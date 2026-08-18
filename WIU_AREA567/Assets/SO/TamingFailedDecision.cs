@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "TamingFailedDecision", menuName = "Scriptable Objects/FSM/Decisions/Taming Failed")]
+[CreateAssetMenu(fileName = "TamingFailedDecision", menuName = "Scriptable Objects/Decisions/Taming Failed")]
 public class TamingFailedDecision : StateDecision
 {
     public override bool Decide(StateController controller)

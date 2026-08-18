@@ -5,7 +5,7 @@ public class StateController : MonoBehaviour
     public State currentState;
     public State remainState;
 
-    [HideInInspector] public bool isHurt = false;
+    [HideInInspector] public bool isHit = false;
     private Damageable damageable;
 
     private void Awake()
@@ -19,7 +19,7 @@ public class StateController : MonoBehaviour
 
     private void HandleTakeDamage(int amount)
     {
-        isHurt = true; // Signal the FSM that we took hit
+        isHit = true; // Signal the FSM that we took hit
     }
 
     void Start()

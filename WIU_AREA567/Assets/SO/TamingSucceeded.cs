@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "IsHurtDecision", menuName = "Scriptable Objects/FSM/Decisions/Is Hurt")]
-public class IsHurtDecision : StateDecision
+[CreateAssetMenu(fileName = "TamingSucceeded", menuName = "Scriptable Objects/Decisions/Taming Succeeded")]
+public class TamingSucceededDecision : StateDecision
 {
     public override bool Decide(StateController controller)
     {

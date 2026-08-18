@@ -4,11 +4,14 @@ public class AlienInstance : MonoBehaviour
 {
     public AlienType alienType;
 
-    [HideInInspector] public bool identified = false;
-    [HideInInspector] public bool tamingAttempted = false;
-    [HideInInspector] public bool tamingSucceeded = false;
+    [SerializeField] public bool identified = false;
+    [SerializeField] public bool tamingAttempted = false;
+    [SerializeField] public bool tamingSucceeded = false;
+    [SerializeField] public bool isHit = false;
+    [SerializeField] private bool isTased = false;
+    [SerializeField] public float stateTimerStart = 0;
 
-    private Animator animator; // swap for Animation component if not using an Animator Controller
+    private Animator animator; 
 
     private void Awake()
     {
