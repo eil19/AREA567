@@ -40,13 +40,13 @@ public class State : ScriptableObject
         foreach (StateTransition transition in transitions)
         {
             bool decisionSucceeded = transition.decision.Decide(controller);
-            if (decisionSucceeded)
+            State nextState = decisionSucceeded ? transition.trueState : transition.falseState;
+
+            // Only act if this transition actually wants to change state.
+            if (nextState != controller.remainState)
             {
-                controller.TransitionToState(transition.trueState);
-            }
-            else
-            {
-                controller.TransitionToState(transition.falseState);
+                controller.TransitionToState(nextState);
+                return;
             }
         }
     }
