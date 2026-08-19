@@ -2,7 +2,7 @@ using UnityEngine;
 
 // Simple test object to verify PlayerInteractor's detection + polymorphic
 // Interact() call work correctly. Swap for real interactables (crafting
-// bench, door, NPC, resource node) once those systems are built by the team.
+// bench, door, NPC) once those systems are built by the team.
 public class TestInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string message = "Interacted!";

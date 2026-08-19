@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+
 public class Damageable : MonoBehaviour
 {
     [Header("Health")]
@@ -7,20 +8,25 @@ public class Damageable : MonoBehaviour
     private int currentHealth;
     public int CurrentHealth => currentHealth;
     public int MaxHealth => maxHealth;
+
     [Header("Events")]
     public UnityEvent<int, int> OnHealthChanged; // (current, max) - hook up to HUD
     public UnityEvent<int> OnDamaged; // (amount taken) - fires on any non-fatal hit, for hurt-flash animations
     public UnityEvent OnDeath;
+
     [Header("Audio (optional)")]
     [SerializeField] private AudioClip hurtClip;
     [SerializeField] private AudioClip deathClip;
+
     [Header("VFX (optional)")]
     [SerializeField] private GameObject hitVFXPrefab;
     [SerializeField] private GameObject deathVFXPrefab;
+
     void Awake()
     {
         currentHealth = maxHealth;
     }
+
     public void TakeDamage(int amount)
     {
         if (currentHealth <= 0) return;
@@ -28,6 +34,7 @@ public class Damageable : MonoBehaviour
         currentHealth = Mathf.Max(currentHealth, 0);
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         if (hitVFXPrefab != null) Instantiate(hitVFXPrefab, transform.position, Quaternion.identity);
+
         if (currentHealth <= 0)
         {
             // AudioManager.Instance?.PlaySFX(deathClip); // TODO: re-enable once AudioManager exists in this project
@@ -40,11 +47,13 @@ public class Damageable : MonoBehaviour
             OnDamaged?.Invoke(amount);
         }
     }
+
     public void Heal(int amount)
     {
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
+
     // Forces death regardless of current health - use for instant-kill
     // hazards (traps, environmental damage, etc.)
     public void Kill()

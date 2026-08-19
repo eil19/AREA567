@@ -14,16 +14,20 @@ public class PlayerController : MonoBehaviour
     public bool IsStealthed => isStealthed;
 
     [Header("Attack Point (for AttackEventHandler)")]
-    [Tooltip("Child transform used by AttackEventHandler - this script repositions it to face FacingDirection every frame.")]
+    [Tooltip("Child transform used by AttackEventHandler - this script repositions it to face FacingDirection every frame. AttackEventHandler reads this via the AttackPoint property, so it only needs to be assigned here, not duplicated.")]
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackPointDistance = 0.6f;
+    public Transform AttackPoint => attackPoint;
 
     private Animator animator;
     private Rigidbody2D body;
 
     private Vector2 moveInput;
 
-    // Defaults facing down - typical top-down convention (character faces camera at rest)
+    // Defaults facing down - typical top-down convention (character faces camera at rest).
+    // IMPORTANT: only updates while actively moving (see Update() below) - standing still
+    // keeps whatever direction was last faced. Anything reading this (AttackEventHandler,
+    // PlayerInteractor) inherits that behavior.
     public Vector2 FacingDirection { get; private set; } = Vector2.down;
 
     void Awake()

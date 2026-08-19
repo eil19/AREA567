@@ -30,6 +30,7 @@ public class Stunnable : MonoBehaviour
         if (!isStunned)
         {
             isStunned = true;
+            Debug.Log($"{gameObject.name} is now stunned for {duration}s"); // TODO: remove once stun VFX exists
             OnStunStart?.Invoke();
         }
 
@@ -37,6 +38,7 @@ public class Stunnable : MonoBehaviour
 
         isStunned = false;
         stunRoutine = null;
+        Debug.Log($"{gameObject.name} stun ended"); // TODO: remove once stun VFX exists
         OnStunEnd?.Invoke();
     }
 }
