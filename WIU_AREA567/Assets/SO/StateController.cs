@@ -6,6 +6,7 @@ public class StateController : MonoBehaviour
     public State remainState;
 
     [HideInInspector] public bool isHit = false;
+    [HideInInspector] public bool isTased = false;
     private Damageable damageable;
 
     private void Awake()

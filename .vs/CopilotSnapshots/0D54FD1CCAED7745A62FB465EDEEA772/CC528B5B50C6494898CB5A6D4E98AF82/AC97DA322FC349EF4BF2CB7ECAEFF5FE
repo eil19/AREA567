@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
 public class AlienInstance : MonoBehaviour
@@ -18,7 +18,10 @@ public class AlienInstance : MonoBehaviour
     private Vector3 offset = new Vector3(0, -2, 0);
 
     [ContextMenu("TEST: Force Identify")]
-    private void TestForceIdentify()
+    private void TestForceIdentify()  
+
+
+
     {
         identified = true;
     }

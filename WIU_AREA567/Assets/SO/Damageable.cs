@@ -7,7 +7,7 @@ public class Damageable : MonoBehaviour
     
     [Header("Health")]
     public int maxHealth = 100;
-    private int currentHealth;
+    [SerializeField] private int currentHealth;
     public int CurrentHealth { get { return currentHealth; } }
     public bool IsDead { get; private set; }
 

@@ -5,7 +5,14 @@ public class TamingSucceededDecision : StateDecision
 {
     public override bool Decide(StateController controller)
     {
-        var alien = controller.GetComponent<AlienInstance>();
-        return alien != null && alien.tamingAttempted && alien.tamingSucceeded;
+        if (controller.TryGetComponent<AlienInstance>(out AlienInstance alien))
+        {
+            if (alien.tameSuccessTrigger)
+            {
+                alien.tameSuccessTrigger = false;
+                return true;
+            }
+        }
+        return false;
     }
 }

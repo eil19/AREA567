@@ -13,7 +13,7 @@ public class AlienType : ScriptableObject
 {
     [Header("Identity")]
     public string alienName;
-    public AlienCategory category; // enum: Healer, Damage, Flying, Tanker
+    public AlienCategory category;
 
     [Header("Stats")]
     public float health;
@@ -25,6 +25,10 @@ public class AlienType : ScriptableObject
     public GameObject essencePrefab;
 
     [Header("Taming")]
-    [Range(0f, 1f)] public float tameDifficulty; // affects success chance
-    public GameObject tamedPrefab; // how it looks/acts once allied
+    [Range(0f, 1f)] public float tameDifficulty; 
+    public GameObject tamedPrefab;
+
+    [Header("Detection")]
+    public float detectRadius = 4f;
+    public LayerMask enemyLayer;
 }

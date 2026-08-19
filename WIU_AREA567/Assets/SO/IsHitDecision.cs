@@ -5,6 +5,11 @@ public class IsHitDecision : StateDecision
 {
     public override bool Decide(StateController controller)
     {
-        return controller.isHit;
+        if (controller.isHit)
+        {
+            controller.isHit = false;
+            return true;
+        }
+        return false;
     }
 }

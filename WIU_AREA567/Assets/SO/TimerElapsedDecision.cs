@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TimerElapsedDecision", menuName = "Scriptable Objects/Decisions/Timer Elapsed")]
 public class TimerElapsedDecision : StateDecision
 {
-    public float duration = 5f;
+    public float duration = 2f;
 
     public override bool Decide(StateController controller)
     {
