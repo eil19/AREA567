@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour, IPickupable
+public class Item : MonoBehaviour 
+    //, IPickupable
 {
     [SerializeField] private ItemInstance item;
 
