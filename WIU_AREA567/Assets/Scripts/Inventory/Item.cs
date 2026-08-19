@@ -1,23 +1,37 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, IPickupable
 {
-    public ItemInstance item;
+    [SerializeField] private ItemInstance item;
 
     private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite =
-            item.itemData.itemImage;
+        if (item != null && 
+            item.itemData != null)
+        {
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sprite = item.itemData.itemImage;
+            }
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void Pickup(GameObject picker)
     {
-        if (other.TryGetComponent(out ItemPickUp itemPickUp))
+        if (picker.TryGetComponent(out ItemPickUp itemPickUp))
         {
             bool pickedUp = itemPickUp.PickUp(item);
             if (pickedUp)
             {
+                Debug.Log("Picked up: " + item.itemData.itemName);
                 Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("Could not pick up " + item.itemData.itemName +
+                    ". Inventory is full");
             }
         }
     }

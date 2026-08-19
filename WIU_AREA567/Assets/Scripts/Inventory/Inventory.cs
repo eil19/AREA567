@@ -4,16 +4,22 @@ using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
-    public List<ItemInstance> items = new List<ItemInstance>();
-    public int maxItems = 10;
-
+    [Header("Inventory Settings")]
+    [SerializeField] private int maxItems = 5;
+    [Header("Events")]
     public UnityEvent OnInventoryChanged;
+
+    private List<ItemInstance> items = new List<ItemInstance>();
+    private int selectedSlotIndex = 0;
+
     public IReadOnlyList<ItemInstance> Items => items;
     public int MaxItems => maxItems;
+    public int SelectedSlotIndex => selectedSlotIndex;
     private static Inventory existingInstance;
 
     private void Awake()
     {
+        InitialiseInventory();
         if (existingInstance != null && existingInstance != this)
         {
             Destroy(gameObject);
@@ -24,42 +30,117 @@ public class Inventory : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public bool AddItem(ItemInstance item)
+    private void InitialiseInventory()
     {
-        if (item == null) return false;
+        items.Clear();
+        for (int i = 0; i < maxItems; i++)
+        {
+            items.Add(null);
+        }
+    }
 
-        if (items.Count >= maxItems)
-            return false;
+    public bool AddItem(ItemInstance newItem)
+    {
+        if (newItem == null || newItem.itemData == null) return false;
 
-        items.Add(item);
-        OnInventoryChanged?.Invoke();
-        return true;
+        // try to stack item first
+        if (newItem.itemData.stackable)
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                ItemInstance currentItem = items[i];
+                if (currentItem == null) continue;
+                if (currentItem.itemData != newItem.itemData) continue;
+                if (currentItem.quantity >= currentItem.itemData.maxStack) continue;
+
+                int availableSpace = currentItem.itemData.maxStack - currentItem.quantity;
+                int amountToAdd = Mathf.Min(availableSpace, newItem.quantity);
+
+                currentItem.quantity += amountToAdd;
+                newItem.quantity -= amountToAdd;
+
+                if (newItem.quantity <= 0)
+                {
+                    OnInventoryChanged?.Invoke();
+                    return true;
+                }
+            }
+        }
+
+        // find empty inventory slot
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i] == null)
+            {
+                items[i] = newItem;
+                OnInventoryChanged?.Invoke();
+                return true;
+            }
+        }
+
+        Debug.Log("Inventory is full");
+        return false;
     }
 
     public ItemInstance GetItem(int index)
     {
-        if (index < 0 || index >= items.Count) { return null; }
+        if (index < 0 || index >= items.Count) return null;
         return items[index];
     }
 
     public void RemoveItem(int index)
     {
         if (index < 0 || index >= items.Count) return;
-        items.RemoveAt(index);
+
+        items[index] = null;
+        OnInventoryChanged?.Invoke();
+    }
+
+    public void SwapItems(int firstIndex, int secondIndex)
+    {
+        if (firstIndex < 0 ||
+            firstIndex >= items.Count ||
+            secondIndex < 0 ||
+            secondIndex >= items.Count) return;
+
+        ItemInstance tempItem = items[firstIndex];
+        items[firstIndex] = items[secondIndex];
+        items[secondIndex] = tempItem;
+
+        OnInventoryChanged?.Invoke();
+    }
+
+    public void SelectSlot(int index)
+    {
+        if (index < 0 || index >= items.Count) return;
+        selectedSlotIndex = index;
+        OnInventoryChanged?.Invoke();
+    }
+
+    public void ClearInventory()
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            items[i] = null;
+        }
         OnInventoryChanged?.Invoke();
     }
 
     public void DisplayItems()
     {
-        foreach (ItemInstance item in items)
+        for (int i = 0; i < items.Count; i++)
         {
-            Debug.Log("Item Name: " + item.itemData.itemName);
+            if (items[i] == null)
+            {
+                Debug.Log("Slot " + i + ": Empty");
+            }
+            else
+            {
+                Debug.Log(
+                    "Slot " + i + ": " + items[i].itemData.itemName
+                    + " x" + items[i].quantity
+                    );
+            }
         }
-    }
-
-    public void ClearInventory()
-    {
-        items.Clear();
-        OnInventoryChanged?.Invoke();
     }
 }

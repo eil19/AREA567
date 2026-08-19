@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
@@ -20,10 +19,5 @@ public class ItemPickUp : MonoBehaviour
     public bool PickUp(ItemInstance item)
     {
         return inventory.AddItem(item);
-    }
-
-    private void Update()
-    {
-        // interact with item
     }
 }

@@ -8,4 +8,5 @@ public class ItemData : ScriptableObject
     public string description;
     public Sprite itemImage;
     public bool stackable;
+    public int maxStack = 99;
 }
