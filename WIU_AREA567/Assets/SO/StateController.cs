@@ -14,7 +14,7 @@ public class StateController : MonoBehaviour
         damageable = GetComponent<Damageable>();
         if (damageable != null)
         {
-            damageable.OnDamaged += HandleTakeDamage;
+            damageable.OnDamaged.AddListener(HandleTakeDamage);
         }
     }
 

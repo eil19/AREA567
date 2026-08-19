@@ -61,7 +61,7 @@ public class AlienAtkAction : StateAction
             if (knockbackForce > 0f)
             {
                 Vector2 direction = (Vector2)hit.transform.position - origin;
-                damageable.TakeDamage(damage, direction, knockbackForce);
+                damageable.TakeDamage(damage);
             }
             else
             {
