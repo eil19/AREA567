@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,11 +11,22 @@ public class TimeTravelController : MonoBehaviour
     [SerializeField] private GameObject presentEnvironment;
     [SerializeField] private GameObject pastEnvironment;
 
-    [Header("Events")]
+    [Header("Transition")]
+    [SerializeField] private float transitionDuration = 0.8f;
+
+    private bool isTravelling = false;
+
+    [Header("Timeline Events")]
     public UnityEvent OnTravelToPast;
     public UnityEvent OnTravelToPresent;
 
-    public Timeline CurrentTimeline { get; internal set; }
+    [Header("Transition Events")]
+    public UnityEvent OnTimeTravelStarted;
+    public UnityEvent OnTimeTravelMidpoint;
+    public UnityEvent OnTimeTravelFinished;
+
+    public Timeline CurrentTimeline => currentTimeline;
+    public bool IsTravelling => isTravelling;
 
     private void Start()
     {
@@ -23,24 +35,25 @@ public class TimeTravelController : MonoBehaviour
 
     public void TravelToPast()
     {
-        if (currentTimeline == Timeline.Past) return;
+        if (currentTimeline == Timeline.Past || isTravelling)
+            return;
 
-        currentTimeline = Timeline.Past;
-        UpdateTimeline();
-        OnTravelToPast?.Invoke();
+        StartCoroutine(TimeTravelSequence(Timeline.Past));
     }
 
     public void TravelToPresent()
     {
-        if (currentTimeline == Timeline.Present) return;
-        
-        currentTimeline = Timeline.Present;
-        UpdateTimeline();
-        OnTravelToPresent?.Invoke();
+        if (currentTimeline == Timeline.Present || isTravelling)
+            return;
+
+        StartCoroutine(TimeTravelSequence(Timeline.Present));
     }
 
     public void ToggleTimeline()
     {
+        if (isTravelling)
+            return;
+
         if (currentTimeline == Timeline.Present)
         {
             TravelToPast();
@@ -51,16 +64,62 @@ public class TimeTravelController : MonoBehaviour
         }
     }
 
+    private IEnumerator TimeTravelSequence(Timeline targetTimeline)
+    {
+        // prevent another time travel from starting
+        isTravelling = true;
+
+        Debug.Log("Time travel started.");
+
+        OnTimeTravelStarted?.Invoke();
+
+        // wait for first half of transition
+        float halfDuration = transitionDuration / 2f;
+
+        yield return new WaitForSeconds(halfDuration);
+
+        // transition midpoint
+        currentTimeline = targetTimeline;
+
+        UpdateTimeline();
+
+        Debug.Log("Timeline changed to: " + currentTimeline);
+
+        OnTimeTravelMidpoint?.Invoke();
+
+        // tell other systems which timeline entered
+        if (currentTimeline == Timeline.Past)
+        {
+            OnTravelToPast?.Invoke();
+        }
+        else
+        {
+            OnTravelToPresent?.Invoke();
+        }
+
+        // wait for second half
+        yield return new WaitForSeconds(halfDuration);
+
+        // transition completely finished
+        isTravelling = false;
+
+        Debug.Log("Time travel finished.");
+
+        OnTimeTravelFinished?.Invoke();
+    }
+
     private void UpdateTimeline()
     {
         if (presentEnvironment != null)
         {
-            presentEnvironment.SetActive(currentTimeline == Timeline.Present);
+            presentEnvironment.SetActive(
+                currentTimeline == Timeline.Present);
         }
 
         if (pastEnvironment != null)
         {
-            pastEnvironment.SetActive(currentTimeline == Timeline.Past);
+            pastEnvironment.SetActive(
+                currentTimeline == Timeline.Past);
         }
     }
 }
