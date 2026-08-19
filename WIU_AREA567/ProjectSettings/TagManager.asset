@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Enemy
   - Alien
   layers:
   - Default
@@ -13,9 +12,9 @@ TagManager:
   - Player
   - Water
   - UI
+  - Interactable
+  - Pickup
   - Enemy
-  - 
-  - 
   - 
   - 
   - 
