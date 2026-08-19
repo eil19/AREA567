@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-
 public class Damageable : MonoBehaviour
 {
     [Header("Health")]
