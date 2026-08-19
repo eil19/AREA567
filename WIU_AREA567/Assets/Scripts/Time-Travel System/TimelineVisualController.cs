@@ -83,7 +83,7 @@ public class TimelineVisualController : MonoBehaviour
 
         float dayProgress = 1f - ((float)dayManager.DaysRemaining / dayManager.MaximumDays);
 
-        return Mathf.Lerp(-100f, 0f, dayProgress);
+        return Mathf.Lerp(-100f, -5f, dayProgress);
     }
 
     private void UpdateVisualsInstantly()
