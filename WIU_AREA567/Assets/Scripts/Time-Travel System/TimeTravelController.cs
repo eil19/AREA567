@@ -14,6 +14,9 @@ public class TimeTravelController : MonoBehaviour
     [Header("Transition")]
     [SerializeField] private float transitionDuration = 0.8f;
 
+    [Header("Shader")]
+    [SerializeField] private Material timeTravelMaterial;
+
     private bool isTravelling = false;
 
     [Header("Timeline Events")]
@@ -73,32 +76,54 @@ public class TimeTravelController : MonoBehaviour
 
         OnTimeTravelStarted?.Invoke();
 
-        // wait for first half of transition
-        float halfDuration = transitionDuration / 2f;
-
-        yield return new WaitForSeconds(halfDuration);
-
-        // transition midpoint
-        currentTimeline = targetTimeline;
-
-        UpdateTimeline();
-
-        Debug.Log("Timeline changed to: " + currentTimeline);
-
-        OnTimeTravelMidpoint?.Invoke();
-
-        // tell other systems which timeline entered
-        if (currentTimeline == Timeline.Past)
+        // reset shader
+        if (timeTravelMaterial != null)
         {
-            OnTravelToPast?.Invoke();
-        }
-        else
-        {
-            OnTravelToPresent?.Invoke();
+            timeTravelMaterial.SetFloat(
+                "_TransitionProgress", 0.0f);
         }
 
-        // wait for second half
-        yield return new WaitForSeconds(halfDuration);
+        float elapsed = 0.0f;
+        bool timelineSwitched = false;
+
+        while (elapsed < transitionDuration)
+        {
+            elapsed += Time.deltaTime;
+            float progress = 
+                Mathf.Clamp01(elapsed / transitionDuration);
+
+            // update shader ripple
+            if (timeTravelMaterial != null)
+            {
+                timeTravelMaterial.SetFloat("_TransitionProgress", progress);
+            }
+
+            // switch timeline once at mid point
+            if (!timelineSwitched && progress >= 0.5f)
+            {
+                timelineSwitched = true;
+                currentTimeline = targetTimeline;
+                UpdateTimeline();
+                Debug.Log("Timeline changed to: " + currentTimeline);
+                OnTimeTravelMidpoint?.Invoke();
+                if (currentTimeline == Timeline.Past)
+                {
+                    OnTravelToPast?.Invoke();
+                }
+                else
+                {
+                    OnTravelToPresent?.Invoke();
+                }
+            }
+
+            yield return null;
+        }
+
+        // shader finishes at 1
+        if (timeTravelMaterial != null)
+        {
+            timeTravelMaterial.SetFloat("_TransitionProgress", 1.0f);
+        }
 
         // transition completely finished
         isTravelling = false;

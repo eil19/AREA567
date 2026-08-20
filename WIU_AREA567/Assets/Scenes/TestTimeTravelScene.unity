@@ -699,6 +699,7 @@ MonoBehaviour:
   presentEnvironment: {fileID: 1758014908}
   pastEnvironment: {fileID: 1753749412}
   transitionDuration: 2
+  timeTravelMaterial: {fileID: 2100000, guid: 1b5b59c1afaa48341bf47b71f5d911aa, type: 2}
   OnTravelToPast:
     m_PersistentCalls:
       m_Calls:
