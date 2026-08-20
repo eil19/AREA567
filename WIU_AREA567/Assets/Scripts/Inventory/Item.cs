@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Item : MonoBehaviour 
-    //, IPickupable
+    , IPickupable
 {
     [SerializeField] private ItemInstance item;
 
