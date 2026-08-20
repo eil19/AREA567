@@ -163,4 +163,27 @@ public class Inventory : MonoBehaviour
 
         return totalQuantity;
     }
+
+    public bool RemoveQuantityAtSlot(int index, int quantity)
+    {
+        if (index < 0 || index >= items.Count) return false;
+
+        ItemInstance item = items[index];
+        if (item == null || quantity <= 0 || item.quantity < quantity) return false;
+
+        item.quantity -= quantity;
+        if (item.quantity <= 0)
+        {
+            items[index] = null;
+        }
+        OnInventoryChanged?.Invoke();
+        return true;
+    }
+
+    // overload for returning something from crafting grid into inventory
+    public bool AddItem(ItemData itemData, int quantity)
+    {
+        ItemInstance item = new ItemInstance(itemData, null, quantity);
+        return AddItem(item);
+    }
 }

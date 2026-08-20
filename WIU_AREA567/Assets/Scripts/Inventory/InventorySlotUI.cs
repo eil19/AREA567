@@ -35,9 +35,12 @@ public class InventorySlotUI : MonoBehaviour,
 
     public void UpdateSlot(ItemInstance item, bool isSelected)
     {
+        currentItem = item;
+
         if (item == null)
         {
             itemImage.enabled = false;
+            itemImage.sprite = null;
             quantityText.text = ""; // no item in slot
         }
         else
