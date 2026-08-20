@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
 public class AlienInstance : MonoBehaviour
@@ -10,9 +10,8 @@ public class AlienInstance : MonoBehaviour
     [HideInInspector] public bool tameFailTrigger = false;
     [HideInInspector] public bool isHit = false;
     [HideInInspector] private bool isTased = false;
-    [HideInInspector] private bool _guessed = false;
-    public bool Guessed { get { return _guessed; } }        
-    [HideInInspector] public float stateTimerStart = 0;    
+    [HideInInspector] private bool guessed = false;
+    [HideInInspector] public float stateTimerStart = 0;
 
     [HideInInspector] public float lastAttackTime = -999f;
     private Animator animator;
@@ -81,8 +80,8 @@ public class AlienInstance : MonoBehaviour
 
     public bool SubmitGuess(AlienCategory guess)
     {
-        if (_guessed) return false; // already guessed, don't allow retries
-        _guessed = true;
+        if (guessed) return false; // already guessed, don't allow retries
+        guessed = true;
 
         bool correct = alienType != null && guess == alienType.category;
         if (correct)
