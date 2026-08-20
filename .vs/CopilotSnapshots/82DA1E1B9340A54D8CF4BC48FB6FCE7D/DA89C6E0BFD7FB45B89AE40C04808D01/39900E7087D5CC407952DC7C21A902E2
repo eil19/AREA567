@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
         // Snap to 4 cardinal directions - no diagonal movement allowed.
         // Whichever axis has the larger magnitude wins; the other is zeroed
-        // out entirely, so moveInput is always exactly (±1,0), (0,±1), or (0,0).
+        // out entirely, so moveInput is always exactly (Â±1,0), (0,Â±1), or (0,0).
         if (rawInput.sqrMagnitude < 0.01f)
         {
             moveInput = Vector2.zero;
@@ -81,13 +81,10 @@ public class PlayerController : MonoBehaviour
             else
             {
                 directionIndex = 2; // Side
-                
-                var s = transform.localScale;
-                s.x = Mathf.Abs(s.x) * (FacingDirection.x < 0 ? -1f : 1f);
-                transform.localScale = s;
+                transform.localScale = new Vector3(FacingDirection.x < 0 ? -1f : 1f, 1f, 1f);
             }
 
-            animator.SetInteger("Direction", directionIndex);
+            animator.SetFloat("Direction", directionIndex);
         }
 
         if (attackPoint != null)
