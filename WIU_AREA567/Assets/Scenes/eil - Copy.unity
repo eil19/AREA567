@@ -1047,7 +1047,8 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
-
+<<<<<<< Updated upstream
+=======
 --- !u!1 &975553626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1265,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
+>>>>>>> Stashed changes
 --- !u!1 &1174022683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1450,8 @@ MonoBehaviour:
   deathClip: {fileID: 0}
   hitVFXPrefab: {fileID: 0}
   deathVFXPrefab: {fileID: 0}
-
+<<<<<<< Updated upstream
+=======
 --- !u!1 &1342317257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2582,17 +2584,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011196376}
   m_CullTransparentMesh: 1
-
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 669775627}
-
+<<<<<<< Updated upstream
+  - {fileID: 585015117}
+  - {fileID: 1174022686}
+  - {fileID: 479611235}
+=======
   - {fileID: 1829595130}
   - {fileID: 1150786885}
   - {fileID: 585015117}
   - {fileID: 1174022686}
   - {fileID: 479611235}
   - {fileID: 1780623714}
-
+>>>>>>> Stashed changes
