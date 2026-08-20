@@ -17,6 +17,7 @@ public class AlienInstance : MonoBehaviour
     [HideInInspector] public float lastAttackTime = -999f;
     private Animator animator;
 
+
     private Vector3 offset = new Vector3(0, -2, 0);
 
     [ContextMenu("TEST: Force Identify")]
