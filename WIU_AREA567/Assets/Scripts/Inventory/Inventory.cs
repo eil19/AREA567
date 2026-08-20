@@ -145,4 +145,24 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
+    public int GetItemQuantity(ItemData itemData)
+    {
+        int totalQuantity = 0;
+
+        for (int i = 0; i < items.Count; i++)
+        {
+            ItemInstance item = items[i];
+
+            if (item == null)
+                continue;
+
+            if (item.itemData == itemData)
+            {
+                totalQuantity += item.quantity;
+            }
+        }
+
+        return totalQuantity;
+    }
 }
