@@ -1,0 +1,24 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "FlipTowardsTargetAction", menuName = "Scriptable Objects/Actions/FlipTowardsTargetAction")]
+public class FlipTowardsTargetAction : StateAction
+{
+    public string targetTag;
+
+    public override void Act(StateController controller)
+    {
+        var targetObj = GameObject.FindGameObjectWithTag(targetTag);
+        if (targetObj == null) return;
+
+        float hDiff = (targetObj.transform.position - controller.transform.position).x;
+
+        if (hDiff >= 0.01f)
+        {
+            controller.transform.localScale = new Vector3(-2.0f, 2.0f, 1.0f);
+        }
+        else if (hDiff <= -0.01f)
+        {
+            controller.transform.localScale = new Vector3(2.0f, 2.0f, 1.0f);
+        }
+    }
+}
