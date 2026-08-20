@@ -17,7 +17,7 @@ public class InventorySlotUI : MonoBehaviour,
     [SerializeField] private GameObject selectionBorder;
 
     private int slotIndex;
-    public int SlotIndex => SlotIndex;
+    public int SlotIndex => slotIndex;
 
     private ItemInstance currentItem;
     private ItemTooltipUI tooltip;
