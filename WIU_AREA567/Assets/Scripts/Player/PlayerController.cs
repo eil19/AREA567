@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
                 transform.localScale = new Vector3(FacingDirection.x < 0 ? -1f : 1f, 1f, 1f);
             }
 
-            animator.SetFloat("Direction", directionIndex);
+            animator.SetInteger("Direction", directionIndex);
         }
 
         if (attackPoint != null)
