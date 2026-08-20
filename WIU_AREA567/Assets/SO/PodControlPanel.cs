@@ -1,125 +1,59 @@
-using TMPro;
-using UnityEditor.UI;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PodControlPanel : MonoBehaviour, IInteractable
+public class PodControlPanel : MonoBehaviour
 {
-    Inventory inventory;
-
     [Header("Linked Alien")]
     [SerializeField] private AlienInstance linkedAlien;
 
-    [Header("TEMP TEST")]
-    [SerializeField] private ItemEffect testSplashPotionEffect;
+    private bool playerInRange;
 
-    [Header("Required Item")]
-    //[SerializeField] private ItemData splashPotionData;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
 
-    [Header("Potion count display")]
-    [SerializeField] private ItemData splashPotionData;
-    [SerializeField] private GameObject promptRoot;
-    [SerializeField] private TMP_Text potionCountText;
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+        }
+    }
 
-    private PlayerInteractor playerInteractor;
-    private bool isFocused;
+    //private void Update()
+    //{
+    //    if (!playerInRange || linkedAlien == null) return;
 
-     private void Start()
-    {
-        var playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-        {
-            playerInteractor = playerObj.GetComponent<PlayerInteractor>();
-        }
- 
-        if (playerInteractor != null)
-        {
-            playerInteractor.OnInteractableFocused.AddListener(HandleFocused);
-            playerInteractor.OnInteractableLostFocus.AddListener(HandleLostFocus);
-        }
- 
-        if (promptRoot != null) promptRoot.SetActive(false);
-    }
- 
-    private void OnDestroy()
-    {
-        if (playerInteractor != null)
-        {
-            playerInteractor.OnInteractableFocused.RemoveListener(HandleFocused);
-            playerInteractor.OnInteractableLostFocus.RemoveListener(HandleLostFocus);
-        }
-    }
- 
-    private void Update()
-    {
-        // Keep the count live in case the player picks up more potions while standing here
-        if (isFocused) UpdatePrompt();
-    }
- 
-    private void HandleFocused(GameObject focusedObject)
-    {
-        if (focusedObject != gameObject) return;
-        isFocused = true;
-        UpdatePrompt();
-    }
- 
-    private void HandleLostFocus()
-    {
-        if (!isFocused) return;
-        isFocused = false;
-        if (promptRoot != null) promptRoot.SetActive(false);
-    }
- 
-    private void UpdatePrompt()
-    {
-        if (linkedAlien == null || linkedAlien.identified)
-        {
-            if (promptRoot != null) promptRoot.SetActive(false);
-            return;
-        }
- 
-        if (promptRoot != null) promptRoot.SetActive(true);
-        if (potionCountText != null)
-        {
-            potionCountText.text = $"Splash Potions: {GetSplashPotionCount()}";
-        }
-    }
- 
-    private int GetSplashPotionCount()
-    {
-        if (Inventory.Instance == null || splashPotionData == null) return 0;
- 
-        int total = 0;
-        foreach (var item in Inventory.Instance.Items)
-        {
-            if (item != null && item.itemData == splashPotionData)
-            {
-                total += item.quantity;
-            }
-        }
-        return total;
-    }
- 
-    public void Interact(GameObject interactor)
-    {
-        if (linkedAlien == null) return;
- 
-        AlienInteractionTarget.SetCurrent(linkedAlien);
- 
-        if (linkedAlien.identified)
-        {
-            Debug.Log("[TubeControlPanel] This alien is already identified.");
-            return;
-        }
- 
-        // TEMP direct call
-        if (testSplashPotionEffect != null)
-        {
-            testSplashPotionEffect.Use(interactor);
-        }
-        else
-        {
-            Debug.LogWarning("[TubeControlPanel] No testSplashPotionEffect assigned — nothing will happen until Inventory is wired up.");
-        }
-    }
+    //    if (!linkedAlien.identified && Input.GetKeyDown(KeyCode.E) && PlayerInventory.HasItem(ItemType.SplashPotion))
+    //    {
+    //        UseSplashPotion();
+    //    }
+
+    //    if (linkedAlien.identified && !linkedAlien.tamingAttempted && Input.GetKeyDown(KeyCode.F) && PlayerInventory.HasItem(ItemType.BondingCharm))
+    //    {
+    //        UseBondingCharm();
+    //    }
+    //}
+
+    //private void UseSplashPotion()
+    //{
+    //    PlayerInventory.ConsumeItem(ItemType.SplashPotion);
+
+    //    var stateController = linkedAlien.GetComponent<StateController>();
+    //    var action = ScriptableObject.CreateInstance<IdentifyAlienAction>();
+    //    action.Act(stateController);
+    //}
+
+    //private void UseBondingCharm()
+    //{
+    //    PlayerInventory.ConsumeItem(ItemType.BondingCharm);
+
+    //    var stateController = linkedAlien.GetComponent<StateController>();
+    //    var action = ScriptableObject.CreateInstance<TryTameAction>();
+    //    action.Act(stateController);
+       
+    //}
 }

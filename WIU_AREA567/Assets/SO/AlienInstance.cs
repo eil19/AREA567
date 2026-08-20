@@ -10,9 +10,7 @@ public class AlienInstance : MonoBehaviour
     [HideInInspector] public bool tameFailTrigger = false;
     [HideInInspector] public bool isHit = false;
     [HideInInspector] private bool isTased = false;
-    [HideInInspector] private bool _guessed = false;
-    public bool Guessed { get { return _guessed; } }        
-    [HideInInspector] public float stateTimerStart = 0;    
+    [HideInInspector] public float stateTimerStart = 0;
 
     [HideInInspector] public float lastAttackTime = -999f;
     private Animator animator;
@@ -77,19 +75,6 @@ public class AlienInstance : MonoBehaviour
         {
             Instantiate(alienType.essencePrefab, transform.position, Quaternion.identity);
         }
-    }
-
-    public bool SubmitGuess(AlienCategory guess)
-    {
-        if (_guessed) return false; // already guessed, don't allow retries
-        _guessed = true;
-
-        bool correct = alienType != null && guess == alienType.category;
-        if (correct)
-        {
-            SpawnEssence();
-        }
-        return correct;
     }
 
     public void AttemptTame()

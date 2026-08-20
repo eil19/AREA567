@@ -59,8 +59,6 @@ public class PlayerInteractor : MonoBehaviour
 
         if (InputSystem.actions["Interact"].WasPressedThisFrame())
         {
-            Debug.Log($"[PlayerInteractor] Interact pressed. interactHit = {interactHit}");
-
             if (interactHit != null && interactHit.TryGetComponent(out IInteractable interactable))
             {
                 interactable.Interact(gameObject);
