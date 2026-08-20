@@ -1,15 +1,16 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class TimeTravelController : MonoBehaviour
 {
     [Header("Timeline")]
     [SerializeField] private Timeline currentTimeline = Timeline.Present;
 
-    [Header("Environment")]
-    [SerializeField] private GameObject presentEnvironment;
-    [SerializeField] private GameObject pastEnvironment;
+    [Header("Timeline Scenes")]
+    [SerializeField] private string presentSceneName;
+    [SerializeField] private string pastSceneName;
 
     [Header("Transition")]
     [SerializeField] private float transitionDuration = 0.8f;
@@ -19,6 +20,7 @@ public class TimeTravelController : MonoBehaviour
     [SerializeField] private float rippleDistortionStrength = 0.05f;
 
     private bool isTravelling = false;
+    private Vector3 savedPlayerPosition;
 
     [Header("Timeline Events")]
     public UnityEvent OnTravelToPast;
@@ -34,16 +36,13 @@ public class TimeTravelController : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
         if (timeTravelMaterial != null)
         {
             timeTravelMaterial.SetFloat("_TransitionProgress", 0.0f);
             timeTravelMaterial.SetFloat("_DistortionStrength", 0.0f);
         }
-    }
-
-    private void Start()
-    {
-        UpdateTimeline();
     }
 
     public void TravelToPast()
@@ -86,6 +85,14 @@ public class TimeTravelController : MonoBehaviour
 
         OnTimeTravelStarted?.Invoke();
 
+        // save current player position
+        GameObject player =
+            GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            savedPlayerPosition = player.transform.position;
+        }
+
         // reset shader
         if (timeTravelMaterial != null)
         {
@@ -115,7 +122,22 @@ public class TimeTravelController : MonoBehaviour
             {
                 timelineSwitched = true;
                 currentTimeline = targetTimeline;
-                UpdateTimeline();
+
+                string targetScene =
+                    currentTimeline == Timeline.Past
+                    ? pastSceneName : presentSceneName;
+
+                SceneManager.LoadScene(targetScene);
+                // wait for new scene objects
+                yield return null;
+
+                GameObject newPlayer =
+                    GameObject.FindGameObjectWithTag("Player");
+                if (newPlayer != null)
+                {
+                    newPlayer.transform.position = savedPlayerPosition;
+                }
+
                 Debug.Log("Timeline changed to: " + currentTimeline);
                 OnTimeTravelMidpoint?.Invoke();
                 if (currentTimeline == Timeline.Past)
@@ -131,10 +153,11 @@ public class TimeTravelController : MonoBehaviour
             yield return null;
         }
 
-        // shader finishes at 1
+        // turn distortion off
         if (timeTravelMaterial != null)
         {
-            timeTravelMaterial.SetFloat("_TransitionProgress", 1.0f);
+            timeTravelMaterial.SetFloat("_TransitionProgress", 0.0f);
+            timeTravelMaterial.SetFloat("_DistortionStrength", 0.0f);
         }
 
         // transition completely finished
@@ -143,21 +166,6 @@ public class TimeTravelController : MonoBehaviour
         Debug.Log("Time travel finished.");
 
         OnTimeTravelFinished?.Invoke();
-    }
-
-    private void UpdateTimeline()
-    {
-        if (presentEnvironment != null)
-        {
-            presentEnvironment.SetActive(
-                currentTimeline == Timeline.Present);
-        }
-
-        if (pastEnvironment != null)
-        {
-            pastEnvironment.SetActive(
-                currentTimeline == Timeline.Past);
-        }
     }
 }
 

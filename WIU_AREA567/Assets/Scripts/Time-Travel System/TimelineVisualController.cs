@@ -7,11 +7,12 @@ public class TimelineVisualController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Volume globalVolume;
-    [SerializeField] private DayManager dayManager;
-    [SerializeField] private TimeTravelController timeTravelController;
 
     [Header("Visual Settings")]
     [SerializeField] private float visualTransitionDuration = 0.4f;
+
+    private TimeTravelController timeTravelController;
+    private DayManager dayManager;
 
     private ColorAdjustments colorAdjustments;
     private Coroutine saturationCoroutine;
@@ -25,12 +26,30 @@ public class TimelineVisualController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Color Adjustments could not be found.");
+            Debug.Log("Color Adjustments could not be found.");
         }
     }
 
     private void Start()
     {
+        // find time travel controller
+        timeTravelController =
+            FindFirstObjectByType<TimeTravelController>();
+
+        if (timeTravelController == null)
+        {
+            Debug.Log("Time travel controller could not be found.");
+            return;
+        }
+
+        // find day manager
+        dayManager =
+            FindFirstObjectByType<DayManager>();
+        if (dayManager == null) 
+        {
+            Debug.Log("Day Manager could not be found");
+        }
+
         UpdateVisualsInstantly();
     }
 

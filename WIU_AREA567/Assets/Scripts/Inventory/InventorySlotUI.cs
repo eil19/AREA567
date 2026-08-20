@@ -17,7 +17,7 @@ public class InventorySlotUI : MonoBehaviour,
     [SerializeField] private GameObject selectionBorder;
 
     private int slotIndex;
-    public int SlotIndex => SlotIndex;
+    public int SlotIndex => slotIndex;
 
     private ItemInstance currentItem;
     private ItemTooltipUI tooltip;
@@ -44,6 +44,10 @@ public class InventorySlotUI : MonoBehaviour,
         {
             itemImage.enabled = true;
             itemImage.sprite = item.itemData.itemImage;
+
+            Debug.Log("Showing icon: " +
+                item.itemData.itemImage);
+
             currentItem = item;
 
             if (item.itemData.stackable && item.quantity > 1)
@@ -56,7 +60,7 @@ public class InventorySlotUI : MonoBehaviour,
             }
         }
 
-        selectionBorder.SetActive(isSelected);
+        //selectionBorder.SetActive(isSelected);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

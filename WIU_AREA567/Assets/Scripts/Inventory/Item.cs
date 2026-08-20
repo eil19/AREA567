@@ -21,6 +21,7 @@ public class Item : MonoBehaviour
 
     public void Pickup(GameObject picker)
     {
+        Debug.Log("Item.Pickup()  called for " + gameObject.name);
         if (picker.TryGetComponent(out ItemPickUp itemPickUp))
         {
             bool pickedUp = itemPickUp.PickUp(item);
