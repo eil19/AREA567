@@ -13,6 +13,11 @@ public class DayManager : MonoBehaviour
     public int DaysRemaining => daysRemaining;
     public int MaximumDays => maximumDays;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void AdvanceDay()
     {
         if (daysRemaining <= 0)
