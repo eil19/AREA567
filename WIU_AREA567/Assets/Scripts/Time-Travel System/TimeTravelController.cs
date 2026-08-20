@@ -16,6 +16,7 @@ public class TimeTravelController : MonoBehaviour
 
     [Header("Shader")]
     [SerializeField] private Material timeTravelMaterial;
+    [SerializeField] private float rippleDistortionStrength = 0.05f;
 
     private bool isTravelling = false;
 
@@ -30,6 +31,15 @@ public class TimeTravelController : MonoBehaviour
 
     public Timeline CurrentTimeline => currentTimeline;
     public bool IsTravelling => isTravelling;
+
+    private void Awake()
+    {
+        if (timeTravelMaterial != null)
+        {
+            timeTravelMaterial.SetFloat("_TransitionProgress", 0.0f);
+            timeTravelMaterial.SetFloat("_DistortionStrength", 0.0f);
+        }
+    }
 
     private void Start()
     {
@@ -81,6 +91,8 @@ public class TimeTravelController : MonoBehaviour
         {
             timeTravelMaterial.SetFloat(
                 "_TransitionProgress", 0.0f);
+            timeTravelMaterial.SetFloat(
+                "_DistortionStrength", rippleDistortionStrength);
         }
 
         float elapsed = 0.0f;

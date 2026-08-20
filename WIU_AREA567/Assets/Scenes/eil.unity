@@ -1048,6 +1048,7 @@ MonoBehaviour:
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
 
+
 --- !u!1 &975553626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1186,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975553626}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1150786882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1266,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &1174022683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1450,6 @@ MonoBehaviour:
   deathClip: {fileID: 0}
   hitVFXPrefab: {fileID: 0}
   deathVFXPrefab: {fileID: 0}
-
 --- !u!1 &1342317257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1342317258
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1531,6 +1531,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342317257}
   m_CullTransparentMesh: 1
+
 --- !u!114 &1342317261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,6 +2100,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811768417}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1829595126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,6 +2203,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+
 --- !u!1 &1889385453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,11 +2591,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 669775627}
-
   - {fileID: 1829595130}
-  - {fileID: 1150786885}
   - {fileID: 585015117}
   - {fileID: 1174022686}
   - {fileID: 479611235}
+  - {fileID: 1150786885}
   - {fileID: 1780623714}
 

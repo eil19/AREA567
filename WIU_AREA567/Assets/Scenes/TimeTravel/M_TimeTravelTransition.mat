@@ -88,7 +88,7 @@ Material:
     m_Floats:
     - _BASE_COLOR_WEIGHT: 1
     - _BUMP_MAP_STRENGTH: 0.3
-    - _DistortionStrength: 0.05
+    - _DistortionStrength: 0
     - _EMISSION_WEIGHT: 1
     - _EnableExternalAlpha: 0
     - _METALNESS: 0
