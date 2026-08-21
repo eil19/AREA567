@@ -17,4 +17,9 @@ public class TestInteractable : MonoBehaviour, IInteractable
             Destroy(gameObject);
         }
     }
+
+    public bool CanInteract()
+    {
+        return destroyOnInteract;
+    }
 }
