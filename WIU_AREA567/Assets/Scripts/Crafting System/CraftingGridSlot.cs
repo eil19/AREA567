@@ -2,20 +2,20 @@
 
 public class CraftingGridSlot
 {
-    public ItemData ItemData;
+    public ItemData itemData;
     public int quantity;
 
-    public bool IsEmpty => ItemData == null || quantity <= 0;
+    public bool IsEmpty => itemData == null || quantity <= 0;
 
     public void SetItem(ItemData item, int amount)
     {
-        ItemData = item;
+        itemData = item;
         quantity = amount;
     }
 
     public void Clear()
     {
-        ItemData = null;
+        itemData = null;
         quantity = 0;
     }
 }

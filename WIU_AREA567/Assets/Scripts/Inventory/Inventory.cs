@@ -186,4 +186,35 @@ public class Inventory : MonoBehaviour
         ItemInstance item = new ItemInstance(itemData, null, quantity);
         return AddItem(item);
     }
+
+    public bool AddItemAtSlot(int index, ItemData itemData, int quantity)
+    {
+        if (index < 0 || index >= items.Count || itemData == null || quantity <= 0) return false;
+
+        ItemInstance currentItem = items[index];
+        // empty slot
+        if (currentItem == null)
+        {
+            items[index] = new ItemInstance(
+                itemData, null, quantity);
+            OnInventoryChanged?.Invoke();
+            return true;
+        }
+
+        // same stackable item
+        if (currentItem.itemData == itemData && itemData.stackable)
+        {
+            if (currentItem.quantity + quantity > itemData.maxStack)
+            {
+                return false;
+            }
+
+            currentItem.quantity += quantity;
+            OnInventoryChanged?.Invoke();
+            return true;
+        }
+
+        // different item already occupies this slot
+        return false;
+    }
 }

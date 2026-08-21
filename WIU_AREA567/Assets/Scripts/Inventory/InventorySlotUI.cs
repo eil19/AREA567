@@ -20,6 +20,7 @@ public class InventorySlotUI : MonoBehaviour,
     public int SlotIndex => slotIndex;
 
     private ItemInstance currentItem;
+    public ItemInstance CurrentItem => currentItem;
     private ItemTooltipUI tooltip;
     private Inventory inventory;
     private Image dragIcon;
@@ -101,14 +102,31 @@ public class InventorySlotUI : MonoBehaviour,
 
     public void OnDrop(PointerEventData eventData)
     {
-        // swap when dropped into another slot
-        InventorySlotUI draggedSlot = 
-            eventData.pointerDrag?.GetComponent<InventorySlotUI>();
+        // inventory -> inventory
+        InventorySlotUI draggedInventorySlot = eventData.pointerDrag?.GetComponent<InventorySlotUI>();
 
-        if (draggedSlot == null) return;
-        if (draggedSlot.SlotIndex == slotIndex) return;
+        if (draggedInventorySlot != null)
+        {
+            if (draggedInventorySlot.SlotIndex == slotIndex) return;
+            inventory.SwapItems(draggedInventorySlot.SlotIndex, slotIndex);
+            return;
+        }
 
-        inventory.SwapItems(
-            draggedSlot.SlotIndex, slotIndex);
+        // crafting -> inventory
+        CraftingSlotUI draggedCraftingSlot = eventData.pointerDrag?.GetComponent<CraftingSlotUI>();
+
+        if (draggedCraftingSlot != null)
+        {
+            draggedCraftingSlot.ReturnOneToInventory(slotIndex);
+            return;
+        }
+
+        // crafting output -> inventory
+        CraftingOutputUI draggedOutput = eventData.pointerDrag?.GetComponent<CraftingOutputUI>();
+        if (draggedOutput != null)
+        {
+            draggedOutput.CraftingSystem.CraftCurrentRecipeToSlot(slotIndex);
+            return;
+        }
     }
 }

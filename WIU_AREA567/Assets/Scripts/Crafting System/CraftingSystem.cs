@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -59,7 +60,7 @@ public class CraftingSystem : MonoBehaviour
         if (itemData == null || quantity <= 0) return false;
 
         CraftingGridSlot slot = craftingGrid[gridIndex];
-        if (!slot.IsEmpty && slot.ItemData != itemData) return false;
+        if (!slot.IsEmpty && slot.itemData != itemData) return false;
 
         if (slot.IsEmpty)
         {
@@ -136,12 +137,11 @@ public class CraftingSystem : MonoBehaviour
                 continue;
             }
             if (actual.IsEmpty) return false;
-            if (actual.ItemData != required.item) return false;
+            if (actual.itemData != required.item) return false;
             if (actual.quantity < required.quantity) return false;
         }
         return true;
     }
-
     public bool CraftCurrentRecipe()
     {
         if (currentRecipe == null || inventory == null) return false;
@@ -159,15 +159,33 @@ public class CraftingSystem : MonoBehaviour
             }
         }
 
-        // add crafted item to inventory
-        ItemInstance craftedItem = new ItemInstance(recipe.outputItem, null, recipe.outputQuantity);
-        bool added = inventory.AddItem(craftedItem);
-        if (!added)
-        {
-            Debug.Log("Crafted item could not be added as inventory is full");
-            return false;
-        }
+        Debug.Log("Crafted: " + recipe.outputItem.itemName);
+        OnCraftingSucceeded?.Invoke();
+        GridChanged();
+        return true;
+    }
 
+    public bool CraftCurrentRecipeToSlot(int inventorySlotIndex)
+    {
+        if (currentRecipe == null || inventory == null) return false;
+
+        CraftingRecipe recipe = currentRecipe;
+
+        // try to place output
+        bool added = inventory.AddItemAtSlot(inventorySlotIndex, recipe.outputItem, recipe.outputQuantity);
+        if (!added) { return false; }
+
+        // consume ingredients
+        for (int i = 0; i < GRID_SIZE; i++)
+        {
+            CraftingIngredient required = recipe.recipeGrid[i];
+            if (required == null || required.item == null || required.quantity <= 0) continue;
+            craftingGrid[i].quantity -= required.quantity;
+            if (craftingGrid[i].quantity <= 0)
+            {
+                craftingGrid[i].Clear();
+            }
+        }
         Debug.Log("Crafted: " + recipe.outputItem.itemName);
         OnCraftingSucceeded?.Invoke();
         GridChanged();
