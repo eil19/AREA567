@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Cinemachine;
 
-public class PodControlPanel : MonoBehaviour, IInteractable
+public class PodControlPanel : MonoBehaviour
 {
     Inventory inventory;
 
