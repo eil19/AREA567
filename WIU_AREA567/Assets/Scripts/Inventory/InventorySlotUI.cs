@@ -49,8 +49,7 @@ public class InventorySlotUI : MonoBehaviour,
             itemImage.enabled = true;
             itemImage.sprite = item.itemData.itemImage;
 
-            Debug.Log("Showing icon: " +
-                item.itemData.itemImage);
+            Debug.Log("Showing icon: " + item.itemData.itemImage);
 
             currentItem = item;
 

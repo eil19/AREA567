@@ -11,8 +11,29 @@ public class InventoryUI : MonoBehaviour
 
     private void Start()
     {
+        if (inventory == null)
+        {
+            GameObject inventoryObject = GameObject.Find("Inventory");
+            if (inventoryObject != null)
+            {
+                inventory = inventoryObject.GetComponent<Inventory>();
+            }
+        }
+
+        if (inventory != null)
+        {
+            inventory.OnInventoryChanged.AddListener(RefreshInventory);
+        }
         InitialiseSlots();
         RefreshInventory();
+    }
+
+    private void OnDestroy()
+    {
+        if (inventory != null)
+        {
+            inventory.OnInventoryChanged.RemoveListener(RefreshInventory);
+        }
     }
 
     private void InitialiseSlots()

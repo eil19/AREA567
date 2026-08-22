@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CraftingSystem : MonoBehaviour
+    //, IInteractable
 {
     public const int GRID_SIZE = 9;
 

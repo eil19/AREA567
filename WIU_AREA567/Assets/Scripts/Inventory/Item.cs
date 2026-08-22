@@ -19,6 +19,16 @@ public class Item : MonoBehaviour
         }
     }
 
+    public void Initialise(ItemData itemData, int quantity)
+    {
+        item = new ItemInstance(itemData, null, quantity);
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null && itemData != null)
+        {
+            spriteRenderer.sprite = itemData.itemImage;
+        }
+    }
+
     public void Pickup(GameObject picker)
     {
         Debug.Log("Item.Pickup()  called for " + gameObject.name);
