@@ -874,6 +874,7 @@ GameObject:
   - component: {fileID: 1841759382}
   - component: {fileID: 1841759380}
   - component: {fileID: 1841759384}
+  - component: {fileID: 1841759385}
   m_Layer: 8
   m_Name: AlienTest
   m_TagString: Alien
@@ -1010,6 +1011,33 @@ MonoBehaviour:
   OnStunEnd:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1841759385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841759375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbeb5240257e8514b968cbca4974964d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damageable
+  maxHealth: 100
+  currentHealth: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  hurtClip: {fileID: 0}
+  deathClip: {fileID: 0}
+  hitVFXPrefab: {fileID: 0}
+  deathVFXPrefab: {fileID: 0}
 --- !u!1001 &2541867343639648041
 PrefabInstance:
   m_ObjectHideFlags: 0
