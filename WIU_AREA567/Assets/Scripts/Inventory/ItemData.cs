@@ -9,4 +9,7 @@ public class ItemData : ScriptableObject
     public Sprite itemImage;
     public bool stackable;
     public int maxStack = 99;
+
+    [Header("World")]
+    public GameObject worldPickupPrefab;
 }

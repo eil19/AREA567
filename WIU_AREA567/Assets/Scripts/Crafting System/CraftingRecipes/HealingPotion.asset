@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874947424e101d14385f519458fbabb5, type: 3}
+  m_Name: HealingPotion
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
+  recipeName: Healing Potion
+  recipeDescription: Create a healing potion to heal yourself
+  recipeGrid:
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 11400000, guid: ae484dd9ee72c2248bcefd498833c75d, type: 2}
+    quantity: 1
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 11400000, guid: ae484dd9ee72c2248bcefd498833c75d, type: 2}
+    quantity: 1
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  outputItem: {fileID: 11400000, guid: 03d0596bdd4d68f46a29a6a9a5fc0095, type: 2}
+  outputQuantity: 1
