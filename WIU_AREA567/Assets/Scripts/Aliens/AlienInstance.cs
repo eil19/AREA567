@@ -10,11 +10,13 @@ public class AlienInstance : MonoBehaviour
     [HideInInspector] public bool tameFailTrigger = false;
     [HideInInspector] public bool isHit = false;
     [HideInInspector] private bool isTased = false;
+    [HideInInspector] public bool splashReactTrigger = false;
     [HideInInspector] private bool _guessed = false;
     public bool Guessed { get { return _guessed; } }        
     [HideInInspector] public float stateTimerStart = 0;    
 
     [HideInInspector] public float lastAttackTime = -999f;
+
     private Animator animator;
 
     private Vector3 offset = new Vector3(0, -2, 0);
@@ -104,5 +106,10 @@ public class AlienInstance : MonoBehaviour
     public void SetTased()
     {
        isTased = true;
+    }
+
+    public void TriggerSplashReaction()
+    {
+        splashReactTrigger = true;
     }
 }

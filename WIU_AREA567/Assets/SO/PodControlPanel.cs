@@ -1,7 +1,9 @@
+using System.Collections;
 using TMPro;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Cinemachine;
 
 public class PodControlPanel : MonoBehaviour, IInteractable
 {
@@ -21,10 +23,17 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     [SerializeField] private GameObject promptRoot;
     [SerializeField] private TMP_Text potionCountText;
 
+    [Header("Reaction Sequence")]
+    [SerializeField] private CinemachineCamera closeUpCamera;
+    [SerializeField] private string reactionTrigger = "SplashReact";
+    [SerializeField] private float reactionFallbackDuration = 2f;
+
     private PlayerInteractor playerInteractor;
     private bool isFocused;
+    private bool isSequencePlaying;
+    private GameObject currentInteractor;
 
-     private void Start()
+    private void Start()
     {
         var playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
@@ -103,7 +112,8 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     public void Interact(GameObject interactor)
     {
         if (linkedAlien == null) return;
- 
+        if (isSequencePlaying) return; // ignore E spam mid-sequence
+
         AlienInteractionTarget.SetCurrent(linkedAlien);
  
         if (linkedAlien.identified)
@@ -111,15 +121,59 @@ public class PodControlPanel : MonoBehaviour, IInteractable
             Debug.Log("[TubeControlPanel] This alien is already identified.");
             return;
         }
- 
-        // TEMP direct call
+
+        if (GetSplashPotionCount() <= 0)
+        {
+            Debug.Log("[PodControlPanel] No splash potions available.");
+            return;
+        }
+
+        currentInteractor = interactor;
+        StartSplashSequence();
+    }
+
+    private void StartSplashSequence()
+    {
+        isSequencePlaying = true;
+
+        // 1) consume the potion
+        //Inventory.Instance.RemoveOneOfItem(splashPotionData);
+        UpdatePrompt();
+
+        // 2) swap to the close-up camera
+        if (TESTCameraSwitch.Instance != null)
+        {
+            TESTCameraSwitch.Instance.SwitchToCloseUp(closeUpCamera);
+        }
+
+        // 4) apply the effect / mark identified
         if (testSplashPotionEffect != null)
         {
-            testSplashPotionEffect.Use(interactor);
+            testSplashPotionEffect.Use(currentInteractor);
         }
         else
         {
-            Debug.LogWarning("[TubeControlPanel] No testSplashPotionEffect assigned — nothing will happen until Inventory is wired up.");
+            linkedAlien.MarkIdentified();
         }
+
+        linkedAlien.TriggerSplashReaction();
+
+        // 5) show the guess UI, then switch the camera back once it closes
+        if (AlienGuessUI.Instance != null)
+        {
+            AlienGuessUI.Instance.OnPanelClosed += HandleGuessPanelClosed;
+        }
+        else
+        {
+            TESTCameraSwitch.Instance?.SwitchToTopDown();
+            isSequencePlaying = false;
+        }
+    }
+
+    private void HandleGuessPanelClosed()
+    {
+        AlienGuessUI.Instance.OnPanelClosed -= HandleGuessPanelClosed;
+        TESTCameraSwitch.Instance?.SwitchToTopDown();
+        isSequencePlaying = false;
     }
 }

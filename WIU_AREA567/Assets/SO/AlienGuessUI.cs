@@ -22,6 +22,8 @@ public class AlienGuessUI : MonoBehaviour
     private AlienInstance currentAlien;
     private Coroutine closeRoutine;
 
+    public event System.Action OnPanelClosed;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -88,6 +90,8 @@ public class AlienGuessUI : MonoBehaviour
         SetButtonsInteractable(true);
         currentAlien = null;
         closeRoutine = null;
+
+        OnPanelClosed?.Invoke();
     }
 
     private void SetButtonsInteractable(bool value)
