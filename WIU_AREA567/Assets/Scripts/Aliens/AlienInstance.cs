@@ -4,7 +4,6 @@ using UnityEngine.InputSystem.XR;
 public class AlienInstance : MonoBehaviour
 {
     public AlienType alienType;
-
     [HideInInspector] public bool identified = false;
     [HideInInspector] public bool tameSuccessTrigger = false;
     [HideInInspector] public bool tameFailTrigger = false;
@@ -83,14 +82,22 @@ public class AlienInstance : MonoBehaviour
 
     public bool SubmitGuess(AlienCategory guess)
     {
-        if (_guessed) return false; // already guessed, don't allow retries
-        _guessed = true;
+        // If already correctly identified, block
+        if (identified) return false;
 
         bool correct = alienType != null && guess == alienType.category;
         if (correct)
         {
+            identified = true; // Mark as identified ONLY when guessed correctly
+            _guessed = true;
             SpawnEssence();
+            Debug.Log("[AlienInstance] Correct guess! Alien identified.");
         }
+        else
+        {
+            Debug.Log("[AlienInstance] Incorrect guess! Try again with another potion.");
+        }
+
         return correct;
     }
 

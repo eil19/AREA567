@@ -14,6 +14,7 @@ public class AlienGuessUI : MonoBehaviour
     public Button tankerButton;
     public TMP_Text resultText;
 
+
     [Header("Result display")]
     [SerializeField] private float resultDisplayDuration = 1.5f;
     [SerializeField] private Color correctColor = Color.green;

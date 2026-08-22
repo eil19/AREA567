@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Cinemachine;
 
-public class PodControlPanel : MonoBehaviour
+public class PodControlPanel : MonoBehaviour, IInteractable
 {
     Inventory inventory;
 
@@ -22,21 +22,27 @@ public class PodControlPanel : MonoBehaviour
     [SerializeField] private ItemData splashPotionData;
     [SerializeField] private GameObject promptRoot;
     [SerializeField] private TMP_Text potionCountText;
+    [SerializeField] private TMP_Text errorText;
 
     [Header("Reaction Sequence")]
     [SerializeField] private CinemachineCamera closeUpCamera;
     [SerializeField] private string reactionTrigger = "SplashReact";
     [SerializeField] private float reactionFallbackDuration = 2f;
 
+    [Header("Camera Delay Settings")]
+    [SerializeField] private float cameraBlendDelay = 1.5f; 
+
     private PlayerInteractor playerInteractor;
     private bool isFocused;
     private bool isSequencePlaying;
     private GameObject currentInteractor;
+    private Coroutine hideErrorCoroutine;
+
 
     [ContextMenu("TEST: Add Splash Potion to Inventory")]
     private void TestAddSplashPotion()
     {
-        if (Inventory.Instance == null)
+        if (inventory == null)
         {
             Debug.LogWarning("[PodControlPanel] No Inventory.Instance in scene.");
             return;
@@ -48,7 +54,7 @@ public class PodControlPanel : MonoBehaviour
         }
 
         var testItem = new ItemInstance(splashPotionData, testSplashPotionEffect, 1);
-        Inventory.Instance.AddItem(testItem);
+        inventory.AddItem(testItem);
         Debug.Log($"[PodControlPanel] Added test splash potion. Count now: {GetSplashPotionCount()}");
     }
 
@@ -67,6 +73,12 @@ public class PodControlPanel : MonoBehaviour
         }
  
         if (promptRoot != null) promptRoot.SetActive(false);
+
+
+        if (inventory == null)
+        {
+            inventory = FindFirstObjectByType<Inventory>();
+        }
     }
  
     private void OnDestroy()
@@ -80,15 +92,15 @@ public class PodControlPanel : MonoBehaviour
  
     private void Update()
     {
-        // Keep the count live in case the player picks up more potions while standing here
-        if (isFocused) UpdatePrompt();
+        // Block UpdatePrompt from running if sequence is playing
+        if (isFocused && !isSequencePlaying) UpdatePrompt();
     }
  
     private void HandleFocused(GameObject focusedObject)
     {
         if (focusedObject != gameObject) return;
         isFocused = true;
-        UpdatePrompt();
+        if (!isSequencePlaying) UpdatePrompt();
     }
  
     private void HandleLostFocus()
@@ -96,6 +108,7 @@ public class PodControlPanel : MonoBehaviour
         if (!isFocused) return;
         isFocused = false;
         if (promptRoot != null) promptRoot.SetActive(false);
+        ClearErrorText(); // Hide error text if the player walks away
     }
  
     private void UpdatePrompt()
@@ -115,72 +128,113 @@ public class PodControlPanel : MonoBehaviour
  
     private int GetSplashPotionCount()
     {
-        if (Inventory.Instance == null || splashPotionData == null) return 0;
- 
-        int total = 0;
-        foreach (var item in Inventory.Instance.Items)
-        {
-            if (item != null && item.itemData == splashPotionData)
-            {
-                total += item.quantity;
-            }
-        }
-        return total;
+        if(inventory == null || splashPotionData == null) return 0;
+        return inventory.GetItemQuantity(splashPotionData);
     }
- 
+
+    public bool CanInteract()
+    {
+        // Prevent interaction if no alien linked, alien is already identified, sequence is playing
+        if (linkedAlien == null) return false;
+        if (linkedAlien.identified) return false;
+        if (isSequencePlaying) return false;
+
+        return true;
+    }
+
     public void Interact(GameObject interactor)
     {
-        if (linkedAlien == null) return;
-        if (isSequencePlaying) return; // ignore E spam mid-sequence
+        if (!CanInteract()) return;
 
         AlienInteractionTarget.SetCurrent(linkedAlien);
- 
-        if (linkedAlien.identified)
-        {
-            Debug.Log("[TubeControlPanel] This alien is already identified.");
-            return;
-        }
-
-        if (GetSplashPotionCount() <= 0)
-        {
-            Debug.Log("[PodControlPanel] No splash potions available.");
-            return;
-        }
 
         currentInteractor = interactor;
+
+        int potionCount = GetSplashPotionCount();
+        if (potionCount <= 0)
+        {
+            ShowError("No potions in inventory! You need a splash potion to start.", 3f);
+            return;
+        }
+
+        ClearErrorText();
         StartSplashSequence();
     }
 
+    private void ShowError(string message, float duration)
+    {
+        if (errorText == null) return;
+
+        // Stop previous timer if one is already running
+        if (hideErrorCoroutine != null)
+        {
+            StopCoroutine(hideErrorCoroutine);
+        }
+
+        errorText.text = message;
+        errorText.gameObject.SetActive(true);
+
+        // Auto-hide error after duration
+        hideErrorCoroutine = StartCoroutine(HideErrorRoutine(duration));
+    }
+
+    private IEnumerator HideErrorRoutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ClearErrorText();
+    }
+
+    private void ClearErrorText()
+    {
+        if (hideErrorCoroutine != null)
+        {
+            StopCoroutine(hideErrorCoroutine);
+            hideErrorCoroutine = null;
+        }
+
+        if (errorText != null)
+        {
+            errorText.text = "";
+            errorText.gameObject.SetActive(false);
+        }
+    }
     private void StartSplashSequence()
     {
         isSequencePlaying = true;
 
-        // 1) consume the potion
-        //Inventory.Instance.RemoveOneOfItem(splashPotionData);
-        UpdatePrompt();
+        bool consumed = inventory.TryConsumeItem(splashPotionData, 1);
+        if (!consumed)
+        {
+            isSequencePlaying = false;
+            return;
+        }
 
-        // 2) swap to the close-up camera
+        if (promptRoot != null) promptRoot.SetActive(false); // hide "Press E" while sequence runs
+        StartCoroutine(SplashSequenceRoutine());
+    }
+
+    private IEnumerator SplashSequenceRoutine()
+    {
+        //Switch Camera
         if (TESTCameraSwitch.Instance != null)
         {
             TESTCameraSwitch.Instance.SwitchToCloseUp(closeUpCamera);
         }
 
-        // 4) apply the effect / mark identified
-        if (testSplashPotionEffect != null)
-        {
-            testSplashPotionEffect.Use(currentInteractor);
-        }
-        else
-        {
-            linkedAlien.MarkIdentified();
-        }
+        //Wait for camera to fully transition into position
+        yield return new WaitForSeconds(cameraBlendDelay);
 
+        //Trigger reaction animation after camera is locked on
         linkedAlien.TriggerSplashReaction();
 
-        // 5) show the guess UI, then switch the camera back once it closes
+        //Wait for reaction animation duration
+        yield return new WaitForSeconds(reactionFallbackDuration);
+
+        //Open Guess UI
         if (AlienGuessUI.Instance != null)
         {
             AlienGuessUI.Instance.OnPanelClosed += HandleGuessPanelClosed;
+            AlienGuessUI.Instance.Show(linkedAlien);
         }
         else
         {
@@ -191,8 +245,19 @@ public class PodControlPanel : MonoBehaviour
 
     private void HandleGuessPanelClosed()
     {
+        errorText.gameObject.SetActive(false);
+        errorText.text = "";
         AlienGuessUI.Instance.OnPanelClosed -= HandleGuessPanelClosed;
         TESTCameraSwitch.Instance?.SwitchToTopDown();
         isSequencePlaying = false;
+
+        // Reset sequence flag
+        isSequencePlaying = false;
+
+        // Force focus state to false so the player MUST step away and return
+        isFocused = false;
+
+        // Hide the prompt UI immediately
+        if (promptRoot != null) promptRoot.SetActive(false);
     }
 }
