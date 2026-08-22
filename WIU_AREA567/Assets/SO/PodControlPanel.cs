@@ -33,6 +33,25 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     private bool isSequencePlaying;
     private GameObject currentInteractor;
 
+    [ContextMenu("TEST: Add Splash Potion to Inventory")]
+    private void TestAddSplashPotion()
+    {
+        if (Inventory.Instance == null)
+        {
+            Debug.LogWarning("[PodControlPanel] No Inventory.Instance in scene.");
+            return;
+        }
+        if (splashPotionData == null)
+        {
+            Debug.LogWarning("[PodControlPanel] splashPotionData not assigned.");
+            return;
+        }
+
+        var testItem = new ItemInstance(splashPotionData, testSplashPotionEffect, 1);
+        Inventory.Instance.AddItem(testItem);
+        Debug.Log($"[PodControlPanel] Added test splash potion. Count now: {GetSplashPotionCount()}");
+    }
+
     private void Start()
     {
         var playerObj = GameObject.FindGameObjectWithTag("Player");

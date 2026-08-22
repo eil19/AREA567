@@ -23,6 +23,9 @@ public class TESTCameraSwitch : MonoBehaviour
             return;
         }
         Instance = this;
+
+        // Establish starting state: top-down active, no close-up cam active yet.
+        if (topDownCam != null) topDownCam.Priority = topDownPriority;
     }
 
     public void SwitchToCloseUp(CinemachineCamera closeUpCam)
