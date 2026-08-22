@@ -113,7 +113,29 @@ public class PlayerController : MonoBehaviour
             isStealthed = !isStealthed;
             animator.SetBool("IsStealthed", isStealthed);
         }
+
+
+
+
+        // Attack / Taser - trigger animation. IsBusy blocks the movement
+        // Any State transitions from interrupting mid-swing if the player
+        // is still holding a movement key. AttackEventHandler.AttackEnd()
+        // clears IsBusy once the animation's final keyframe is reached.
+        if (InputSystem.actions["Attack"].WasPressedThisFrame())
+        {
+            animator.SetBool("IsBusy", true);
+            animator.SetTrigger("Attack");
+        }
+
+        if (InputSystem.actions["Taser"].WasPressedThisFrame())
+        {
+            animator.SetBool("IsBusy", true);
+            animator.SetTrigger("Taser");
+        }
+
     }
+
+
 
     void FixedUpdate()
     {
