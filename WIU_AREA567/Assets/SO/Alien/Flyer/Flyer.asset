@@ -18,10 +18,11 @@ MonoBehaviour:
   damage: 5
   moveSpeed: 2
   reactionDescription: 
-  essencePrefab: {fileID: 8381668134395269385, guid: 445ee3f8083837049a1c8c9f5d64c5c7, type: 3}
   tameDifficulty: 0.5
   tamedPrefab: {fileID: 0}
   detectRadius: 5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
+  essencePrefab: {fileID: 3856763265357270299, guid: fb97581180db08548a929350b8eaf3bd, type: 3}
+  essenceItemData: {fileID: 11400000, guid: c1fc54314dc31364da075d50408ce68b, type: 2}

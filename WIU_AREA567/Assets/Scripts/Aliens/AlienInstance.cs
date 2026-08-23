@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
@@ -7,6 +8,7 @@ public class AlienInstance : MonoBehaviour
     [HideInInspector] public bool identified = false;
     [HideInInspector] public bool tameSuccessTrigger = false;
     [HideInInspector] public bool tameFailTrigger = false;
+    [HideInInspector] public bool isTamed = false;
     [HideInInspector] public bool isHit = false;
     [HideInInspector] private bool isTased = false;
     [HideInInspector] public bool splashReactTrigger = false;
@@ -74,9 +76,13 @@ public class AlienInstance : MonoBehaviour
 
     public void SpawnEssence()
     {
-        if (alienType != null && alienType.essencePrefab != null)
+        if (alienType == null || alienType.essencePrefab == null) return;
+
+        GameObject drop = Instantiate(alienType.essencePrefab, transform.position + offset, Quaternion.identity);
+
+        if (drop.TryGetComponent<Item>(out var item))
         {
-            Instantiate(alienType.essencePrefab, transform.position, Quaternion.identity);
+            item.Initialise(alienType.essenceItemData, 1);
         }
     }
 
@@ -101,13 +107,19 @@ public class AlienInstance : MonoBehaviour
         return correct;
     }
 
-    public void AttemptTame()
+    public bool AttemptTame()
     {
         bool success = Random.value <= (1f - alienType.tameDifficulty);
         if (success)
+        {
             tameSuccessTrigger = true;
+            isTamed = true; // Mark tamed on success
+        }
         else
+        {
             tameFailTrigger = true;
+        }
+        return success;
     }
 
     public void SetTased()

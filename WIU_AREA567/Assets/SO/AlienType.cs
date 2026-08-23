@@ -22,7 +22,6 @@ public class AlienType : ScriptableObject
 
     [Header("Experimentation")]
     public string reactionDescription; // e.g. "Glows green, reaches toward wounded specimen"
-    public GameObject essencePrefab;
 
     [Header("Taming")]
     [Range(0f, 1f)] public float tameDifficulty; 
@@ -31,4 +30,8 @@ public class AlienType : ScriptableObject
     [Header("Detection")]
     public float detectRadius = 4f;
     public LayerMask enemyLayer;
+
+    [Header("Essence Drop")]
+    public GameObject essencePrefab;
+    public ItemData essenceItemData;
 }
