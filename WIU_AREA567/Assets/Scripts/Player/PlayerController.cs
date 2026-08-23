@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -21,10 +22,11 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     private Rigidbody2D body;
+    private SpriteRenderer spriteRenderer;
 
-    private Vector2 moveInput; // always a cardinal unit vector or zero - see Update()
+    private Vector2 moveInput;
     private Vector2 previousRawInput = Vector2.zero;
-    private bool horizontalWasLastPressed = false; // tracks which axis to use when both are held
+    private bool horizontalWasLastPressed = false;
     private int directionIndex = 0; // 0 = Down, 1 = Up, 2 = Side - matches Animator's "Direction" parameter
 
     // Defaults facing down - typical top-down convention (character faces camera at rest).
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Top-down: no gravity should affect the player
         body.gravityScale = 0f;
@@ -46,15 +49,12 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 rawInput = InputSystem.actions["Move"].ReadValue<Vector2>();
 
-        // Detect which axis was JUST pressed this frame (went from ~0 to nonzero) -
-        // whichever one that is becomes the priority axis when both are held together.
         bool xPressedThisFrame = Mathf.Abs(rawInput.x) > 0.01f && Mathf.Abs(previousRawInput.x) <= 0.01f;
         bool yPressedThisFrame = Mathf.Abs(rawInput.y) > 0.01f && Mathf.Abs(previousRawInput.y) <= 0.01f;
 
         if (xPressedThisFrame) horizontalWasLastPressed = true;
         if (yPressedThisFrame) horizontalWasLastPressed = false;
 
-        // Snap to 4 cardinal directions - no diagonal movement allowed.
         if (rawInput.sqrMagnitude < 0.01f)
         {
             moveInput = Vector2.zero;
@@ -71,7 +71,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // Both axes held - use whichever key was pressed most recently
             moveInput = horizontalWasLastPressed
                 ? new Vector2(Mathf.Sign(rawInput.x), 0f)
                 : new Vector2(0f, Mathf.Sign(rawInput.y));
@@ -84,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
         if (isMoving)
         {
-            FacingDirection = moveInput; // already a cardinal unit vector, no normalization needed
+            FacingDirection = moveInput;
 
             animator.SetFloat("MoveX", FacingDirection.x);
             animator.SetFloat("MoveY", FacingDirection.y);
@@ -96,7 +95,11 @@ public class PlayerController : MonoBehaviour
             else
             {
                 directionIndex = 2; // Side
-                transform.localScale = new Vector3(FacingDirection.x < 0 ? -1f : 1f, 1f, 1f);
+                // Flip the sprite visually only - Transform itself never flips,
+                // so AttackPoint's child-local-position math stays correct in
+                // every direction (this used to flip transform.localScale.x,
+                // which broke AttackPoint's world position when facing left).
+                spriteRenderer.flipX = FacingDirection.x < 0;
             }
 
             animator.SetInteger("Direction", directionIndex);
@@ -114,13 +117,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsStealthed", isStealthed);
         }
 
-
-
-
-        // Attack / Taser - trigger animation. IsBusy blocks the movement
-        // Any State transitions from interrupting mid-swing if the player
-        // is still holding a movement key. AttackEventHandler.AttackEnd()
-        // clears IsBusy once the animation's final keyframe is reached.
+        // Attack / Taser
         if (InputSystem.actions["Attack"].WasPressedThisFrame())
         {
             animator.SetBool("IsBusy", true);
@@ -132,10 +129,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsBusy", true);
             animator.SetTrigger("Taser");
         }
-
     }
-
-
 
     void FixedUpdate()
     {
