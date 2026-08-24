@@ -236,9 +236,9 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         }
 
         //Switch Camera
-        if (TESTCameraSwitch.Instance != null)
+        if (CameraSwitch.Instance != null)
         {
-            TESTCameraSwitch.Instance.SwitchToCloseUp(closeUpCamera);
+            CameraSwitch.Instance.SwitchToCloseUp(closeUpCamera);
         }
 
         //Wait for camera to fully transition into position
@@ -251,7 +251,7 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         //Hold on the result before switching back
         yield return new WaitForSeconds(tameResultDisplayDuration);
 
-        TESTCameraSwitch.Instance?.SwitchToTopDown();
+        CameraSwitch.Instance?.SwitchToTopDown();
 
         isSequencePlaying = false;
 
@@ -354,9 +354,9 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     private IEnumerator SplashSequenceRoutine()
     {
         //Switch Camera
-        if (TESTCameraSwitch.Instance != null)
+        if (CameraSwitch.Instance != null)
         {
-            TESTCameraSwitch.Instance.SwitchToCloseUp(closeUpCamera);
+            CameraSwitch.Instance.SwitchToCloseUp(closeUpCamera);
         }
 
         //Wait for camera to fully transition into position
@@ -376,7 +376,7 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         }
         else
         {
-            TESTCameraSwitch.Instance?.SwitchToTopDown();
+            CameraSwitch.Instance?.SwitchToTopDown();
             isSequencePlaying = false;
         }
     }   
@@ -384,7 +384,7 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     private void HandleGuessPanelClosed()
     {
         AlienGuessUI.Instance.OnPanelClosed -= HandleGuessPanelClosed;
-        TESTCameraSwitch.Instance?.SwitchToTopDown();
+        CameraSwitch.Instance?.SwitchToTopDown();
         isSequencePlaying = false;
 
         // Force focus to reset so player MUST step away and re-enter trigger

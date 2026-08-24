@@ -1,9 +1,9 @@
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class TESTCameraSwitch : MonoBehaviour
+public class CameraSwitch : MonoBehaviour
 {
-    public static TESTCameraSwitch Instance { get; private set; }
+    public static CameraSwitch Instance { get; private set; }
 
     [Header("Default gameplay camera")]
     [SerializeField] private CinemachineCamera topDownCam;
