@@ -6,6 +6,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
+    public enum WeaponType
+    {
+        Melee,
+        Ranged,
+        Taser
+    }
+
     [Header("Movement")]
     public float moveSpeed = 4f;
 
@@ -20,9 +27,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float attackPointDistance = 0.6f;
     public Transform AttackPoint => attackPoint;
 
+    [Header("Ranged Spawn Point")]
+    [Tooltip("Child transform used only for ranged projectiles. Its position is calculated separately from Attack Point.")]
+    [SerializeField] private Transform rangedSpawnPoint;
+    [SerializeField] private float rangedSpawnDistance = 0.6f;
+    [Tooltip("Fine-tune the projectile muzzle position without affecting melee or taser range.")]
+    [SerializeField] private Vector2 rangedSpawnOffset = new Vector2(0f, 0.15f);
+    public Transform RangedSpawnPoint => rangedSpawnPoint;
+
+    [Header("Weapons")]
+    [Tooltip("1 = melee, 2 = ranged, 3 = taser.")]
+    [SerializeField] private WeaponType equippedWeapon = WeaponType.Melee;
+    public WeaponType EquippedWeapon => equippedWeapon;
+
     private Animator animator;
     private Rigidbody2D body;
     private SpriteRenderer spriteRenderer;
+    private AttackEventHandler attackEventHandler;
 
     private Vector2 moveInput;
     private Vector2 previousRawInput = Vector2.zero;
@@ -40,6 +61,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        attackEventHandler = GetComponent<AttackEventHandler>();
 
         // Top-down: no gravity should affect the player
         body.gravityScale = 0f;
@@ -110,6 +132,11 @@ public class PlayerController : MonoBehaviour
             attackPoint.localPosition = FacingDirection * attackPointDistance;
         }
 
+        if (rangedSpawnPoint != null)
+        {
+            rangedSpawnPoint.localPosition = FacingDirection * rangedSpawnDistance + rangedSpawnOffset;
+        }
+
         // Stealth - toggle on press
         if (InputSystem.actions["Stealth"].WasPressedThisFrame())
         {
@@ -117,18 +144,43 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsStealthed", isStealthed);
         }
 
-        // Attack / Taser
+        HandleWeaponSelection();
+
+        // Left mouse click (the existing Attack input action) uses the selected weapon.
         if (InputSystem.actions["Attack"].WasPressedThisFrame())
         {
-            animator.SetBool("IsBusy", true);
-            animator.SetTrigger("Attack");
-        }
+            switch (equippedWeapon)
+            {
+                case WeaponType.Melee:
+                    animator.SetBool("IsBusy", true);
+                    animator.SetTrigger("Attack");
+                    break;
 
-        if (InputSystem.actions["Taser"].WasPressedThisFrame())
-        {
-            animator.SetBool("IsBusy", true);
-            animator.SetTrigger("Taser");
+                case WeaponType.Ranged:
+                    attackEventHandler?.FireRangedAttack();
+                    break;
+
+                case WeaponType.Taser:
+                    animator.SetBool("IsBusy", true);
+                    animator.SetTrigger("Taser");
+                    break;
+            }
         }
+    }
+
+    private void HandleWeaponSelection()
+    {
+        Keyboard keyboard = Keyboard.current;
+        if (keyboard == null) return;
+
+        if (keyboard.digit1Key.wasPressedThisFrame) SetEquippedWeapon(WeaponType.Melee);
+        if (keyboard.digit2Key.wasPressedThisFrame) SetEquippedWeapon(WeaponType.Ranged);
+        if (keyboard.digit3Key.wasPressedThisFrame) SetEquippedWeapon(WeaponType.Taser);
+    }
+
+    public void SetEquippedWeapon(WeaponType weapon)
+    {
+        equippedWeapon = weapon;
     }
 
     void FixedUpdate()
