@@ -16,7 +16,7 @@ public class ItemTooltipUI : MonoBehaviour
     {
         if (itemData == null) return;
 
-        itemName.text = itemData.name;
+        itemName.text = itemData.itemName;
         itemDescription.text = itemData.description;
         gameObject.SetActive(true);
     }

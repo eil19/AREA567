@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WaypointMover : MonoBehaviour
 {
@@ -9,13 +9,26 @@ public class WaypointMover : MonoBehaviour
     public bool loopWaypoints = true;
     public Transform[] waypoints;
 
+    public UnityEvent<Vector2> OnMoveDirectionChanged;
+    public UnityEvent OnStartedMoving;
+    public UnityEvent OnStoppedMoving;
+
     private int currentWaypointIndex;
     private bool isWaiting;
+    private bool isPaused;
+
+    private Vector2 lastDirection;
+
+    private void Start()
+    {
+        OnStoppedMoving?.Invoke();
+    }
 
     private void Update()
     {
         // pause game 
-        if (isWaiting) return;
+        if (isWaiting || isPaused) return;
+        if (waypoints == null || waypoints.Length == 0) return;
 
         // move to waypoint
         MoveToWaypoint();
@@ -24,8 +37,16 @@ public class WaypointMover : MonoBehaviour
     void MoveToWaypoint()
     {
         Transform target = waypoints[currentWaypointIndex];
+        Vector2 direction = ((Vector2)target.position - (Vector2)transform.position).normalized;
+        if (direction != lastDirection)
+        {
+            lastDirection = direction;
+            OnMoveDirectionChanged?.Invoke(direction);
+        }
+
         transform.position =
             Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        
         if (Vector2.Distance(transform.position, target.position) < 0.1f)
         {
             // wait waypoint
@@ -36,6 +57,7 @@ public class WaypointMover : MonoBehaviour
     IEnumerator WaitAtWaypoint()
     {
         isWaiting = true;
+        OnStoppedMoving?.Invoke();
         yield return new WaitForSeconds(waitTime);
 
         // looping -> increment currentwaypointindex and wrap around if needed
@@ -44,5 +66,26 @@ public class WaypointMover : MonoBehaviour
             : Mathf.Min(currentWaypointIndex + 1, waypoints.Length - 1);
 
         isWaiting = false;
+
+        if (!isPaused)
+        {
+            OnStartedMoving?.Invoke();
+        }
+    }
+
+    public void PauseMovement()
+    {
+        isPaused = true;
+        OnStoppedMoving?.Invoke();
+    }
+
+    public void ResumeMovement()
+    {
+        isPaused = false;
+
+        if (!isWaiting)
+        {
+            OnStartedMoving?.Invoke();
+        }
     }
 }

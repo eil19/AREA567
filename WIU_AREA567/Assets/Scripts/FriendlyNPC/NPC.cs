@@ -1,103 +1,68 @@
-using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
-public class NPC : MonoBehaviour, 
-    IInteractable
+public class NPC : MonoBehaviour, IInteractable
 {
-    public NPCDialogue dialogueData;
-    public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText;
-    public Image portraitImage;
+    [Header("Dialogue")]
+    [SerializeField] private NPCDialogue dialogueData;
+    [SerializeField] private DialogueManager dialogueManager;
 
-    private int dialogueIndex;
-    private bool isTyping, isDialogueActive;
+    [Header("Dialogue Events")]
+    public UnityEvent OnDialogueStarted;
+    public UnityEvent OnDialogueEnded;
+
+    private bool isMyDialogueActive;
+    private UnityEvent dialogueFinishedEvent;
+
+    private void Awake()
+    {
+        dialogueFinishedEvent = new UnityEvent();
+
+        dialogueFinishedEvent.AddListener(HandleDialogueEnded);
+    }
+
     public bool CanInteract()
     {
-        return !isDialogueActive;
+        if (dialogueData == null || dialogueManager == null) return false;
+
+        // If THIS NPC is already speaking,
+        // allow interaction so the player can progress the dialogue.
+        if (isMyDialogueActive) return true;
+
+        // Otherwise, do not allow another NPC to interrupt
+        // an existing dialogue.
+        return !dialogueManager.IsDialogueActive;
     }
 
     public void Interact(GameObject interactor)
     {
-        // if no dialogue data or game is paused and no dialogue is active
-        // add pause controller later
-        if (dialogueData == null || (!isDialogueActive)) return;
+        if (!CanInteract()) return;
 
-        if (isDialogueActive)
+        // Dialogue already belongs to this NPC,
+        // so pressing interact progresses it.
+        if (isMyDialogueActive)
         {
-            // next line
-            NextLine();
+            dialogueManager.NextLine();
         }
         else
         {
-            // start dialogue
             StartDialogue();
         }
     }
 
-    void StartDialogue()
+    private void StartDialogue()
     {
-        isDialogueActive = true;
-        dialogueIndex = 0;
+        isMyDialogueActive = true;
 
-        nameText.SetText(dialogueData.npcName);
-        portraitImage.sprite = dialogueData.npcPortrait;
+        // Notify other components that dialogue started
+        OnDialogueStarted?.Invoke();
 
-        dialoguePanel.SetActive(true);
-        // pause game
-
-        StartCoroutine(TypeLine());
+        dialogueManager.StartDialogue(dialogueData, OnDialogueEnded);
     }
 
-    void NextLine()
+    public void HandleDialogueEnded()
     {
-        if (isTyping)
-        {
-            StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
-            isTyping = false;
-        }
-        else if (++dialogueIndex < dialogueData.dialogueLines.Length)
-        {
-            // if another line, type next line
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            // end dialogue 
-            EndDialogue();
-        }
-    }
-
-    IEnumerator TypeLine()
-    {
-        isTyping = true;
-        dialogueText.SetText("");
-
-        foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(dialogueData.typingSpeed);
-        }
-
-        isTyping = false;
-        
-        if (dialogueData.autoProgressLines.Length > dialogueIndex 
-            && dialogueData.autoProgressLines[dialogueIndex])
-        {
-            yield return new WaitForSeconds(dialogueData.autoProgressDelay);
-            // display next line
-            NextLine();
-        }
-    }
-
-    public void EndDialogue()
-    {
-        StopAllCoroutines();
-        isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
-        // pause to false
+        isMyDialogueActive = false;
+        OnDialogueEnded?.Invoke();
     }
 }
