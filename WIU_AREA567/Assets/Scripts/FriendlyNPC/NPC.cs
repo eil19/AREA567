@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class NPC : MonoBehaviour, IInteractable
+public class NPC : MonoBehaviour, 
+    IInteractable
 {
     [Header("Dialogue")]
     [SerializeField] private NPCDialogue dialogueData;
