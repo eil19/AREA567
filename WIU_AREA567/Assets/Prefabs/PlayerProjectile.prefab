@@ -172,4 +172,6 @@ MonoBehaviour:
   damageAmount: 20
   speed: 8
   lifetime: 2
-  targetTag: Alien
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 256

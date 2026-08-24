@@ -28,6 +28,7 @@ public class ResearchNote : MonoBehaviour, IPickupable
         if (added)
         {
             Debug.Log($"{picker.name} discovered research: {researchData.researchName}");
+            NotificationPopupUI.Instance?.Show("New note unlocked!");
             Destroy(gameObject);
         }
         else
