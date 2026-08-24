@@ -19,16 +19,17 @@ public class InventorySlotUI : MonoBehaviour,
 
     private ItemInstance currentItem;
     public ItemInstance CurrentItem => currentItem;
-    private InventoryDetailsUI detailsUI;
+    private ItemTooltipUI tooltipUI;
     private Inventory inventory;
     private Image dragIcon;
 
-    public void Initialise(int index, Inventory inventoryRef, Image dragIconRef, InventoryDetailsUI detailsUIRef)
+    public void Initialise(int index, Inventory inventoryRef, Image dragIconRef, 
+        ItemTooltipUI tooltipRef)
     {
         slotIndex = index;
         inventory = inventoryRef;
         dragIcon = dragIconRef;
-        detailsUI = detailsUIRef;
+        tooltipUI = tooltipRef;
     }
 
     public void UpdateSlot(ItemInstance item, bool isSelected)
@@ -105,6 +106,15 @@ public class InventorySlotUI : MonoBehaviour,
             draggedOutput.CraftingSystem.CraftCurrentRecipeToSlot(slotIndex);
             return;
         }
+
+        // chest -> inventory
+        ChestSlotUI draggedChestSlot = eventData.pointerDrag?.GetComponent<ChestSlotUI>();
+
+        if (draggedChestSlot != null)
+        {
+            draggedChestSlot.ReturnToInventory(slotIndex);
+            return;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -114,9 +124,9 @@ public class InventorySlotUI : MonoBehaviour,
         // weapon slots reserved for future weapon logic
         if (SlotIndex <= 2) return;
 
-        if (detailsUI != null)
+        if (tooltipUI != null)
         {
-            detailsUI.ShowForSlot(slotIndex);
+            tooltipUI.ShowForSlot(slotIndex);
         }
     }
 }

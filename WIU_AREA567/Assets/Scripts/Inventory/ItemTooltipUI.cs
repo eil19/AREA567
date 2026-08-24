@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryDetailsUI : MonoBehaviour
+public class ItemTooltipUI : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private TMP_Text itemNameText;
@@ -12,15 +12,13 @@ public class InventoryDetailsUI : MonoBehaviour
     [SerializeField] private Button backButton;
 
     private Inventory inventory;
-    private ItemDropper itemDropper;
     private GameObject player;
 
     private int selectedSlotIndex = -1;
 
-    public void Initialise(Inventory inventoryRef, ItemDropper itemDropperRef, GameObject playerRef)
+    public void Initialise(Inventory inventoryRef, GameObject playerRef)
     {
         inventory = inventoryRef;
-        itemDropper = itemDropperRef;
         player = playerRef;
 
         Hide();
@@ -42,7 +40,8 @@ public class InventoryDetailsUI : MonoBehaviour
         descriptionText.text = item.itemData.description;
 
         // materials cannot be used by player
-        bool canUse = item.itemData.itemType != ItemType.Material;
+        bool canUse = item.itemEffect != null
+            && item.itemData.itemType == ItemType.Consumable;
 
         useButton.gameObject.SetActive(canUse);
         gameObject.SetActive(true);
@@ -66,24 +65,6 @@ public class InventoryDetailsUI : MonoBehaviour
         inventory.TryConsumeItem(item.itemData, 1);
 
         Refresh();
-    }
-
-    public void DropOne()
-    {
-        if (selectedSlotIndex < 0) return;
-
-        itemDropper.DropOne(selectedSlotIndex);
-
-        Refresh();
-    }
-
-    public void DropAll()
-    {
-        if (selectedSlotIndex < 0) return;
-
-        itemDropper.DropStack(selectedSlotIndex);
-
-        Hide();
     }
 
     private void Refresh()

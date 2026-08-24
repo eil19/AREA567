@@ -18,20 +18,9 @@ public class Inventory : MonoBehaviour
     public IReadOnlyList<ItemInstance> Items => items;
     public int MaxItems => maxItems;
     public int SelectedSlotIndex => selectedSlotIndex;
-    private static Inventory existingInstance;
-
-
 
     private void Awake()
     {
-        if (existingInstance != null && existingInstance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        existingInstance = this;
-        DontDestroyOnLoad(gameObject);
         InitialiseInventory();
     }
 
@@ -260,7 +249,8 @@ public class Inventory : MonoBehaviour
         return AddItem(item);
     }
 
-    public bool AddItemAtSlot(int index, ItemData itemData, int quantity)
+    public bool AddItemAtSlot(int index, ItemData itemData, 
+        ItemEffect itemEffect, int quantity)
     {
         if (index < 0 || index >= items.Count || itemData == null || quantity <= 0) return false;
         if (!CanPlaceItemInSlot(index, itemData)) return false;
@@ -273,7 +263,7 @@ public class Inventory : MonoBehaviour
             if (itemData.stackable && quantity > itemData.maxStack) return false;
             if (!itemData.stackable && quantity > 1) return false;
 
-            items[index] = new ItemInstance(itemData, null, quantity);
+            items[index] = new ItemInstance(itemData, itemEffect, quantity);
             OnInventoryChanged?.Invoke();
             return true;
         }

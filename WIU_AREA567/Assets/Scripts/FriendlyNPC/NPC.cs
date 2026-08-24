@@ -22,22 +22,12 @@ public class NPC : MonoBehaviour,
         dialogueFinishedEvent.AddListener(HandleDialogueEnded);
     }
 
-    public bool CanInteract()
-    {
-        if (dialogueData == null || dialogueManager == null) return false;
-
-        // If THIS NPC is already speaking,
-        // allow interaction so the player can progress the dialogue.
-        if (isMyDialogueActive) return true;
-
-        // Otherwise, do not allow another NPC to interrupt
-        // an existing dialogue.
-        return !dialogueManager.IsDialogueActive;
-    }
-
     public void Interact(GameObject interactor)
     {
-        if (!CanInteract()) return;
+        if (dialogueData == null || dialogueManager == null)
+        {
+            return;
+        }
 
         // Dialogue already belongs to this NPC,
         // so pressing interact progresses it.

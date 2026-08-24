@@ -182,18 +182,16 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         return inventory.GetItemQuantity(data);
     }
 
-    public bool CanInteract()
-    {
-        // Prevent interaction if no alien linked, alien is already identified, sequence is playing
-        if (linkedAlien == null) return false;
-        if (isSequencePlaying) return false;
-        if (linkedAlien.isTamed) return false;
-        return true; // covers both "not identified yet" and "identified, not tamed"
-    }
-
     public void Interact(GameObject interactor)
     {
-        if (!CanInteract()) return;
+        if (linkedAlien == null)
+            return;
+
+        if (isSequencePlaying)
+            return;
+
+        if (linkedAlien.isTamed)
+            return;
 
         currentInteractor = interactor;
 

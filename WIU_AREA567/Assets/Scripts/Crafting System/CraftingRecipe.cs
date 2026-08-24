@@ -14,5 +14,6 @@ public class CraftingRecipe : ScriptableObject
 
     [Header("Output")]
     public ItemData outputItem;
+    public ItemEffect outputEffect;
     public int outputQuantity = 1;
 }

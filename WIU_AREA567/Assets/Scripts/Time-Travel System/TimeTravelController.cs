@@ -36,8 +36,6 @@ public class TimeTravelController : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-
         if (timeTravelMaterial != null)
         {
             timeTravelMaterial.SetFloat("_TransitionProgress", 0.0f);

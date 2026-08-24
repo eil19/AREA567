@@ -8,19 +8,14 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private InventorySlotUI[] slots;
     [SerializeField] private Image dragIcon;
 
-    [SerializeField] private InventoryDetailsUI detailsUI;
-    [SerializeField] private ItemDropper itemDropper;
+    [SerializeField] private ItemTooltipUI tooltipUI;
     [SerializeField] private GameObject player;
 
     private void Start()
     {
         if (inventory == null)
         {
-            GameObject inventoryObject = GameObject.Find("Inventory");
-            if (inventoryObject != null)
-            {
-                inventory = inventoryObject.GetComponent<Inventory>();
-            }
+            inventory = FindFirstObjectByType<Inventory>();
         }
 
         if (inventory != null)
@@ -43,12 +38,12 @@ public class InventoryUI : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].Initialise(i, inventory, dragIcon, detailsUI);
+            slots[i].Initialise(i, inventory, dragIcon, tooltipUI);
         }
 
-        if (detailsUI != null)
+        if (tooltipUI != null)
         {
-            detailsUI.Initialise(inventory, itemDropper, player);
+            tooltipUI.Initialise(inventory, player);
         }
     }
 
