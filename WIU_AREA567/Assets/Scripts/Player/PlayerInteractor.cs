@@ -62,7 +62,14 @@ public class PlayerInteractor : MonoBehaviour
             if (interactHit != null && interactHit.TryGetComponent(out IInteractable interactable)
                 && interactable.CanInteract())
             {
-                interactable.Interact(gameObject);
+                if (interactable.CanInteract())
+                {
+                    interactable.Interact(gameObject);
+                }
+                else
+                {
+                    Debug.Log("[PlayerInteractor] Object found, but CanInteract() returned false.");
+                }
             }
         }
 

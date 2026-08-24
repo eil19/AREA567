@@ -20,6 +20,8 @@ public class Inventory : MonoBehaviour
     public int SelectedSlotIndex => selectedSlotIndex;
     private static Inventory existingInstance;
 
+
+
     private void Awake()
     {
         if (existingInstance != null && existingInstance != this)

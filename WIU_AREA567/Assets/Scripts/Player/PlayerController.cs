@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -21,8 +22,12 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     private Rigidbody2D body;
+    private SpriteRenderer spriteRenderer;
 
     private Vector2 moveInput;
+    private Vector2 previousRawInput = Vector2.zero;
+    private bool horizontalWasLastPressed = false;
+    private int directionIndex = 0; // 0 = Down, 1 = Up, 2 = Side - matches Animator's "Direction" parameter
 
     // Defaults facing down - typical top-down convention (character faces camera at rest).
     // IMPORTANT: only updates while actively moving (see Update() below) - standing still
@@ -34,6 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Top-down: no gravity should affect the player
         body.gravityScale = 0f;
@@ -41,20 +47,62 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        moveInput = InputSystem.actions["Move"].ReadValue<Vector2>();
+        Vector2 rawInput = InputSystem.actions["Move"].ReadValue<Vector2>();
+
+        bool xPressedThisFrame = Mathf.Abs(rawInput.x) > 0.01f && Mathf.Abs(previousRawInput.x) <= 0.01f;
+        bool yPressedThisFrame = Mathf.Abs(rawInput.y) > 0.01f && Mathf.Abs(previousRawInput.y) <= 0.01f;
+
+        if (xPressedThisFrame) horizontalWasLastPressed = true;
+        if (yPressedThisFrame) horizontalWasLastPressed = false;
+
+        if (rawInput.sqrMagnitude < 0.01f)
+        {
+            moveInput = Vector2.zero;
+        }
+        else if (Mathf.Abs(rawInput.x) <= 0.01f)
+        {
+            moveInput = new Vector2(0f, Mathf.Sign(rawInput.y));
+            horizontalWasLastPressed = false;
+        }
+        else if (Mathf.Abs(rawInput.y) <= 0.01f)
+        {
+            moveInput = new Vector2(Mathf.Sign(rawInput.x), 0f);
+            horizontalWasLastPressed = true;
+        }
+        else
+        {
+            moveInput = horizontalWasLastPressed
+                ? new Vector2(Mathf.Sign(rawInput.x), 0f)
+                : new Vector2(0f, Mathf.Sign(rawInput.y));
+        }
+
+        previousRawInput = rawInput;
 
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
         animator.SetBool("IsMoving", isMoving);
 
         if (isMoving)
         {
-            FacingDirection = moveInput.normalized;
+            FacingDirection = moveInput;
 
-            // Feed these to a Blend Tree for 8-directional animation,
-            // or round to nearest cardinal direction in the Animator
-            // if using a simpler 4-direction sprite set.
             animator.SetFloat("MoveX", FacingDirection.x);
             animator.SetFloat("MoveY", FacingDirection.y);
+
+            if (FacingDirection.y != 0)
+            {
+                directionIndex = FacingDirection.y > 0 ? 1 : 0; // Up : Down
+            }
+            else
+            {
+                directionIndex = 2; // Side
+                // Flip the sprite visually only - Transform itself never flips,
+                // so AttackPoint's child-local-position math stays correct in
+                // every direction (this used to flip transform.localScale.x,
+                // which broke AttackPoint's world position when facing left).
+                spriteRenderer.flipX = FacingDirection.x < 0;
+            }
+
+            animator.SetInteger("Direction", directionIndex);
         }
 
         if (attackPoint != null)
@@ -68,6 +116,19 @@ public class PlayerController : MonoBehaviour
             isStealthed = !isStealthed;
             animator.SetBool("IsStealthed", isStealthed);
         }
+
+        // Attack / Taser
+        if (InputSystem.actions["Attack"].WasPressedThisFrame())
+        {
+            animator.SetBool("IsBusy", true);
+            animator.SetTrigger("Attack");
+        }
+
+        if (InputSystem.actions["Taser"].WasPressedThisFrame())
+        {
+            animator.SetBool("IsBusy", true);
+            animator.SetTrigger("Taser");
+        }
     }
 
     void FixedUpdate()
@@ -75,6 +136,6 @@ public class PlayerController : MonoBehaviour
         float speed = moveSpeed;
         if (isStealthed) speed *= stealthSpeedMultiplier;
 
-        body.linearVelocity = moveInput.normalized * speed;
+        body.linearVelocity = moveInput * speed;
     }
 }

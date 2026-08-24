@@ -14,11 +14,16 @@ public class FlipTowardsTargetAction : StateAction
 
         if (hDiff >= 0.01f)
         {
-            controller.transform.localScale = new Vector3(-2.0f, 2.0f, 1.0f);
+            // ensure the x scale is negative (face one direction); flip sign if needed
+            var scale = controller.transform.localScale;
+            if (scale.x > 0f) scale.x *= -1f;
+            controller.transform.localScale = scale;
         }
         else if (hDiff <= -0.01f)
         {
-            controller.transform.localScale = new Vector3(2.0f, 2.0f, 1.0f);
+            var scale = controller.transform.localScale;
+            if (scale.x < 0f) scale.x *= -1f;
+            controller.transform.localScale = scale;
         }
     }
 }

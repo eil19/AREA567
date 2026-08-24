@@ -1,18 +1,23 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
 public class AlienInstance : MonoBehaviour
 {
     public AlienType alienType;
-
     [HideInInspector] public bool identified = false;
     [HideInInspector] public bool tameSuccessTrigger = false;
     [HideInInspector] public bool tameFailTrigger = false;
+    [HideInInspector] public bool isTamed = false;
     [HideInInspector] public bool isHit = false;
     [HideInInspector] private bool isTased = false;
-    [HideInInspector] public float stateTimerStart = 0;
+    [HideInInspector] public bool splashReactTrigger = false;
+    [HideInInspector] private bool _guessed = false;
+    public bool Guessed { get { return _guessed; } }        
+    [HideInInspector] public float stateTimerStart = 0;    
 
     [HideInInspector] public float lastAttackTime = -999f;
+
     private Animator animator;
 
     private Vector3 offset = new Vector3(0, -2, 0);
@@ -71,23 +76,59 @@ public class AlienInstance : MonoBehaviour
 
     public void SpawnEssence()
     {
-        if (alienType != null && alienType.essencePrefab != null)
+        if (alienType == null || alienType.essencePrefab == null) return;
+
+        GameObject drop = Instantiate(alienType.essencePrefab, transform.position + offset, Quaternion.identity);
+
+        if (drop.TryGetComponent<Item>(out var item))
         {
-            Instantiate(alienType.essencePrefab, transform.position, Quaternion.identity);
+            item.Initialise(alienType.essenceItemData, 1);
         }
     }
 
-    public void AttemptTame()
+    public bool SubmitGuess(AlienCategory guess)
+    {
+        // If already correctly identified, block
+        if (identified) return false;
+
+        bool correct = alienType != null && guess == alienType.category;
+        if (correct)
+        {
+            identified = true; // Mark as identified ONLY when guessed correctly
+            _guessed = true;
+            SpawnEssence();
+            Debug.Log("[AlienInstance] Correct guess! Alien identified.");
+        }
+        else
+        {
+            Debug.Log("[AlienInstance] Incorrect guess! Try again with another potion.");
+        }
+
+        return correct;
+    }
+
+    public bool AttemptTame()
     {
         bool success = Random.value <= (1f - alienType.tameDifficulty);
         if (success)
+        {
             tameSuccessTrigger = true;
+            isTamed = true; // Mark tamed on success
+        }
         else
+        {
             tameFailTrigger = true;
+        }
+        return success;
     }
 
     public void SetTased()
     {
        isTased = true;
+    }
+
+    public void TriggerSplashReaction()
+    {
+        splashReactTrigger = true;
     }
 }
