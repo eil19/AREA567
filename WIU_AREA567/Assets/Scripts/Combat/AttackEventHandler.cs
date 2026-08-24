@@ -12,6 +12,8 @@ using UnityEngine;
 public class AttackEventHandler : MonoBehaviour
 {
     private Transform attackPoint;
+    private Animator animator;
+
     [SerializeField] private LayerMask layerToCheck;
     [SerializeField] private float attackRadius = 0.2f;
     [SerializeField] private int damageAmount = 10;
@@ -24,6 +26,7 @@ public class AttackEventHandler : MonoBehaviour
     void Awake()
     {
         attackPoint = GetComponent<PlayerController>().AttackPoint;
+        animator = GetComponent<Animator>();
         if (attackPoint == null)
         {
             Debug.LogWarning($"{gameObject.name}: AttackEventHandler couldn't find an Attack Point - assign one on PlayerController's Inspector field.");
@@ -70,6 +73,7 @@ public class AttackEventHandler : MonoBehaviour
     {
         if (attackPoint == null) return;
         attackPoint.gameObject.SetActive(false);
+        if (animator != null) animator.SetBool("IsBusy", false);
     }
 
     // Called by AttackBoostItemEffect-style buffs, if you build one for this project.

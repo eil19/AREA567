@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -21,9 +22,12 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
     private Rigidbody2D body;
+    private SpriteRenderer spriteRenderer;
 
-    private Vector2 moveInput; // now always a cardinal unit vector or zero - see Update()
-    private int directionIndex = 0; // 0 = Down, 1 = Up, 2 = Side - matches Animator's "Direction" Blend Tree
+    private Vector2 moveInput;
+    private Vector2 previousRawInput = Vector2.zero;
+    private bool horizontalWasLastPressed = false;
+    private int directionIndex = 0; // 0 = Down, 1 = Up, 2 = Side - matches Animator's "Direction" parameter
 
     // Defaults facing down - typical top-down convention (character faces camera at rest).
     // IMPORTANT: only updates while actively moving (see Update() below) - standing still
@@ -35,6 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Top-down: no gravity should affect the player
         body.gravityScale = 0f;
@@ -44,36 +49,45 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 rawInput = InputSystem.actions["Move"].ReadValue<Vector2>();
 
-        // Snap to 4 cardinal directions - no diagonal movement allowed.
-        // Whichever axis has the larger magnitude wins; the other is zeroed
-        // out entirely, so moveInput is always exactly (±1,0), (0,±1), or (0,0).
+        bool xPressedThisFrame = Mathf.Abs(rawInput.x) > 0.01f && Mathf.Abs(previousRawInput.x) <= 0.01f;
+        bool yPressedThisFrame = Mathf.Abs(rawInput.y) > 0.01f && Mathf.Abs(previousRawInput.y) <= 0.01f;
+
+        if (xPressedThisFrame) horizontalWasLastPressed = true;
+        if (yPressedThisFrame) horizontalWasLastPressed = false;
+
         if (rawInput.sqrMagnitude < 0.01f)
         {
             moveInput = Vector2.zero;
         }
-        else if (Mathf.Abs(rawInput.x) > Mathf.Abs(rawInput.y))
+        else if (Mathf.Abs(rawInput.x) <= 0.01f)
+        {
+            moveInput = new Vector2(0f, Mathf.Sign(rawInput.y));
+            horizontalWasLastPressed = false;
+        }
+        else if (Mathf.Abs(rawInput.y) <= 0.01f)
         {
             moveInput = new Vector2(Mathf.Sign(rawInput.x), 0f);
+            horizontalWasLastPressed = true;
         }
         else
         {
-            moveInput = new Vector2(0f, Mathf.Sign(rawInput.y));
+            moveInput = horizontalWasLastPressed
+                ? new Vector2(Mathf.Sign(rawInput.x), 0f)
+                : new Vector2(0f, Mathf.Sign(rawInput.y));
         }
+
+        previousRawInput = rawInput;
 
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
         animator.SetBool("IsMoving", isMoving);
 
         if (isMoving)
         {
-            FacingDirection = moveInput; // already a cardinal unit vector, no normalization needed
+            FacingDirection = moveInput;
 
             animator.SetFloat("MoveX", FacingDirection.x);
             animator.SetFloat("MoveY", FacingDirection.y);
 
-            // Direction is now always purely vertical or purely horizontal
-            // (movement itself is restricted to 4 directions above), so this
-            // maps straight onto the 3 Blend Tree poses - Side still covers
-            // both Left and Right via the localScale flip.
             if (FacingDirection.y != 0)
             {
                 directionIndex = FacingDirection.y > 0 ? 1 : 0; // Up : Down
@@ -81,10 +95,11 @@ public class PlayerController : MonoBehaviour
             else
             {
                 directionIndex = 2; // Side
-                
-                var s = transform.localScale;
-                s.x = Mathf.Abs(s.x) * (FacingDirection.x < 0 ? -1f : 1f);
-                transform.localScale = s;
+                // Flip the sprite visually only - Transform itself never flips,
+                // so AttackPoint's child-local-position math stays correct in
+                // every direction (this used to flip transform.localScale.x,
+                // which broke AttackPoint's world position when facing left).
+                spriteRenderer.flipX = FacingDirection.x < 0;
             }
 
             animator.SetInteger("Direction", directionIndex);
@@ -101,6 +116,19 @@ public class PlayerController : MonoBehaviour
             isStealthed = !isStealthed;
             animator.SetBool("IsStealthed", isStealthed);
         }
+
+        // Attack / Taser
+        if (InputSystem.actions["Attack"].WasPressedThisFrame())
+        {
+            animator.SetBool("IsBusy", true);
+            animator.SetTrigger("Attack");
+        }
+
+        if (InputSystem.actions["Taser"].WasPressedThisFrame())
+        {
+            animator.SetBool("IsBusy", true);
+            animator.SetTrigger("Taser");
+        }
     }
 
     void FixedUpdate()
@@ -108,6 +136,6 @@ public class PlayerController : MonoBehaviour
         float speed = moveSpeed;
         if (isStealthed) speed *= stealthSpeedMultiplier;
 
-        body.linearVelocity = moveInput * speed; // moveInput is already a unit vector (or zero)
+        body.linearVelocity = moveInput * speed;
     }
 }
