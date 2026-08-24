@@ -6,8 +6,11 @@ public class InventoryUI : MonoBehaviour
     [Header("References")]
     [SerializeField] private Inventory inventory;
     [SerializeField] private InventorySlotUI[] slots;
-    [SerializeField] private ItemTooltipUI tooltip;
     [SerializeField] private Image dragIcon;
+
+    [SerializeField] private InventoryDetailsUI detailsUI;
+    [SerializeField] private ItemDropper itemDropper;
+    [SerializeField] private GameObject player;
 
     private void Start()
     {
@@ -40,7 +43,12 @@ public class InventoryUI : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].Initialise(i, tooltip, inventory, dragIcon);
+            slots[i].Initialise(i, inventory, dragIcon, detailsUI);
+        }
+
+        if (detailsUI != null)
+        {
+            detailsUI.Initialise(inventory, itemDropper, player);
         }
     }
 

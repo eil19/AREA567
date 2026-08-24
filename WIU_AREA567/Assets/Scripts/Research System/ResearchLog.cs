@@ -9,6 +9,7 @@ public class ResearchLog : MonoBehaviour
 {
     [Header("Events")]
     public UnityEvent OnResearchLogChanged;
+    public UnityEvent<ResearchData> OnResearchDiscovered;
 
     private List<ResearchData> discovered = new List<ResearchData>();
     public IReadOnlyList<ResearchData> Discovered => discovered;
@@ -34,6 +35,7 @@ public class ResearchLog : MonoBehaviour
         if (discovered.Contains(data)) return false; // already known
 
         discovered.Add(data);
+        OnResearchDiscovered?.Invoke(data);
         OnResearchLogChanged?.Invoke();
         return true;
     }

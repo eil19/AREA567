@@ -110,6 +110,9 @@ public class CraftingSystem : MonoBehaviour
         currentRecipe = null;
         foreach (CraftingRecipe recipe in craftingRecipesList)
         {
+            if (recipe == null) continue;
+            // recipe must be unlocked first
+            if (ResearchLog.Instance == null || !ResearchLog.Instance.IsRecipeUnlocked(recipe)) continue;
             if (RecipeMatches(recipe))
             {
                 currentRecipe = recipe;
