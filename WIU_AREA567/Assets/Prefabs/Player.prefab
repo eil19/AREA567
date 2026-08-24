@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1259108513913241240}
   - component: {fileID: 4223878342237065612}
   - component: {fileID: 8694058418281001635}
+  - component: {fileID: 6980369784090146768}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -173,7 +174,7 @@ Animator:
   m_GameObject: {fileID: 3513979378496533052}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -7782239928633169491, guid: ff3931885065efd4fadd170a76d43344, type: 3}
+  m_Controller: {fileID: 9100000, guid: 79f45406aafdb864caf5c1e5091917ca, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -201,13 +202,49 @@ MonoBehaviour:
   currentHealth: 0
   OnHealthChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6980369784090146768}
+        m_TargetAssemblyTypeName: DamageFeedback, Assembly-CSharp
+        m_MethodName: OnHealthChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6980369784090146768}
+        m_TargetAssemblyTypeName: DamageFeedback, Assembly-CSharp
+        m_MethodName: OnHurt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6980369784090146768}
+        m_TargetAssemblyTypeName: DamageFeedback, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hurtClip: {fileID: 0}
   deathClip: {fileID: 0}
   hitVFXPrefab: {fileID: 0}
@@ -276,10 +313,24 @@ MonoBehaviour:
   layerToCheck:
     serializedVersion: 2
     m_Bits: 256
-  attackRadius: 0.2
+  attackRadius: 0.5
   damageAmount: 10
   alienTag: Alien
   stunDuration: 2
+--- !u!114 &6980369784090146768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513979378496533052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5b28920abb9964a848e950f8e09b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageFeedback
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.15
 --- !u!1 &3828207482115882165
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6836975422181820089
 Transform:
   m_ObjectHideFlags: 0
