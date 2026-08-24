@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e115aaa8693a0f84da614c5ba619f3dd
+guid: 29e1721836572324b804ed82932405bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -318911390704657791
-    second: Chemical_0
+      213: 8096459312978753757
+    second: Scrap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chemical_0
+      name: Scrap_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 14
-        height: 16
+        x: 0
+        y: 2
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18a1932a7cff29bf0800000000000000
-      internalID: -318911390704657791
+      spriteID: dd8708829d66c5070800000000000000
+      internalID: 8096459312978753757
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chemical_0: -318911390704657791
+      Scrap_0: 8096459312978753757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
