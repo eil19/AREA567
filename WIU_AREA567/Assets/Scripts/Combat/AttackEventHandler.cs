@@ -12,11 +12,18 @@ using UnityEngine;
 public class AttackEventHandler : MonoBehaviour
 {
     private Transform attackPoint;
+    private Transform rangedSpawnPoint;
     private Animator animator;
 
     [SerializeField] private LayerMask layerToCheck;
     [SerializeField] private float attackRadius = 0.2f;
     [SerializeField] private int damageAmount = 10;
+
+    [Header("Ranged")]
+    [Tooltip("Projectile spawned when the player has weapon 2 (ranged) equipped.")]
+    [SerializeField] private GameObject rangedProjectilePrefab;
+    [SerializeField, Min(0f)] private float rangedFireCooldown = 0.25f;
+    private float nextRangedFireTime;
 
     [Header("Taser")]
     [Tooltip("GameObject tag used to identify Aliens - Taser only affects objects with this tag.")]
@@ -25,7 +32,9 @@ public class AttackEventHandler : MonoBehaviour
 
     void Awake()
     {
-        attackPoint = GetComponent<PlayerController>().AttackPoint;
+        PlayerController playerController = GetComponent<PlayerController>();
+        attackPoint = playerController.AttackPoint;
+        rangedSpawnPoint = playerController.RangedSpawnPoint;
         animator = GetComponent<Animator>();
         if (attackPoint == null)
         {
@@ -67,6 +76,37 @@ public class AttackEventHandler : MonoBehaviour
         {
             stunnableTarget.Stun(stunDuration);
         }
+    }
+
+    // Called by PlayerController when left-clicking with weapon 2 selected.
+    // Unlike melee/taser this fires immediately, so it does not require an animation event.
+    public bool FireRangedAttack()
+    {
+        if (rangedProjectilePrefab == null)
+        {
+            Debug.LogWarning($"{gameObject.name}: No ranged projectile prefab is assigned.");
+            return false;
+        }
+
+        if (Time.time < nextRangedFireTime) return false;
+
+        PlayerController player = GetComponent<PlayerController>();
+        Vector2 direction = player.FacingDirection;
+        Vector3 spawnPosition = rangedSpawnPoint != null
+            ? rangedSpawnPoint.position
+            : attackPoint != null ? attackPoint.position : transform.position;
+        GameObject projectile = Instantiate(rangedProjectilePrefab, spawnPosition, Quaternion.identity);
+
+        if (!projectile.TryGetComponent(out PlayerProjectile playerProjectile))
+        {
+            Debug.LogError($"{rangedProjectilePrefab.name} must have a PlayerProjectile component.");
+            Destroy(projectile);
+            return false;
+        }
+
+        playerProjectile.Launch(direction);
+        nextRangedFireTime = Time.time + rangedFireCooldown;
+        return true;
     }
 
     public void AttackEnd()
