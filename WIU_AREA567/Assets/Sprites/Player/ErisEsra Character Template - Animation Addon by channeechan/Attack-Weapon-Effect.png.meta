@@ -1,0 +1,1170 @@
+fileFormatVersion: 2
+guid: 4e630c6ecaa624e4cb8948d0e8033284
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1961459137007927526
+    second: Attack-Weapon-Effect_0
+  - first:
+      213: -9195200338140921908
+    second: Attack-Weapon-Effect_1
+  - first:
+      213: -3838049202101926566
+    second: Attack-Weapon-Effect_2
+  - first:
+      213: -2044745276743087067
+    second: Attack-Weapon-Effect_3
+  - first:
+      213: 121487125302513183
+    second: Attack-Weapon-Effect_4
+  - first:
+      213: 4201532045275900172
+    second: Attack-Weapon-Effect_5
+  - first:
+      213: 5795661689371783334
+    second: Attack-Weapon-Effect_6
+  - first:
+      213: -6362916221272962909
+    second: Attack-Weapon-Effect_7
+  - first:
+      213: 1380248837233749446
+    second: Attack-Weapon-Effect_8
+  - first:
+      213: -3461051917295974498
+    second: Attack-Weapon-Effect_9
+  - first:
+      213: 4919589946489437012
+    second: Attack-Weapon-Effect_10
+  - first:
+      213: -2873166616135396574
+    second: Attack-Weapon-Effect_11
+  - first:
+      213: 4165148388478665117
+    second: Attack-Weapon-Effect_12
+  - first:
+      213: 9103274574237591859
+    second: Attack-Weapon-Effect_13
+  - first:
+      213: 841038095768956284
+    second: Attack-Weapon-Effect_14
+  - first:
+      213: -4667799165654123885
+    second: Attack-Weapon-Effect_15
+  - first:
+      213: -2204118512017127388
+    second: Attack-Weapon-Effect_16
+  - first:
+      213: 1063926593843028055
+    second: Attack-Weapon-Effect_17
+  - first:
+      213: 5511692489681552765
+    second: Attack-Weapon-Effect_18
+  - first:
+      213: -7532994744644513625
+    second: Attack-Weapon-Effect_19
+  - first:
+      213: -6443025919818879634
+    second: Attack-Weapon-Effect_20
+  - first:
+      213: 4276163500267926438
+    second: Attack-Weapon-Effect_21
+  - first:
+      213: -2894118713344612835
+    second: Attack-Weapon-Effect_22
+  - first:
+      213: -6151460065230107998
+    second: Attack-Weapon-Effect_23
+  - first:
+      213: 5431927278794506633
+    second: Attack-Weapon-Effect_24
+  - first:
+      213: -349951134189987880
+    second: Attack-Weapon-Effect_25
+  - first:
+      213: 7120181641039028887
+    second: Attack-Weapon-Effect_26
+  - first:
+      213: 8610001352004907087
+    second: Attack-Weapon-Effect_27
+  - first:
+      213: 8099168419796271673
+    second: Attack-Weapon-Effect_28
+  - first:
+      213: -5812450852677528452
+    second: Attack-Weapon-Effect_29
+  - first:
+      213: -2769784298439832545
+    second: Attack-Weapon-Effect_30
+  - first:
+      213: -3246164834801605585
+    second: Attack-Weapon-Effect_31
+  - first:
+      213: 5433105057319955681
+    second: Attack-Weapon-Effect_32
+  - first:
+      213: -581049464941849461
+    second: Attack-Weapon-Effect_33
+  - first:
+      213: -1020564237078850431
+    second: Attack-Weapon-Effect_34
+  - first:
+      213: 5522417298016835028
+    second: Attack-Weapon-Effect_35
+  - first:
+      213: -1851395969381985847
+    second: Attack-Weapon-Effect_36
+  - first:
+      213: -2458262319027903020
+    second: Attack-Weapon-Effect_37
+  - first:
+      213: -4599471380769783791
+    second: Attack-Weapon-Effect_38
+  - first:
+      213: 3136561644885059222
+    second: Attack-Weapon-Effect_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 207
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1fb231ae4f77c4e0800000000000000
+      internalID: -1961459137007927526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 207
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccffe8eb206146080800000000000000
+      internalID: -9195200338140921908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 207
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a554e36e5928cbac0800000000000000
+      internalID: -3838049202101926566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 207
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c029b110b9f93e0800000000000000
+      internalID: -2044745276743087067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 207
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e807495eb9fa100800000000000000
+      internalID: 121487125302513183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_5
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 207
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c09271f6227de4a30800000000000000
+      internalID: 4201532045275900172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 207
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0785989935e6050800000000000000
+      internalID: 5795661689371783334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_7
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 216
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8447fa86162b7a0800000000000000
+      internalID: -6362916221272962909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_8
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 195
+        width: 20
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cda6fc2101a72310800000000000000
+      internalID: 1380248837233749446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_9
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 198
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9783606e9fd7ffc0800000000000000
+      internalID: -3461051917295974498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 143
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45bf511cdf4e54440800000000000000
+      internalID: 4919589946489437012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_11
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 143
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2231db07f267028d0800000000000000
+      internalID: -2873166616135396574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_12
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 143
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91cf0434649dc930800000000000000
+      internalID: 4165148388478665117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_13
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 143
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339e64a7ef3555e70800000000000000
+      internalID: 9103274574237591859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_14
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 143
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d21ec21b7fbab00800000000000000
+      internalID: 841038095768956284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_15
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 143
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a3250d365a83fb0800000000000000
+      internalID: -4667799165654123885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_16
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 143
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4284b5824e56961e0800000000000000
+      internalID: -2204118512017127388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_17
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 152
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750ea15a993d3ce00800000000000000
+      internalID: 1063926593843028055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_18
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 133
+        width: 20
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7548aefd177d7c40800000000000000
+      internalID: 5511692489681552765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 134
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a05496f03d657790800000000000000
+      internalID: -7532994744644513625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_20
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 79
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6daf820016c596a0800000000000000
+      internalID: -6443025919818879634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 79
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3f5f22c0cf75b30800000000000000
+      internalID: 4276163500267926438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 79
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16a8492d5606d7d0800000000000000
+      internalID: -2894118713344612835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_23
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 79
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa45f999af91aaa0800000000000000
+      internalID: -6151460065230107998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_24
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 79
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9810d4a9415126b40800000000000000
+      internalID: 5431927278794506633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_25
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 78
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d75cdd2c49b42bf0800000000000000
+      internalID: -349951134189987880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_26
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 79
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792a36a6a77ffc260800000000000000
+      internalID: 7120181641039028887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_27
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 91
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40b2e5ac9edc7770800000000000000
+      internalID: 8610001352004907087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_28
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 72
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932c40e34c6066070800000000000000
+      internalID: 8099168419796271673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_29
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 72
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c745db3ceb6065fa0800000000000000
+      internalID: -5812450852677528452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_30
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 15
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c0a030bdfbf89d0800000000000000
+      internalID: -2769784298439832545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_31
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 15
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24294b184e43f2d0800000000000000
+      internalID: -3246164834801605585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_32
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 15
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec2fe88344466b40800000000000000
+      internalID: 5433105057319955681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_33
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 15
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b84d5351792bfe7f0800000000000000
+      internalID: -581049464941849461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_34
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 15
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184927acb3a36d1f0800000000000000
+      internalID: -1020564237078850431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_35
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 15
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d514c5064193ac40800000000000000
+      internalID: 5522417298016835028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_36
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 15
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c1956acc258e46e0800000000000000
+      internalID: -1851395969381985847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_37
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 27
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d52d9df17f72edd0800000000000000
+      internalID: -2458262319027903020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_38
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 8
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11044a2f5256b20c0800000000000000
+      internalID: -4599471380769783791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack-Weapon-Effect_39
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 8
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6962d73a23e478b20800000000000000
+      internalID: 3136561644885059222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Attack-Weapon-Effect_0: -1961459137007927526
+      Attack-Weapon-Effect_1: -9195200338140921908
+      Attack-Weapon-Effect_10: 4919589946489437012
+      Attack-Weapon-Effect_11: -2873166616135396574
+      Attack-Weapon-Effect_12: 4165148388478665117
+      Attack-Weapon-Effect_13: 9103274574237591859
+      Attack-Weapon-Effect_14: 841038095768956284
+      Attack-Weapon-Effect_15: -4667799165654123885
+      Attack-Weapon-Effect_16: -2204118512017127388
+      Attack-Weapon-Effect_17: 1063926593843028055
+      Attack-Weapon-Effect_18: 5511692489681552765
+      Attack-Weapon-Effect_19: -7532994744644513625
+      Attack-Weapon-Effect_2: -3838049202101926566
+      Attack-Weapon-Effect_20: -6443025919818879634
+      Attack-Weapon-Effect_21: 4276163500267926438
+      Attack-Weapon-Effect_22: -2894118713344612835
+      Attack-Weapon-Effect_23: -6151460065230107998
+      Attack-Weapon-Effect_24: 5431927278794506633
+      Attack-Weapon-Effect_25: -349951134189987880
+      Attack-Weapon-Effect_26: 7120181641039028887
+      Attack-Weapon-Effect_27: 8610001352004907087
+      Attack-Weapon-Effect_28: 8099168419796271673
+      Attack-Weapon-Effect_29: -5812450852677528452
+      Attack-Weapon-Effect_3: -2044745276743087067
+      Attack-Weapon-Effect_30: -2769784298439832545
+      Attack-Weapon-Effect_31: -3246164834801605585
+      Attack-Weapon-Effect_32: 5433105057319955681
+      Attack-Weapon-Effect_33: -581049464941849461
+      Attack-Weapon-Effect_34: -1020564237078850431
+      Attack-Weapon-Effect_35: 5522417298016835028
+      Attack-Weapon-Effect_36: -1851395969381985847
+      Attack-Weapon-Effect_37: -2458262319027903020
+      Attack-Weapon-Effect_38: -4599471380769783791
+      Attack-Weapon-Effect_39: 3136561644885059222
+      Attack-Weapon-Effect_4: 121487125302513183
+      Attack-Weapon-Effect_5: 4201532045275900172
+      Attack-Weapon-Effect_6: 5795661689371783334
+      Attack-Weapon-Effect_7: -6362916221272962909
+      Attack-Weapon-Effect_8: 1380248837233749446
+      Attack-Weapon-Effect_9: -3461051917295974498
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

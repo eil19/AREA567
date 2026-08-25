@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 8d614f4cf5a3b424bb72478952896bce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5710091954712774613
+    second: Tools-Sprite-WateringCan_0
+  - first:
+      213: -7620294701534732410
+    second: Tools-Sprite-WateringCan_1
+  - first:
+      213: 2231191985630893194
+    second: Tools-Sprite-WateringCan_2
+  - first:
+      213: -4654941488727255359
+    second: Tools-Sprite-WateringCan_3
+  - first:
+      213: 3546247500073308716
+    second: Tools-Sprite-WateringCan_4
+  - first:
+      213: 7654503027547740132
+    second: Tools-Sprite-WateringCan_5
+  - first:
+      213: -2844224383652554541
+    second: Tools-Sprite-WateringCan_6
+  - first:
+      213: 2196099926027346567
+    second: Tools-Sprite-WateringCan_7
+  - first:
+      213: -4838800857366615279
+    second: Tools-Sprite-WateringCan_8
+  - first:
+      213: 3601644948877932392
+    second: Tools-Sprite-WateringCan_9
+  - first:
+      213: 3338067331620589443
+    second: Tools-Sprite-WateringCan_10
+  - first:
+      213: 3513808531360547790
+    second: Tools-Sprite-WateringCan_11
+  - first:
+      213: 6432003662407791845
+    second: Tools-Sprite-WateringCan_12
+  - first:
+      213: 1815476312307838579
+    second: Tools-Sprite-WateringCan_13
+  - first:
+      213: -716949446370393388
+    second: Tools-Sprite-WateringCan_14
+  - first:
+      213: 2994066705039038690
+    second: Tools-Sprite-WateringCan_15
+  - first:
+      213: -1147382811708896279
+    second: Tools-Sprite-WateringCan_16
+  - first:
+      213: 1288952958165901200
+    second: Tools-Sprite-WateringCan_17
+  - first:
+      213: -1161060443705299186
+    second: Tools-Sprite-WateringCan_18
+  - first:
+      213: 926458387854452215
+    second: Tools-Sprite-WateringCan_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 210
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b28778cde9da1c0b0800000000000000
+      internalID: -5710091954712774613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 211
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f1b3fc7564f3690800000000000000
+      internalID: -7620294701534732410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 214
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a845a312a49c6fe10800000000000000
+      internalID: 2231191985630893194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 214
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c61f220163566fb0800000000000000
+      internalID: -4654941488727255359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 214
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c229c7fff4dc63130800000000000000
+      internalID: 3546247500073308716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 149
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e79221c2f14a3a60800000000000000
+      internalID: 7654503027547740132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 150
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d892ee0ef84788d0800000000000000
+      internalID: -2844224383652554541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 155
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7822f1e4f3d1a7e10800000000000000
+      internalID: 2196099926027346567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 155
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11baecdd14029dcb0800000000000000
+      internalID: -4838800857366615279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_9
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 155
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867f2f8affc9bf130800000000000000
+      internalID: 3601644948877932392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 85
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38fc4916d82335e20800000000000000
+      internalID: 3338067331620589443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 88
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec38b780e3e83c030800000000000000
+      internalID: 3513808531360547790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_12
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 92
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4f3d3b041134950800000000000000
+      internalID: 6432003662407791845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_13
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 92
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37eae35561ed13910800000000000000
+      internalID: 1815476312307838579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_14
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 92
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d20e2fe642ec06f0800000000000000
+      internalID: -716949446370393388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 21
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e81da31ecf0d8920800000000000000
+      internalID: 2994066705039038690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_16
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 22
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ebc3be696da310f0800000000000000
+      internalID: -1147382811708896279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_17
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 27
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fdaa3e2e743e110800000000000000
+      internalID: 1288952958165901200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_18
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 27
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f20329da513efe0800000000000000
+      internalID: -1161060443705299186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-WateringCan_19
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 26
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f5ee33cef07bdc00800000000000000
+      internalID: 926458387854452215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tools-Sprite-WateringCan_0: -5710091954712774613
+      Tools-Sprite-WateringCan_1: -7620294701534732410
+      Tools-Sprite-WateringCan_10: 3338067331620589443
+      Tools-Sprite-WateringCan_11: 3513808531360547790
+      Tools-Sprite-WateringCan_12: 6432003662407791845
+      Tools-Sprite-WateringCan_13: 1815476312307838579
+      Tools-Sprite-WateringCan_14: -716949446370393388
+      Tools-Sprite-WateringCan_15: 2994066705039038690
+      Tools-Sprite-WateringCan_16: -1147382811708896279
+      Tools-Sprite-WateringCan_17: 1288952958165901200
+      Tools-Sprite-WateringCan_18: -1161060443705299186
+      Tools-Sprite-WateringCan_19: 926458387854452215
+      Tools-Sprite-WateringCan_2: 2231191985630893194
+      Tools-Sprite-WateringCan_3: -4654941488727255359
+      Tools-Sprite-WateringCan_4: 3546247500073308716
+      Tools-Sprite-WateringCan_5: 7654503027547740132
+      Tools-Sprite-WateringCan_6: -2844224383652554541
+      Tools-Sprite-WateringCan_7: 2196099926027346567
+      Tools-Sprite-WateringCan_8: -4838800857366615279
+      Tools-Sprite-WateringCan_9: 3601644948877932392
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

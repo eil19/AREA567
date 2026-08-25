@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 615f35519cbe3484999b9b85572f0ebb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7574690633950151189
+    second: Tools-Schyte-Effect_0
+  - first:
+      213: -7109803152984384714
+    second: Tools-Schyte-Effect_1
+  - first:
+      213: -8901185276491522248
+    second: Tools-Schyte-Effect_2
+  - first:
+      213: -5751006650166803544
+    second: Tools-Schyte-Effect_3
+  - first:
+      213: 2853580431110169241
+    second: Tools-Schyte-Effect_4
+  - first:
+      213: -6842524270386774014
+    second: Tools-Schyte-Effect_5
+  - first:
+      213: 7345891968573619137
+    second: Tools-Schyte-Effect_6
+  - first:
+      213: -5526260823942517030
+    second: Tools-Schyte-Effect_7
+  - first:
+      213: 8481063067950347880
+    second: Tools-Schyte-Effect_8
+  - first:
+      213: 4108181743296582798
+    second: Tools-Schyte-Effect_9
+  - first:
+      213: -4342472671855313135
+    second: Tools-Schyte-Effect_10
+  - first:
+      213: -7770164012659920763
+    second: Tools-Schyte-Effect_11
+  - first:
+      213: -5980744270355422378
+    second: Tools-Schyte-Effect_12
+  - first:
+      213: 1563818178462000599
+    second: Tools-Schyte-Effect_13
+  - first:
+      213: -8331988244799959481
+    second: Tools-Schyte-Effect_14
+  - first:
+      213: 5962133484337239249
+    second: Tools-Schyte-Effect_15
+  - first:
+      213: 3939316036196008185
+    second: Tools-Schyte-Effect_16
+  - first:
+      213: -613129238355443508
+    second: Tools-Schyte-Effect_17
+  - first:
+      213: -5818381011219842085
+    second: Tools-Schyte-Effect_18
+  - first:
+      213: -3483242959492679024
+    second: Tools-Schyte-Effect_19
+  - first:
+      213: -2940087169772147314
+    second: Tools-Schyte-Effect_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 207
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512c318cff4be1960800000000000000
+      internalID: 7574690633950151189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 207
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63bd963a3b7e45d90800000000000000
+      internalID: -7109803152984384714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 207
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f19cac623a87480800000000000000
+      internalID: -8901185276491522248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 198
+        width: 46
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a306ebfbe15030b0800000000000000
+      internalID: -5751006650166803544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 207
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992e35e7844f99720800000000000000
+      internalID: 2853580431110169241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_5
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 143
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2008b98ed687a01a0800000000000000
+      internalID: -6842524270386774014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_6
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 143
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cbb93143d9d1f560800000000000000
+      internalID: 7345891968573619137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_7
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 143
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adeafbc5f07ce43b0800000000000000
+      internalID: -5526260823942517030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_8
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 143
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8667ddafce9c2b570800000000000000
+      internalID: 8481063067950347880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_9
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 143
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8410f98781330930800000000000000
+      internalID: 4108181743296582798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 79
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ff833cc107cb3c0800000000000000
+      internalID: -4342472671855313135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_11
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 79
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580b1e2aff4da2490800000000000000
+      internalID: -7770164012659920763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_12
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 79
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653230106c0200da0800000000000000
+      internalID: -5980744270355422378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_13
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 98
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5a68c095cc3b510800000000000000
+      internalID: 1563818178462000599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_14
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 79
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ec7fb06d4de5c80800000000000000
+      internalID: -8331988244799959481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_15
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 79
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d41265b0d0cdb250800000000000000
+      internalID: 5962133484337239249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 15
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0867340134ba630800000000000000
+      internalID: 3939316036196008185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 15
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc00b6ac43abd77f0800000000000000
+      internalID: -613129238355443508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_18
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 15
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdbfc522c45f04fa0800000000000000
+      internalID: -5818381011219842085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 15
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09afe0dbbf809afc0800000000000000
+      internalID: -3483242959492679024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Schyte-Effect_20
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 15
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d2c0ddb46b237d0800000000000000
+      internalID: -2940087169772147314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tools-Schyte-Effect_0: 7574690633950151189
+      Tools-Schyte-Effect_1: -7109803152984384714
+      Tools-Schyte-Effect_10: -4342472671855313135
+      Tools-Schyte-Effect_11: -7770164012659920763
+      Tools-Schyte-Effect_12: -5980744270355422378
+      Tools-Schyte-Effect_13: 1563818178462000599
+      Tools-Schyte-Effect_14: -8331988244799959481
+      Tools-Schyte-Effect_15: 5962133484337239249
+      Tools-Schyte-Effect_16: 3939316036196008185
+      Tools-Schyte-Effect_17: -613129238355443508
+      Tools-Schyte-Effect_18: -5818381011219842085
+      Tools-Schyte-Effect_19: -3483242959492679024
+      Tools-Schyte-Effect_2: -8901185276491522248
+      Tools-Schyte-Effect_20: -2940087169772147314
+      Tools-Schyte-Effect_3: -5751006650166803544
+      Tools-Schyte-Effect_4: 2853580431110169241
+      Tools-Schyte-Effect_5: -6842524270386774014
+      Tools-Schyte-Effect_6: 7345891968573619137
+      Tools-Schyte-Effect_7: -5526260823942517030
+      Tools-Schyte-Effect_8: 8481063067950347880
+      Tools-Schyte-Effect_9: 4108181743296582798
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

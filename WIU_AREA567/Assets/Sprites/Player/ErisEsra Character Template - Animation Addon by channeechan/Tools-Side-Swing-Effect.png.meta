@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: ae90d0186bd539b46ac9f2ef8208dec6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2217168954763114002
+    second: Tools-Side-Swing-Effect_0
+  - first:
+      213: -5976241746848900303
+    second: Tools-Side-Swing-Effect_1
+  - first:
+      213: 7443904721519374441
+    second: Tools-Side-Swing-Effect_2
+  - first:
+      213: 887561558349094947
+    second: Tools-Side-Swing-Effect_3
+  - first:
+      213: -1174106410384662592
+    second: Tools-Side-Swing-Effect_4
+  - first:
+      213: -6637728614242580550
+    second: Tools-Side-Swing-Effect_5
+  - first:
+      213: -3914883003520995188
+    second: Tools-Side-Swing-Effect_6
+  - first:
+      213: -1228972194384254515
+    second: Tools-Side-Swing-Effect_7
+  - first:
+      213: -3237494422976782840
+    second: Tools-Side-Swing-Effect_8
+  - first:
+      213: 4972881102551964626
+    second: Tools-Side-Swing-Effect_9
+  - first:
+      213: -4558572066629890345
+    second: Tools-Side-Swing-Effect_10
+  - first:
+      213: -1259759230049011022
+    second: Tools-Side-Swing-Effect_11
+  - first:
+      213: 261552749779070916
+    second: Tools-Side-Swing-Effect_12
+  - first:
+      213: -1049987021380268874
+    second: Tools-Side-Swing-Effect_13
+  - first:
+      213: -6138184491625508381
+    second: Tools-Side-Swing-Effect_14
+  - first:
+      213: 4786735671857390682
+    second: Tools-Side-Swing-Effect_15
+  - first:
+      213: 6141435208436728765
+    second: Tools-Side-Swing-Effect_16
+  - first:
+      213: 3573805634797232284
+    second: Tools-Side-Swing-Effect_17
+  - first:
+      213: 2653894146068555271
+    second: Tools-Side-Swing-Effect_18
+  - first:
+      213: 3819220564187438928
+    second: Tools-Side-Swing-Effect_19
+  - first:
+      213: -6611358469942654759
+    second: Tools-Side-Swing-Effect_20
+  - first:
+      213: 1159466858122680658
+    second: Tools-Side-Swing-Effect_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 207
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216fda3da67f4ce10800000000000000
+      internalID: 2217168954763114002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 207
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b16337bcf101da0800000000000000
+      internalID: -5976241746848900303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 207
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960f30c97ef0e4760800000000000000
+      internalID: 7443904721519374441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 198
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320a0b9e880415c00800000000000000
+      internalID: 887561558349094947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_4
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 207
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf5380c07cb4bfe0800000000000000
+      internalID: -1174106410384662592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 207
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab700a85efc02e3a0800000000000000
+      internalID: -6637728614242580550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 143
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80bae576aa8ba9c0800000000000000
+      internalID: -3914883003520995188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_7
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 143
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9e4e2fc40d1fee0800000000000000
+      internalID: -1228972194384254515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 143
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e192ca9fb1213d0800000000000000
+      internalID: -3237494422976782840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_9
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 143
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dbdcdbe309330540800000000000000
+      internalID: 4972881102551964626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_10
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 143
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dec1859bd2bcb0c0800000000000000
+      internalID: -4558572066629890345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_11
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 79
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bab86e97af648ee0800000000000000
+      internalID: -1259759230049011022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 79
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfab9417d831a300800000000000000
+      internalID: 261552749779070916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_13
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 79
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bccbdbfd52bd61f0800000000000000
+      internalID: -1049987021380268874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_14
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 98
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e199d2f9b9c0daa0800000000000000
+      internalID: -6138184491625508381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_15
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 79
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5420ca7bb6ed6240800000000000000
+      internalID: 4786735671857390682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_16
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 79
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3c2f988c2ca3550800000000000000
+      internalID: 6141435208436728765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_17
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 15
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90e06e3a45b89130800000000000000
+      internalID: 3573805634797232284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_18
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 15
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706a7e73aa684d420800000000000000
+      internalID: 2653894146068555271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_19
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 15
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f52473ed8900530800000000000000
+      internalID: 3819220564187438928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_20
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 15
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d84c44008cbf34a0800000000000000
+      internalID: -6611358469942654759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Side-Swing-Effect_21
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 15
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2599d3fd6f0471010800000000000000
+      internalID: 1159466858122680658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tools-Side-Swing-Effect_0: 2217168954763114002
+      Tools-Side-Swing-Effect_1: -5976241746848900303
+      Tools-Side-Swing-Effect_10: -4558572066629890345
+      Tools-Side-Swing-Effect_11: -1259759230049011022
+      Tools-Side-Swing-Effect_12: 261552749779070916
+      Tools-Side-Swing-Effect_13: -1049987021380268874
+      Tools-Side-Swing-Effect_14: -6138184491625508381
+      Tools-Side-Swing-Effect_15: 4786735671857390682
+      Tools-Side-Swing-Effect_16: 6141435208436728765
+      Tools-Side-Swing-Effect_17: 3573805634797232284
+      Tools-Side-Swing-Effect_18: 2653894146068555271
+      Tools-Side-Swing-Effect_19: 3819220564187438928
+      Tools-Side-Swing-Effect_2: 7443904721519374441
+      Tools-Side-Swing-Effect_20: -6611358469942654759
+      Tools-Side-Swing-Effect_21: 1159466858122680658
+      Tools-Side-Swing-Effect_3: 887561558349094947
+      Tools-Side-Swing-Effect_4: -1174106410384662592
+      Tools-Side-Swing-Effect_5: -6637728614242580550
+      Tools-Side-Swing-Effect_6: -3914883003520995188
+      Tools-Side-Swing-Effect_7: -1228972194384254515
+      Tools-Side-Swing-Effect_8: -3237494422976782840
+      Tools-Side-Swing-Effect_9: 4972881102551964626
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

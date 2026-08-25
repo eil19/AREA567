@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: d9886ce6351d5424dbd1e5097c0e6360
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 320166246551622452
+    second: Idle-RightArm_0
+  - first:
+      213: 2376922109590005492
+    second: Idle-RightArm_1
+  - first:
+      213: -1585402562451970175
+    second: Idle-RightArm_2
+  - first:
+      213: -1026034032322934213
+    second: Idle-RightArm_3
+  - first:
+      213: -1243927505459271635
+    second: Idle-RightArm_4
+  - first:
+      213: 7679295473804645543
+    second: Idle-RightArm_5
+  - first:
+      213: -4858227821648662623
+    second: Idle-RightArm_6
+  - first:
+      213: -3949315185699488003
+    second: Idle-RightArm_7
+  - first:
+      213: 8078804540716521844
+    second: Idle-RightArm_8
+  - first:
+      213: -470137290721707126
+    second: Idle-RightArm_9
+  - first:
+      213: -6990849781484842804
+    second: Idle-RightArm_10
+  - first:
+      213: -1359928198067900051
+    second: Idle-RightArm_11
+  - first:
+      213: 8751250655034245266
+    second: Idle-RightArm_12
+  - first:
+      213: 7418761224993704192
+    second: Idle-RightArm_13
+  - first:
+      213: 5212832302456121110
+    second: Idle-RightArm_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idle-RightArm_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 212
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43397c24185717400800000000000000
+      internalID: 320166246551622452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 211
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f662e0b0168cf020800000000000000
+      internalID: 2376922109590005492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 211
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1876e0fe4c48ff9e0800000000000000
+      internalID: -1585402562451970175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 212
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a0ee7db7bc2c1f0800000000000000
+      internalID: -1026034032322934213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 212
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2823ce368eacbee0800000000000000
+      internalID: -1243927505459271635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 148
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a41469fb86529a60800000000000000
+      internalID: 7679295473804645543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_6
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 147
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af26b4498b149cb0800000000000000
+      internalID: -4858227821648662623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_7
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 147
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe735253c63139c0800000000000000
+      internalID: -3949315185699488003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_8
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 148
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479983b2dedad1070800000000000000
+      internalID: 8078804540716521844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_9
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 148
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b3edeff9cb979f0800000000000000
+      internalID: -470137290721707126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 84
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc09a70b9238bfe90800000000000000
+      internalID: -6990849781484842804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 83
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6130225280902de0800000000000000
+      internalID: -1359928198067900051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 83
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29088b9ca10b27970800000000000000
+      internalID: 8751250655034245266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_13
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 84
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0090131270cb4f660800000000000000
+      internalID: 7418761224993704192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle-RightArm_14
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 84
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617249d3c53b75840800000000000000
+      internalID: 5212832302456121110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Idle-RightArm_0: 320166246551622452
+      Idle-RightArm_1: 2376922109590005492
+      Idle-RightArm_10: -6990849781484842804
+      Idle-RightArm_11: -1359928198067900051
+      Idle-RightArm_12: 8751250655034245266
+      Idle-RightArm_13: 7418761224993704192
+      Idle-RightArm_14: 5212832302456121110
+      Idle-RightArm_2: -1585402562451970175
+      Idle-RightArm_3: -1026034032322934213
+      Idle-RightArm_4: -1243927505459271635
+      Idle-RightArm_5: 7679295473804645543
+      Idle-RightArm_6: -4858227821648662623
+      Idle-RightArm_7: -3949315185699488003
+      Idle-RightArm_8: 8078804540716521844
+      Idle-RightArm_9: -470137290721707126
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

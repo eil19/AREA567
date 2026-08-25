@@ -9,7 +9,8 @@ public class PlayerProjectile : MonoBehaviour
     [SerializeField] private int damageAmount = 20;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float lifetime = 2f;
-    [SerializeField] private string targetTag = "Alien";
+    [Tooltip("Set to the Enemy layer - covers both alien and non-alien enemies, same layer AttackEventHandler's melee check uses.")]
+    [SerializeField] private LayerMask targetLayer;
 
     private Rigidbody2D body;
 
@@ -30,13 +31,18 @@ public class PlayerProjectile : MonoBehaviour
         // The projectile is spawned at the player's attack point, so never hit its owner.
         if (other.CompareTag("Player")) return;
 
-        Damageable damageable = other.GetComponentInParent<Damageable>();
-        if (damageable != null && damageable.CompareTag(targetTag))
+        if (((1 << other.gameObject.layer) & targetLayer) != 0)
         {
-            damageable.TakeDamage(damageAmount);
+            Damageable damageable = other.GetComponentInParent<Damageable>();
+            if (damageable != null)
+            {
+                damageable.TakeDamage(damageAmount);
+            }
         }
 
-        // A shot is consumed by its target, walls, and any other obstacle.
+        // A shot is consumed by its target, walls, and any other obstacle -
+        // this still happens even if the thing hit wasn't on targetLayer,
+        // same "consumed by anything it touches" behavior as before.
         Destroy(gameObject);
     }
 }
