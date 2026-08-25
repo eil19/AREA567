@@ -8,6 +8,7 @@ public class PersistentManagers : MonoBehaviour
         if (existingInstance != null && existingInstance != this)
         {
             Destroy(gameObject);
+            return;
         }
         existingInstance = this;
         DontDestroyOnLoad(gameObject);

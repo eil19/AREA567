@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
   recipeName: Splash Potion
   recipeDescription: Create a splash potion to use on aliens
+  formulaImage: {fileID: 21300000, guid: 5a46cdfc06d851b479cfc87f15ac54b7, type: 3}
   recipeGrid:
   - item: {fileID: 0}
     quantity: 0

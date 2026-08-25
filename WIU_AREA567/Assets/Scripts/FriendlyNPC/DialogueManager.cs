@@ -12,90 +12,88 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private Image portraitImage;
 
+    [SerializeField] private float typingSpeed = 0.05f;
+
     private NPCDialogue currentDialogue;
     private int dialogueIndex;
 
     private bool isTyping;
     private bool isDialogueActive;
 
-    // Stores the event belonging to the NPC currently speaking
-    private UnityEvent currentDialogueEndedEvent;
+    public UnityEvent dialogueEndedEvent;
 
-    public bool IsDialogueActive
-    {
-        get { return isDialogueActive; }
-    }
+    public bool IsDialogueActive => isDialogueActive;
+    public bool IsTyping => isTyping;
 
     private void Start()
     {
         ShowDialogueUI(false);
     }
 
-    public void StartDialogue(NPCDialogue dialogueData, UnityEvent dialogueEndedEvent)
+    public void StartDialogue(NPCDialogue dialogueData, UnityEvent onDialogueEnded)
     {
         if (dialogueData == null) return;
+        if (isDialogueActive) return;
 
         currentDialogue = dialogueData;
-        currentDialogueEndedEvent = dialogueEndedEvent;
-
         dialogueIndex = 0;
+        dialogueEndedEvent = onDialogueEnded;
+
         isDialogueActive = true;
 
         SetNPCInfo(currentDialogue.npcName, currentDialogue.npcPortrait);
         ShowDialogueUI(true);
-        StartCoroutine(TypeLine());
+        ShowCurrentLine();
     }
 
     public void NextLine()
     {
         if (!isDialogueActive || currentDialogue == null) return;
 
-        // If currently typing, finish the current sentence immediately
+        // do not allow advancing while text is still typing
         if (isTyping)
         {
-            StopAllCoroutines();
-
-            SetDialogueText(currentDialogue.dialogueLines[dialogueIndex]);
-
-            isTyping = false;
             return;
         }
 
         dialogueIndex++;
 
-        // More dialogue lines remain
-        if (dialogueIndex < currentDialogue.dialogueLines.Length)
-        {
-            StartCoroutine(TypeLine());
-        }
-        else
+        if (dialogueIndex >= currentDialogue.dialogueLines.Length)
         {
             EndDialogue();
+            return;
         }
+
+        ShowCurrentLine();
     }
 
-    private IEnumerator TypeLine()
+    private void ShowCurrentLine()
+    {
+        if (currentDialogue.dialogueLines == null ||
+            dialogueIndex < 0 || dialogueIndex >= currentDialogue.dialogueLines.Length)
+        {
+            EndDialogue();
+            return;
+        }
+
+        StopAllCoroutines();
+
+        StartCoroutine(TypeLine(currentDialogue.dialogueLines[dialogueIndex]));
+    }
+
+    private IEnumerator TypeLine(string line)
     {
         isTyping = true;
 
-        SetDialogueText("");
+        dialogueText.text = "";
 
-        foreach (char letter in currentDialogue.dialogueLines[dialogueIndex])
+        foreach (char letter in line)
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(currentDialogue.typingSpeed);
+            yield return new WaitForSeconds(typingSpeed);
         }
 
         isTyping = false;
-
-        // Automatically progress if this line is marked as auto-progress
-        if (currentDialogue.autoProgressLines != null &&
-            dialogueIndex < currentDialogue.autoProgressLines.Length &&
-            currentDialogue.autoProgressLines[dialogueIndex])
-        {
-            yield return new WaitForSeconds(currentDialogue.autoProgressDelay);
-            NextLine();
-        }
     }
 
     public void EndDialogue()
@@ -105,27 +103,32 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         isDialogueActive = false;
 
-        SetDialogueText("");
         ShowDialogueUI(false);
 
+        UnityEvent finishedEvent = dialogueEndedEvent;
+        dialogueEndedEvent = null;
         currentDialogue = null;
-        currentDialogueEndedEvent?.Invoke();
-        currentDialogueEndedEvent = null;
+        dialogueIndex = 0;
     }
 
     public void ShowDialogueUI(bool show)
     {
+        if (dialoguePanel == null) return;
         dialoguePanel.SetActive(show);
     }
 
     public void SetNPCInfo(string npcName, Sprite portrait)
     {
+        if (nameText == null) return;
         nameText.text = npcName;
+        if (portraitImage == null) return;
         portraitImage.sprite = portrait;
+        portraitImage.enabled = portrait != null;
     }
 
     public void SetDialogueText(string text)
     {
+        if (dialogueText == null) return;
         dialogueText.text = text;
     }
 }

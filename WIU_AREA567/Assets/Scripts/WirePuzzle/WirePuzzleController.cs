@@ -7,13 +7,49 @@ public class WirePuzzleController : MonoBehaviour
     [SerializeField]
     private WireConnectionUI[] connections;
 
+    [Header("Right Endpoints")]
+    [SerializeField]
+    private RectTransform[] rightEndpoints;
+
     [Header("Events")]
     public UnityEvent OnPuzzleCompleted;
+    public UnityEvent OnPuzzleOpened;
+    public UnityEvent OnPuzzleClosed;
 
     private int completedConnections;
     private bool isCompleted;
 
+    // The specific door currently using this puzzle.
+    private WirePuzzleDoor activeDoor;
+
+    private Vector2[] originalEndpointPositions;
+
     public bool IsCompleted => isCompleted;
+
+    private void Awake()
+    {
+        SaveEndpointPositions();
+    }
+
+    public void OpenForDoor(WirePuzzleDoor door)
+    {
+        if (door == null)
+            return;
+
+        activeDoor = door;
+
+        ResetPuzzle();
+        RandomiseEndpoints();
+
+        gameObject.SetActive(true);
+
+        OnPuzzleOpened?.Invoke();
+
+        Debug.Log(
+            "Wire puzzle opened for: " +
+            door.gameObject.name
+        );
+    }
 
     public void RegisterConnection()
     {
@@ -48,14 +84,21 @@ public class WirePuzzleController : MonoBehaviour
         );
 
         OnPuzzleCompleted?.Invoke();
+
+        if (activeDoor != null)
+        {
+            activeDoor.UnlockDoor();
+        }
+
+        activeDoor = null;
+
+        gameObject.SetActive(false);
     }
 
     public void ResetPuzzle()
     {
-        if (isCompleted)
-            return;
-
         completedConnections = 0;
+        isCompleted = false;
 
         foreach (WireConnectionUI connection
                  in connections)
@@ -65,10 +108,6 @@ public class WirePuzzleController : MonoBehaviour
                 connection.ResetConnection();
             }
         }
-
-        Debug.Log(
-            "Wire puzzle reset."
-        );
     }
 
     public void ClosePuzzle()
@@ -78,6 +117,76 @@ public class WirePuzzleController : MonoBehaviour
             ResetPuzzle();
         }
 
+        activeDoor = null;
+
+        OnPuzzleClosed?.Invoke();
+
         gameObject.SetActive(false);
+    }
+
+    private void SaveEndpointPositions()
+    {
+        if (rightEndpoints == null)
+            return;
+
+        originalEndpointPositions =
+            new Vector2[
+                rightEndpoints.Length
+            ];
+
+        for (int i = 0;
+             i < rightEndpoints.Length;
+             i++)
+        {
+            if (rightEndpoints[i] != null)
+            {
+                originalEndpointPositions[i] =
+                    rightEndpoints[i]
+                        .anchoredPosition;
+            }
+        }
+    }
+
+    private void RandomiseEndpoints()
+    {
+        if (rightEndpoints == null ||
+            originalEndpointPositions == null)
+        {
+            return;
+        }
+
+        Vector2[] shuffledPositions =
+            (Vector2[])
+            originalEndpointPositions.Clone();
+
+        for (int i =
+             shuffledPositions.Length - 1;
+             i > 0;
+             i--)
+        {
+            int randomIndex =
+                Random.Range(0, i + 1);
+
+            Vector2 temp =
+                shuffledPositions[i];
+
+            shuffledPositions[i] =
+                shuffledPositions[randomIndex];
+
+            shuffledPositions[randomIndex] =
+                temp;
+        }
+
+        for (int i = 0;
+             i < rightEndpoints.Length;
+             i++)
+        {
+            if (rightEndpoints[i] != null)
+            {
+                rightEndpoints[i]
+                    .anchoredPosition =
+                    shuffledPositions[i];
+            }
+        }
     }
 }

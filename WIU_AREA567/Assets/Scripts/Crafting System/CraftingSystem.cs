@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class CraftingSystem : MonoBehaviour
-    //, IInteractable
 {
     public const int GRID_SIZE = 9;
 
@@ -39,8 +38,7 @@ public class CraftingSystem : MonoBehaviour
         }
         if (researchLog == null)
         {
-            researchLog =
-                FindFirstObjectByType<ResearchLog>();
+            researchLog = FindFirstObjectByType<ResearchLog>();
         }
 
         SubscribeToResearch();
@@ -50,8 +48,7 @@ public class CraftingSystem : MonoBehaviour
     {
         if (researchLog != null)
         {
-            researchLog.OnResearchLogChanged
-                .AddListener(CheckCraftingOutput);
+            researchLog.OnResearchLogChanged.AddListener(CheckCraftingOutput);
         }
     }
 
@@ -59,8 +56,7 @@ public class CraftingSystem : MonoBehaviour
     {
         if (researchLog != null)
         {
-            researchLog.OnResearchLogChanged
-                .RemoveListener(CheckCraftingOutput);
+            researchLog.OnResearchLogChanged.RemoveListener(CheckCraftingOutput);
         }
     }
 
@@ -221,5 +217,33 @@ public class CraftingSystem : MonoBehaviour
         OnCraftingSucceeded?.Invoke();
         GridChanged();
         return true;
+    }
+
+    public bool ReturnAllItemsToInventory()
+    {
+        if (inventory == null) return false;
+
+        bool allReturned = true;
+
+        for (int i = 0; i < craftingGrid.Length; i++)
+        {
+            CraftingGridSlot slot = craftingGrid[i];
+            if (slot == null || slot.IsEmpty) continue;
+
+            bool returned = inventory.AddItem(
+                new ItemInstance(slot.itemData, slot.itemEffect, slot.quantity));
+
+            if (!returned)
+            {
+                Debug.Log("Could not return " + slot.itemData.itemName);
+                allReturned = false;
+                continue;
+            }
+
+            slot.Clear();
+        }
+
+        GridChanged();
+        return allReturned;
     }
 }

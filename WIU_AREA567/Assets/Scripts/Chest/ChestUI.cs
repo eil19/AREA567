@@ -15,16 +15,14 @@ public class ChestUI : MonoBehaviour
     {
         if (inventory == null)
         {
-            inventory =
-                FindFirstObjectByType<Inventory>();
+            inventory = FindFirstObjectByType<Inventory>();
         }
 
         InitialiseSlots();
 
         if (chestStorage != null)
         {
-            chestStorage.OnStorageChanged
-                .AddListener(Refresh);
+            chestStorage.OnStorageChanged.AddListener(Refresh);
         }
 
         Refresh();
@@ -34,8 +32,7 @@ public class ChestUI : MonoBehaviour
     {
         if (chestStorage != null)
         {
-            chestStorage.OnStorageChanged
-                .RemoveListener(Refresh);
+            chestStorage.OnStorageChanged.RemoveListener(Refresh);
         }
     }
 
@@ -67,5 +64,10 @@ public class ChestUI : MonoBehaviour
                 chestStorage.GetItem(i)
             );
         }
+    }
+
+    public void CloseChest()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class WireConnectionUI : MonoBehaviour,
     IBeginDragHandler,
@@ -10,6 +11,10 @@ public class WireConnectionUI : MonoBehaviour,
     [SerializeField] private RectTransform wireImage;
     [SerializeField] private WireEndpointUI startEndpoint;
     [SerializeField] private WirePuzzleController puzzleController;
+
+    [Header("Events")]
+    public UnityEvent OnCorrectConnection;
+    public UnityEvent OnWrongConnection;
 
     private bool isConnected;
     private WireEndpointUI connectedEndpoint;
@@ -85,7 +90,7 @@ public class WireConnectionUI : MonoBehaviour,
                 "Incorrect wire connection: " +
                 startEndpoint.WireType
             );
-
+            OnWrongConnection?.Invoke();
             HideWire();
             return;
         }
@@ -110,7 +115,7 @@ public class WireConnectionUI : MonoBehaviour,
             startEndpoint.WireType +
             " wire connected correctly."
         );
-
+        OnCorrectConnection?.Invoke();
         puzzleController?.RegisterConnection();
     }
 

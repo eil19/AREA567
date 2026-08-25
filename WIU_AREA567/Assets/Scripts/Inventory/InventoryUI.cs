@@ -17,11 +17,15 @@ public class InventoryUI : MonoBehaviour
         {
             inventory = FindFirstObjectByType<Inventory>();
         }
-
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         if (inventory != null)
         {
             inventory.OnInventoryChanged.AddListener(RefreshInventory);
         }
+
         InitialiseSlots();
         RefreshInventory();
     }

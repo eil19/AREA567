@@ -1,6 +1,6 @@
-using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RecipePanelUI : MonoBehaviour
 {
@@ -10,14 +10,27 @@ public class RecipePanelUI : MonoBehaviour
     [Header("Recipe Details")]
     [SerializeField] private GameObject recipeDetailsPanel;
     [SerializeField] private TMP_Text recipeNameText;
-    [SerializeField] private TMP_Text recipeDescriptionText;
-    [SerializeField] private TMP_Text ingredientsText;
+    [SerializeField] private Image formulaImage;
+    [SerializeField] private TMP_Text lockedText;
+
+    private void Start()
+    {
+        if (researchLog == null)
+        {
+            researchLog = FindFirstObjectByType<ResearchLog>();
+        }
+
+        if (recipeDetailsPanel != null)
+        {
+            recipeDetailsPanel.SetActive(false);
+        }
+    }
 
     public void ShowRecipe(CraftingRecipe recipe)
     {
         if (recipe == null)
         {
-            Debug.LogWarning("No CraftingRecipe assigned.");
+            Debug.Log("No CraftingRecipe assigned.");
             return;
         }
 
@@ -38,45 +51,32 @@ public class RecipePanelUI : MonoBehaviour
     private void ShowLockedRecipe(CraftingRecipe recipe)
     {
         recipeNameText.text = recipe.recipeName;
-
-        recipeDescriptionText.text =
-            "Recipe has not been unlocked yet.";
-
-        ingredientsText.text =
-            "Find research notes to unlock this recipe.";
+        // hide formula
+        formulaImage.sprite = null;
+        formulaImage.gameObject.SetActive(false);
+        lockedText.text = "Recipe has not been unlocked yet.";
+        lockedText.gameObject.SetActive(true);
     }
 
     private void ShowUnlockedRecipe(CraftingRecipe recipe)
     {
         recipeNameText.text = recipe.recipeName;
-        recipeDescriptionText.text = recipe.recipeDescription;
 
-        ingredientsText.text = GetIngredientsText(recipe);
-    }
+        // hide locked message
+        lockedText.gameObject.SetActive(false);
 
-    private string GetIngredientsText(CraftingRecipe recipe)
-    {
-        StringBuilder text = new StringBuilder();
-
-        text.AppendLine("Required Materials:");
-
-        foreach (CraftingIngredient ingredient in recipe.recipeGrid)
+        // show crafting formula
+        if (recipe.formulaImage != null)
         {
-            if (ingredient == null ||
-                ingredient.item == null ||
-                ingredient.quantity <= 0)
-            {
-                continue;
-            }
-
-            text.AppendLine(
-                ingredient.item.itemName +
-                " x" +
-                ingredient.quantity
-            );
+            formulaImage.sprite = recipe.formulaImage;
+            formulaImage.gameObject.SetActive(true);
         }
-
-        return text.ToString();
+        else
+        {
+            formulaImage.sprite = null;
+            formulaImage.gameObject.SetActive(false);
+            Debug.Log("No formula image assigned to recipe: " + recipe.recipeName);
+        }
     }
 
     public void HideRecipeDetails()

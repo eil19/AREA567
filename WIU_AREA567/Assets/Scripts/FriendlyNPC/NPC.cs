@@ -1,18 +1,20 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class NPC : MonoBehaviour, 
+public class NPC : MonoBehaviour,
     IInteractable
 {
     [Header("Dialogue")]
     [SerializeField] private NPCDialogue dialogueData;
+
     [SerializeField] private DialogueManager dialogueManager;
 
-    [Header("Dialogue Events")]
+    [Header("Events")]
     public UnityEvent OnDialogueStarted;
     public UnityEvent OnDialogueEnded;
 
     private bool isMyDialogueActive;
+
     private UnityEvent dialogueFinishedEvent;
 
     private void Awake()
@@ -22,38 +24,49 @@ public class NPC : MonoBehaviour,
         dialogueFinishedEvent.AddListener(HandleDialogueEnded);
     }
 
+    private void Start()
+    {
+        if (dialogueManager == null)
+        {
+            dialogueManager = FindFirstObjectByType<DialogueManager>();
+        }
+    }
+
     public void Interact(GameObject interactor)
     {
-        if (dialogueData == null || dialogueManager == null)
+        if (dialogueManager == null ||
+            dialogueData == null)
         {
             return;
         }
 
-        // Dialogue already belongs to this NPC,
-        // so pressing interact progresses it.
         if (isMyDialogueActive)
         {
             dialogueManager.NextLine();
+            return;
         }
-        else
+
+        if (dialogueManager.IsDialogueActive)
         {
-            StartDialogue();
+            return;
         }
+
+        StartDialogue();
     }
 
     private void StartDialogue()
     {
         isMyDialogueActive = true;
 
-        // Notify other components that dialogue started
         OnDialogueStarted?.Invoke();
 
-        dialogueManager.StartDialogue(dialogueData, OnDialogueEnded);
+        dialogueManager.StartDialogue(dialogueData, dialogueFinishedEvent);
     }
 
-    public void HandleDialogueEnded()
+    private void HandleDialogueEnded()
     {
         isMyDialogueActive = false;
+
         OnDialogueEnded?.Invoke();
     }
 }

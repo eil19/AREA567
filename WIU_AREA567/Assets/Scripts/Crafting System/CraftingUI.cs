@@ -18,9 +18,18 @@ public class CraftingUI : MonoBehaviour
 
     private void Start()
     {
+        if (craftingSystem == null)
+        {
+            craftingSystem = FindFirstObjectByType<CraftingSystem>();
+        }
         if (inventory == null)
         {
             inventory = FindFirstObjectByType<Inventory>();
+        }
+        if (craftingSystem == null)
+        {
+            Debug.Log("Crafting system not found");
+            return;
         }
 
         InitialiseSlots();

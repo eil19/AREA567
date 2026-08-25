@@ -26,7 +26,7 @@ public class ResearchLog : MonoBehaviour
         }
 
         existingInstance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public bool AddResearch(ResearchData data)
@@ -86,5 +86,11 @@ public class ResearchLog : MonoBehaviour
         {
             Debug.Log("Discovered: " + data.researchName);
         }
+    }
+
+    public void ClearResearch()
+    {
+        discovered.Clear();
+        OnResearchLogChanged?.Invoke();
     }
 }

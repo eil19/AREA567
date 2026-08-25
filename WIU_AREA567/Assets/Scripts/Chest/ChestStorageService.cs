@@ -4,19 +4,13 @@ using UnityEngine;
 public class ChestStorageService : MonoBehaviour
 {
     private Dictionary<string, List<ItemInstance>>
-        chestContents =
-        new Dictionary<string, List<ItemInstance>>();
+        chestContents = new Dictionary<string, List<ItemInstance>>();
 
-    public List<ItemInstance> GetOrCreateChest(
-        string chestId,
-        int slotCount)
+    public List<ItemInstance> GetOrCreateChest(string chestId, int slotCount)
     {
         if (string.IsNullOrWhiteSpace(chestId))
         {
-            Debug.LogError(
-                "Chest must have a valid Chest ID."
-            );
-
+            Debug.Log("Chest must have a valid Chest ID.");
             return null;
         }
 
@@ -41,5 +35,10 @@ public class ChestStorageService : MonoBehaviour
         }
 
         return slots;
+    }
+
+    public void ClearAll()
+    {
+        chestContents.Clear();
     }
 }

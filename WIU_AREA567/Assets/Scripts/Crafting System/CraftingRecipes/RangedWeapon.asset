@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
   recipeName: Ranged Weapon
   recipeDescription: Ranged Weapon
+  formulaImage: {fileID: 21300000, guid: bb70c2467b23de34db31ba6982ed5c45, type: 3}
   recipeGrid:
   - item: {fileID: 0}
     quantity: 0

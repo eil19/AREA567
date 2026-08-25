@@ -9,6 +9,9 @@ public class CraftingRecipe : ScriptableObject
     [TextArea]
     public string recipeDescription;
 
+    [Header("Recipe Display")]
+    public Sprite formulaImage;
+
     [Header("3x3 grid")]
     public CraftingIngredient[] recipeGrid = new CraftingIngredient[9];
 

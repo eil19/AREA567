@@ -5,15 +5,12 @@ using UnityEngine.Events;
 public class ChestStorage : MonoBehaviour
 {
     [Header("Chest Settings")]
-    [SerializeField]
-    private string chestId = "LaboratoryChest";
+    [SerializeField] private string chestId = "LaboratoryChest";
 
-    [SerializeField]
-    private int maxSlots = 5;
+    [SerializeField] private int maxSlots = 5;
 
     [Header("Events")]
     public UnityEvent OnStorageChanged;
-
     private ChestStorageService storageService;
 
     private List<ItemInstance> items;
@@ -22,60 +19,36 @@ public class ChestStorage : MonoBehaviour
 
     private void Start()
     {
-        storageService =
-            FindFirstObjectByType<
-                ChestStorageService>();
+        storageService = FindFirstObjectByType<ChestStorageService>();
 
         if (storageService == null)
         {
-            Debug.LogError(
-                "ChestStorage could not find " +
-                "ChestStorageService."
-            );
-
+            Debug.Log("ChestStorage could not find ChestStorageService.");
             return;
         }
 
-        items =
-            storageService.GetOrCreateChest(
-                chestId,
-                maxSlots
-            );
-
+        items = storageService.GetOrCreateChest(chestId, maxSlots);
         OnStorageChanged?.Invoke();
     }
 
     public ItemInstance GetItem(int index)
     {
-        if (items == null ||
-            index < 0 ||
-            index >= items.Count)
+        if (items == null || index < 0 || index >= items.Count)
         {
             return null;
         }
-
         return items[index];
     }
 
-    public bool CanStore(
-        ItemData itemData)
+    public bool CanStore(ItemData itemData)
     {
-        if (itemData == null)
-            return false;
+        if (itemData == null) return false;
 
-        return
-            itemData.itemType ==
-                ItemType.Material
-            ||
-            itemData.itemType ==
-                ItemType.Consumable;
+        return itemData.itemType == ItemType.Material
+            || itemData.itemType == ItemType.Consumable;
     }
 
-    public bool AddItemAtSlot(
-        int index,
-        ItemData itemData,
-        ItemEffect itemEffect,
-        int quantity)
+    public bool AddItemAtSlot(int index, ItemData itemData, ItemEffect itemEffect, int quantity)
     {
         if (items == null ||
             index < 0 ||
@@ -86,11 +59,9 @@ public class ChestStorage : MonoBehaviour
             return false;
         }
 
-        if (!CanStore(itemData))
-            return false;
+        if (!CanStore(itemData)) return false;
 
-        ItemInstance current =
-            items[index];
+        ItemInstance current = items[index];
 
         if (current == null)
         {
@@ -184,14 +155,9 @@ public class ChestStorage : MonoBehaviour
             return false;
         }
 
-        ItemInstance temp =
-            items[firstIndex];
-
-        items[firstIndex] =
-            items[secondIndex];
-
-        items[secondIndex] =
-            temp;
+        ItemInstance temp = items[firstIndex];
+        items[firstIndex] = items[secondIndex];
+        items[secondIndex] = temp;
 
         OnStorageChanged?.Invoke();
 

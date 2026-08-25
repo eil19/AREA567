@@ -1,15 +1,24 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WirePuzzleDoor : MonoBehaviour,
+public class WirePuzzleDoor :
+    MonoBehaviour,
     IInteractable
 {
     [Header("Puzzle")]
     [SerializeField]
-    private GameObject puzzlePanel;
+    private WirePuzzleController puzzleController;
+
+    [Header("Door")]
+    [SerializeField]
+    private Collider2D blockingCollider;
+
+    [SerializeField]
+    private Animator animator;
 
     [Header("Events")]
     public UnityEvent OnDoorUnlocked;
+    public UnityEvent OnDoorOpened;
 
     private bool unlocked;
 
@@ -24,14 +33,24 @@ public class WirePuzzleDoor : MonoBehaviour,
             return;
         }
 
-        if (puzzlePanel != null)
+        if (puzzleController == null)
         {
-            puzzlePanel.SetActive(true);
+            puzzleController =
+                FindFirstObjectByType<
+                    WirePuzzleController>();
         }
 
-        Debug.Log(
-            "Door locked. Opening wire puzzle."
-        );
+        if (puzzleController == null)
+        {
+            Debug.LogWarning(
+                "WirePuzzleController " +
+                "could not be found."
+            );
+
+            return;
+        }
+
+        puzzleController.OpenForDoor(this);
     }
 
     public void UnlockDoor()
@@ -41,13 +60,9 @@ public class WirePuzzleDoor : MonoBehaviour,
 
         unlocked = true;
 
-        if (puzzlePanel != null)
-        {
-            puzzlePanel.SetActive(false);
-        }
-
         Debug.Log(
-            "DOOR UNLOCKED!"
+            gameObject.name +
+            " unlocked."
         );
 
         OnDoorUnlocked?.Invoke();
@@ -57,12 +72,22 @@ public class WirePuzzleDoor : MonoBehaviour,
 
     private void OpenDoor()
     {
+        if (blockingCollider != null)
+        {
+            blockingCollider.enabled =
+                false;
+        }
+
+        if (animator != null)
+        {
+            animator.SetTrigger("Open");
+        }
+
         Debug.Log(
-            "Door opened successfully."
+            gameObject.name +
+            " opened."
         );
 
-        // Later:
-        // animator.SetTrigger("Open");
-        // blockingCollider.enabled = false;
+        OnDoorOpened?.Invoke();
     }
 }
