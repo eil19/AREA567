@@ -10,20 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 874947424e101d14385f519458fbabb5, type: 3}
-  m_Name: HealingPotion
+  m_Name: BondingCharm
   m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
-  recipeName: Healing Potion
-  recipeDescription: Create a healing potion to heal yourself
+  recipeName: Bonding Charm
+  recipeDescription: Tame aliens using this item
   recipeGrid:
   - item: {fileID: 0}
-    quantity: 0
-  - item: {fileID: 11400000, guid: ae484dd9ee72c2248bcefd498833c75d, type: 2}
-    quantity: 1
-  - item: {fileID: 0}
-    quantity: 0
-  - item: {fileID: 0}
-    quantity: 0
-  - item: {fileID: 11400000, guid: ae484dd9ee72c2248bcefd498833c75d, type: 2}
     quantity: 1
   - item: {fileID: 0}
     quantity: 0
@@ -31,8 +23,16 @@ MonoBehaviour:
     quantity: 0
   - item: {fileID: 0}
     quantity: 0
+  - item: {fileID: 11400000, guid: 91b98353b962d1d42920783c62367b52, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: ae484dd9ee72c2248bcefd498833c75d, type: 2}
+    quantity: 1
   - item: {fileID: 0}
     quantity: 0
-  outputItem: {fileID: 11400000, guid: 03d0596bdd4d68f46a29a6a9a5fc0095, type: 2}
-  outputEffect: {fileID: 11400000, guid: 58c1f83c29798624d97e2e9248620216, type: 2}
+  - item: {fileID: 11400000, guid: 3e41c8d2c30e445449dcf6f7a988d81d, type: 2}
+    quantity: 1
+  - item: {fileID: 0}
+    quantity: 0
+  outputItem: {fileID: 11400000, guid: 36758c1c8cad4f64194e244d5f586a81, type: 2}
+  outputEffect: {fileID: 0}
   outputQuantity: 1

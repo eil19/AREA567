@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee531aae4e494b940bf84e407791faa6, type: 3}
-  m_Name: Research_MeleeRecipe
+  m_Name: ResearchDamageType
   m_EditorClassIdentifier: Assembly-CSharp::ResearchData
-  researchName: Melee Weapon Recipe
+  researchName: Taming for Damage Alien
   description: 
   icon: {fileID: 0}
-  category: 0
+  category: 1
   unlockedRecipe: {fileID: 0}
-  relatedAlienCategory: 0
+  relatedAlienCategory: 1
