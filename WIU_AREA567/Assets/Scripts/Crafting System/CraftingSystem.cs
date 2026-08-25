@@ -136,7 +136,7 @@ public class CraftingSystem : MonoBehaviour
         {
             if (recipe == null) continue;
             // recipe must be unlocked first
-            if (ResearchLog.Instance == null || !ResearchLog.Instance.IsRecipeUnlocked(recipe)) continue;
+            if (researchLog == null || !researchLog.IsRecipeUnlocked(recipe)) continue;
             if (RecipeMatches(recipe))
             {
                 currentRecipe = recipe;
