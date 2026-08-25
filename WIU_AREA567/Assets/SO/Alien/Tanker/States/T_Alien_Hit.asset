@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
+  m_Name: T_Alien_Hit
+  m_EditorClassIdentifier: Assembly-CSharp::State
+  initializeActions:
+  - {fileID: 11400000, guid: 662f6ed28e0b6f64eac422f03205890e, type: 2}
+  - {fileID: 11400000, guid: c53d578794a929e46b4b66e96cf97a00, type: 2}
+  executeActions: []
+  endActions:
+  - {fileID: 11400000, guid: f4c28cbca505764468564e5a0b784cca, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 958896599de3d1642a299cb8efcf8091, type: 2}
+    trueState: {fileID: 11400000, guid: 6963d287d51f2be4ea03429a467acb90, type: 2}
+    falseState: {fileID: 11400000, guid: a6970a10b4372704e83358e9b9ac0132, type: 2}

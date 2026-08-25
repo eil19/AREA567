@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AlienType
   alienName: Damage
   category: 1
-  health: 10
-  damage: 2
+  health: 40
+  damage: 10
   moveSpeed: 2
   reactionDescription: 
   tameDifficulty: 0.739

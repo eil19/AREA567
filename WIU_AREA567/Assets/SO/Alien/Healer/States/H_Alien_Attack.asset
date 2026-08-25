@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
+  m_Name: H_Alien_Attack
+  m_EditorClassIdentifier: Assembly-CSharp::State
+  initializeActions:
+  - {fileID: 11400000, guid: 7eb5dfd664438474b8ed0c09059abfda, type: 2}
+  - {fileID: 11400000, guid: 099e6647d532d9d4abb75cff2c84b7de, type: 2}
+  - {fileID: 11400000, guid: 123e9d3d1f1d6df49a46823408fb3847, type: 2}
+  - {fileID: 11400000, guid: 3e8c60dc410d0ab428d6930ef93a93a7, type: 2}
+  - {fileID: 11400000, guid: 6f619c144f8783243ba77886732a2a4c, type: 2}
+  executeActions: []
+  endActions:
+  - {fileID: 11400000, guid: 96f4c05c9f986f24883807b6ebefcd1f, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: ee56ba3eebd4b2e4fa728936c7386242, type: 2}
+    trueState: {fileID: 11400000, guid: 4ec83a8b8940ed0458be19cc882a3a93, type: 2}
+    falseState: {fileID: 11400000, guid: 75044756d76591246ba846457717831f, type: 2}
