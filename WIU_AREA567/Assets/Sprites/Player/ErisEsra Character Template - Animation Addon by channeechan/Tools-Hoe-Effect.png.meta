@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 0512c84365e85de4498ca74c60ef1a34
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2880416285245505044
+    second: Tools-Hoe-Effect_0
+  - first:
+      213: 1721270173858525842
+    second: Tools-Hoe-Effect_1
+  - first:
+      213: -8838059285245171877
+    second: Tools-Hoe-Effect_2
+  - first:
+      213: 156335355755080776
+    second: Tools-Hoe-Effect_3
+  - first:
+      213: 1856085429656971940
+    second: Tools-Hoe-Effect_4
+  - first:
+      213: -3142563899247927321
+    second: Tools-Hoe-Effect_5
+  - first:
+      213: 4542501953990801054
+    second: Tools-Hoe-Effect_6
+  - first:
+      213: 1901667515601382117
+    second: Tools-Hoe-Effect_7
+  - first:
+      213: 5794486093794159356
+    second: Tools-Hoe-Effect_8
+  - first:
+      213: 3424346236380577017
+    second: Tools-Hoe-Effect_9
+  - first:
+      213: -52255384560183101
+    second: Tools-Hoe-Effect_10
+  - first:
+      213: 3376444731124427354
+    second: Tools-Hoe-Effect_11
+  - first:
+      213: -4314956352875959015
+    second: Tools-Hoe-Effect_12
+  - first:
+      213: 4331588714376383978
+    second: Tools-Hoe-Effect_13
+  - first:
+      213: 7204808437018410367
+    second: Tools-Hoe-Effect_14
+  - first:
+      213: 3949092184133012848
+    second: Tools-Hoe-Effect_15
+  - first:
+      213: 3400247409039015416
+    second: Tools-Hoe-Effect_16
+  - first:
+      213: -615036695982668628
+    second: Tools-Hoe-Effect_17
+  - first:
+      213: -5890346716469738969
+    second: Tools-Hoe-Effect_18
+  - first:
+      213: 3687253453818469564
+    second: Tools-Hoe-Effect_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 207
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce101b056a4b608d0800000000000000
+      internalID: -2880416285245505044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 207
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292ff4b7a1e23e710800000000000000
+      internalID: 1721270173858525842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 216
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b576e17f7e7e85580800000000000000
+      internalID: -8838059285245171877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 195
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84cad918d2a6b2200800000000000000
+      internalID: 156335355755080776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 199
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa6b734dd322c910800000000000000
+      internalID: 1856085429656971940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_5
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 143
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef5c5d98ce5364d0800000000000000
+      internalID: -3142563899247927321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_6
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 143
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96b32fb5753a0f30800000000000000
+      internalID: 4542501953990801054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_7
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 155
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eae15ca784146a10800000000000000
+      internalID: 1901667515601382117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_8
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 135
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfaaa8cd6662a6050800000000000000
+      internalID: 5794486093794159356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_9
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 137
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcf86f42c8b58f20800000000000000
+      internalID: 3424346236380577017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 79
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c850bd210a564ff0800000000000000
+      internalID: -52255384560183101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_11
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 79
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a2962089a8bde20800000000000000
+      internalID: 3376444731124427354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_12
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 88
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91d63850f023e14c0800000000000000
+      internalID: -4314956352875959015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 67
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedce796cf4ec1c30800000000000000
+      internalID: 4331588714376383978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_14
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 69
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d383bc91f9cf360800000000000000
+      internalID: 7204808437018410367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_15
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 15
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d05841b6efdc630800000000000000
+      internalID: 3949092184133012848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_16
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 15
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd7634d00b103f20800000000000000
+      internalID: 3400247409039015416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 27
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca48f143263f677f0800000000000000
+      internalID: -615036695982668628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_18
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 7
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722cee8aed8414ea0800000000000000
+      internalID: -5890346716469738969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Hoe-Effect_19
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 8
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc9ea7fa71cb2330800000000000000
+      internalID: 3687253453818469564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tools-Hoe-Effect_0: -2880416285245505044
+      Tools-Hoe-Effect_1: 1721270173858525842
+      Tools-Hoe-Effect_10: -52255384560183101
+      Tools-Hoe-Effect_11: 3376444731124427354
+      Tools-Hoe-Effect_12: -4314956352875959015
+      Tools-Hoe-Effect_13: 4331588714376383978
+      Tools-Hoe-Effect_14: 7204808437018410367
+      Tools-Hoe-Effect_15: 3949092184133012848
+      Tools-Hoe-Effect_16: 3400247409039015416
+      Tools-Hoe-Effect_17: -615036695982668628
+      Tools-Hoe-Effect_18: -5890346716469738969
+      Tools-Hoe-Effect_19: 3687253453818469564
+      Tools-Hoe-Effect_2: -8838059285245171877
+      Tools-Hoe-Effect_3: 156335355755080776
+      Tools-Hoe-Effect_4: 1856085429656971940
+      Tools-Hoe-Effect_5: -3142563899247927321
+      Tools-Hoe-Effect_6: 4542501953990801054
+      Tools-Hoe-Effect_7: 1901667515601382117
+      Tools-Hoe-Effect_8: 5794486093794159356
+      Tools-Hoe-Effect_9: 3424346236380577017
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 74b7845ddc21d834a9a81c47994d5b84
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2378032210242283733
+    second: Tools-Sprite-Axe_0
+  - first:
+      213: 2710082837301281785
+    second: Tools-Sprite-Axe_1
+  - first:
+      213: -1815410012103292551
+    second: Tools-Sprite-Axe_2
+  - first:
+      213: -5669446364001051389
+    second: Tools-Sprite-Axe_3
+  - first:
+      213: -512591687567925107
+    second: Tools-Sprite-Axe_4
+  - first:
+      213: 1486801478559788407
+    second: Tools-Sprite-Axe_5
+  - first:
+      213: -5815168806215901662
+    second: Tools-Sprite-Axe_6
+  - first:
+      213: 2474412418518416164
+    second: Tools-Sprite-Axe_7
+  - first:
+      213: -8832770583690514298
+    second: Tools-Sprite-Axe_8
+  - first:
+      213: -5322525288711366828
+    second: Tools-Sprite-Axe_9
+  - first:
+      213: 1828092909311952893
+    second: Tools-Sprite-Axe_10
+  - first:
+      213: -6215115326414327122
+    second: Tools-Sprite-Axe_11
+  - first:
+      213: -3108838863545972922
+    second: Tools-Sprite-Axe_12
+  - first:
+      213: -1329817441842025031
+    second: Tools-Sprite-Axe_13
+  - first:
+      213: 7353522053442808451
+    second: Tools-Sprite-Axe_14
+  - first:
+      213: -8761266968227534843
+    second: Tools-Sprite-Axe_15
+  - first:
+      213: 2755221995730417176
+    second: Tools-Sprite-Axe_16
+  - first:
+      213: -3883240023562091544
+    second: Tools-Sprite-Axe_17
+  - first:
+      213: 5292677302029765891
+    second: Tools-Sprite-Axe_18
+  - first:
+      213: -837856712339077864
+    second: Tools-Sprite-Axe_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 213
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8ade322b7700120800000000000000
+      internalID: 2378032210242283733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 217
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3c93d5bf52c9520800000000000000
+      internalID: 2710082837301281785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 211
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97945e2663e5ec6e0800000000000000
+      internalID: -1815410012103292551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 206
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d5698e1941251b0800000000000000
+      internalID: -5669446364001051389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 211
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8022b37398e2e8f0800000000000000
+      internalID: -512591687567925107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 149
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77de41d311e22a410800000000000000
+      internalID: 1486801478559788407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_6
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 152
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e9194e7ce5c4fa0800000000000000
+      internalID: -5815168806215901662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 151
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42bfa911cf0e65220800000000000000
+      internalID: 2474412418518416164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_8
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 149
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6807b90c3f1bb6580800000000000000
+      internalID: -8832770583690514298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 158
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457535a23779226b0800000000000000
+      internalID: -5322525288711366828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 85
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df703fbb0d0be5910800000000000000
+      internalID: 1828092909311952893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 92
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2fcfa2a897fb9a0800000000000000
+      internalID: -6215115326414327122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_12
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 83
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647c962668f2bd4d0800000000000000
+      internalID: -3108838863545972922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_13
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 94
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd23e2151a8b8de0800000000000000
+      internalID: -1329817441842025031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_14
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 83
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38aa573d855fc0660800000000000000
+      internalID: 7353522053442808451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_15
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5082f609c1ab96680800000000000000
+      internalID: -8761266968227534843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_16
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 23
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 816badcaec38c3620800000000000000
+      internalID: 2755221995730417176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 23
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3800ad5c5fb1ac0800000000000000
+      internalID: -3883240023562091544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_18
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 21
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dc142e6fd537940800000000000000
+      internalID: 5292677302029765891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Axe_19
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 29
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8154a5062c55f54f0800000000000000
+      internalID: -837856712339077864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tools-Sprite-Axe_0: 2378032210242283733
+      Tools-Sprite-Axe_1: 2710082837301281785
+      Tools-Sprite-Axe_10: 1828092909311952893
+      Tools-Sprite-Axe_11: -6215115326414327122
+      Tools-Sprite-Axe_12: -3108838863545972922
+      Tools-Sprite-Axe_13: -1329817441842025031
+      Tools-Sprite-Axe_14: 7353522053442808451
+      Tools-Sprite-Axe_15: -8761266968227534843
+      Tools-Sprite-Axe_16: 2755221995730417176
+      Tools-Sprite-Axe_17: -3883240023562091544
+      Tools-Sprite-Axe_18: 5292677302029765891
+      Tools-Sprite-Axe_19: -837856712339077864
+      Tools-Sprite-Axe_2: -1815410012103292551
+      Tools-Sprite-Axe_3: -5669446364001051389
+      Tools-Sprite-Axe_4: -512591687567925107
+      Tools-Sprite-Axe_5: 1486801478559788407
+      Tools-Sprite-Axe_6: -5815168806215901662
+      Tools-Sprite-Axe_7: 2474412418518416164
+      Tools-Sprite-Axe_8: -8832770583690514298
+      Tools-Sprite-Axe_9: -5322525288711366828
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -138,7 +138,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 12
-      height: 16
+      height: 17
     spriteID: 85991ff70d7a7d8478c4a0262bb0a3fa
     spriteBone: []
     spriteOutline: []
@@ -199,7 +199,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 28
+      y: 29
       width: 12
       height: 16
     spriteID: a290f1405db3f974390c29efee67687d
@@ -210,7 +210,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 28}
+    uvTransform: {x: 4, y: 29}
   - name: Frame_4
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -220,7 +220,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 52
+      y: 53
       width: 12
       height: 16
     spriteID: ad45964154f95124096ac4662d17486d
@@ -231,7 +231,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 52}
+    uvTransform: {x: 4, y: 53}
   - name: Frame_5
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -283,7 +283,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 76
+      y: 77
       width: 12
       height: 16
     spriteID: fb19a5ec9aa4b0d4aa6b6ec7b29b70f3
@@ -294,7 +294,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 76}
+    uvTransform: {x: 4, y: 77}
   - name: Frame_8
     originalName: 
     pivot: {x: 0.50000006, y: 0}
@@ -472,7 +472,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 100
+      y: 101
       width: 12
       height: 16
     spriteID: d717c159a9f1ffd4bbc86c0cf8b6d83d
@@ -483,7 +483,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 100}
+    uvTransform: {x: 4, y: 101}
   - name: Frame_17
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -569,7 +569,7 @@ ScriptedImporter:
         x: 6
         y: 0
         width: 12
-        height: 16
+        height: 17
       spriteId: 85991ff70d7a7d8478c4a0262bb0a3fa
     - name: Frame_1
       frameIndex: 1

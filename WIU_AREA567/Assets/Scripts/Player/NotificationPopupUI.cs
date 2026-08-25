@@ -7,6 +7,7 @@ using UnityEngine;
 // happened!" moment later, not just research pickups.
 public class NotificationPopupUI : MonoBehaviour
 {
+    [SerializeField] private GameObject popupRoot;
     [SerializeField] private TMP_Text messageText;
     [SerializeField] private float displayDuration = 2.5f;
 
@@ -17,7 +18,8 @@ public class NotificationPopupUI : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        gameObject.SetActive(false);
+        if (popupRoot == null) popupRoot = gameObject;
+        popupRoot.SetActive(false);
     }
 
     void OnDestroy()
@@ -28,7 +30,7 @@ public class NotificationPopupUI : MonoBehaviour
     public void Show(string message)
     {
         messageText.text = message;
-        gameObject.SetActive(true);
+        popupRoot.SetActive(true);
 
         if (hideRoutine != null) StopCoroutine(hideRoutine);
         hideRoutine = StartCoroutine(HideAfterDelay());
@@ -37,7 +39,7 @@ public class NotificationPopupUI : MonoBehaviour
     private IEnumerator HideAfterDelay()
     {
         yield return new WaitForSeconds(displayDuration);
-        gameObject.SetActive(false);
+        popupRoot.SetActive(false);
         hideRoutine = null;
     }
 }

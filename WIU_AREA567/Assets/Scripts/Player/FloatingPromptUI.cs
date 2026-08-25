@@ -10,11 +10,6 @@ public class FloatingPromptUI : MonoBehaviour
 
     private Transform target;
 
-    void Awake()
-    {
-        Hide();
-    }
-
     public void Show(GameObject focusedObject)
     {
         target = focusedObject.transform;
