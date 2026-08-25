@@ -235,6 +235,12 @@ public class PodControlPanel : MonoBehaviour, IInteractable
             yield break;
         }
 
+        // Point the shared close-up camera at THIS pod's alien before switching to it.
+        if (closeUpCamera != null && linkedAlien != null)
+        {
+            closeUpCamera.Target.TrackingTarget = linkedAlien.transform;
+        }
+
         //Switch Camera
         if (CameraSwitch.Instance != null)
         {
@@ -353,6 +359,12 @@ public class PodControlPanel : MonoBehaviour, IInteractable
 
     private IEnumerator SplashSequenceRoutine()
     {
+        // Point the shared close-up camera at THIS pod's alien before switching to it.
+        if (closeUpCamera != null && linkedAlien != null)
+        {
+            closeUpCamera.Target.TrackingTarget = linkedAlien.transform;
+        }
+
         //Switch Camera
         if (CameraSwitch.Instance != null)
         {
