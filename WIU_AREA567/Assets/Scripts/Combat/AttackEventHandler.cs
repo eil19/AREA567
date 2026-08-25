@@ -1,22 +1,23 @@
 using System.Collections;
 using UnityEngine;
 
-// Attach to the Player. Reads its AttackPoint directly from PlayerController
-// (single source of truth - no need to separately drag the same child
-// transform into two different fields).
-// Wire AttackCheck() to a keyframe on the Attack animation clip and
-// AttackEnd() to a later keyframe via Animation Events.
-// TaserCheck() works the same way, wired to a Taser animation clip instead.
-
 [RequireComponent(typeof(PlayerController))]
 public class AttackEventHandler : MonoBehaviour
 {
     private Transform attackPoint;
+    private Transform rangedSpawnPoint;
     private Animator animator;
+    private PlayerController playerController;
 
     [SerializeField] private LayerMask layerToCheck;
     [SerializeField] private float attackRadius = 0.2f;
     [SerializeField] private int damageAmount = 10;
+
+    [Header("Ranged")]
+    [Tooltip("Projectile spawned when the player has weapon 2 (ranged) equipped.")]
+    [SerializeField] private GameObject rangedProjectilePrefab;
+    [SerializeField, Min(0f)] private float rangedFireCooldown = 0.25f;
+    private float nextRangedFireTime;
 
     [Header("Taser")]
     [Tooltip("GameObject tag used to identify Aliens - Taser only affects objects with this tag.")]
@@ -25,7 +26,9 @@ public class AttackEventHandler : MonoBehaviour
 
     void Awake()
     {
-        attackPoint = GetComponent<PlayerController>().AttackPoint;
+        playerController = GetComponent<PlayerController>();
+        attackPoint = playerController.AttackPoint;
+        rangedSpawnPoint = playerController.RangedSpawnPoint;
         animator = GetComponent<Animator>();
         if (attackPoint == null)
         {
@@ -43,9 +46,6 @@ public class AttackEventHandler : MonoBehaviour
     {
         if (attackPoint == null) return;
 
-        // Toggling active here is currently cosmetic-only (OverlapCircle below
-        // doesn't need it) - kept in case a weapon-swing visual gets attached
-        // to attackPoint later that should only be visible during the attack window.
         attackPoint.gameObject.SetActive(true);
         Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, attackRadius, layerToCheck);
         if (hit != null && hit.TryGetComponent(out Damageable damagedObject))
@@ -54,9 +54,6 @@ public class AttackEventHandler : MonoBehaviour
         }
     }
 
-    // Wire to a keyframe on your Taser animation clip via Animation Events,
-    // same pattern as AttackCheck(). Only affects objects tagged "Alien" -
-    // stuns instead of damaging, does nothing to non-alien targets.
     public void TaserCheck()
     {
         if (attackPoint == null) return;
@@ -69,6 +66,36 @@ public class AttackEventHandler : MonoBehaviour
         }
     }
 
+    // Called by PlayerController when the Attack input is pressed with weapon 2 (Ranged) equipped.
+    // Unlike melee/taser this fires immediately, so it does not require an animation event.
+    public bool FireRangedAttack()
+    {
+        if (rangedProjectilePrefab == null)
+        {
+            Debug.LogWarning($"{gameObject.name}: No ranged projectile prefab is assigned.");
+            return false;
+        }
+
+        if (Time.time < nextRangedFireTime) return false;
+
+        Vector2 direction = playerController.FacingDirection;
+        Vector3 spawnPosition = rangedSpawnPoint != null
+            ? rangedSpawnPoint.position
+            : attackPoint != null ? attackPoint.position : transform.position;
+        GameObject projectile = Instantiate(rangedProjectilePrefab, spawnPosition, Quaternion.identity);
+
+        if (!projectile.TryGetComponent(out PlayerProjectile playerProjectile))
+        {
+            Debug.LogError($"{rangedProjectilePrefab.name} must have a PlayerProjectile component.");
+            Destroy(projectile);
+            return false;
+        }
+
+        playerProjectile.Launch(direction);
+        nextRangedFireTime = Time.time + rangedFireCooldown;
+        return true;
+    }
+
     public void AttackEnd()
     {
         if (attackPoint == null) return;
@@ -76,7 +103,6 @@ public class AttackEventHandler : MonoBehaviour
         if (animator != null) animator.SetBool("IsBusy", false);
     }
 
-    // Called by AttackBoostItemEffect-style buffs, if you build one for this project.
     public void ApplyDamageBoost(float multiplier, float duration)
     {
         StartCoroutine(BoostRoutine(multiplier, duration));

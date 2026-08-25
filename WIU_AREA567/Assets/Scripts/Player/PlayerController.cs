@@ -6,6 +6,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
+    public enum WeaponType
+    {
+        Melee,
+        Ranged,
+        Taser
+    }
+
     [Header("Movement")]
     public float moveSpeed = 4f;
 
@@ -20,19 +27,29 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float attackPointDistance = 0.6f;
     public Transform AttackPoint => attackPoint;
 
+    [Header("Ranged Spawn Point")]
+    [Tooltip("Child transform used only for ranged projectiles. Its position is calculated separately from Attack Point.")]
+    [SerializeField] private Transform rangedSpawnPoint;
+    [SerializeField] private float rangedSpawnDistance = 0.6f;
+    [Tooltip("Fine-tune the projectile muzzle position without affecting melee or taser range.")]
+    [SerializeField] private Vector2 rangedSpawnOffset = new Vector2(0f, 0.15f);
+    public Transform RangedSpawnPoint => rangedSpawnPoint;
+
+    [Header("Weapons")]
+    [Tooltip("KNOWN LIMITATION: currently a fixed mapping (1=Melee, 2=Ranged, 3=Taser). Once Sze Yee's 3-weapon-slot inventory allows reordering, this needs to read whichever weapon is actually in that slot instead of assuming a fixed type per number.")]
+    [SerializeField] private WeaponType equippedWeapon = WeaponType.Melee;
+    public WeaponType EquippedWeapon => equippedWeapon;
+
     private Animator animator;
     private Rigidbody2D body;
     private SpriteRenderer spriteRenderer;
+    private AttackEventHandler attackEventHandler;
 
     private Vector2 moveInput;
     private Vector2 previousRawInput = Vector2.zero;
     private bool horizontalWasLastPressed = false;
     private int directionIndex = 0; // 0 = Down, 1 = Up, 2 = Side - matches Animator's "Direction" parameter
 
-    // Defaults facing down - typical top-down convention (character faces camera at rest).
-    // IMPORTANT: only updates while actively moving (see Update() below) - standing still
-    // keeps whatever direction was last faced. Anything reading this (AttackEventHandler,
-    // PlayerInteractor) inherits that behavior.
     public Vector2 FacingDirection { get; private set; } = Vector2.down;
 
     void Awake()
@@ -40,8 +57,8 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        attackEventHandler = GetComponent<AttackEventHandler>();
 
-        // Top-down: no gravity should affect the player
         body.gravityScale = 0f;
     }
 
@@ -90,15 +107,11 @@ public class PlayerController : MonoBehaviour
 
             if (FacingDirection.y != 0)
             {
-                directionIndex = FacingDirection.y > 0 ? 1 : 0; // Up : Down
+                directionIndex = FacingDirection.y > 0 ? 1 : 0;
             }
             else
             {
-                directionIndex = 2; // Side
-                // Flip the sprite visually only - Transform itself never flips,
-                // so AttackPoint's child-local-position math stays correct in
-                // every direction (this used to flip transform.localScale.x,
-                // which broke AttackPoint's world position when facing left).
+                directionIndex = 2;
                 spriteRenderer.flipX = FacingDirection.x < 0;
             }
 
@@ -110,6 +123,11 @@ public class PlayerController : MonoBehaviour
             attackPoint.localPosition = FacingDirection * attackPointDistance;
         }
 
+        if (rangedSpawnPoint != null)
+        {
+            rangedSpawnPoint.localPosition = FacingDirection * rangedSpawnDistance + rangedSpawnOffset;
+        }
+
         // Stealth - toggle on press
         if (InputSystem.actions["Stealth"].WasPressedThisFrame())
         {
@@ -117,18 +135,42 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsStealthed", isStealthed);
         }
 
-        // Attack / Taser
+        HandleWeaponSelection();
+
+        // Left mouse click (the existing Attack input action) uses the selected weapon.
         if (InputSystem.actions["Attack"].WasPressedThisFrame())
         {
-            animator.SetBool("IsBusy", true);
-            animator.SetTrigger("Attack");
-        }
+            switch (equippedWeapon)
+            {
+                case WeaponType.Melee:
+                    animator.SetBool("IsBusy", true);
+                    animator.SetTrigger("Attack");
+                    break;
 
-        if (InputSystem.actions["Taser"].WasPressedThisFrame())
-        {
-            animator.SetBool("IsBusy", true);
-            animator.SetTrigger("Taser");
+                case WeaponType.Ranged:
+                    attackEventHandler?.FireRangedAttack();
+                    break;
+
+                case WeaponType.Taser:
+                    animator.SetBool("IsBusy", true);
+                    animator.SetTrigger("Taser");
+                    break;
+            }
         }
+    }
+
+    private void HandleWeaponSelection()
+    {
+        // Uses the Input Actions system, consistent with the rest of the
+        // project, instead of polling Keyboard.current directly.
+        if (InputSystem.actions["SelectWeapon1"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Melee);
+        if (InputSystem.actions["SelectWeapon2"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Ranged);
+        if (InputSystem.actions["SelectWeapon3"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Taser);
+    }
+
+    public void SetEquippedWeapon(WeaponType weapon)
+    {
+        equippedWeapon = weapon;
     }
 
     void FixedUpdate()

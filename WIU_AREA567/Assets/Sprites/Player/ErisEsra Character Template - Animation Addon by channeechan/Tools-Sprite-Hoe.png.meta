@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: c19b333d49873a048b4e29e4ec3f4a50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -16996336727646314
+    second: Tools-Sprite-Hoe_0
+  - first:
+      213: -7122589742113341253
+    second: Tools-Sprite-Hoe_1
+  - first:
+      213: -872773010584008181
+    second: Tools-Sprite-Hoe_2
+  - first:
+      213: 9057503090441766209
+    second: Tools-Sprite-Hoe_3
+  - first:
+      213: -4111513173001431780
+    second: Tools-Sprite-Hoe_4
+  - first:
+      213: 1912196710612390887
+    second: Tools-Sprite-Hoe_5
+  - first:
+      213: 3838332969371233148
+    second: Tools-Sprite-Hoe_6
+  - first:
+      213: 6376620471688173385
+    second: Tools-Sprite-Hoe_7
+  - first:
+      213: -4174546243217441832
+    second: Tools-Sprite-Hoe_8
+  - first:
+      213: -2869121716081274730
+    second: Tools-Sprite-Hoe_9
+  - first:
+      213: -315945709994652812
+    second: Tools-Sprite-Hoe_10
+  - first:
+      213: -4391021893757594892
+    second: Tools-Sprite-Hoe_11
+  - first:
+      213: 1593675620382730608
+    second: Tools-Sprite-Hoe_12
+  - first:
+      213: -8494253399839616116
+    second: Tools-Sprite-Hoe_13
+  - first:
+      213: 2039207962725088016
+    second: Tools-Sprite-Hoe_14
+  - first:
+      213: 1741544471278235687
+    second: Tools-Sprite-Hoe_15
+  - first:
+      213: -9069321992132108510
+    second: Tools-Sprite-Hoe_16
+  - first:
+      213: 8521928540378403954
+    second: Tools-Sprite-Hoe_17
+  - first:
+      213: 3934309893924685885
+    second: Tools-Sprite-Hoe_18
+  - first:
+      213: -1977205293645646118
+    second: Tools-Sprite-Hoe_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 212
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f9ddafbed93cff0800000000000000
+      internalID: -16996336727646314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 218
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb04e7cdd5a772d90800000000000000
+      internalID: -7122589742113341253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 227
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a879e229943e3f0800000000000000
+      internalID: -872773010584008181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_3
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 203
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145c8c17217b2bd70800000000000000
+      internalID: 9057503090441766209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 199
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1519e98d88f0f6c0800000000000000
+      internalID: -4111513173001431780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_5
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 174
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3d8bce6cc798a10800000000000000
+      internalID: 1912196710612390887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_6
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 148
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7bea01df7f744530800000000000000
+      internalID: 3838332969371233148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_7
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 151
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9471572c88e4e7850800000000000000
+      internalID: 6376620471688173385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_8
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 148
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db359a3f480116c0800000000000000
+      internalID: -4174546243217441832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_9
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 137
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690dd9f1005de28d0800000000000000
+      internalID: -2869121716081274730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_10
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 111
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47bc57bfc098d9bf0800000000000000
+      internalID: -315945709994652812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 85
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f29d9d2ad4ff03c0800000000000000
+      internalID: -4391021893757594892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_12
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 91
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079ec18788fdd1610800000000000000
+      internalID: 1593675620382730608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_13
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 75
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83d76e89895e1a80800000000000000
+      internalID: -8494253399839616116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_14
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 69
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b706186d8bc4c10800000000000000
+      internalID: 2039207962725088016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 47
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720b51338753b2810800000000000000
+      internalID: 1741544471278235687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_16
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 21
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22fd35113bb432280800000000000000
+      internalID: -9069321992132108510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_17
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 23
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274948a3bd8f34670800000000000000
+      internalID: 8521928540378403954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_18
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 20
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d388fafe00a799630800000000000000
+      internalID: 3934309893924685885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Sprite-Hoe_19
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 8
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad6ba38d24e8f84e0800000000000000
+      internalID: -1977205293645646118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tools-Sprite-Hoe_0: -16996336727646314
+      Tools-Sprite-Hoe_1: -7122589742113341253
+      Tools-Sprite-Hoe_10: -315945709994652812
+      Tools-Sprite-Hoe_11: -4391021893757594892
+      Tools-Sprite-Hoe_12: 1593675620382730608
+      Tools-Sprite-Hoe_13: -8494253399839616116
+      Tools-Sprite-Hoe_14: 2039207962725088016
+      Tools-Sprite-Hoe_15: 1741544471278235687
+      Tools-Sprite-Hoe_16: -9069321992132108510
+      Tools-Sprite-Hoe_17: 8521928540378403954
+      Tools-Sprite-Hoe_18: 3934309893924685885
+      Tools-Sprite-Hoe_19: -1977205293645646118
+      Tools-Sprite-Hoe_2: -872773010584008181
+      Tools-Sprite-Hoe_3: 9057503090441766209
+      Tools-Sprite-Hoe_4: -4111513173001431780
+      Tools-Sprite-Hoe_5: 1912196710612390887
+      Tools-Sprite-Hoe_6: 3838332969371233148
+      Tools-Sprite-Hoe_7: 6376620471688173385
+      Tools-Sprite-Hoe_8: -4174546243217441832
+      Tools-Sprite-Hoe_9: -2869121716081274730
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: f596cd5da6119dc40a4c88e497945535
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5682281752145333396
+    second: Interact_0
+  - first:
+      213: 6828575121188932713
+    second: Interact_1
+  - first:
+      213: 1375905558975414970
+    second: Interact_2
+  - first:
+      213: 4270301505219629152
+    second: Interact_3
+  - first:
+      213: 3820446977167197645
+    second: Interact_4
+  - first:
+      213: 9196988478204768949
+    second: Interact_5
+  - first:
+      213: -7812899497276693533
+    second: Interact_6
+  - first:
+      213: -4415627666958122151
+    second: Interact_7
+  - first:
+      213: -413164252337202173
+    second: Interact_8
+  - first:
+      213: 727313483545145978
+    second: Interact_9
+  - first:
+      213: -3924643060681071224
+    second: Interact_10
+  - first:
+      213: -6270801798377259022
+    second: Interact_11
+  - first:
+      213: 4391128869004824054
+    second: Interact_12
+  - first:
+      213: -2662192789735604161
+    second: Interact_13
+  - first:
+      213: 4242642256810614997
+    second: Interact_14
+  - first:
+      213: 2961061502895464664
+    second: Interact_15
+  - first:
+      213: 521041333377498695
+    second: Interact_16
+  - first:
+      213: -2068692059968461783
+    second: Interact_17
+  - first:
+      213: 4603477322135451262
+    second: Interact_18
+  - first:
+      213: -6355121244994924992
+    second: Interact_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Interact_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 207
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c8e46c5258bde40800000000000000
+      internalID: 5682281752145333396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 207
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c4984b4e8f3ce50800000000000000
+      internalID: 6828575121188932713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 207
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab20737e0d2381310800000000000000
+      internalID: 1375905558975414970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 207
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0609e6e0898234b30800000000000000
+      internalID: 4270301505219629152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 207
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5044db844f40530800000000000000
+      internalID: 3820446977167197645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 143
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b271ce0b4442af70800000000000000
+      internalID: 9196988478204768949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_6
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 143
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3aefe3d41039390800000000000000
+      internalID: -7812899497276693533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 143
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953039a280a88b2c0800000000000000
+      internalID: -4415627666958122151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_8
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 143
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c1d813d45244af0800000000000000
+      internalID: -413164252337202173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_9
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 143
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a727f0382cfe71a00800000000000000
+      internalID: 727313483545145978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 79
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88527e11eedd889c0800000000000000
+      internalID: -3924643060681071224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_11
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 79
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffb7de0df2a9f8a0800000000000000
+      internalID: -6270801798377259022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 79
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdceffe07c60fc30800000000000000
+      internalID: 4391128869004824054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_13
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 79
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f30043c33cdfd0bd0800000000000000
+      internalID: -2662192789735604161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_14
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 79
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0224277a4e0ea30800000000000000
+      internalID: 4242642256810614997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_15
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 15
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d02b2e9fbdc71920800000000000000
+      internalID: 2961061502895464664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_16
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 15
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ef245055c1b3700800000000000000
+      internalID: 521041333377498695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_17
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 15
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924a8e728878a43e0800000000000000
+      internalID: -2068692059968461783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_18
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 15
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e763375fb36d2ef30800000000000000
+      internalID: 4603477322135451262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interact_19
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 15
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e0a8706e21ec7a0800000000000000
+      internalID: -6355121244994924992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Interact_0: 5682281752145333396
+      Interact_1: 6828575121188932713
+      Interact_10: -3924643060681071224
+      Interact_11: -6270801798377259022
+      Interact_12: 4391128869004824054
+      Interact_13: -2662192789735604161
+      Interact_14: 4242642256810614997
+      Interact_15: 2961061502895464664
+      Interact_16: 521041333377498695
+      Interact_17: -2068692059968461783
+      Interact_18: 4603477322135451262
+      Interact_19: -6355121244994924992
+      Interact_2: 1375905558975414970
+      Interact_3: 4270301505219629152
+      Interact_4: 3820446977167197645
+      Interact_5: 9196988478204768949
+      Interact_6: -7812899497276693533
+      Interact_7: -4415627666958122151
+      Interact_8: -413164252337202173
+      Interact_9: 727313483545145978
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

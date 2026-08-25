@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: b25e37244ed99054cafc3bff6e76297d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3254645493589455760
+    second: Tools-Seed-Effect_0
+  - first:
+      213: -4781933084105521160
+    second: Tools-Seed-Effect_1
+  - first:
+      213: 5497322097304416486
+    second: Tools-Seed-Effect_2
+  - first:
+      213: 3413541004698109116
+    second: Tools-Seed-Effect_3
+  - first:
+      213: -6743640779476687970
+    second: Tools-Seed-Effect_4
+  - first:
+      213: -2502110247515870355
+    second: Tools-Seed-Effect_5
+  - first:
+      213: -4784233149215595130
+    second: Tools-Seed-Effect_6
+  - first:
+      213: 8069331025537240274
+    second: Tools-Seed-Effect_7
+  - first:
+      213: -7446820625440986656
+    second: Tools-Seed-Effect_8
+  - first:
+      213: -4698285704161540703
+    second: Tools-Seed-Effect_9
+  - first:
+      213: -3245570648418863972
+    second: Tools-Seed-Effect_10
+  - first:
+      213: 9026934148091843163
+    second: Tools-Seed-Effect_11
+  - first:
+      213: 4316732282961021906
+    second: Tools-Seed-Effect_12
+  - first:
+      213: -343604877623304056
+    second: Tools-Seed-Effect_13
+  - first:
+      213: -1291816705889501048
+    second: Tools-Seed-Effect_14
+  - first:
+      213: 7214082142835979310
+    second: Tools-Seed-Effect_15
+  - first:
+      213: -3976178733758047197
+    second: Tools-Seed-Effect_16
+  - first:
+      213: 729231376744101445
+    second: Tools-Seed-Effect_17
+  - first:
+      213: -9109663093574257520
+    second: Tools-Seed-Effect_18
+  - first:
+      213: -4192502861938270427
+    second: Tools-Seed-Effect_19
+  - first:
+      213: 8972916441183638158
+    second: Tools-Seed-Effect_20
+  - first:
+      213: -635869539563335301
+    second: Tools-Seed-Effect_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 207
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c46ccda2d25d2d0800000000000000
+      internalID: -3254645493589455760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 207
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7c33e123923adb0800000000000000
+      internalID: -4781933084105521160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 207
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e03cb942596a4c40800000000000000
+      internalID: 5497322097304416486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 198
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4c24345755f5f20800000000000000
+      internalID: 3413541004698109116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 207
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93247eb076c962a0800000000000000
+      internalID: -6743640779476687970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 207
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ba3f39cf7b64dd0800000000000000
+      internalID: -2502110247515870355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 143
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6852b5a7c4dfa9db0800000000000000
+      internalID: -4784233149215595130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_7
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 143
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc8f2880d50cff60800000000000000
+      internalID: 8069331025537240274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 143
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9a98a981497a890800000000000000
+      internalID: -7446820625440986656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_9
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 143
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5c72e6b065cceb0800000000000000
+      internalID: -4698285704161540703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_10
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 143
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c943f87e0ba65f2d0800000000000000
+      internalID: -3245570648418863972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_11
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 79
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b529bdbe7cc164d70800000000000000
+      internalID: 9026934148091843163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 79
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db4a5ce32d18eb30800000000000000
+      internalID: 4316732282961021906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_13
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 79
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880eb2e2f254b3bf0800000000000000
+      internalID: -343604877623304056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_14
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 98
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8808a82ec8b821ee0800000000000000
+      internalID: -1291816705889501048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_15
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 79
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e243a30bc719d1460800000000000000
+      internalID: 7214082142835979310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_16
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 79
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c93e22286c1d8c0800000000000000
+      internalID: -3976178733758047197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_17
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 15
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546b6e1d210ce1a00800000000000000
+      internalID: 729231376744101445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_18
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 15
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09435047ea9f39180800000000000000
+      internalID: -9109663093574257520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_19
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 15
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f5c522cdc31d5c0800000000000000
+      internalID: -4192502861938270427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_20
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 15
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82530476f3368c70800000000000000
+      internalID: 8972916441183638158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Seed-Effect_21
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 15
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7116d2d500fc27f0800000000000000
+      internalID: -635869539563335301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tools-Seed-Effect_0: -3254645493589455760
+      Tools-Seed-Effect_1: -4781933084105521160
+      Tools-Seed-Effect_10: -3245570648418863972
+      Tools-Seed-Effect_11: 9026934148091843163
+      Tools-Seed-Effect_12: 4316732282961021906
+      Tools-Seed-Effect_13: -343604877623304056
+      Tools-Seed-Effect_14: -1291816705889501048
+      Tools-Seed-Effect_15: 7214082142835979310
+      Tools-Seed-Effect_16: -3976178733758047197
+      Tools-Seed-Effect_17: 729231376744101445
+      Tools-Seed-Effect_18: -9109663093574257520
+      Tools-Seed-Effect_19: -4192502861938270427
+      Tools-Seed-Effect_2: 5497322097304416486
+      Tools-Seed-Effect_20: 8972916441183638158
+      Tools-Seed-Effect_21: -635869539563335301
+      Tools-Seed-Effect_3: 3413541004698109116
+      Tools-Seed-Effect_4: -6743640779476687970
+      Tools-Seed-Effect_5: -2502110247515870355
+      Tools-Seed-Effect_6: -4784233149215595130
+      Tools-Seed-Effect_7: 8069331025537240274
+      Tools-Seed-Effect_8: -7446820625440986656
+      Tools-Seed-Effect_9: -4698285704161540703
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

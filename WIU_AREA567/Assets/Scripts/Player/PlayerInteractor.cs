@@ -2,13 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-// Handles two separate player-facing systems, both using the same
-// facing-direction + range/radius detection:
-//   - Interact (E)         -> IInteractable.Interact()  - crafting bench, cryo tube panel, NPCs
-//   - Pickup (Right-Click) -> IPickupable.Pickup()      - Research Notes, Scrap, Chemical
-// Each has its own Layer Mask and focus events (fired when something enters/
-// leaves range so UI can show "Press E" / "Right-click to pick up" prompts
-// without polling this script - see FloatingPromptUI).
 [RequireComponent(typeof(PlayerController))]
 public class PlayerInteractor : MonoBehaviour
 {
@@ -25,15 +18,11 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private LayerMask pickupLayer;
 
     [Header("Interact Focus Events")]
-    [Tooltip("Fires when an interactable enters range/facing. Passes the interactable's GameObject - use to show a 'Press E' prompt.")]
     public UnityEvent<GameObject> OnInteractableFocused;
-    [Tooltip("Fires when the previously focused interactable leaves range/facing. Use to hide the prompt.")]
     public UnityEvent OnInteractableLostFocus;
 
     [Header("Pickup Focus Events")]
-    [Tooltip("Fires when a pickup enters range/facing. Passes the pickup's GameObject - use to show a 'Right-click to pick up' prompt.")]
     public UnityEvent<GameObject> OnPickupFocused;
-    [Tooltip("Fires when the previously focused pickup leaves range/facing. Use to hide the prompt.")]
     public UnityEvent OnPickupLostFocus;
 
     private GameObject currentFocusedInteractable;
@@ -81,6 +70,18 @@ public class PlayerInteractor : MonoBehaviour
             if (pickupHit != null && pickupHit.TryGetComponent(out IPickupable pickupable))
             {
                 pickupable.Pickup(gameObject);
+
+                // The picked-up object may destroy itself this same frame
+                // (ResearchNote does). Don't rely on next frame's overlap
+                // check to notice - a reference to a just-destroyed
+                // GameObject compares equal to null via Unity's overloaded
+                // operators, which silently breaks the change-detection
+                // above. Force the lost-focus event now instead.
+                if (currentFocusedPickup != null)
+                {
+                    OnPickupLostFocus?.Invoke();
+                    currentFocusedPickup = null;
+                }
             }
         }
     }
