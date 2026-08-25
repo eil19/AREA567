@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2456412510807447457, guid: 93d2bfd0c3ed5b8469253a40187e9cb8, type: 3}
+  m_Sprite: {fileID: -2018904809, guid: b8e3f4239ddd8384597325fc5369246d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -261,3 +261,4 @@ MonoBehaviour:
   splashReactTrigger: 0
   stateTimerStart: 0
   lastAttackTime: -999
+  lastHealTime: -999

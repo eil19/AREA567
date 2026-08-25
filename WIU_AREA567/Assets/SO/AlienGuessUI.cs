@@ -14,6 +14,8 @@ public class AlienGuessUI : MonoBehaviour
     public Button tankerButton;
     public TMP_Text resultText;
 
+    public GameObject barUI;
+
 
     [Header("Result display")]
     [SerializeField] private float resultDisplayDuration = 1.5f;
@@ -37,6 +39,8 @@ public class AlienGuessUI : MonoBehaviour
         if (panelRoot != null) panelRoot.SetActive(false);
         if (resultText != null) resultText.gameObject.SetActive(false);
 
+        
+
         healerButton.onClick.AddListener(() => SubmitGuess(AlienCategory.Healer));
         damageButton.onClick.AddListener(() => SubmitGuess(AlienCategory.Damage));
         flyingButton.onClick.AddListener(() => SubmitGuess(AlienCategory.Flying));
@@ -57,6 +61,8 @@ public class AlienGuessUI : MonoBehaviour
         currentAlien = alien;
         if (resultText != null) resultText.text = "";
         if (panelRoot != null) panelRoot.SetActive(true);
+
+        if (barUI != null) barUI.SetActive(false);
     }
 
 
@@ -92,6 +98,7 @@ public class AlienGuessUI : MonoBehaviour
         currentAlien = null;
         closeRoutine = null;
 
+        if (barUI != null) barUI.SetActive(true);
         OnPanelClosed?.Invoke();
     }
 

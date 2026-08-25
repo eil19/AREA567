@@ -12,6 +12,8 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     [Header("Linked Alien")]
     [SerializeField] private AlienInstance linkedAlien;
 
+    public GameObject barUI;
+
     [Header("Taming Items")]
     [SerializeField] private ItemData bondingCharmData;
     [SerializeField] private ItemEffect bondingCharmEffect;
@@ -138,6 +140,7 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         isFocused = false;
         if (promptRoot != null) promptRoot.SetActive(false);
         if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
+        if (barUI != null) barUI.SetActive(true);
         ClearErrorText(); // Hide error text if the player walks away
     }
  
@@ -145,6 +148,7 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     {
         if (linkedAlien == null)
         {
+            if (barUI != null) barUI.SetActive(true);
             if (promptRoot != null) promptRoot.SetActive(false);
             if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
             return;
@@ -162,12 +166,14 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         // Alien tamed already, or no valid state -> hide both
         if (linkedAlien.isTamed)
         {
+            if (barUI != null) barUI.SetActive(false);
             if (promptRoot != null) promptRoot.SetActive(false);
             if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
             return;
         }
 
-        // Not yet identified -> show potion prompt (original behavior)
+        // Not yet identified -> show potion prompt
+        if (barUI != null) barUI.SetActive(false);
         if (promptRoot != null) promptRoot.SetActive(true);
         if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
         if (potionCountText != null)
@@ -380,6 +386,8 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         //Wait for reaction animation duration
         yield return new WaitForSeconds(reactionFallbackDuration);
 
+        if (barUI != null) barUI.SetActive(false);
+
         //Open Guess UI
         if (AlienGuessUI.Instance != null)
         {
@@ -388,6 +396,8 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         }
         else
         {
+            // no guess UI to reopen it later, so restore immediately
+            if (barUI != null) barUI.SetActive(true); 
             CameraSwitch.Instance?.SwitchToTopDown();
             isSequencePlaying = false;
         }
@@ -395,6 +405,8 @@ public class PodControlPanel : MonoBehaviour, IInteractable
 
     private void HandleGuessPanelClosed()
     {
+        if (barUI != null) barUI.SetActive(true);
+
         AlienGuessUI.Instance.OnPanelClosed -= HandleGuessPanelClosed;
         CameraSwitch.Instance?.SwitchToTopDown();
         isSequencePlaying = false;

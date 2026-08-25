@@ -2366,6 +2366,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975553626}
   m_CullTransparentMesh: 1
+--- !u!114 &1005364103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6611695659385961450, guid: 54130df17beb21d45a75e94083b07c4f, type: 3}
+  m_PrefabInstance: {fileID: 7798922042246774}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22447112322edd14886232aef3c01674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlienInstance
 --- !u!1 &1150786882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,6 +2740,7 @@ MonoBehaviour:
   flyingButton: {fileID: 96922855}
   tankerButton: {fileID: 1625641707}
   resultText: {fileID: 1706603925}
+  barUI: {fileID: 362029735}
   resultDisplayDuration: 1.5
   correctColor: {r: 0, g: 1, b: 0, a: 1}
   wrongColor: {r: 1, g: 0, b: 0, a: 1}
@@ -4347,6 +4359,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4593997297487141444, guid: 54130df17beb21d45a75e94083b07c4f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c1a6cb469234b0749bbe0e77d5bb2e2c, type: 2}
     - target: {fileID: 6468102638896732187, guid: 54130df17beb21d45a75e94083b07c4f, type: 3}
       propertyPath: m_Name
       value: Flyer
@@ -4559,6 +4575,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2754521846339449983, guid: dcf9b88b0d186364a9657ef0611e4506, type: 3}
+      propertyPath: barUI
+      value: 
+      objectReference: {fileID: 362029735}
+    - target: {fileID: 2754521846339449983, guid: dcf9b88b0d186364a9657ef0611e4506, type: 3}
       propertyPath: errorText
       value: 
       objectReference: {fileID: 7596853}
@@ -4569,7 +4589,7 @@ PrefabInstance:
     - target: {fileID: 2754521846339449983, guid: dcf9b88b0d186364a9657ef0611e4506, type: 3}
       propertyPath: linkedAlien
       value: 
-      objectReference: {fileID: 8685039489523946587}
+      objectReference: {fileID: 1005364103}
     - target: {fileID: 2754521846339449983, guid: dcf9b88b0d186364a9657ef0611e4506, type: 3}
       propertyPath: closeUpCamera
       value: 
@@ -4599,6 +4619,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcf9b88b0d186364a9657ef0611e4506, type: 3}
+--- !u!1001 &4702343188950613548
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2112908848193712794, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_Name
+      value: FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112908848193712794, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.36473
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20425
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363785414868265109, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 57aba3ac46069054f9330ea66e52829c, type: 3}
 --- !u!1001 &5052501904000929654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4610,6 +4691,10 @@ PrefabInstance:
     - target: {fileID: 1032903364418011652, guid: 7eb535d33759bb2448a284c1b2474bb7, type: 3}
       propertyPath: m_Name
       value: Healer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032903364418011652, guid: 7eb535d33759bb2448a284c1b2474bb7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2117821553417314782, guid: 7eb535d33759bb2448a284c1b2474bb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4667,6 +4752,10 @@ PrefabInstance:
     - target: {fileID: 6291556818968716693, guid: ad88be7837865304f92793000116173c, type: 3}
       propertyPath: m_Name
       value: Damager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291556818968716693, guid: ad88be7837865304f92793000116173c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7923207013082654098, guid: ad88be7837865304f92793000116173c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4765,22 +4854,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tanker
       objectReference: {fileID: 0}
+    - target: {fileID: 7332445387450454447, guid: 258d5ae9cb1a42447a6663ac87ba244f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7332445387450454447, guid: 258d5ae9cb1a42447a6663ac87ba244f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6812337273391905231}
   m_SourcePrefab: {fileID: 100100000, guid: 258d5ae9cb1a42447a6663ac87ba244f, type: 3}
---- !u!114 &8685039489523946587 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2705443997837482081, guid: 7eb535d33759bb2448a284c1b2474bb7, type: 3}
-  m_PrefabInstance: {fileID: 5052501904000929654}
+--- !u!1 &6812337273391905230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7332445387450454447, guid: 258d5ae9cb1a42447a6663ac87ba244f, type: 3}
+  m_PrefabInstance: {fileID: 6812337273391905229}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &6812337273391905231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812337273391905230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22447112322edd14886232aef3c01674, type: 3}
+  m_Script: {fileID: 11500000, guid: be1a9f6cf5e6e1942b7fdfc8165afedf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AlienInstance
+  m_EditorClassIdentifier: Assembly-CSharp::AlienShield
+  maxShieldHealth: 50
+  regenDelay: 5
+  OnShieldChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShieldBroken:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShieldRestored:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &9176764137683273075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7923207013082654098, guid: ad88be7837865304f92793000116173c, type: 3}
@@ -4809,3 +4922,4 @@ SceneRoots:
   - {fileID: 736583113}
   - {fileID: 29413073}
   - {fileID: 2820434492153473969}
+  - {fileID: 4702343188950613548}
