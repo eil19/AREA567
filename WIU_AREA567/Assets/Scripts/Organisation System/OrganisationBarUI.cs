@@ -3,23 +3,40 @@ using UnityEngine.UI;
 
 public class OrganisationBarUI : MonoBehaviour
 {
+    //organisation progress. Retries subscribing every frame until OrganisationManager.Instance actually exists, 
     [SerializeField] private Slider progressSlider;
+
+    private bool subscribed;
 
     void OnEnable()
     {
-        if (OrganisationManager.Instance != null)
+        TrySubscribe();
+    }
+
+    void Update()
+    {
+        if (!subscribed)
         {
-            OrganisationManager.Instance.OnProgressChanged.AddListener(UpdateBar);
-            UpdateBar(OrganisationManager.Instance.PercentOrganised);
+            TrySubscribe();
         }
     }
 
     void OnDisable()
     {
-        if (OrganisationManager.Instance != null)
+        if (subscribed && OrganisationManager.Instance != null)
         {
             OrganisationManager.Instance.OnProgressChanged.RemoveListener(UpdateBar);
         }
+        subscribed = false;
+    }
+
+    private void TrySubscribe()
+    {
+        if (OrganisationManager.Instance == null) return;
+
+        OrganisationManager.Instance.OnProgressChanged.AddListener(UpdateBar);
+        UpdateBar(OrganisationManager.Instance.PercentOrganised);
+        subscribed = true;
     }
 
     private void UpdateBar(float percent)

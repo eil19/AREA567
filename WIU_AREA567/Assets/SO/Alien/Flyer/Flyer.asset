@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6da4e5ac9a0971469570a1085b8042a, type: 3}
   m_Name: Flyer
   m_EditorClassIdentifier: Assembly-CSharp::AlienType
-  alienName: 
+  alienName: Flyer
   category: 2
-  health: 10
+  health: 35
   damage: 5
-  moveSpeed: 2
+  moveSpeed: 4
   reactionDescription: 
   tameDifficulty: 0.5
   tamedPrefab: {fileID: 0}
