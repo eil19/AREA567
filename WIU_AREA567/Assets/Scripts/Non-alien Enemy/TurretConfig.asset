@@ -15,4 +15,4 @@ MonoBehaviour:
   detectionRange: 7
   fireCooldown: 1.2
   projectileSpeed: 7
-  lifetime: 20
+  lifetime: 10
