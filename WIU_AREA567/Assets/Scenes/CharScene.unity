@@ -2637,6 +2637,10 @@ PrefabInstance:
       propertyPath: rangedSpawnOffset.y
       value: 0.37
       objectReference: {fileID: 0}
+    - target: {fileID: 3000213729321372344, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 79f45406aafdb864caf5c1e5091917ca, type: 2}
     - target: {fileID: 3513979378496533052, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: m_Name
       value: Player

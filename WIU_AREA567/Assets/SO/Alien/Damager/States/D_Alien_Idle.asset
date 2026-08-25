@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
+  m_Name: D_Alien_Idle
+  m_EditorClassIdentifier: Assembly-CSharp::State
+  initializeActions:
+  - {fileID: 11400000, guid: 7a6fdace4c5fc9d42b5f60b29761874f, type: 2}
+  executeActions:
+  - {fileID: 11400000, guid: 84da9b29241c21b4680e896814db74ba, type: 2}
+  endActions: []
+  transitions:
+  - decision: {fileID: 11400000, guid: 74a4d60c9867b80408812bb072a41fc6, type: 2}
+    trueState: {fileID: 11400000, guid: 52618a44b1f42294da15fde0c949f917, type: 2}
+    falseState: {fileID: 11400000, guid: 58d9ac5b0713f8d4baa5a939faa449c3, type: 2}
+  - decision: {fileID: 11400000, guid: 13bcbc08545445e40bd8d2e6e6e77ebc, type: 2}
+    trueState: {fileID: 11400000, guid: 94096b1d14009b24aa5df2b2553ada09, type: 2}
+    falseState: {fileID: 11400000, guid: 58d9ac5b0713f8d4baa5a939faa449c3, type: 2}
+  - decision: {fileID: 11400000, guid: 39d6c7060499a044d9d274c882805574, type: 2}
+    trueState: {fileID: 11400000, guid: cd13bf051608d2242b783f6fd28d6de7, type: 2}
+    falseState: {fileID: 11400000, guid: 58d9ac5b0713f8d4baa5a939faa449c3, type: 2}
