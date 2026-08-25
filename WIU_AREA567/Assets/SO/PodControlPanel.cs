@@ -13,8 +13,8 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     [SerializeField] private AlienInstance linkedAlien;
 
     [Header("Taming Items")]
-    [SerializeField] private ItemData essenceData;
-    [SerializeField] private ItemEffect essenceEffect;
+    [SerializeField] private ItemData bondingCharmData;
+    [SerializeField] private ItemEffect bondingCharmEffect;
 
     [Header("Experiment Items")]
     [SerializeField] private ItemData splashPotionData;
@@ -65,23 +65,23 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         Debug.Log($"[PodControlPanel] Added test splash potion. Count now: {GetItemCount(splashPotionData)}");
     }
 
-    [ContextMenu("TEST: Add Essence to Inventory")]
-    private void TestAddEssence()
+    [ContextMenu("TEST: Add bondingCharm to Inventory")]
+    private void TestAddBondingCharm()
     {
         if (inventory == null)
         {
             Debug.LogWarning("[PodControlPanel] No Inventory.Instance in scene.");
             return;
         }
-        if (essenceData == null)
+        if (bondingCharmData == null)
         {
-            Debug.LogWarning("[PodControlPanel] essence not assigned.");
+            Debug.LogWarning("[PodControlPanel] bondingCharm not assigned.");
             return;
         }
 
-        var testItem = new ItemInstance(essenceData, essenceEffect, 1);
+        var testItem = new ItemInstance(bondingCharmData, bondingCharmEffect, 1);
         inventory.AddItem(testItem);
-        Debug.Log($"[PodControlPanel] Added essence. Count now: {GetItemCount(splashPotionData)}");
+        Debug.Log($"[PodControlPanel] Added bondingCharm. Count now: {GetItemCount(splashPotionData)}");
     }
 
     private void Start()
@@ -155,7 +155,7 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         {
             if (promptRoot != null) promptRoot.SetActive(false);
             if (tamePromptRoot != null) tamePromptRoot.SetActive(true);
-            if (tamePromptText != null) tamePromptText.text = "PRESS \"E\" TO ATTEMPT TAMING\r\n1 ESSENCE REQUIRED PER ATTEMPT";
+            if (tamePromptText != null) tamePromptText.text = "PRESS \"E\" TO ATTEMPT TAMING\r\n1 BONDING CHARM REQUIRED PER ATTEMPT";
             return;
         }
 
@@ -212,9 +212,9 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         //tame
         else if (!linkedAlien.isTamed)
         {
-            if (GetItemCount(essenceData) <= 0)
+            if (GetItemCount(bondingCharmData) <= 0)
             {
-                ShowError("No essence in inventory.", 3f);
+                ShowError("No bondingCharm in inventory.", 3f);
                 return;
             }
 
@@ -227,11 +227,11 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         isSequencePlaying = true;
         if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
 
-        bool consumed = inventory.TryConsumeItem(essenceData, 1);
+        bool consumed = inventory.TryConsumeItem(bondingCharmData, 1);
         if (!consumed)
         {
             isSequencePlaying = false;
-            ShowError("No essence in inventory.", 3f);
+            ShowError("No bondingCharm in inventory.", 3f);
             yield break;
         }
 
