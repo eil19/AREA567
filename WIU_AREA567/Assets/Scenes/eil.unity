@@ -1741,7 +1741,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1766,7 +1766,7 @@ Transform:
   m_GameObject: {fileID: 669775624}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: 0.17864, z: -10}
+  m_LocalPosition: {x: -14.24, y: -0.1502, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1949,7 +1949,7 @@ Transform:
   m_GameObject: {fileID: 695620982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.4, y: -0.1502, z: -10}
+  m_LocalPosition: {x: -14.24, y: -0.1502, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4670,7 +4670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7923207013082654098, guid: ad88be7837865304f92793000116173c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.4
+      value: -14.24
       objectReference: {fileID: 0}
     - target: {fileID: 7923207013082654098, guid: ad88be7837865304f92793000116173c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4723,7 +4723,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1237458222156227915, guid: 258d5ae9cb1a42447a6663ac87ba244f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.83
+      value: -10.62
       objectReference: {fileID: 0}
     - target: {fileID: 1237458222156227915, guid: 258d5ae9cb1a42447a6663ac87ba244f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4794,6 +4794,7 @@ SceneRoots:
   - {fileID: 400779080}
   - {fileID: 1829595130}
   - {fileID: 1150786885}
+  - {fileID: 695620985}
   - {fileID: 7798922042246774}
   - {fileID: 5441208880734809975}
   - {fileID: 6812337273391905229}
@@ -4801,7 +4802,6 @@ SceneRoots:
   - {fileID: 1174022686}
   - {fileID: 3191329008197315656}
   - {fileID: 1777807362}
-  - {fileID: 695620985}
   - {fileID: 1608839924}
   - {fileID: 178186463}
   - {fileID: 534308789}
