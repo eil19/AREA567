@@ -43,10 +43,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Crouch",
+                    "name": "Stealth",
                     "type": "Button",
                     "id": "27c5f898-bc57-4ee1-8800-db469aca5fe3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -97,15 +97,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Stealth",
-                    "type": "Button",
-                    "id": "1466080a-0adf-45e9-9288-aa656f8ac81e",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Inventory",
                     "type": "Button",
                     "id": "0a96ee76-c8da-44cb-8723-79c35fc75caf",
@@ -115,9 +106,27 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Taser",
+                    "name": "SelectWeapon1",
                     "type": "Button",
-                    "id": "87ccce05-60c1-43b2-8c11-808438b5231d",
+                    "id": "e33a26e5-cebe-4a77-ad81-604865242e3e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SelectWeapon2",
+                    "type": "Button",
+                    "id": "a38ef86e-32ea-42da-8edf-eac2f417da79",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SelectWeapon3",
+                    "type": "Button",
+                    "id": "9d756037-2cef-4b99-ad6a-9e30c27fe91e",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -495,7 +504,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Crouch",
+                    "action": "Stealth",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -506,7 +515,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Crouch",
+                    "action": "Stealth",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -523,17 +532,6 @@
                 },
                 {
                     "name": "",
-                    "id": "3abffa93-b624-4bcf-90bc-41d4d6ced1d4",
-                    "path": "<Keyboard>/c",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Stealth",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "f7b9beb4-186c-4f6f-b48b-2f1f9fa89dfc",
                     "path": "<Keyboard>/i",
                     "interactions": "",
@@ -545,12 +543,34 @@
                 },
                 {
                     "name": "",
-                    "id": "35cc13d9-f450-4097-a0e3-b84e07d86e80",
-                    "path": "",
+                    "id": "1d1e16d1-40a5-4105-ae94-3d75ce94b756",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Taser",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SelectWeapon1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca001394-0263-4190-a4d2-91e124eb082a",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SelectWeapon2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a8c005cc-7369-4483-92e5-0dd82fb5d6c3",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SelectWeapon3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
