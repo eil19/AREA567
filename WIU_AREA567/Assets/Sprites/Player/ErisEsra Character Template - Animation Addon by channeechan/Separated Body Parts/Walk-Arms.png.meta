@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: 1d19f251d57e27942b41d4c2ebd75cd4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1372968985606714796
+    second: Walk-Arms_0
+  - first:
+      213: 4421499542101406388
+    second: Walk-Arms_1
+  - first:
+      213: 8721756481325622256
+    second: Walk-Arms_2
+  - first:
+      213: -2200111928158801087
+    second: Walk-Arms_3
+  - first:
+      213: 4646641951159206561
+    second: Walk-Arms_4
+  - first:
+      213: -5242228093978535166
+    second: Walk-Arms_5
+  - first:
+      213: -9077942817352515861
+    second: Walk-Arms_6
+  - first:
+      213: -5638336774201605456
+    second: Walk-Arms_7
+  - first:
+      213: -4535972834125578416
+    second: Walk-Arms_8
+  - first:
+      213: 9189629621895978525
+    second: Walk-Arms_9
+  - first:
+      213: -3754946479468180082
+    second: Walk-Arms_10
+  - first:
+      213: -2666830171206376589
+    second: Walk-Arms_11
+  - first:
+      213: 4358170234081048557
+    second: Walk-Arms_12
+  - first:
+      213: -7983806714896283141
+    second: Walk-Arms_13
+  - first:
+      213: -6113273969740260431
+    second: Walk-Arms_14
+  - first:
+      213: -4446814615098554812
+    second: Walk-Arms_15
+  - first:
+      213: 8636871985141225569
+    second: Walk-Arms_16
+  - first:
+      213: 5831763443087674557
+    second: Walk-Arms_17
+  - first:
+      213: -7388973654637716852
+    second: Walk-Arms_18
+  - first:
+      213: 5047594400772803925
+    second: Walk-Arms_19
+  - first:
+      213: -8860804677943619751
+    second: Walk-Arms_20
+  - first:
+      213: 692692466622956751
+    second: Walk-Arms_21
+  - first:
+      213: 7034620676732222674
+    second: Walk-Arms_22
+  - first:
+      213: 7082209929533138055
+    second: Walk-Arms_23
+  - first:
+      213: -8834902145844532368
+    second: Walk-Arms_24
+  - first:
+      213: -5217117508286004229
+    second: Walk-Arms_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk-Arms_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 212
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a884d5bfb32fce0800000000000000
+      internalID: -1372968985606714796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 212
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2b18d48625c5d30800000000000000
+      internalID: 4421499542101406388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_2
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 211
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f3efd65f47e90970800000000000000
+      internalID: 8721756481325622256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_3
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 212
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 143bef7abd1a771e0800000000000000
+      internalID: -2200111928158801087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_4
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 212
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2c5415c303c7040800000000000000
+      internalID: 4646641951159206561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_5
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 211
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b16d2b25ddf37b0800000000000000
+      internalID: -5242228093978535166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 148
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beef468ca1ba40280800000000000000
+      internalID: -9077942817352515861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 149
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b201b9b39a90c1b0800000000000000
+      internalID: -5638336774201605456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_8
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 150
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f7f1f6dbcfc01c0800000000000000
+      internalID: -4535972834125578416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_9
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 148
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1e548ec37f188f70800000000000000
+      internalID: 9189629621895978525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_10
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 149
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d02bc4210c3ebc0800000000000000
+      internalID: -3754946479468180082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_11
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 150
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37323f8b6148dfad0800000000000000
+      internalID: -2666830171206376589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_12
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 84
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7f411ccb45b7c30800000000000000
+      internalID: 4358170234081048557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_13
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 84
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf98a33c712d33190800000000000000
+      internalID: -7983806714896283141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_14
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 83
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb5dfac6b9492ba0800000000000000
+      internalID: -6113273969740260431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 86
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4460905faadb942c0800000000000000
+      internalID: -4446814615098554812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_16
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 84
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1689dd47f455cd770800000000000000
+      internalID: 8636871985141225569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_17
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 84
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc895714f59ee050800000000000000
+      internalID: 5831763443087674557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_18
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 86
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a599c0c97157990800000000000000
+      internalID: -7388973654637716852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_19
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 83
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d405c3d58ac0640800000000000000
+      internalID: 5047594400772803925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_20
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 20
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f0d0b8719180580800000000000000
+      internalID: -8860804677943619751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_21
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 22
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc486abd020fc9900800000000000000
+      internalID: 692692466622956751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 21
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dcfd360c3eff9160800000000000000
+      internalID: 7034620676732222674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_23
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 20
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78421926860194260800000000000000
+      internalID: 7082209929533138055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_24
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 22
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ba993ce4f146580800000000000000
+      internalID: -8834902145844532368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-Arms_25
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 21
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf3442784431997b0800000000000000
+      internalID: -5217117508286004229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Walk-Arms_0: -1372968985606714796
+      Walk-Arms_1: 4421499542101406388
+      Walk-Arms_10: -3754946479468180082
+      Walk-Arms_11: -2666830171206376589
+      Walk-Arms_12: 4358170234081048557
+      Walk-Arms_13: -7983806714896283141
+      Walk-Arms_14: -6113273969740260431
+      Walk-Arms_15: -4446814615098554812
+      Walk-Arms_16: 8636871985141225569
+      Walk-Arms_17: 5831763443087674557
+      Walk-Arms_18: -7388973654637716852
+      Walk-Arms_19: 5047594400772803925
+      Walk-Arms_2: 8721756481325622256
+      Walk-Arms_20: -8860804677943619751
+      Walk-Arms_21: 692692466622956751
+      Walk-Arms_22: 7034620676732222674
+      Walk-Arms_23: 7082209929533138055
+      Walk-Arms_24: -8834902145844532368
+      Walk-Arms_25: -5217117508286004229
+      Walk-Arms_3: -2200111928158801087
+      Walk-Arms_4: 4646641951159206561
+      Walk-Arms_5: -5242228093978535166
+      Walk-Arms_6: -9077942817352515861
+      Walk-Arms_7: -5638336774201605456
+      Walk-Arms_8: -4535972834125578416
+      Walk-Arms_9: 9189629621895978525
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

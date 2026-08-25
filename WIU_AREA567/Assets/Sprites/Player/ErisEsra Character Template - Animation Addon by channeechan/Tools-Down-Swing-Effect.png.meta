@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 624dab94be661e14cad50daf955d98d0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1807335252451117609
+    second: Tools-Down-Swing-Effect_0
+  - first:
+      213: 5151852307733226057
+    second: Tools-Down-Swing-Effect_1
+  - first:
+      213: -1129259244417638948
+    second: Tools-Down-Swing-Effect_2
+  - first:
+      213: -669096339199172019
+    second: Tools-Down-Swing-Effect_3
+  - first:
+      213: -5431580984718870668
+    second: Tools-Down-Swing-Effect_4
+  - first:
+      213: -1793447535262496364
+    second: Tools-Down-Swing-Effect_5
+  - first:
+      213: 6169261121481257444
+    second: Tools-Down-Swing-Effect_6
+  - first:
+      213: 8047827546523943789
+    second: Tools-Down-Swing-Effect_7
+  - first:
+      213: -7914880999507808762
+    second: Tools-Down-Swing-Effect_8
+  - first:
+      213: 282977916292721300
+    second: Tools-Down-Swing-Effect_9
+  - first:
+      213: -6144474431757153203
+    second: Tools-Down-Swing-Effect_10
+  - first:
+      213: 1177979567109153702
+    second: Tools-Down-Swing-Effect_11
+  - first:
+      213: 611740984568355951
+    second: Tools-Down-Swing-Effect_12
+  - first:
+      213: 344941205828211237
+    second: Tools-Down-Swing-Effect_13
+  - first:
+      213: 3116151631129687021
+    second: Tools-Down-Swing-Effect_14
+  - first:
+      213: 4073288009915584385
+    second: Tools-Down-Swing-Effect_15
+  - first:
+      213: -3819065931064303545
+    second: Tools-Down-Swing-Effect_16
+  - first:
+      213: 1505116256744525929
+    second: Tools-Down-Swing-Effect_17
+  - first:
+      213: -6118386133825053802
+    second: Tools-Down-Swing-Effect_18
+  - first:
+      213: -3592860411418623626
+    second: Tools-Down-Swing-Effect_19
+  - first:
+      213: 8762644847970183333
+    second: Tools-Down-Swing-Effect_20
+  - first:
+      213: 344287519030461985
+    second: Tools-Down-Swing-Effect_21
+  - first:
+      213: 2063005712962637374
+    second: Tools-Down-Swing-Effect_22
+  - first:
+      213: -1351368555789080468
+    second: Tools-Down-Swing-Effect_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 207
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ac36026d1f41910800000000000000
+      internalID: 1807335252451117609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 207
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94227b1d06e0f7740800000000000000
+      internalID: 5151852307733226057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 216
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd192543b01450f0800000000000000
+      internalID: -1129259244417638948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 209
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42e48dac64e6b6f0800000000000000
+      internalID: -669096339199172019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_4
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 195
+        width: 20
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477b0154fd52f94b0800000000000000
+      internalID: -5431580984718870668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 207
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499016108f46c17e0800000000000000
+      internalID: -1793447535262496364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 143
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1b488cd4e9d9550800000000000000
+      internalID: 6169261121481257444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_7
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 143
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63c92ca380afaf60800000000000000
+      internalID: 8047827546523943789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 155
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e29d07aa1b82290800000000000000
+      internalID: -7914880999507808762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 145
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a68e36ae65de300800000000000000
+      internalID: 282977916292721300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_10
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 135
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c05a32f017abaa0800000000000000
+      internalID: -6144474431757153203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_11
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 143
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3a532dc26095010800000000000000
+      internalID: 1177979567109153702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_12
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 79
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c9ebf2f275d7800800000000000000
+      internalID: 611740984568355951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_13
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 79
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52219c9f23a79c400800000000000000
+      internalID: 344941205828211237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_14
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 88
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de33dbff56bce3b20800000000000000
+      internalID: 3116151631129687021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_15
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 67
+        width: 20
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f40e22dd9378830800000000000000
+      internalID: 4073288009915584385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_16
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 81
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 740ad1d15c3fffac0800000000000000
+      internalID: -3819065931064303545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_17
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 79
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9605ce4d24f33e410800000000000000
+      internalID: 1505116256744525929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 15
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b9ea65a30271ba0800000000000000
+      internalID: -6118386133825053802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_19
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 15
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67144d9dd78932ec0800000000000000
+      internalID: -3592860411418623626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_20
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 27
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a86b20101b2b9970800000000000000
+      internalID: 8762644847970183333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_21
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 7
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1264968aca727c400800000000000000
+      internalID: 344287519030461985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_22
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 17
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e4db204c441ac10800000000000000
+      internalID: 2063005712962637374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tools-Down-Swing-Effect_23
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 15
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c682f875579fe3de0800000000000000
+      internalID: -1351368555789080468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tools-Down-Swing-Effect_0: 1807335252451117609
+      Tools-Down-Swing-Effect_1: 5151852307733226057
+      Tools-Down-Swing-Effect_10: -6144474431757153203
+      Tools-Down-Swing-Effect_11: 1177979567109153702
+      Tools-Down-Swing-Effect_12: 611740984568355951
+      Tools-Down-Swing-Effect_13: 344941205828211237
+      Tools-Down-Swing-Effect_14: 3116151631129687021
+      Tools-Down-Swing-Effect_15: 4073288009915584385
+      Tools-Down-Swing-Effect_16: -3819065931064303545
+      Tools-Down-Swing-Effect_17: 1505116256744525929
+      Tools-Down-Swing-Effect_18: -6118386133825053802
+      Tools-Down-Swing-Effect_19: -3592860411418623626
+      Tools-Down-Swing-Effect_2: -1129259244417638948
+      Tools-Down-Swing-Effect_20: 8762644847970183333
+      Tools-Down-Swing-Effect_21: 344287519030461985
+      Tools-Down-Swing-Effect_22: 2063005712962637374
+      Tools-Down-Swing-Effect_23: -1351368555789080468
+      Tools-Down-Swing-Effect_3: -669096339199172019
+      Tools-Down-Swing-Effect_4: -5431580984718870668
+      Tools-Down-Swing-Effect_5: -1793447535262496364
+      Tools-Down-Swing-Effect_6: 6169261121481257444
+      Tools-Down-Swing-Effect_7: 8047827546523943789
+      Tools-Down-Swing-Effect_8: -7914880999507808762
+      Tools-Down-Swing-Effect_9: 282977916292721300
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

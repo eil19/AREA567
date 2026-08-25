@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public Transform RangedSpawnPoint => rangedSpawnPoint;
 
     [Header("Weapons")]
-    [Tooltip("1 = melee, 2 = ranged, 3 = taser.")]
+    [Tooltip("KNOWN LIMITATION: currently a fixed mapping (1=Melee, 2=Ranged, 3=Taser). Once Sze Yee's 3-weapon-slot inventory allows reordering, this needs to read whichever weapon is actually in that slot instead of assuming a fixed type per number.")]
     [SerializeField] private WeaponType equippedWeapon = WeaponType.Melee;
     public WeaponType EquippedWeapon => equippedWeapon;
 
@@ -50,10 +50,6 @@ public class PlayerController : MonoBehaviour
     private bool horizontalWasLastPressed = false;
     private int directionIndex = 0; // 0 = Down, 1 = Up, 2 = Side - matches Animator's "Direction" parameter
 
-    // Defaults facing down - typical top-down convention (character faces camera at rest).
-    // IMPORTANT: only updates while actively moving (see Update() below) - standing still
-    // keeps whatever direction was last faced. Anything reading this (AttackEventHandler,
-    // PlayerInteractor) inherits that behavior.
     public Vector2 FacingDirection { get; private set; } = Vector2.down;
 
     void Awake()
@@ -63,7 +59,6 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         attackEventHandler = GetComponent<AttackEventHandler>();
 
-        // Top-down: no gravity should affect the player
         body.gravityScale = 0f;
     }
 
@@ -112,15 +107,11 @@ public class PlayerController : MonoBehaviour
 
             if (FacingDirection.y != 0)
             {
-                directionIndex = FacingDirection.y > 0 ? 1 : 0; // Up : Down
+                directionIndex = FacingDirection.y > 0 ? 1 : 0;
             }
             else
             {
-                directionIndex = 2; // Side
-                // Flip the sprite visually only - Transform itself never flips,
-                // so AttackPoint's child-local-position math stays correct in
-                // every direction (this used to flip transform.localScale.x,
-                // which broke AttackPoint's world position when facing left).
+                directionIndex = 2;
                 spriteRenderer.flipX = FacingDirection.x < 0;
             }
 
@@ -170,12 +161,11 @@ public class PlayerController : MonoBehaviour
 
     private void HandleWeaponSelection()
     {
-        Keyboard keyboard = Keyboard.current;
-        if (keyboard == null) return;
-
-        if (keyboard.digit1Key.wasPressedThisFrame) SetEquippedWeapon(WeaponType.Melee);
-        if (keyboard.digit2Key.wasPressedThisFrame) SetEquippedWeapon(WeaponType.Ranged);
-        if (keyboard.digit3Key.wasPressedThisFrame) SetEquippedWeapon(WeaponType.Taser);
+        // Uses the Input Actions system, consistent with the rest of the
+        // project, instead of polling Keyboard.current directly.
+        if (InputSystem.actions["SelectWeapon1"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Melee);
+        if (InputSystem.actions["SelectWeapon2"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Ranged);
+        if (InputSystem.actions["SelectWeapon3"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Taser);
     }
 
     public void SetEquippedWeapon(WeaponType weapon)
