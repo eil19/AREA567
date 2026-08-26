@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c983caf1021e8884c954b88e027cc82a, type: 3}
+  m_Name: IntroDiaolgue
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneDialogue
+  lines:
+  - I thought it was over.
+  - The Alien Queen had destroyed everything.
+  - 'But when I opened my eyes, the laboratory was different. '
+  - 'I had travelled seven days before the attack. '
+  - 'If I can recover the research, restore the laboratory and prepare... '
+  - Maybe this time, I can stop her.

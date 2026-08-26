@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c010c736b0e8cb4f89da63052e4185c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IntroCutsceneController
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 93fd75d42e20b16458674ff8f134c6e5, type: 2}
   dialogueText: {fileID: 1022554851}
   choiceButtons: {fileID: 1735347569}
   readyButton: {fileID: 1632769646}
@@ -6111,7 +6111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.47058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
