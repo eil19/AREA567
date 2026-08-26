@@ -11,166 +11,216 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private Image portraitImage;
-    [SerializeField] private GameObject backButton;   
+    [SerializeField] private GameObject closeButton;
 
+    [Header("Dialogue Timing")]
     [SerializeField] private float typingSpeed = 0.05f;
+
+    [Tooltip(
+        "How long the completed line remains " +
+        "before the next line begins automatically."
+    )]
+    [SerializeField] private float delayBetweenLines = 1.5f;
 
     [Header("Events")]
     public UnityEvent OnDialogueStarted;
     public UnityEvent OnDialogueFinished;
 
     private NPCDialogue currentDialogue;
-    private int dialogueIndex;
+    private UnityEvent dialogueEndedEvent;
 
     private bool isTyping;
     private bool isDialogueActive;
+    private bool canClose;
 
-    public UnityEvent dialogueEndedEvent;
+    private Coroutine dialogueCoroutine;
 
-    public bool IsDialogueActive => isDialogueActive;
-    public bool IsTyping => isTyping;
+    public bool IsDialogueActive =>
+        isDialogueActive;
+
+    public bool IsTyping =>
+        isTyping;
 
     private void Start()
     {
         ShowDialogueUI(false);
+
+        if (closeButton != null)
+        {
+            closeButton.SetActive(false);
+        }
     }
 
-    public void StartDialogue(NPCDialogue dialogueData, UnityEvent onDialogueEnded)
+    public void StartDialogue(
+        NPCDialogue dialogueData,
+        UnityEvent onDialogueEnded)
     {
-        if (dialogueData == null) return;
-        if (isDialogueActive) return;
-        if (dialogueData.dialogueLines == null || dialogueData.dialogueLines.Length == 0) return;
+        if (dialogueData == null)
+            return;
+
+        if (isDialogueActive)
+            return;
+
+        if (dialogueData.dialogueLines == null ||
+            dialogueData.dialogueLines.Length == 0)
+        {
+            return;
+        }
 
         currentDialogue = dialogueData;
-        dialogueIndex = 0;
         dialogueEndedEvent = onDialogueEnded;
 
         isDialogueActive = true;
+        isTyping = false;
+        canClose = false;
 
-        if (backButton != null)
+        if (closeButton != null)
         {
-            backButton.SetActive(false);
+            closeButton.SetActive(false);
         }
 
-        SetNPCInfo(currentDialogue.npcName, currentDialogue.npcPortrait);
+        SetNPCInfo(
+            currentDialogue.npcName,
+            currentDialogue.npcPortrait
+        );
+
         ShowDialogueUI(true);
+
         OnDialogueStarted?.Invoke();
-        ShowCurrentLine();
+
+        dialogueCoroutine =
+            StartCoroutine(
+                PlayDialogue()
+            );
     }
 
-    public void NextLine()
+    private IEnumerator PlayDialogue()
     {
-        if (!isDialogueActive || currentDialogue == null) return;
-
-        // do not allow advancing while text is still typing
-        if (isTyping)
+        for (int i = 0;
+             i < currentDialogue.dialogueLines.Length;
+             i++)
         {
-            return;
+            yield return TypeLine(
+                currentDialogue.dialogueLines[i]
+            );
+
+            bool isLastLine =
+                i ==
+                currentDialogue.dialogueLines.Length - 1;
+
+            if (!isLastLine)
+            {
+                yield return
+                    new WaitForSeconds(
+                        delayBetweenLines
+                    );
+            }
         }
 
-        // use close button
-        if (dialogueIndex >= currentDialogue.dialogueLines.Length - 1)
-        {
-            return;
-        }
+        // All dialogue has now completely finished.
+        canClose = true;
+        dialogueCoroutine = null;
 
-        dialogueIndex++;
-        ShowCurrentLine();
+        if (closeButton != null)
+        {
+            closeButton.SetActive(true);
+        }
     }
 
-    private void ShowCurrentLine()
-    {
-        if (currentDialogue.dialogueLines == null ||
-            dialogueIndex < 0 || dialogueIndex >= currentDialogue.dialogueLines.Length)
-        {
-            return;
-        }
-
-        StopAllCoroutines();
-
-        StartCoroutine(TypeLine(currentDialogue.dialogueLines[dialogueIndex]));
-    }
-
-    private IEnumerator TypeLine(string line)
+    private IEnumerator TypeLine(
+        string line)
     {
         isTyping = true;
 
-        dialogueText.text = "";
+        if (dialogueText != null)
+        {
+            dialogueText.text = "";
+        }
 
         foreach (char letter in line)
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            if (dialogueText != null)
+            {
+                dialogueText.text += letter;
+            }
+
+            yield return new WaitForSeconds(
+                typingSpeed
+            );
         }
 
         isTyping = false;
-        if (dialogueIndex >= currentDialogue.dialogueLines.Length -1)
-        {
-            if (backButton != null)
-            {
-                backButton.SetActive(true);
-            }
-        }
     }
 
-    public void EndDialogue()
+    public void CloseDialogue()
     {
-        StopAllCoroutines();
+        if (!isDialogueActive)
+            return;
+
+        // Dialogue has not finished yet.
+        if (!canClose)
+            return;
+
+        EndDialogue();
+    }
+
+    private void EndDialogue()
+    {
+        if (dialogueCoroutine != null)
+        {
+            StopCoroutine(
+                dialogueCoroutine
+            );
+
+            dialogueCoroutine = null;
+        }
 
         isTyping = false;
         isDialogueActive = false;
+        canClose = false;
 
         ShowDialogueUI(false);
-        if (backButton != null)
+
+        if (closeButton != null)
         {
-            backButton.SetActive(false);
+            closeButton.SetActive(false);
         }
 
-        UnityEvent finishedEvent = dialogueEndedEvent;
+        UnityEvent finishedEvent =
+            dialogueEndedEvent;
+
         dialogueEndedEvent = null;
         currentDialogue = null;
-        dialogueIndex = 0;
 
+        // Tell this specific NPC its dialogue ended.
         finishedEvent?.Invoke();
+
+        // Tell global systems dialogue ended.
         OnDialogueFinished?.Invoke();
     }
 
     public void ShowDialogueUI(bool show)
     {
-        if (dialoguePanel == null) return;
-        dialoguePanel.SetActive(show);
-        if (!show && backButton != null)
+        if (dialoguePanel != null)
         {
-            backButton.SetActive(false);
+            dialoguePanel.SetActive(show);
         }
     }
 
-    public void SetNPCInfo(string npcName, Sprite portrait)
+    public void SetNPCInfo(
+        string npcName,
+        Sprite portrait)
     {
-        if (nameText == null) return;
-        nameText.text = npcName;
-        if (portraitImage == null) return;
-        portraitImage.sprite = portrait;
-        portraitImage.enabled = portrait != null;
-    }
+        if (nameText != null)
+        {
+            nameText.text = npcName;
+        }
 
-    public void SetDialogueText(string text)
-    {
-        if (dialogueText == null) return;
-        dialogueText.text = text;
-    }
-
-    public void CloseDialogue()
-    {
-        if (!isDialogueActive) return;
-        if (isTyping) return;
-        if (currentDialogue == null) return;
-
-        int lastIndex = currentDialogue.dialogueLines.Length - 1;
-
-        // cannot close before reaching final dialogue line
-        if (dialogueIndex < lastIndex) return;
-
-        EndDialogue();
+        if (portraitImage != null)
+        {
+            portraitImage.sprite = portrait;
+            portraitImage.enabled =
+                portrait != null;
+        }
     }
 }

@@ -11,26 +11,20 @@ public class FloatingPromptUI : MonoBehaviour
     private Vector3 offset =
         new Vector3(0f, 0.75f, 0f);
 
-    [SerializeField]
-    private Camera worldCamera;
-
     private Transform target;
-
-    private void Awake()
-    {
-        if (worldCamera == null)
-        {
-            worldCamera = Camera.main;
-        }
-    }
 
     public void Show(GameObject focusedObject)
     {
         if (focusedObject == null)
+        {
             return;
+        }
 
         target = focusedObject.transform;
+
         gameObject.SetActive(true);
+
+        UpdatePosition();
     }
 
     public void Hide()
@@ -46,20 +40,12 @@ public class FloatingPromptUI : MonoBehaviour
             return;
         }
 
-        if (worldCamera == null)
-        {
-            worldCamera = Camera.main;
+        UpdatePosition();
+    }
 
-            if (worldCamera == null)
-                return;
-        }
-
-        Vector3 worldPosition =
-            target.position + offset;
-
+    private void UpdatePosition()
+    {
         transform.position =
-            worldCamera.WorldToScreenPoint(
-                worldPosition
-            );
+            target.position + offset;
     }
 }
