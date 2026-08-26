@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6637779993383803007}
   - component: {fileID: 6611695659385961450}
   m_Layer: 0
-  m_Name: Flyer
+  m_Name: Damager
   m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2456412510807447457, guid: 93d2bfd0c3ed5b8469253a40187e9cb8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6efa392d49e6e249a80d224c6b0b959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StateController
-  currentState: {fileID: 11400000, guid: 62b87efe95bd4e348814f4a08d77a43d, type: 2}
-  remainState: {fileID: 11400000, guid: 1232fad5d99e0f5409e25c4866a02518, type: 2}
+  currentState: {fileID: 11400000, guid: 7304ffe2fc888ab42ae854012f8ceea4, type: 2}
+  remainState: {fileID: 11400000, guid: 58d9ac5b0713f8d4baa5a939faa449c3, type: 2}
   isHit: 0
   isTased: 0
 --- !u!114 &6668038745157386567
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22447112322edd14886232aef3c01674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlienInstance
-  alienType: {fileID: 11400000, guid: e502a06a3b5405b468480c95982010c2, type: 2}
+  alienType: {fileID: 11400000, guid: 827e522a4e6223c43a636a2c9bba36f2, type: 2}
   identified: 0
   tameSuccessTrigger: 0
   tameFailTrigger: 0
