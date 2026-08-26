@@ -40,6 +40,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private WeaponType equippedWeapon = WeaponType.Melee;
     public WeaponType EquippedWeapon => equippedWeapon;
 
+    private bool inputLocked;
+    public bool IsInputLocked => inputLocked;
+
+    public void SetInputLocked(bool locked)
+    {
+        inputLocked = locked;
+        if (locked)
+        {
+            moveInput = Vector2.zero;
+            previousRawInput = Vector2.zero;
+            body.linearVelocity = Vector2.zero;
+            animator.SetBool("IsMoving", false);
+        }
+    }
+
     public void SetSlowMultiplier(float multiplier)
     {
         externalSpeedMultiplier = multiplier;
@@ -75,6 +90,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (inputLocked) return;
+
         Vector2 rawInput = InputSystem.actions["Move"].ReadValue<Vector2>();
 
         bool xPressedThisFrame = Mathf.Abs(rawInput.x) > 0.01f && Mathf.Abs(previousRawInput.x) <= 0.01f;
@@ -186,6 +203,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (inputLocked)
+        {
+            body.linearVelocity = Vector2.zero;
+            return;
+        }
+
         float speed = moveSpeed;
         if (isStealthed) speed *= stealthSpeedMultiplier;
         speed *= externalSpeedMultiplier;

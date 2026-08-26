@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CraftingBench : MonoBehaviour,
     IInteractable
@@ -6,6 +7,10 @@ public class CraftingBench : MonoBehaviour,
     [SerializeField] private GameObject craftingPanel;
     [SerializeField] private GameObject recipePanel;
     [SerializeField] private CraftingSystem craftingSystem;
+
+    [Header("Events")]
+    public UnityEvent OnCraftingOpened;
+    public UnityEvent OnCraftingClosed;
 
     private void Start()
     {
@@ -31,6 +36,7 @@ public class CraftingBench : MonoBehaviour,
         {
             recipePanel.SetActive(true);
         }
+        OnCraftingOpened?.Invoke();
     }
 
     public void CloseCrafting()
@@ -52,5 +58,6 @@ public class CraftingBench : MonoBehaviour,
         { 
             recipePanel.SetActive(false); 
         }
+        OnCraftingClosed?.Invoke();
     }
 }

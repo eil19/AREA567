@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ChestUI : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ChestUI : MonoBehaviour
     private ChestSlotUI[] chestSlots;
 
     [SerializeField] private Image dragIcon;
+
+    public UnityEvent OnChestClosed;
 
     private void Start()
     {
@@ -69,5 +72,6 @@ public class ChestUI : MonoBehaviour
     public void CloseChest()
     {
         gameObject.SetActive(false);
+        OnChestClosed?.Invoke();
     }
 }
