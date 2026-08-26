@@ -36,6 +36,7 @@ Transform:
   - {fileID: 4409803990012077095}
   - {fileID: 5956436404105172188}
   - {fileID: 830692488950788384}
+  - {fileID: 2763501916712409589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4820943940470574660
@@ -99,6 +100,59 @@ MonoBehaviour:
   chestStorage: {fileID: 6984528438541433051}
   dayManager: {fileID: 5880228440065701860}
   timeTravelController: {fileID: 6098313787451371130}
+  OnRunReset:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &3209277012054955166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2763501916712409589}
+  - component: {fileID: 4304767279127522649}
+  m_Layer: 0
+  m_Name: SceneFlowManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2763501916712409589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209277012054955166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7061401804986170731}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4304767279127522649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209277012054955166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df86870cdf6de204cac6599d6f66087e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneFlowManager
+  menuScene: MenuScene
+  introCutscene: IntroCutsceneScene
+  presentScene: PresentScene
+  pastScene: PastScene
+  bossScene: BossScene
+  gameSessionManager: {fileID: 9054898825319672062}
 --- !u!1 &3866871766909283161
 GameObject:
   m_ObjectHideFlags: 0

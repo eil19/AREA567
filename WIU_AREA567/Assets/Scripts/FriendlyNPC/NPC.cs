@@ -20,7 +20,6 @@ public class NPC : MonoBehaviour,
     private void Awake()
     {
         dialogueFinishedEvent = new UnityEvent();
-
         dialogueFinishedEvent.AddListener(HandleDialogueEnded);
     }
 
@@ -29,6 +28,15 @@ public class NPC : MonoBehaviour,
         if (dialogueManager == null)
         {
             dialogueManager = FindFirstObjectByType<DialogueManager>();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (dialogueFinishedEvent != null)
+        {
+            dialogueFinishedEvent.RemoveListener(
+                HandleDialogueEnded);
         }
     }
 
@@ -57,16 +65,13 @@ public class NPC : MonoBehaviour,
     private void StartDialogue()
     {
         isMyDialogueActive = true;
-
         OnDialogueStarted?.Invoke();
-
         dialogueManager.StartDialogue(dialogueData, dialogueFinishedEvent);
     }
 
     private void HandleDialogueEnded()
     {
         isMyDialogueActive = false;
-
         OnDialogueEnded?.Invoke();
     }
 }

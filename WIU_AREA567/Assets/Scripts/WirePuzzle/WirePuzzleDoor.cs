@@ -16,6 +16,10 @@ public class WirePuzzleDoor :
     [SerializeField]
     private Animator animator;
 
+    [Header("Persistence")]
+    [SerializeField] private string doorID;
+
+
     [Header("Events")]
     public UnityEvent OnDoorUnlocked;
     public UnityEvent OnDoorOpened;
@@ -23,6 +27,15 @@ public class WirePuzzleDoor :
     private bool unlocked;
 
     public bool IsUnlocked => unlocked;
+    public string DoorID => doorID;
+
+    private void Start()
+    {
+        if (DoorRunData.IsDoorUnlocked(doorID))
+        {
+            RestoreUnlockedState();
+        }
+    }
 
     public void Interact(
         GameObject interactor)
@@ -60,6 +73,8 @@ public class WirePuzzleDoor :
 
         unlocked = true;
 
+        DoorRunData.UnlockDoor(doorID);
+
         Debug.Log(
             gameObject.name +
             " unlocked."
@@ -89,5 +104,18 @@ public class WirePuzzleDoor :
         );
 
         OnDoorOpened?.Invoke();
+    }
+
+    private void RestoreUnlockedState()
+    {
+        unlocked = true;
+        if (blockingCollider != null)
+        {
+            blockingCollider.enabled = false;
+        }
+        if (animator != null)
+        {
+            // set bool is open true
+        }
     }
 }

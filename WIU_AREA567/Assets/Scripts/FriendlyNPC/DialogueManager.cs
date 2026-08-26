@@ -11,8 +11,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private Image portraitImage;
+    [SerializeField] private GameObject backButton;   
 
     [SerializeField] private float typingSpeed = 0.05f;
+
+    [Header("Events")]
+    public UnityEvent OnDialogueStarted;
+    public UnityEvent OnDialogueFinished;
 
     private NPCDialogue currentDialogue;
     private int dialogueIndex;
@@ -34,6 +39,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueData == null) return;
         if (isDialogueActive) return;
+        if (dialogueData.dialogueLines == null || dialogueData.dialogueLines.Length == 0) return;
 
         currentDialogue = dialogueData;
         dialogueIndex = 0;
@@ -41,8 +47,14 @@ public class DialogueManager : MonoBehaviour
 
         isDialogueActive = true;
 
+        if (backButton != null)
+        {
+            backButton.SetActive(false);
+        }
+
         SetNPCInfo(currentDialogue.npcName, currentDialogue.npcPortrait);
         ShowDialogueUI(true);
+        OnDialogueStarted?.Invoke();
         ShowCurrentLine();
     }
 
@@ -56,14 +68,13 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        dialogueIndex++;
-
-        if (dialogueIndex >= currentDialogue.dialogueLines.Length)
+        // use close button
+        if (dialogueIndex >= currentDialogue.dialogueLines.Length - 1)
         {
-            EndDialogue();
             return;
         }
 
+        dialogueIndex++;
         ShowCurrentLine();
     }
 
@@ -72,7 +83,6 @@ public class DialogueManager : MonoBehaviour
         if (currentDialogue.dialogueLines == null ||
             dialogueIndex < 0 || dialogueIndex >= currentDialogue.dialogueLines.Length)
         {
-            EndDialogue();
             return;
         }
 
@@ -94,6 +104,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         isTyping = false;
+        if (dialogueIndex >= currentDialogue.dialogueLines.Length -1)
+        {
+            if (backButton != null)
+            {
+                backButton.SetActive(true);
+            }
+        }
     }
 
     public void EndDialogue()
@@ -104,17 +121,28 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
 
         ShowDialogueUI(false);
+        if (backButton != null)
+        {
+            backButton.SetActive(false);
+        }
 
         UnityEvent finishedEvent = dialogueEndedEvent;
         dialogueEndedEvent = null;
         currentDialogue = null;
         dialogueIndex = 0;
+
+        finishedEvent?.Invoke();
+        OnDialogueFinished?.Invoke();
     }
 
     public void ShowDialogueUI(bool show)
     {
         if (dialoguePanel == null) return;
         dialoguePanel.SetActive(show);
+        if (!show && backButton != null)
+        {
+            backButton.SetActive(false);
+        }
     }
 
     public void SetNPCInfo(string npcName, Sprite portrait)
@@ -130,5 +158,19 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueText == null) return;
         dialogueText.text = text;
+    }
+
+    public void CloseDialogue()
+    {
+        if (!isDialogueActive) return;
+        if (isTyping) return;
+        if (currentDialogue == null) return;
+
+        int lastIndex = currentDialogue.dialogueLines.Length - 1;
+
+        // cannot close before reaching final dialogue line
+        if (dialogueIndex < lastIndex) return;
+
+        EndDialogue();
     }
 }

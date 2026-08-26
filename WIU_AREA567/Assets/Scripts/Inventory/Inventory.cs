@@ -160,7 +160,7 @@ public class Inventory : MonoBehaviour
         ItemInstance firstItem = items[firstIndex];
         ItemInstance secondItem = items[secondIndex];
 
-        // can first item move to second slot?
+        // can first item move to second slot
         if (firstItem != null && !CanPlaceItemInSlot(secondIndex, firstItem.itemData)) return false;
 
         // can second item move to first slot

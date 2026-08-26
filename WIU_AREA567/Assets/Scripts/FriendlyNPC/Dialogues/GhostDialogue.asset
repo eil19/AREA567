@@ -17,6 +17,4 @@ MonoBehaviour:
   dialogueLines:
   - 'Hello there young person! '
   - I am a ghost of the past
-  autoProgressLines: 0100
-  autoProgressDelay: 1.5
-  typingSpeed: 0.05
+  - You may find research notes around the lab

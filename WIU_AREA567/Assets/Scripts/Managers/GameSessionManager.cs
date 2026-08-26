@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameSessionManager : MonoBehaviour
 {
@@ -8,8 +9,14 @@ public class GameSessionManager : MonoBehaviour
     [SerializeField] private DayManager dayManager;
     [SerializeField] private TimeTravelController timeTravelController;
 
+    [Header("Events")]
+    public UnityEvent OnRunReset;
+
     public void ResetRun()
     {
+        // organisation run data
+        DoorRunData.ResetRun();
+
         if (inventory != null)
         {
             inventory.ClearInventory();
