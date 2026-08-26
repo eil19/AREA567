@@ -1906,6 +1906,9 @@ MonoBehaviour:
   OnResearchLogChanged:
     m_PersistentCalls:
       m_Calls: []
+  OnResearchDiscovered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &755172746
 Transform:
   m_ObjectHideFlags: 0

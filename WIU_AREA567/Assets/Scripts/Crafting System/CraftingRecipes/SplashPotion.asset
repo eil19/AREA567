@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874947424e101d14385f519458fbabb5, type: 3}
+  m_Name: SplashPotion
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
+  recipeName: Splash Potion
+  recipeDescription: Create a splash potion to use on aliens
+  formulaImage: {fileID: 21300000, guid: 5a46cdfc06d851b479cfc87f15ac54b7, type: 3}
+  recipeGrid:
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 11400000, guid: 3e41c8d2c30e445449dcf6f7a988d81d, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: ae484dd9ee72c2248bcefd498833c75d, type: 2}
+    quantity: 1
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  outputItem: {fileID: 11400000, guid: def2b988f172ab24b9f3aef750903474, type: 2}
+  outputEffect: {fileID: 11400000, guid: 37d4f78746f37544fb984e0d374393eb, type: 2}
+  outputQuantity: 1
