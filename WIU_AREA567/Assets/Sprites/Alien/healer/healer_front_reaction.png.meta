@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 13
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,12 +125,12 @@ TextureImporter:
       name: healer_front_reaction_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 39
-        width: 22
-        height: 25
+        x: 3
+        y: 35
+        width: 32
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: healer_front_reaction_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 43
-        width: 22
-        height: 25
+        x: 36
+        y: 35
+        width: 32
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: healer_front_reaction_2
       rect:
         serializedVersion: 2
-        x: 74
-        y: 43
-        width: 22
-        height: 25
+        x: 68
+        y: 35
+        width: 32
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: healer_front_reaction_3
       rect:
         serializedVersion: 2
-        x: 108
-        y: 41
-        width: 22
-        height: 25
+        x: 103
+        y: 35
+        width: 32
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f7026598a90882140906bed91fe5d4cb
     internalID: 0
     vertices: []
     indices: 
@@ -221,12 +221,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":35.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       healer_front_reaction_0: 8085071101782440799
       healer_front_reaction_1: 1117890525018178652
       healer_front_reaction_2: 2150590630719349354
       healer_front_reaction_3: 4669420039933715011
+      healer_front_reaction_4: 551854703
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

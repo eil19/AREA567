@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,89 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tanker_front_atk_0
+      name: damager_front_atk_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 9
-        width: 44
-        height: 40
+        x: 19
+        y: 0
+        width: 70
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8cf168cf925c9beb0800000000000000
-      internalID: -4703511551690793016
+      spriteID: 5a4dc2977d9772f46938535411efd840
+      internalID: 1610756633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanker_front_atk_1
+      name: damager_front_atk_1
       rect:
         serializedVersion: 2
-        x: 106
-        y: 10
-        width: 33
-        height: 40
+        x: 87
+        y: 0
+        width: 70
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fca0387f746365880800000000000000
-      internalID: -8622644753831097649
+      spriteID: 3eafc4728274a3248a33137674396427
+      internalID: 1189938440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanker_front_atk_2
+      name: damager_front_atk_2
       rect:
         serializedVersion: 2
-        x: 173
-        y: 9
-        width: 44
-        height: 48
+        x: 159
+        y: 0
+        width: 70
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fce15412a8c01ac60800000000000000
-      internalID: 7827551414749830863
+      spriteID: f1c986cb7a1bc7f49aef0284c865dbf8
+      internalID: 55162405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tanker_front_atk_3
+      name: damager_front_atk_3
       rect:
         serializedVersion: 2
-        x: 251
-        y: 11
-        width: 33
-        height: 40
+        x: 233
+        y: 0
+        width: 70
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f2293c21c6a29ff40800000000000000
-      internalID: 5762683841856901679
+      spriteID: f72e7d3fc01bb2d44a2aed268a0fd980
+      internalID: -1329284669
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: af8f1a4023737064d8b2308d611abd50
     internalID: 0
     vertices: []
     indices: 
@@ -221,12 +221,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":70.0,"y":64.0},"gridSpriteOffset":{"x":11.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      tanker_front_atk_0: -4703511551690793016
-      tanker_front_atk_1: -8622644753831097649
-      tanker_front_atk_2: 7827551414749830863
-      tanker_front_atk_3: 5762683841856901679
+      damager_front_atk_0: 1610756633
+      damager_front_atk_1: 1189938440
+      damager_front_atk_2: 55162405
+      damager_front_atk_3: -1329284669
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
