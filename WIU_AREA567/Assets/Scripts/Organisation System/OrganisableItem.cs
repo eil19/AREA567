@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class OrganisableItem : MonoBehaviour
 {
+    [Header("Organisation")]
     [SerializeField] private string zoneId;
-    public string ZoneId => zoneId;
+
+    [Header("Persistence")]
+    [SerializeField] private string persistentID;
 
     [Header("Visual Feedback")]
     [SerializeField] private Color correctColor = Color.white;
@@ -11,25 +14,26 @@ public class OrganisableItem : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    public string ZoneId => zoneId;
     public bool IsOrganised { get; private set; }
-
-    // False until the player has placed it at least once - keeps items
-    // that haven't been touched yet from counting as "wrong" / glowing red.
     public bool HasBeenPlaced { get; private set; }
 
-    void Awake()
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Start()
+    private void Start()
     {
+        RestoreState();
+
         OrganisationManager.Instance?.Register(this);
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
-        OrganisationManager.Instance?.Unregister(this);
+        OrganisationManager.Instance?
+            .Unregister(this);
     }
 
     public void SetOrganised(bool organised)
@@ -42,6 +46,34 @@ public class OrganisableItem : MonoBehaviour
             spriteRenderer.color = organised ? correctColor : incorrectColor;
         }
 
+        if (organised)
+        {
+            OrganisationRunData.MarkOrganised(persistentID, transform.position);
+        }
+        else
+        {
+            OrganisationRunData.RemoveOrganised(persistentID);
+        }
+
         OrganisationManager.Instance?.NotifyChanged();
+    }
+
+    private void RestoreState()
+    {
+        if (!OrganisationRunData.TryGetPosition(
+            persistentID, out Vector3 savedPosition))
+        {
+            return;
+        }
+
+        transform.position = savedPosition;
+
+        IsOrganised = true;
+        HasBeenPlaced = true;
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = correctColor;
+        }
     }
 }

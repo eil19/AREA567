@@ -27,6 +27,11 @@ public class PlayerOrganisation : MonoBehaviour
 
     void Update()
     {
+        if (playerController != null && playerController.IsInputLocked)
+        {
+            return;
+        }
+
         if (InputSystem.actions["Pickup"].WasPressedThisFrame())
         {
             if (carriedItem == null)
