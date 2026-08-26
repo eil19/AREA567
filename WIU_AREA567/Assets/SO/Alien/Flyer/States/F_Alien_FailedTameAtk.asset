@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
+  m_Name: F_Alien_FailedTameAtk
+  m_EditorClassIdentifier: Assembly-CSharp::State
+  initializeActions:
+  - {fileID: 11400000, guid: 8e133964a6861db4bb1094292b04748e, type: 2}
+  - {fileID: 11400000, guid: 65ecf3df8f04a2d4ab9147cdf230d09d, type: 2}
+  - {fileID: 11400000, guid: 5da75811ade097f4f83144e9d6025930, type: 2}
+  - {fileID: 11400000, guid: 89dec507bb47db049a040080810310e3, type: 2}
+  - {fileID: 11400000, guid: 32a938ad871585a4cad38af9220bae9c, type: 2}
+  executeActions: []
+  endActions:
+  - {fileID: 11400000, guid: c4ede4cea3bf2a641b07f6c4e798983a, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 283fb359a9e03bb42a5a4400022dde60, type: 2}
+    trueState: {fileID: 11400000, guid: 62b87efe95bd4e348814f4a08d77a43d, type: 2}
+    falseState: {fileID: 11400000, guid: 1232fad5d99e0f5409e25c4866a02518, type: 2}
