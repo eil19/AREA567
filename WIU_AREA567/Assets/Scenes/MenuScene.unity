@@ -561,16 +561,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Teng Poh
-
-
-    Charisse
+  m_text: 'Charisse
 
 
     Eileen
 
 
-    Sze Yee'
+    Sze Yee
+
+
+    Teng Poh'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f4ef3ca8ce877c845824b73a6ce27b33, type: 2}
   m_sharedMaterial: {fileID: 2967673305952960626, guid: f4ef3ca8ce877c845824b73a6ce27b33, type: 2}
