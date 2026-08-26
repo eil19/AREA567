@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneFlowManager : MonoBehaviour
 {
-    [Header("Scene names")]
+    [Header("Scene Names")]
     [SerializeField] private string menuScene = "MenuScene";
     [SerializeField] private string introCutscene = "IntroCutsceneScene";
     [SerializeField] private string presentScene = "PresentScene";
@@ -11,14 +11,12 @@ public class SceneFlowManager : MonoBehaviour
     [SerializeField] private string bossScene = "BossScene";
 
     [Header("References")]
-    [SerializeField] private GameSessionManager gameSessionManager; 
+    [SerializeField] private GameSessionManager gameSessionManager;
+    [SerializeField] private AsyncLoader asyncLoader;
 
-    public void StartNewGam()
+    public void StartNewGame()
     {
-        if (gameSessionManager != null)
-        {
-            gameSessionManager.ResetRun();
-        }
+        gameSessionManager?.ResetRun();
 
         LoadScene(introCutscene);
     }
@@ -45,27 +43,31 @@ public class SceneFlowManager : MonoBehaviour
 
     public void ReplayGame()
     {
-        if (gameSessionManager != null)
-        {
-            gameSessionManager.ResetRun();
-        }
+        gameSessionManager?.ResetRun();
 
         LoadScene(introCutscene);
     }
 
     public void ReturnToMainMenu()
     {
-        if (gameSessionManager != null)
-        {
-            gameSessionManager.ResetRun();
-        }
+        gameSessionManager?.ResetRun();
 
         LoadScene(menuScene);
     }
 
     private void LoadScene(string sceneName)
     {
-        if (string.IsNullOrEmpty(sceneName)) return;
-        SceneManager.LoadScene(sceneName);
+        if (string.IsNullOrEmpty(sceneName))
+            return;
+
+        if (asyncLoader != null)
+        {
+            asyncLoader.LoadScene(sceneName);
+        }
+        else
+        {
+            // Safe fallback.
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

@@ -22,18 +22,48 @@ public class ResearchNote : MonoBehaviour, IPickupable
 
     public void Pickup(GameObject picker)
     {
-        if (researchData == null) return;
+        if (researchData == null)
+            return;
 
-        bool added = ResearchLog.Instance.AddResearch(researchData);
+        bool added =
+            ResearchLog.Instance.AddResearch(
+                researchData
+            );
+
         if (added)
         {
-            Debug.Log($"{picker.name} discovered research: {researchData.researchName}");
-            NotificationPopupUI.Instance?.Show("New note unlocked!");
+            Debug.Log(
+                picker.name +
+                " discovered research: " +
+                researchData.researchName
+            );
+
+            if (researchData.category ==
+                    ResearchCategory.Recipe &&
+                researchData.unlockedRecipe != null)
+            {
+                NotificationPopupUI.Instance?.Show(
+                    "Recipe Unlocked: " +
+                    researchData.unlockedRecipe
+                        .recipeName
+                );
+            }
+            else
+            {
+                NotificationPopupUI.Instance?.Show(
+                    "Research Discovered: " +
+                    researchData.researchName
+                );
+            }
+
             Destroy(gameObject);
         }
         else
         {
-            Debug.Log($"Already discovered: {researchData.researchName}");
+            Debug.Log(
+                "Already discovered: " +
+                researchData.researchName
+            );
         }
     }
 }

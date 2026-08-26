@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class OpeningCutsceneController : MonoBehaviour
+public class IntroCutsceneController : MonoBehaviour
 {
     [Header("World")]
     [SerializeField] private Animator alienQueenAnimator;
@@ -14,103 +14,63 @@ public class OpeningCutsceneController : MonoBehaviour
     [SerializeField] private Image blackOverlay;
 
     [Header("Dialogue")]
-    [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private TMP_Text speakerNameText;
-    [SerializeField] private TMP_Text dialogueText;
-    [SerializeField] private Button continueButton;
-    [SerializeField] private Button readyButton;
+    [SerializeField]
+    private CutsceneDialogue dialogue;
 
-    [Header("Dialogue Lines")]
-    [SerializeField] private CutsceneDialogueLine[] dialogueLines;
+    [SerializeField]
+    private TMP_Text dialogueText;
 
-    [Header("Timing")]
-    [SerializeField] private float attackDelay = 1.5f;
-    [SerializeField] private float redFadeDuration = 1f;
-    [SerializeField] private float blackFadeDuration = 1.5f;
+    [Header("Buttons")]
+    [SerializeField]
+    private GameObject choiceButtons;
+
+    [SerializeField]
+    private Button readyButton;
+
+    [SerializeField]
+    private Button notReadyButton;
+
+    [Header("Typewriter")]
+    [SerializeField]
+    private float typingSpeed = 0.04f;
+
+    [SerializeField]
+    private float delayBetweenLines = 1.5f;
+
+    [SerializeField]
+    private float introDelay = 1f;
 
     [Header("Events")]
-    public UnityEvent OnFatalAttack;
-    public UnityEvent OnFlashbackStarted;
-    public UnityEvent OnCutsceneFinished;
+    public UnityEvent OnIntroStarted;
+    public UnityEvent OnDialogueFinished;
 
-    private int dialogueIndex;
-    private bool dialogueStarted;
+    private Coroutine introCoroutine;
+
+    public void BeginIntro()
+    {
+        if (introCoroutine != null)
+        {
+            StopCoroutine(introCoroutine);
+        }
+
+        dialogueText.text = "";
+
+        if (choiceButtons != null)
+        {
+            choiceButtons.SetActive(false);
+        }
+
+        introCoroutine =
+            StartCoroutine(PlayIntro());
+    }
 
     private void Start()
     {
-        SetupInitialState();
-        StartCoroutine(PlayOpeningSequence());
-    }
+        dialogueText.text = "";
 
-    private void SetupInitialState()
-    {
-        SetImageAlpha(redOverlay, 0f);
-        SetImageAlpha(blackOverlay, 0f);
-
-        dialoguePanel.SetActive(false);
-        continueButton.gameObject.SetActive(false);
-        readyButton.gameObject.SetActive(false);
-
-        dialogueIndex = 0;
-        dialogueStarted = false;
-    }
-
-    private IEnumerator PlayOpeningSequence()
-    {
-        yield return new WaitForSeconds(attackDelay);
-
-        OnFatalAttack?.Invoke();
-
-        if (alienQueenAnimator != null)
+        if (choiceButtons != null)
         {
-            alienQueenAnimator.SetTrigger("FatalAttack");
-        }
-
-        yield return FadeImage(
-            redOverlay,
-            0f,
-            1f,
-            redFadeDuration
-        );
-
-        yield return FadeImage(
-            blackOverlay,
-            0f,
-            1f,
-            blackFadeDuration
-        );
-
-        StartDialogue();
-    }
-
-    private void StartDialogue()
-    {
-        if (dialogueLines == null ||
-            dialogueLines.Length == 0)
-        {
-            ShowReadyButton();
-            return;
-        }
-
-        dialogueStarted = true;
-        dialogueIndex = 0;
-
-        dialoguePanel.SetActive(true);
-
-        OnFlashbackStarted?.Invoke();
-
-        ShowCurrentDialogue();
-    }
-
-    private void ShowCurrentDialogue()
-    {
-        if (!dialogueStarted)
-            return;
-
-        if (dialogueIndex >= dialogueLines.Length)
-        {
-            ShowReadyButton();
-            return;
+            choiceButtons.SetActive(false);
         }
 
         CutsceneDialogueLine line =
@@ -126,52 +86,46 @@ public class OpeningCutsceneController : MonoBehaviour
         readyButton.gameObject.SetActive(isLastLine);
     }
 
-    public void ContinueDialogue()
+    private IEnumerator PlayIntro()
     {
-        if (!dialogueStarted)
-            return;
+        OnIntroStarted?.Invoke();
 
-        dialogueIndex++;
+        // Allows the death / impact SFX
+        // to play against a black screen.
+        yield return new WaitForSecondsRealtime(
+            introDelay
+        );
 
-        ShowCurrentDialogue();
-    }
-
-    private void ShowReadyButton()
-    {
-        continueButton.gameObject.SetActive(false);
-        readyButton.gameObject.SetActive(true);
-    }
-
-    public void FinishCutscene()
-    {
-        OnCutsceneFinished?.Invoke();
-    }
-
-    private IEnumerator FadeImage(
-        Image image,
-        float startAlpha,
-        float endAlpha,
-        float duration)
-    {
-        if (image == null)
-            yield break;
-
-        float elapsed = 0f;
-
-        while (elapsed < duration)
+        if (dialogue == null ||
+            dialogue.lines == null)
         {
-            elapsed += Time.deltaTime;
+            FinishDialogue();
+            yield break;
+        }
 
-            float t =
-                Mathf.Clamp01(elapsed / duration);
+        foreach (string line in dialogue.lines)
+        {
+            yield return TypeLine(line);
 
-            SetImageAlpha(
-                image,
-                Mathf.Lerp(
-                    startAlpha,
-                    endAlpha,
-                    t
-                )
+            yield return new WaitForSecondsRealtime(
+                delayBetweenLines
+            );
+        }
+
+        FinishDialogue();
+    }
+
+    private IEnumerator TypeLine(
+        string line)
+    {
+        dialogueText.text = "";
+
+        foreach (char character in line)
+        {
+            dialogueText.text += character;
+
+            yield return new WaitForSecondsRealtime(
+                typingSpeed
             );
 
             yield return null;
@@ -180,15 +134,15 @@ public class OpeningCutsceneController : MonoBehaviour
         SetImageAlpha(image, endAlpha);
     }
 
-    private void SetImageAlpha(
-        Image image,
-        float alpha)
+    private void FinishDialogue()
     {
-        if (image == null)
-            return;
+        introCoroutine = null;
 
-        Color colour = image.color;
-        colour.a = alpha;
-        image.color = colour;
+        OnDialogueFinished?.Invoke();
+
+        if (choiceButtons != null)
+        {
+            choiceButtons.SetActive(true);
+        }
     }
 }

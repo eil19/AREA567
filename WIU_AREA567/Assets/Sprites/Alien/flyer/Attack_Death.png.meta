@@ -1,0 +1,418 @@
+fileFormatVersion: 2
+guid: 81ebc2b04d6e9e24da939e3a1eed46a4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7051569666769413183
+    second: Attack_Death_0
+  - first:
+      213: 3355160325758913367
+    second: Attack_Death_1
+  - first:
+      213: -6462162399864093068
+    second: Attack_Death_2
+  - first:
+      213: -6276267626261231713
+    second: Attack_Death_3
+  - first:
+      213: 8066835656369006423
+    second: Attack_Death_4
+  - first:
+      213: 4672724178084132957
+    second: Attack_Death_5
+  - first:
+      213: -6634907459196939941
+    second: Attack_Death_6
+  - first:
+      213: 8239048191989321363
+    second: Attack_Death_7
+  - first:
+      213: -8529900236272937431
+    second: Attack_Death_8
+  - first:
+      213: 194770928370593996
+    second: Attack_Death_9
+  - first:
+      213: -9181884007693990783
+    second: Attack_Death_10
+  - first:
+      213: 1806965657638384130
+    second: Attack_Death_11
+  - first:
+      213: 5506870040858791492
+    second: Attack_Death_12
+  - first:
+      213: -7934279377675453263
+    second: Attack_Death_13
+  - first:
+      213: -5117701492536573826
+    second: Attack_Death_14
+  - first:
+      213: -3292277959050694989
+    second: Attack_Death_15
+  - first:
+      213: -2009615105169470660
+    second: Attack_Death_16
+  - first:
+      213: -6115643389030267353
+    second: Attack_Death_17
+  - first:
+      213: 6451183594309502060
+    second: Attack_Death_18
+  - first:
+      213: 6486754135457146693
+    second: Attack_Death_19
+  - first:
+      213: -2453780940628272107
+    second: Attack_Death_20
+  - first:
+      213: -1246206116603511237
+    second: Attack_Death_21
+  - first:
+      213: 1996142947548522532
+    second: Attack_Death_22
+  - first:
+      213: 8226904695329717848
+    second: Attack_Death_23
+  - first:
+      213: -2185861296781916084
+    second: Attack_Death_24
+  - first:
+      213: -4765398934046978762
+    second: Attack_Death_25
+  - first:
+      213: 6263829243534591349
+    second: Attack_Death_26
+  - first:
+      213: 5904820559696576678
+    second: Attack_Death_27
+  - first:
+      213: 1073316427800233758
+    second: Attack_Death_28
+  - first:
+      213: 2958051317785355931
+    second: Attack_Death_29
+  - first:
+      213: -911607844786994374
+    second: Attack_Death_30
+  - first:
+      213: -1236877438925980969
+    second: Attack_Death_31
+  - first:
+      213: 7057258647793461774
+    second: Attack_Death_32
+  - first:
+      213: 2203826264753426247
+    second: Attack_Death_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_Death_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 12
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34e5b840453cd160800000000000000
+      internalID: 7051569666769413183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Death_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 14
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b08553a8cef8e20800000000000000
+      internalID: 3355160325758913367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Death_2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 14
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476073b0989c156a0800000000000000
+      internalID: -6462162399864093068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Death_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 14
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f974a65d8d736e8a0800000000000000
+      internalID: -6276267626261231713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Death_4
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 14
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757645f1a4823ff60800000000000000
+      internalID: 8066835656369006423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Death_5
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 14
+        width: 87
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58751002e9d8d040800000000000000
+      internalID: 4672724178084132957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Death_6
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 14
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b511af0b1d21ce3a0800000000000000
+      internalID: -6634907459196939941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Death_7
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 14
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e09d2adaaf65270800000000000000
+      internalID: 8239048191989321363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5f64e5a29a3b04a4cbee8f4c4e586acb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":74.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":2.0},"gridSpritePadding":{"x":24.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Attack_Death_0: 7051569666769413183
+      Attack_Death_1: 3355160325758913367
+      Attack_Death_2: -6462162399864093068
+      Attack_Death_3: -6276267626261231713
+      Attack_Death_4: 8066835656369006423
+      Attack_Death_5: 4672724178084132957
+      Attack_Death_6: -6634907459196939941
+      Attack_Death_7: 8239048191989321363
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

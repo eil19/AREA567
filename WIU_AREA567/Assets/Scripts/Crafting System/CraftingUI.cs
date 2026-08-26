@@ -18,13 +18,18 @@ public class CraftingUI : MonoBehaviour
 
     private void Start()
     {
+        if (craftingSystem == null)
+        {
+            craftingSystem = FindFirstObjectByType<CraftingSystem>();
+        }
         if (inventory == null)
         {
-            GameObject inventoryObject = GameObject.Find("Inventory");
-            if (inventoryObject != null)
-            {
-                inventory = inventoryObject.GetComponent<Inventory>();
-            }
+            inventory = FindFirstObjectByType<Inventory>();
+        }
+        if (craftingSystem == null)
+        {
+            Debug.Log("Crafting system not found");
+            return;
         }
 
         InitialiseSlots();

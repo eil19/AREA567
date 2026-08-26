@@ -12,9 +12,11 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     [Header("Linked Alien")]
     [SerializeField] private AlienInstance linkedAlien;
 
+    public GameObject barUI;
+
     [Header("Taming Items")]
-    [SerializeField] private ItemData essenceData;
-    [SerializeField] private ItemEffect essenceEffect;
+    [SerializeField] private ItemData bondingCharmData;
+    [SerializeField] private ItemEffect bondingCharmEffect;
 
     [Header("Experiment Items")]
     [SerializeField] private ItemData splashPotionData;
@@ -36,7 +38,7 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     [SerializeField] private CinemachineCamera closeUpCamera;
     [SerializeField] private string reactionTrigger = "SplashReact";
     [SerializeField] private float reactionFallbackDuration = 2f;
-    [SerializeField] private float cameraBlendDelay = 1.5f; 
+    [SerializeField] private float cameraBlendDelay = 1.5f;
 
     private PlayerInteractor playerInteractor;
     private bool isFocused;
@@ -65,23 +67,23 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         Debug.Log($"[PodControlPanel] Added test splash potion. Count now: {GetItemCount(splashPotionData)}");
     }
 
-    [ContextMenu("TEST: Add Essence to Inventory")]
-    private void TestAddEssence()
+    [ContextMenu("TEST: Add bondingCharm to Inventory")]
+    private void TestAddBondingCharm()
     {
         if (inventory == null)
         {
             Debug.LogWarning("[PodControlPanel] No Inventory.Instance in scene.");
             return;
         }
-        if (essenceData == null)
+        if (bondingCharmData == null)
         {
-            Debug.LogWarning("[PodControlPanel] essence not assigned.");
+            Debug.LogWarning("[PodControlPanel] bondingCharm not assigned.");
             return;
         }
 
-        var testItem = new ItemInstance(essenceData, essenceEffect, 1);
+        var testItem = new ItemInstance(bondingCharmData, bondingCharmEffect, 1);
         inventory.AddItem(testItem);
-        Debug.Log($"[PodControlPanel] Added essence. Count now: {GetItemCount(splashPotionData)}");
+        Debug.Log($"[PodControlPanel] Added bondingCharm. Count now: {GetItemCount(splashPotionData)}");
     }
 
     private void Start()
@@ -91,13 +93,13 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         {
             playerInteractor = playerObj.GetComponent<PlayerInteractor>();
         }
- 
+
         if (playerInteractor != null)
         {
             playerInteractor.OnInteractableFocused.AddListener(HandleFocused);
             playerInteractor.OnInteractableLostFocus.AddListener(HandleLostFocus);
         }
- 
+
         if (promptRoot != null) promptRoot.SetActive(false);
         if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
 
@@ -109,7 +111,7 @@ public class PodControlPanel : MonoBehaviour, IInteractable
             inventory = FindFirstObjectByType<Inventory>();
         }
     }
- 
+
     private void OnDestroy()
     {
         if (playerInteractor != null)
@@ -118,33 +120,35 @@ public class PodControlPanel : MonoBehaviour, IInteractable
             playerInteractor.OnInteractableLostFocus.RemoveListener(HandleLostFocus);
         }
     }
- 
+
     private void Update()
     {
         // Block UpdatePrompt from running if sequence is playing
         if (isFocused && !isSequencePlaying) UpdatePrompt();
     }
- 
+
     private void HandleFocused(GameObject focusedObject)
     {
         if (focusedObject != gameObject) return;
         isFocused = true;
         if (!isSequencePlaying) UpdatePrompt();
     }
- 
+
     private void HandleLostFocus()
     {
         if (!isFocused) return;
         isFocused = false;
         if (promptRoot != null) promptRoot.SetActive(false);
         if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
+        if (barUI != null) barUI.SetActive(true);
         ClearErrorText(); // Hide error text if the player walks away
     }
- 
+
     private void UpdatePrompt()
     {
         if (linkedAlien == null)
         {
+            if (barUI != null) barUI.SetActive(true);
             if (promptRoot != null) promptRoot.SetActive(false);
             if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
             return;
@@ -155,19 +159,21 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         {
             if (promptRoot != null) promptRoot.SetActive(false);
             if (tamePromptRoot != null) tamePromptRoot.SetActive(true);
-            if (tamePromptText != null) tamePromptText.text = "PRESS \"E\" TO ATTEMPT TAMING\r\n1 ESSENCE REQUIRED PER ATTEMPT";
+            if (tamePromptText != null) tamePromptText.text = "PRESS \"E\" TO ATTEMPT TAMING\r\n1 BONDING CHARM REQUIRED PER ATTEMPT";
             return;
         }
 
         // Alien tamed already, or no valid state -> hide both
         if (linkedAlien.isTamed)
         {
+            if (barUI != null) barUI.SetActive(false);
             if (promptRoot != null) promptRoot.SetActive(false);
             if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
             return;
         }
 
-        // Not yet identified -> show potion prompt (original behavior)
+        // Not yet identified -> show potion prompt
+        if (barUI != null) barUI.SetActive(false);
         if (promptRoot != null) promptRoot.SetActive(true);
         if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
         if (potionCountText != null)
@@ -212,9 +218,9 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         //tame
         else if (!linkedAlien.isTamed)
         {
-            if (GetItemCount(essenceData) <= 0)
+            if (GetItemCount(bondingCharmData) <= 0)
             {
-                ShowError("No essence in inventory.", 3f);
+                ShowError("No bondingCharm in inventory.", 3f);
                 return;
             }
 
@@ -227,12 +233,18 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         isSequencePlaying = true;
         if (tamePromptRoot != null) tamePromptRoot.SetActive(false);
 
-        bool consumed = inventory.TryConsumeItem(essenceData, 1);
+        bool consumed = inventory.TryConsumeItem(bondingCharmData, 1);
         if (!consumed)
         {
             isSequencePlaying = false;
-            ShowError("No essence in inventory.", 3f);
+            ShowError("No bondingCharm in inventory.", 3f);
             yield break;
+        }
+
+        // Point the shared close-up camera at THIS pod's alien before switching to it.
+        if (closeUpCamera != null && linkedAlien != null)
+        {
+            closeUpCamera.Target.TrackingTarget = linkedAlien.transform;
         }
 
         //Switch Camera
@@ -353,6 +365,12 @@ public class PodControlPanel : MonoBehaviour, IInteractable
 
     private IEnumerator SplashSequenceRoutine()
     {
+        // Point the shared close-up camera at THIS pod's alien before switching to it.
+        if (closeUpCamera != null && linkedAlien != null)
+        {
+            closeUpCamera.Target.TrackingTarget = linkedAlien.transform;
+        }
+
         //Switch Camera
         if (CameraSwitch.Instance != null)
         {
@@ -368,6 +386,8 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         //Wait for reaction animation duration
         yield return new WaitForSeconds(reactionFallbackDuration);
 
+        if (barUI != null) barUI.SetActive(false);
+
         //Open Guess UI
         if (AlienGuessUI.Instance != null)
         {
@@ -376,13 +396,17 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         }
         else
         {
+            // no guess UI to reopen it later, so restore immediately
+            if (barUI != null) barUI.SetActive(true);
             CameraSwitch.Instance?.SwitchToTopDown();
             isSequencePlaying = false;
         }
-    }   
+    }
 
     private void HandleGuessPanelClosed()
     {
+        if (barUI != null) barUI.SetActive(true);
+
         AlienGuessUI.Instance.OnPanelClosed -= HandleGuessPanelClosed;
         CameraSwitch.Instance?.SwitchToTopDown();
         isSequencePlaying = false;

@@ -1,103 +1,94 @@
-using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
-public class NPC : MonoBehaviour, 
+public class NPC : MonoBehaviour,
     IInteractable
 {
-    public NPCDialogue dialogueData;
-    public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText;
-    public Image portraitImage;
+    [Header("Dialogue")]
+    [SerializeField]
+    private NPCDialogue dialogueData;
 
-    private int dialogueIndex;
-    private bool isTyping, isDialogueActive;
-    public bool CanInteract()
+    [SerializeField]
+    private DialogueManager dialogueManager;
+
+    [Header("Events")]
+    public UnityEvent OnDialogueStarted;
+    public UnityEvent OnDialogueEnded;
+
+    private bool isMyDialogueActive;
+    private UnityEvent dialogueFinishedEvent;
+
+    private void Awake()
     {
-        return !isDialogueActive;
+        dialogueFinishedEvent =
+            new UnityEvent();
+
+        dialogueFinishedEvent.AddListener(
+            HandleDialogueEnded
+        );
     }
 
-    public void Interact(GameObject interactor)
+    private void Start()
     {
-        // if no dialogue data or game is paused and no dialogue is active
-        // add pause controller later
-        if (dialogueData == null || (!isDialogueActive)) return;
-
-        if (isDialogueActive)
+        if (dialogueManager == null)
         {
-            // next line
-            NextLine();
-        }
-        else
-        {
-            // start dialogue
-            StartDialogue();
-        }
-    }
-
-    void StartDialogue()
-    {
-        isDialogueActive = true;
-        dialogueIndex = 0;
-
-        nameText.SetText(dialogueData.npcName);
-        portraitImage.sprite = dialogueData.npcPortrait;
-
-        dialoguePanel.SetActive(true);
-        // pause game
-
-        StartCoroutine(TypeLine());
-    }
-
-    void NextLine()
-    {
-        if (isTyping)
-        {
-            StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
-            isTyping = false;
-        }
-        else if (++dialogueIndex < dialogueData.dialogueLines.Length)
-        {
-            // if another line, type next line
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            // end dialogue 
-            EndDialogue();
+            dialogueManager =
+                FindFirstObjectByType<
+                    DialogueManager>();
         }
     }
 
-    IEnumerator TypeLine()
+    private void OnDestroy()
     {
-        isTyping = true;
-        dialogueText.SetText("");
-
-        foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
+        if (dialogueFinishedEvent != null)
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(dialogueData.typingSpeed);
-        }
-
-        isTyping = false;
-        
-        if (dialogueData.autoProgressLines.Length > dialogueIndex 
-            && dialogueData.autoProgressLines[dialogueIndex])
-        {
-            yield return new WaitForSeconds(dialogueData.autoProgressDelay);
-            // display next line
-            NextLine();
+            dialogueFinishedEvent
+                .RemoveListener(
+                    HandleDialogueEnded
+                );
         }
     }
 
-    public void EndDialogue()
+    public void Interact(
+        GameObject interactor)
     {
-        StopAllCoroutines();
-        isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
-        // pause to false
+        if (dialogueManager == null ||
+            dialogueData == null)
+        {
+            return;
+        }
+
+        // Already talking to this NPC.
+        if (isMyDialogueActive)
+        {
+            return;
+        }
+
+        // Another dialogue is already running.
+        if (dialogueManager.IsDialogueActive)
+        {
+            return;
+        }
+
+        StartDialogue();
+    }
+
+    private void StartDialogue()
+    {
+        isMyDialogueActive = true;
+
+        OnDialogueStarted?.Invoke();
+
+        dialogueManager.StartDialogue(
+            dialogueData,
+            dialogueFinishedEvent
+        );
+    }
+
+    private void HandleDialogueEnded()
+    {
+        isMyDialogueActive = false;
+
+        OnDialogueEnded?.Invoke();
     }
 }

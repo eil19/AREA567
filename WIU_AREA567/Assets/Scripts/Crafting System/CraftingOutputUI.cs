@@ -16,6 +16,14 @@ public class CraftingOutputUI : MonoBehaviour,
 
     public CraftingSystem CraftingSystem => craftingSystem;
 
+    private void Start()
+    {
+        if (craftingSystem == null)
+        {
+            craftingSystem = FindFirstObjectByType<CraftingSystem>();
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         CraftingRecipe recipe = CurrentRecipe;

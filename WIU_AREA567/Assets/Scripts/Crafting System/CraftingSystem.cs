@@ -3,12 +3,14 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class CraftingSystem : MonoBehaviour
-    //, IInteractable
 {
     public const int GRID_SIZE = 9;
 
     [Header("References")]
     [SerializeField] private Inventory inventory;
+
+    [Header("Research")]
+    [SerializeField] private ResearchLog researchLog;
 
     [Header("Recipes")]
     [SerializeField] private List<CraftingRecipe> craftingRecipesList = new List<CraftingRecipe>();
@@ -21,6 +23,7 @@ public class CraftingSystem : MonoBehaviour
     private CraftingRecipe currentRecipe;
     public CraftingGridSlot[] CraftingGrid => craftingGrid;
     public CraftingRecipe CurrentRecipe => currentRecipe;
+    public IReadOnlyList<CraftingRecipe> Recipes => craftingRecipesList;
 
     private void Awake()
     {
@@ -31,13 +34,30 @@ public class CraftingSystem : MonoBehaviour
     {
         if (inventory == null)
         {
-            GameObject inventoryObject = GameObject.Find("Inventory");
-            if (inventoryObject != null)
-            {
-                inventory = inventoryObject.GetComponent<Inventory>();
-            }
+            inventory = FindFirstObjectByType<Inventory>();
         }
+        if (researchLog == null)
+        {
+            researchLog = FindFirstObjectByType<ResearchLog>();
+        }
+
+        SubscribeToResearch();
         CheckCraftingOutput();
+    }
+    private void SubscribeToResearch()
+    {
+        if (researchLog != null)
+        {
+            researchLog.OnResearchLogChanged.AddListener(CheckCraftingOutput);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (researchLog != null)
+        {
+            researchLog.OnResearchLogChanged.RemoveListener(CheckCraftingOutput);
+        }
     }
 
     private void InitialiseGrid()
@@ -54,7 +74,7 @@ public class CraftingSystem : MonoBehaviour
         return craftingGrid[index];
     }
 
-    public bool PlaceItem(int gridIndex, ItemData itemData, int quantity)
+    public bool PlaceItem(int gridIndex, ItemData itemData, ItemEffect itemEffect, int quantity)
     {
         if (gridIndex < 0 || gridIndex >= craftingGrid.Length) return false;
         if (itemData == null || quantity <= 0) return false;
@@ -64,7 +84,7 @@ public class CraftingSystem : MonoBehaviour
 
         if (slot.IsEmpty)
         {
-            slot.SetItem(itemData, quantity);
+            slot.SetItem(itemData, itemEffect, quantity);
         }
         else
         {
@@ -110,6 +130,9 @@ public class CraftingSystem : MonoBehaviour
         currentRecipe = null;
         foreach (CraftingRecipe recipe in craftingRecipesList)
         {
+            if (recipe == null) continue;
+            // recipe must be unlocked first
+            if (researchLog == null || !researchLog.IsRecipeUnlocked(recipe)) continue;
             if (RecipeMatches(recipe))
             {
                 currentRecipe = recipe;
@@ -168,11 +191,15 @@ public class CraftingSystem : MonoBehaviour
     public bool CraftCurrentRecipeToSlot(int inventorySlotIndex)
     {
         if (currentRecipe == null || inventory == null) return false;
-
+        if (researchLog == null || !researchLog.IsRecipeUnlocked(currentRecipe))
+        {
+            return false;
+        }
         CraftingRecipe recipe = currentRecipe;
 
         // try to place output
-        bool added = inventory.AddItemAtSlot(inventorySlotIndex, recipe.outputItem, recipe.outputQuantity);
+        bool added = inventory.AddItemAtSlot(inventorySlotIndex, recipe.outputItem, 
+            recipe.outputEffect, recipe.outputQuantity);
         if (!added) { return false; }
 
         // consume ingredients
@@ -190,5 +217,33 @@ public class CraftingSystem : MonoBehaviour
         OnCraftingSucceeded?.Invoke();
         GridChanged();
         return true;
+    }
+
+    public bool ReturnAllItemsToInventory()
+    {
+        if (inventory == null) return false;
+
+        bool allReturned = true;
+
+        for (int i = 0; i < craftingGrid.Length; i++)
+        {
+            CraftingGridSlot slot = craftingGrid[i];
+            if (slot == null || slot.IsEmpty) continue;
+
+            bool returned = inventory.AddItem(
+                new ItemInstance(slot.itemData, slot.itemEffect, slot.quantity));
+
+            if (!returned)
+            {
+                Debug.Log("Could not return " + slot.itemData.itemName);
+                allReturned = false;
+                continue;
+            }
+
+            slot.Clear();
+        }
+
+        GridChanged();
+        return allReturned;
     }
 }
