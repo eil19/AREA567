@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d35e5f2fdd0f1a04e97d5acf9ba3a0d0, type: 3}
-  m_Name: PlayAlienDeathAnim
+  m_Name: PlayAlienFrontAtkAction
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationAction
-  animationName: flyer_side_death
+  animationName: flyer_front_atk
