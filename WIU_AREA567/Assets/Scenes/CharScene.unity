@@ -2480,24 +2480,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1346346298 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3513979378496533052, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-  m_PrefabInstance: {fileID: 2541867343639648041}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1346346309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346346298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe0a694e011f06a4ea6e73f8cc33fbc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
-  inventory: {fileID: 754595036}
 --- !u!1001 &1464980941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3018,137 +3000,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1259108513913241240, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: rangedSpawnOffset.y
-      value: 0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3000213729321372344, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: m_Controller
+    - target: {fileID: 2166797974003004678, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: inventory
       value: 
-      objectReference: {fileID: 9100000, guid: 02b628c82eac2f149937eaf65c2efa62, type: 2}
+      objectReference: {fileID: 754595036}
     - target: {fileID: 3513979378496533052, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3828207482115882165, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223130364137161549, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -4003549706165777984, guid: 0483344201fa3964088eaa1803a0c0d1, type: 3}
     - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupFocused.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      propertyPath: interactRange
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupLostFocus.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableFocused.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableLostFocus.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      propertyPath: interactRadius
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: OnPickupFocused.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 210000004}
     - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: OnPickupLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 210000004}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupFocused.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupFocused.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Show
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: OnInteractableFocused.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 210000014}
     - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Hide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: OnInteractableLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 210000014}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableFocused.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+    - target: {fileID: 5638060584516672795, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.92
       objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableFocused.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Show
+    - target: {fileID: 5638060584516672795, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.08
       objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Hide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupFocused.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FloatingPromptUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FloatingPromptUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableFocused.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FloatingPromptUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FloatingPromptUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupFocused.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnPickupLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableFocused.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: OnInteractableLostFocus.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6329098834030427651, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: 5638060584516672795, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6329098834030427651, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.37
+    - target: {fileID: 5638060584516672795, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 7832747358973802329, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3190,14 +3088,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8411457295007538148, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 8411457295007538148, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8689203423987896027, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: inventory
       value: 
@@ -3205,10 +3095,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3513979378496533052, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1346346309}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
 --- !u!1001 &2792703522758481631
 PrefabInstance:
