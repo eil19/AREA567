@@ -12,6 +12,27 @@ public class DayManager : MonoBehaviour
 
     public int DaysRemaining => daysRemaining;
     public int MaximumDays => maximumDays;
+    public void AdvanceDays(int amount)
+    {
+        if (amount <= 0 ||
+            daysRemaining <= 0)
+        {
+            return;
+        }
+
+        daysRemaining =
+            Mathf.Max(0,
+                daysRemaining - amount);
+
+        Debug.Log(
+            "Days remaining: " +
+            daysRemaining
+        );
+
+        OnDayChanged?.Invoke(
+            daysRemaining
+        );
+    }
 
     public void AdvanceDay()
     {
