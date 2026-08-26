@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -11,8 +12,15 @@ public class ScientistEnemy : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform projectileSpawnPoint;
 
+    [Header("Animation")]
+    [SerializeField] private Transform throwItemVisual;
+    [SerializeField] private float throwRotationAngle = 60f;
+    [SerializeField] private float throwRotationDuration = 0.15f;
+
     private Rigidbody2D body;
     private Damageable damageable;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     private State currentState = State.Idle;
     private Vector2 moveDirection = Vector2.zero;
@@ -22,6 +30,8 @@ public class ScientistEnemy : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         damageable = GetComponent<Damageable>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         body.gravityScale = 0f;
 
         if (player == null)
@@ -73,15 +83,6 @@ public class ScientistEnemy : MonoBehaviour
                 {
                     currentState = State.Pursue;
                 }
-                else
-                {
-                    throwTimer -= Time.deltaTime;
-                    if (throwTimer <= 0f)
-                    {
-                        ThrowFlask(directionToPlayer);
-                        throwTimer = config.throwCooldown;
-                    }
-                }
                 break;
 
             case State.Retreat:
@@ -92,6 +93,20 @@ public class ScientistEnemy : MonoBehaviour
                 }
                 break;
         }
+
+        if (currentState == State.Attack || currentState == State.Retreat)
+        {
+            throwTimer -= Time.deltaTime;
+            if (throwTimer <= 0f)
+            {
+                ThrowFlask(directionToPlayer);
+                throwTimer = config.throwCooldown;
+            }
+        }
+
+        Vector2 facingDirection = moveDirection.sqrMagnitude > 0.01f ? moveDirection : directionToPlayer;
+        bool isMoving = moveDirection.sqrMagnitude > 0.01f;
+        UpdateAnimator(facingDirection, isMoving);
     }
 
     private void FixedUpdate()
@@ -100,17 +115,73 @@ public class ScientistEnemy : MonoBehaviour
         body.linearVelocity = moveDirection * config.moveSpeed;
     }
 
+    private void UpdateAnimator(Vector2 facingDirection, bool isMoving)
+    {
+        if (animator == null) return;
+
+        animator.speed = isMoving ? 1f : 0f;
+        animator.SetBool("IsMoving", isMoving);
+
+        if (facingDirection.sqrMagnitude < 0.0001f) return;
+
+        animator.SetFloat("MoveX", facingDirection.x);
+        animator.SetFloat("MoveY", facingDirection.y);
+
+        int directionIndex;
+        if (Mathf.Abs(facingDirection.y) >= Mathf.Abs(facingDirection.x))
+        {
+            directionIndex = facingDirection.y > 0 ? 1 : 0;
+        }
+        else
+        {
+            directionIndex = 2;
+            if (spriteRenderer != null) spriteRenderer.flipX = facingDirection.x > 0;
+        }
+
+        animator.SetInteger("Direction", directionIndex);
+    }
+
     private void ThrowFlask(Vector2 direction)
     {
-        if (projectilePrefab == null) return;
-
-        Vector3 spawnPos = projectileSpawnPoint != null ? projectileSpawnPoint.position : transform.position;
-        GameObject flask = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
-
-        if (flask.TryGetComponent(out Rigidbody2D flaskBody))
+        if (projectilePrefab != null)
         {
-            flaskBody.linearVelocity = direction * config.projectileSpeed;
+            Vector3 spawnPos = projectileSpawnPoint != null ? projectileSpawnPoint.position : transform.position;
+            GameObject flask = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+
+            if (flask.TryGetComponent(out Rigidbody2D flaskBody))
+            {
+                flaskBody.linearVelocity = direction * config.projectileSpeed;
+            }
         }
+
+        if (throwItemVisual != null)
+        {
+            StartCoroutine(PlayThrowRotation());
+        }
+    }
+
+    private IEnumerator PlayThrowRotation()
+    {
+        Quaternion start = Quaternion.identity;
+        Quaternion peak = Quaternion.Euler(0f, 0f, -throwRotationAngle);
+
+        float elapsed = 0f;
+        while (elapsed < throwRotationDuration)
+        {
+            elapsed += Time.deltaTime;
+            throwItemVisual.localRotation = Quaternion.Slerp(start, peak, elapsed / throwRotationDuration);
+            yield return null;
+        }
+
+        elapsed = 0f;
+        while (elapsed < throwRotationDuration)
+        {
+            elapsed += Time.deltaTime;
+            throwItemVisual.localRotation = Quaternion.Slerp(peak, start, elapsed / throwRotationDuration);
+            yield return null;
+        }
+
+        throwItemVisual.localRotation = start;
     }
 
     private void HandleDeath()

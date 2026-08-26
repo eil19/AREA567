@@ -1,0 +1,5111 @@
+fileFormatVersion: 2
+guid: e3f192f2db35abb48ac5c8febf463b19
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6774085091950267815
+    second: TownsPeople2_Animations_0
+  - first:
+      213: -8213506389765833001
+    second: TownsPeople2_Animations_1
+  - first:
+      213: 7927394625979238497
+    second: TownsPeople2_Animations_2
+  - first:
+      213: -6551372312140711590
+    second: TownsPeople2_Animations_3
+  - first:
+      213: -6738088525002232040
+    second: TownsPeople2_Animations_4
+  - first:
+      213: 534018278223460715
+    second: TownsPeople2_Animations_5
+  - first:
+      213: 3885801711202283
+    second: TownsPeople2_Animations_6
+  - first:
+      213: 2095748373301076518
+    second: TownsPeople2_Animations_7
+  - first:
+      213: -7939077382143690355
+    second: TownsPeople2_Animations_8
+  - first:
+      213: -2365568229342933938
+    second: TownsPeople2_Animations_9
+  - first:
+      213: 5507048132842718594
+    second: TownsPeople2_Animations_10
+  - first:
+      213: -2179841169267998436
+    second: TownsPeople2_Animations_11
+  - first:
+      213: 548452433288428190
+    second: TownsPeople2_Animations_12
+  - first:
+      213: 7107943803266740933
+    second: TownsPeople2_Animations_13
+  - first:
+      213: 219203386476757288
+    second: TownsPeople2_Animations_14
+  - first:
+      213: 6447926561749888038
+    second: TownsPeople2_Animations_15
+  - first:
+      213: 5731939907053418352
+    second: TownsPeople2_Animations_16
+  - first:
+      213: -4040770094531237791
+    second: TownsPeople2_Animations_17
+  - first:
+      213: 8831165159759528781
+    second: TownsPeople2_Animations_18
+  - first:
+      213: 6129517689003318531
+    second: TownsPeople2_Animations_19
+  - first:
+      213: 1670950274226952880
+    second: TownsPeople2_Animations_20
+  - first:
+      213: 1022287706542164465
+    second: TownsPeople2_Animations_21
+  - first:
+      213: 6007631009552656286
+    second: TownsPeople2_Animations_22
+  - first:
+      213: -4278651956390461470
+    second: TownsPeople2_Animations_23
+  - first:
+      213: -8828217910366314735
+    second: TownsPeople2_Animations_24
+  - first:
+      213: -3513381853521689406
+    second: TownsPeople2_Animations_25
+  - first:
+      213: 6090779709938725565
+    second: TownsPeople2_Animations_26
+  - first:
+      213: -3167468086408328386
+    second: TownsPeople2_Animations_27
+  - first:
+      213: -5159390326883591714
+    second: TownsPeople2_Animations_28
+  - first:
+      213: 7211420881677919892
+    second: TownsPeople2_Animations_29
+  - first:
+      213: -8777369778543227091
+    second: TownsPeople2_Animations_30
+  - first:
+      213: -8125654589205021201
+    second: TownsPeople2_Animations_31
+  - first:
+      213: -8921146778573317578
+    second: TownsPeople2_Animations_32
+  - first:
+      213: -7017752463994967541
+    second: TownsPeople2_Animations_33
+  - first:
+      213: 154032979512893920
+    second: TownsPeople2_Animations_34
+  - first:
+      213: 1680602047183528426
+    second: TownsPeople2_Animations_35
+  - first:
+      213: -7429384927185044661
+    second: TownsPeople2_Animations_36
+  - first:
+      213: 2741074559048797292
+    second: TownsPeople2_Animations_37
+  - first:
+      213: 5879450458807510094
+    second: TownsPeople2_Animations_38
+  - first:
+      213: 76915177702077430
+    second: TownsPeople2_Animations_39
+  - first:
+      213: 2210844668297011313
+    second: TownsPeople2_Animations_40
+  - first:
+      213: 2847804033424109654
+    second: TownsPeople2_Animations_41
+  - first:
+      213: 5499262258071437526
+    second: TownsPeople2_Animations_42
+  - first:
+      213: -7449033134742775080
+    second: TownsPeople2_Animations_43
+  - first:
+      213: 8425849723550467323
+    second: TownsPeople2_Animations_44
+  - first:
+      213: 8773972791941460659
+    second: TownsPeople2_Animations_45
+  - first:
+      213: -5406639029194172712
+    second: TownsPeople2_Animations_46
+  - first:
+      213: -5507661149155255771
+    second: TownsPeople2_Animations_47
+  - first:
+      213: 3274519474529456706
+    second: TownsPeople2_Animations_48
+  - first:
+      213: 3396793170707519240
+    second: TownsPeople2_Animations_49
+  - first:
+      213: 1568090132455128026
+    second: TownsPeople2_Animations_50
+  - first:
+      213: 8603660232788795362
+    second: TownsPeople2_Animations_51
+  - first:
+      213: 8851884663932455702
+    second: TownsPeople2_Animations_52
+  - first:
+      213: 7924144199252590876
+    second: TownsPeople2_Animations_53
+  - first:
+      213: 6920162830255287351
+    second: TownsPeople2_Animations_54
+  - first:
+      213: 7340431261906083571
+    second: TownsPeople2_Animations_55
+  - first:
+      213: 77458805541067624
+    second: TownsPeople2_Animations_56
+  - first:
+      213: -8522701699494327687
+    second: TownsPeople2_Animations_57
+  - first:
+      213: 8329259326601446198
+    second: TownsPeople2_Animations_58
+  - first:
+      213: 1056501399408301520
+    second: TownsPeople2_Animations_59
+  - first:
+      213: 8175057786303598868
+    second: TownsPeople2_Animations_60
+  - first:
+      213: -4906655725760379692
+    second: TownsPeople2_Animations_61
+  - first:
+      213: -8888831753796664974
+    second: TownsPeople2_Animations_62
+  - first:
+      213: -4480970067656322423
+    second: TownsPeople2_Animations_63
+  - first:
+      213: -1525007652957772623
+    second: TownsPeople2_Animations_64
+  - first:
+      213: -3835661012120175332
+    second: TownsPeople2_Animations_65
+  - first:
+      213: -1655920545039277495
+    second: TownsPeople2_Animations_66
+  - first:
+      213: -1156398927828060032
+    second: TownsPeople2_Animations_67
+  - first:
+      213: 967426884778274699
+    second: TownsPeople2_Animations_68
+  - first:
+      213: 9021030832749545800
+    second: TownsPeople2_Animations_69
+  - first:
+      213: 8539606664732849977
+    second: TownsPeople2_Animations_70
+  - first:
+      213: 8427641826030241660
+    second: TownsPeople2_Animations_71
+  - first:
+      213: 2748029077412217977
+    second: TownsPeople2_Animations_72
+  - first:
+      213: -5423510255856003440
+    second: TownsPeople2_Animations_73
+  - first:
+      213: 8506253730042496847
+    second: TownsPeople2_Animations_74
+  - first:
+      213: -8056600442760402633
+    second: TownsPeople2_Animations_75
+  - first:
+      213: -6722629922632345200
+    second: TownsPeople2_Animations_76
+  - first:
+      213: -2572189087455871698
+    second: TownsPeople2_Animations_77
+  - first:
+      213: 4224953329888297519
+    second: TownsPeople2_Animations_78
+  - first:
+      213: 8820510588455490052
+    second: TownsPeople2_Animations_79
+  - first:
+      213: -2329516167117230792
+    second: TownsPeople2_Animations_80
+  - first:
+      213: 8202530430452491776
+    second: TownsPeople2_Animations_81
+  - first:
+      213: 3541033023923076538
+    second: TownsPeople2_Animations_82
+  - first:
+      213: -8217390493397950880
+    second: TownsPeople2_Animations_83
+  - first:
+      213: 4905465310865136596
+    second: TownsPeople2_Animations_84
+  - first:
+      213: -3645434756335016694
+    second: TownsPeople2_Animations_85
+  - first:
+      213: -6563564885329250379
+    second: TownsPeople2_Animations_86
+  - first:
+      213: 1784217658526531663
+    second: TownsPeople2_Animations_87
+  - first:
+      213: 3722095175464606885
+    second: TownsPeople2_Animations_88
+  - first:
+      213: -573754938683956183
+    second: TownsPeople2_Animations_89
+  - first:
+      213: 2585672117446687507
+    second: TownsPeople2_Animations_90
+  - first:
+      213: -1573518713129807098
+    second: TownsPeople2_Animations_91
+  - first:
+      213: 3096694256949568850
+    second: TownsPeople2_Animations_92
+  - first:
+      213: -3019646618958289604
+    second: TownsPeople2_Animations_93
+  - first:
+      213: -4500049154433304833
+    second: TownsPeople2_Animations_94
+  - first:
+      213: 7705142115962943908
+    second: TownsPeople2_Animations_95
+  - first:
+      213: 7892680755167789006
+    second: TownsPeople2_Animations_96
+  - first:
+      213: 4224007177656025873
+    second: TownsPeople2_Animations_97
+  - first:
+      213: -7863164799709100446
+    second: TownsPeople2_Animations_98
+  - first:
+      213: -5036755988722746675
+    second: TownsPeople2_Animations_99
+  - first:
+      213: -1374357024824124249
+    second: TownsPeople2_Animations_100
+  - first:
+      213: -5685512601668496124
+    second: TownsPeople2_Animations_101
+  - first:
+      213: 5786870582343985883
+    second: TownsPeople2_Animations_102
+  - first:
+      213: -102940195369101898
+    second: TownsPeople2_Animations_103
+  - first:
+      213: -7577869433494471984
+    second: TownsPeople2_Animations_104
+  - first:
+      213: 1810673290214284310
+    second: TownsPeople2_Animations_105
+  - first:
+      213: 4240522626280912786
+    second: TownsPeople2_Animations_106
+  - first:
+      213: 297253931449034136
+    second: TownsPeople2_Animations_107
+  - first:
+      213: -4407382798727554852
+    second: TownsPeople2_Animations_108
+  - first:
+      213: 5768724085921084806
+    second: TownsPeople2_Animations_109
+  - first:
+      213: 2230462950077009287
+    second: TownsPeople2_Animations_110
+  - first:
+      213: -3821746557500139874
+    second: TownsPeople2_Animations_111
+  - first:
+      213: -2919501431474010526
+    second: TownsPeople2_Animations_112
+  - first:
+      213: -3677605553414125181
+    second: TownsPeople2_Animations_113
+  - first:
+      213: 4959139739800604888
+    second: TownsPeople2_Animations_114
+  - first:
+      213: 2234379956454068230
+    second: TownsPeople2_Animations_115
+  - first:
+      213: 8378284290152653346
+    second: TownsPeople2_Animations_116
+  - first:
+      213: 6538064132543573471
+    second: TownsPeople2_Animations_117
+  - first:
+      213: -385425473350585895
+    second: TownsPeople2_Animations_118
+  - first:
+      213: -2318750255489234764
+    second: TownsPeople2_Animations_119
+  - first:
+      213: -1647118934679088262
+    second: TownsPeople2_Animations_120
+  - first:
+      213: -5757713702555427516
+    second: TownsPeople2_Animations_121
+  - first:
+      213: 5930128462955644261
+    second: TownsPeople2_Animations_122
+  - first:
+      213: 7474362224454586029
+    second: TownsPeople2_Animations_123
+  - first:
+      213: -3361310709913716328
+    second: TownsPeople2_Animations_124
+  - first:
+      213: -2749223014395993702
+    second: TownsPeople2_Animations_125
+  - first:
+      213: -5317046203407660924
+    second: TownsPeople2_Animations_126
+  - first:
+      213: -6421159708053321242
+    second: TownsPeople2_Animations_127
+  - first:
+      213: 5977347199496758404
+    second: TownsPeople2_Animations_128
+  - first:
+      213: -8885268096174162765
+    second: TownsPeople2_Animations_129
+  - first:
+      213: 4611206535898022979
+    second: TownsPeople2_Animations_130
+  - first:
+      213: 3689006540745417986
+    second: TownsPeople2_Animations_131
+  - first:
+      213: -4708495085318955801
+    second: TownsPeople2_Animations_132
+  - first:
+      213: -848680190490130533
+    second: TownsPeople2_Animations_133
+  - first:
+      213: -793171065511095387
+    second: TownsPeople2_Animations_134
+  - first:
+      213: 2782097573320659763
+    second: TownsPeople2_Animations_135
+  - first:
+      213: -8499508372622562293
+    second: TownsPeople2_Animations_136
+  - first:
+      213: -1664371799022824956
+    second: TownsPeople2_Animations_137
+  - first:
+      213: 6146519596209478456
+    second: TownsPeople2_Animations_138
+  - first:
+      213: -1954413500884816264
+    second: TownsPeople2_Animations_139
+  - first:
+      213: 6806294215692264444
+    second: TownsPeople2_Animations_140
+  - first:
+      213: -4594741188524935043
+    second: TownsPeople2_Animations_141
+  - first:
+      213: 7768871639478608964
+    second: TownsPeople2_Animations_142
+  - first:
+      213: -5996458756504615569
+    second: TownsPeople2_Animations_143
+  - first:
+      213: -2654534459878705038
+    second: TownsPeople2_Animations_144
+  - first:
+      213: 2154813144623308208
+    second: TownsPeople2_Animations_145
+  - first:
+      213: 416896686836377184
+    second: TownsPeople2_Animations_146
+  - first:
+      213: 3087229282164470547
+    second: TownsPeople2_Animations_147
+  - first:
+      213: 3028196159968429176
+    second: TownsPeople2_Animations_148
+  - first:
+      213: 4948298980041816786
+    second: TownsPeople2_Animations_149
+  - first:
+      213: -6959293426767647564
+    second: TownsPeople2_Animations_150
+  - first:
+      213: -5557767363621279314
+    second: TownsPeople2_Animations_151
+  - first:
+      213: 3421973562702559010
+    second: TownsPeople2_Animations_152
+  - first:
+      213: -5246391699151015401
+    second: TownsPeople2_Animations_153
+  - first:
+      213: 5970720539476776010
+    second: TownsPeople2_Animations_154
+  - first:
+      213: -7809285438929837867
+    second: TownsPeople2_Animations_155
+  - first:
+      213: -6091192379486137100
+    second: TownsPeople2_Animations_156
+  - first:
+      213: 2646797317673833065
+    second: TownsPeople2_Animations_157
+  - first:
+      213: -4597607306539200735
+    second: TownsPeople2_Animations_158
+  - first:
+      213: 3846999908390153064
+    second: TownsPeople2_Animations_159
+  - first:
+      213: -5199518076749610328
+    second: TownsPeople2_Animations_160
+  - first:
+      213: -3702212464784843821
+    second: TownsPeople2_Animations_161
+  - first:
+      213: 1538279955512012970
+    second: TownsPeople2_Animations_162
+  - first:
+      213: 3018512354949960165
+    second: TownsPeople2_Animations_163
+  - first:
+      213: 4852762546430804319
+    second: TownsPeople2_Animations_164
+  - first:
+      213: 8365181155554375432
+    second: TownsPeople2_Animations_165
+  - first:
+      213: 1794457324625798975
+    second: TownsPeople2_Animations_166
+  - first:
+      213: -4770659682599602313
+    second: TownsPeople2_Animations_167
+  - first:
+      213: -1668451604372714809
+    second: TownsPeople2_Animations_168
+  - first:
+      213: -7108103206041669927
+    second: TownsPeople2_Animations_169
+  - first:
+      213: -7292668206770725428
+    second: TownsPeople2_Animations_170
+  - first:
+      213: -4047070118477424692
+    second: TownsPeople2_Animations_171
+  - first:
+      213: 404770066037164148
+    second: TownsPeople2_Animations_172
+  - first:
+      213: 6572581388301330004
+    second: TownsPeople2_Animations_173
+  - first:
+      213: -1792101522427207460
+    second: TownsPeople2_Animations_174
+  - first:
+      213: 1995962608196006648
+    second: TownsPeople2_Animations_175
+  - first:
+      213: 422104652036895085
+    second: TownsPeople2_Animations_176
+  - first:
+      213: 6341178877899467031
+    second: TownsPeople2_Animations_177
+  - first:
+      213: -6421025561542942933
+    second: TownsPeople2_Animations_178
+  - first:
+      213: 8704152708772180592
+    second: TownsPeople2_Animations_179
+  - first:
+      213: -2155394030768642869
+    second: TownsPeople2_Animations_180
+  - first:
+      213: -7174133521228569734
+    second: TownsPeople2_Animations_181
+  - first:
+      213: 3483496408191505430
+    second: TownsPeople2_Animations_182
+  - first:
+      213: 4460838887603977199
+    second: TownsPeople2_Animations_183
+  - first:
+      213: -7955112820701580811
+    second: TownsPeople2_Animations_184
+  - first:
+      213: -3100398794527292938
+    second: TownsPeople2_Animations_185
+  - first:
+      213: -6832317404926255736
+    second: TownsPeople2_Animations_186
+  - first:
+      213: 191013333642619192
+    second: TownsPeople2_Animations_187
+  - first:
+      213: -2430333069042415209
+    second: TownsPeople2_Animations_188
+  - first:
+      213: 4223727601287716102
+    second: TownsPeople2_Animations_189
+  - first:
+      213: -1679261353033341181
+    second: TownsPeople2_Animations_190
+  - first:
+      213: -1078344102528958082
+    second: TownsPeople2_Animations_191
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad07ff1082620e50800000000000000
+      internalID: 6774085091950267815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de3b9d9473c30e80800000000000000
+      internalID: -8213506389765833001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16845d34963c30e60800000000000000
+      internalID: 7927394625979238497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59f58fb799d415a0800000000000000
+      internalID: -6551372312140711590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f2b1abf208d72a0800000000000000
+      internalID: -6738088525002232040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6933117bc6396700800000000000000
+      internalID: 534018278223460715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_6
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: befe9a6bd1ecd0000800000000000000
+      internalID: 3885801711202283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_7
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 622a631ba08951d10800000000000000
+      internalID: 2095748373301076518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89bcf81f2bb2d190800000000000000
+      internalID: -7939077382143690355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c801e8a30db2fd0800000000000000
+      internalID: -2365568229342933938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_10
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28581176917fc6c40800000000000000
+      internalID: 5507048132842718594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 390
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11420f7106afb1e0800000000000000
+      internalID: -2179841169267998436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9afa5e059e7c9700800000000000000
+      internalID: 548452433288428190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_13
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c23725ca3d74a260800000000000000
+      internalID: 7107943803266740933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_14
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82182809154ca0300800000000000000
+      internalID: 219203386476757288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_15
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c68ea9b03ab7950800000000000000
+      internalID: 6447926561749888038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077fdc1f9f0fb8f40800000000000000
+      internalID: 5731939907053418352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168a178020d4ce7c0800000000000000
+      internalID: -4040770094531237791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_18
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43c54c5ce99e8a70800000000000000
+      internalID: 8831165159759528781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_19
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d1481dcdb601550800000000000000
+      internalID: 6129517689003318531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_20
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba93acdb68603710800000000000000
+      internalID: 1670950274226952880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_21
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9c1b6b045ef2e00800000000000000
+      internalID: 1022287706542164465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_22
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97e10ac2946f5350800000000000000
+      internalID: 6007631009552656286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_23
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 364
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eff0d507bc2f94c0800000000000000
+      internalID: -4278651956390461470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11fdfdc959edb7580800000000000000
+      internalID: -8828217910366314735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_25
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c44984a1d5fd3fc0800000000000000
+      internalID: -3513381853521689406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_26
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2fd0830ebc68450800000000000000
+      internalID: 6090779709938725565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_27
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bce30be84ea04d0800000000000000
+      internalID: -3167468086408328386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_28
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9548455d92668b0800000000000000
+      internalID: -5159390326883591714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_29
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4962f3a851d141460800000000000000
+      internalID: 7211420881677919892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_30
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f8eafd0b4803680800000000000000
+      internalID: -8777369778543227091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_31
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed79e2e330eb3f80800000000000000
+      internalID: -8125654589205021201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_32
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a540a6548b13480800000000000000
+      internalID: -8921146778573317578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_33
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a25fdc05feb9e90800000000000000
+      internalID: -7017752463994967541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_34
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1af83cd2c332200800000000000000
+      internalID: 154032979512893920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_35
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 338
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae12b2f58a2b25710800000000000000
+      internalID: 1680602047183528426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b7e7375c585e890800000000000000
+      internalID: -7429384927185044661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_37
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cc6f2e9c04a0620800000000000000
+      internalID: 2741074559048797292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_38
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44aab7aa01089150800000000000000
+      internalID: 5879450458807510094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_39
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3b4c452f1411100800000000000000
+      internalID: 76915177702077430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_40
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170e863238f7eae10800000000000000
+      internalID: 2210844668297011313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_41
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6503b2a1eae658720800000000000000
+      internalID: 2847804033424109654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_42
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d08f0b23ed415c40800000000000000
+      internalID: 5499262258071437526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_43
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dada83a4d7bf9890800000000000000
+      internalID: -7449033134742775080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_44
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf48c077ea1aee470800000000000000
+      internalID: 8425849723550467323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_45
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2fc9c84c963c970800000000000000
+      internalID: 8773972791941460659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_46
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d65e14d272c7f4b0800000000000000
+      internalID: -5406639029194172712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_47
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 312
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a916d9d5bd093b0800000000000000
+      internalID: -5507661149155255771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2425d69ec1e617d20800000000000000
+      internalID: 3274519474529456706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_49
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8079e7b4465d32f20800000000000000
+      internalID: 3396793170707519240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_50
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb78c8daa9f2c510800000000000000
+      internalID: 1568090132455128026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_51
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efd787c567566770800000000000000
+      internalID: 8603660232788795362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_52
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b0c6ad33638da70800000000000000
+      internalID: 8851884663932455702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_53
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c114c615a2738fd60800000000000000
+      internalID: 7924144199252590876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_54
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c6a35fd6b590060800000000000000
+      internalID: 6920162830255287351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_55
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe951867537ed560800000000000000
+      internalID: 7340431261906083571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_56
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b500d8f50331100800000000000000
+      internalID: 77458805541067624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_57
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ac503a5f749b980800000000000000
+      internalID: -8522701699494327687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_58
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633403c2a39779370800000000000000
+      internalID: 8329259326601446198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_59
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 286
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d55f68dc6279ae00800000000000000
+      internalID: 1056501399408301520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411daea4eb3a37170800000000000000
+      internalID: 8175057786303598868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_61
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d48aee2d9e08ebb0800000000000000
+      internalID: -4906655725760379692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_62
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 271ccbe6d9684a480800000000000000
+      internalID: -8888831753796664974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_63
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982df24f67560d1c0800000000000000
+      internalID: -4480970067656322423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_64
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b423b59e9516dae0800000000000000
+      internalID: -1525007652957772623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_65
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1df2c5b1aef4cac0800000000000000
+      internalID: -3835661012120175332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_66
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942a9a8a90df409e0800000000000000
+      internalID: -1655920545039277495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_67
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0887a205d45a3ffe0800000000000000
+      internalID: -1156398927828060032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_68
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f2f5540adfc6d00800000000000000
+      internalID: 967426884778274699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_69
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84902e53fb3213d70800000000000000
+      internalID: 9021030832749545800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_70
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937b5fc4407c28670800000000000000
+      internalID: 8539606664732849977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_71
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 260
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77c1c6d69ff4f470800000000000000
+      internalID: 8427641826030241660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 974899fd2e5f22620800000000000000
+      internalID: 2748029077412217977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_73
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096d3044822dbb4b0800000000000000
+      internalID: -5423510255856003440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_74
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47468c03b84c0670800000000000000
+      internalID: 8506253730042496847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_75
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 739e2004594313090800000000000000
+      internalID: -8056600442760402633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_76
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 099561114bb64b2a0800000000000000
+      internalID: -6722629922632345200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_77
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d7e0b27afbd4cd0800000000000000
+      internalID: -2572189087455871698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_78
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2288943bac02aa30800000000000000
+      internalID: 4224953329888297519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_79
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 402167aa5afb86a70800000000000000
+      internalID: 8820510588455490052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_80
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83da2786365ebafd0800000000000000
+      internalID: -2329516167117230792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_81
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006e376b7fd35d170800000000000000
+      internalID: 8202530430452491776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_82
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abdbcd826c6442130800000000000000
+      internalID: 3541033023923076538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_83
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 234
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ed75442e6f5fd80800000000000000
+      internalID: -8217390493397950880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db1e10c5b6b31440800000000000000
+      internalID: 4905465310865136596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_85
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a05e9c84760d86dc0800000000000000
+      internalID: -3645434756335016694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_86
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7f8b5138889e4a0800000000000000
+      internalID: -6563564885329250379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_87
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40047ad180d2c810800000000000000
+      internalID: 1784217658526531663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_88
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac53c177d987a330800000000000000
+      internalID: 3722095175464606885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_89
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924ed935cec9908f0800000000000000
+      internalID: -573754938683956183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_90
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31bba02671722e320800000000000000
+      internalID: 2585672117446687507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_91
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603d778311db92ae0800000000000000
+      internalID: -1573518713129807098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_92
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255a87b050ba9fa20800000000000000
+      internalID: 3096694256949568850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_93
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3528c9166f0816d0800000000000000
+      internalID: -3019646618958289604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_94
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6b436e22d9c81c0800000000000000
+      internalID: -4500049154433304833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_95
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 208
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a97fdd4ee92eea60800000000000000
+      internalID: 7705142115962943908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf7651645f688d60800000000000000
+      internalID: 7892680755167789006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_97
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11343e8f520be9a30800000000000000
+      internalID: 4224007177656025873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_98
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266cbf6864d60e290800000000000000
+      internalID: -7863164799709100446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_99
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcafbd73d19d91ab0800000000000000
+      internalID: -5036755988722746675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_100
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac9bcc419d4dece0800000000000000
+      internalID: -1374357024824124249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_101
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405da8379600911b0800000000000000
+      internalID: -5685512601668496124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_102
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda65cd62281f4050800000000000000
+      internalID: 5786870582343985883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_103
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b55aed0078429ef0800000000000000
+      internalID: -102940195369101898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_104
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da754646eff5d690800000000000000
+      internalID: -7577869433494471984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_105
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c928b93cdc02910800000000000000
+      internalID: 1810673290214284310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_106
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297fa718cdc59da30800000000000000
+      internalID: 4240522626280912786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_107
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 182
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 895ab1030ee002400800000000000000
+      internalID: 297253931449034136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd85da422b4d5d2c0800000000000000
+      internalID: -4407382798727554852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_109
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 685f09cfdff9e0050800000000000000
+      internalID: 5768724085921084806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_110
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d82005c3234fe10800000000000000
+      internalID: 2230462950077009287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_111
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96d1a221cd66fac0800000000000000
+      internalID: -3821746557500139874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_112
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2664fbf8ae8db77d0800000000000000
+      internalID: -2919501431474010526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_113
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3894fb4eb3586fcc0800000000000000
+      internalID: -3677605553414125181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_114
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d09656915762d440800000000000000
+      internalID: 4959139739800604888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_115
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60092bd6bbc120f10800000000000000
+      internalID: 2234379956454068230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_116
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222e8cdfb25a54470800000000000000
+      internalID: 8378284290152653346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_117
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd6bfa30bedbba50800000000000000
+      internalID: 6538064132543573471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_118
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d13d85f291b6aaf0800000000000000
+      internalID: -385425473350585895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_119
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 156
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8c7ba8de422dfd0800000000000000
+      internalID: -2318750255489234764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7312a34e024429e0800000000000000
+      internalID: -1647118934679088262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_121
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44dd8c8a4ed7810b0800000000000000
+      internalID: -5757713702555427516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_122
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56587eafa6c0c4250800000000000000
+      internalID: 5930128462955644261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_123
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daec63f97d44ab760800000000000000
+      internalID: 7474362224454586029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_124
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89970e3e7b93a51d0800000000000000
+      internalID: -3361310709913716328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_125
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9129920c3cc8d9d0800000000000000
+      internalID: -2749223014395993702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_126
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4880c8f16ae0636b0800000000000000
+      internalID: -5317046203407660924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_127
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e94e6b244573e6a0800000000000000
+      internalID: -6421159708053321242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_128
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4842e2dcb9dc3f250800000000000000
+      internalID: 5977347199496758404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_129
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc7d612ebf21b480800000000000000
+      internalID: -8885268096174162765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_130
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3444926c9eb4eff30800000000000000
+      internalID: 4611206535898022979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_131
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 130
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205293357ebf13330800000000000000
+      internalID: 3689006540745417986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec14e4aaa018aeb0800000000000000
+      internalID: -4708495085318955801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_133
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97ccedfcd1e834f0800000000000000
+      internalID: -848680190490130533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_134
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3d71a4e171ef4f0800000000000000
+      internalID: -793171065511095387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_135
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3331144b00ffb9620800000000000000
+      internalID: 2782097573320659763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_136
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0caf5cda2eab0a80800000000000000
+      internalID: -8499508372622562293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_137
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4021111caa6f6e8e0800000000000000
+      internalID: -1664371799022824956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_138
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b1b01d103dc4550800000000000000
+      internalID: 6146519596209478456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_139
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e688f964780e4e0800000000000000
+      internalID: -1954413500884816264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_140
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf322232780d47e50800000000000000
+      internalID: 6806294215692264444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_141
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d787d17ab333c30c0800000000000000
+      internalID: -4594741188524935043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_142
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444aab8489390db60800000000000000
+      internalID: 7768871639478608964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_143
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 104
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f650344188c48cca0800000000000000
+      internalID: -5996458756504615569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27875ea19f2392bd0800000000000000
+      internalID: -2654534459878705038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_145
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd5d9a632f67ed10800000000000000
+      internalID: 2154813144623308208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_146
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0666beee35d19c500800000000000000
+      internalID: 416896686836377184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_147
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313f89fdcaa08da20800000000000000
+      internalID: 3087229282164470547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_148
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874ce190d50560a20800000000000000
+      internalID: 3028196159968429176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_149
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2daf1d384b3eba440800000000000000
+      internalID: 4948298980041816786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_150
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcadc1108f9b6f90800000000000000
+      internalID: -6959293426767647564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_151
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea928137708ded2b0800000000000000
+      internalID: -5557767363621279314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_152
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227f9ab23da4d7f20800000000000000
+      internalID: 3421973562702559010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_153
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712bb83db821137b0800000000000000
+      internalID: -5246391699151015401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_154
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4454a842b24cd250800000000000000
+      internalID: 5970720539476776010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_155
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 78
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0e4f6c448df9390800000000000000
+      internalID: -7809285438929837867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4992aadccb77ba0800000000000000
+      internalID: -6091192379486137100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_157
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962d76813205bb420800000000000000
+      internalID: 2646797317673833065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_158
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f8dfc83840230c0800000000000000
+      internalID: -4597607306539200735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_159
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b2e8ec80a436530800000000000000
+      internalID: 3846999908390153064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_160
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a20e108bd997d7b0800000000000000
+      internalID: -5199518076749610328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_161
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbd971e0691f9cc0800000000000000
+      internalID: -3702212464784843821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_162
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0b5692871195510800000000000000
+      internalID: 1538279955512012970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_163
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e19bea7ef8e3e920800000000000000
+      internalID: 3018512354949960165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_164
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51045f23d9785340800000000000000
+      internalID: 4852762546430804319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_165
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8073c9ab0f7171470800000000000000
+      internalID: 8365181155554375432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_166
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f372be6ed6137e810800000000000000
+      internalID: 1794457324625798975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_167
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 52
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7777f527b463bcdb0800000000000000
+      internalID: -4770659682599602313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca0f6c0b1878d8e0800000000000000
+      internalID: -1668451604372714809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_169
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de22116bc1fa5d90800000000000000
+      internalID: -7108103206041669927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_170
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd55a677ec3bca90800000000000000
+      internalID: -7292668206770725428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_171
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc71e076b2be5d7c0800000000000000
+      internalID: -4047070118477424692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_172
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4784bd10b380e9500800000000000000
+      internalID: 404770066037164148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_173
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4566b0b13ff763b50800000000000000
+      internalID: 6572581388301330004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_174
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd02a4a092d2127e0800000000000000
+      internalID: -1792101522427207460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_175
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f23c76ca6513bb10800000000000000
+      internalID: 1995962608196006648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_176
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61f2b2d1fd9bd500800000000000000
+      internalID: 422104652036895085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_177
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719686aa794600850800000000000000
+      internalID: 6341178877899467031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_178
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f9786954fe3e6a0800000000000000
+      internalID: -6421025561542942933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_179
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 26
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072be15a5cc5bc870800000000000000
+      internalID: 8704152708772180592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4a90d7c808612e0800000000000000
+      internalID: -2155394030768642869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_181
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73e2f7929b507c90800000000000000
+      internalID: -7174133521228569734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_182
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6149a92e68dd75030800000000000000
+      internalID: 3483496408191505430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_183
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb32ef655518ed30800000000000000
+      internalID: 4460838887603977199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_184
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f13ded9903c99190800000000000000
+      internalID: -7955112820701580811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_185
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f1c62619bb29f4d0800000000000000
+      internalID: -3100398794527292938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_186
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88dd6a6f48bbe21a0800000000000000
+      internalID: -6832317404926255736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_187
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839a12b6d9d96a200800000000000000
+      internalID: 191013333642619192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_188
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79987dd33f8b54ed0800000000000000
+      internalID: -2430333069042415209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_189
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d54c600e1bd9a30800000000000000
+      internalID: 4223727601287716102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_190
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307e76f42b012b8e0800000000000000
+      internalID: -1679261353033341181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownsPeople2_Animations_191
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71cf1780c3f801f0800000000000000
+      internalID: -1078344102528958082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9d5e4d2c76379eb43a9d0e5814da407e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":12.0,"y":16.0},"gridSpriteSize":{"x":18.0,"y":26.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      TownsPeople2_Animations_0: 6774085091950267815
+      TownsPeople2_Animations_1: -8213506389765833001
+      TownsPeople2_Animations_10: 5507048132842718594
+      TownsPeople2_Animations_100: -1374357024824124249
+      TownsPeople2_Animations_101: -5685512601668496124
+      TownsPeople2_Animations_102: 5786870582343985883
+      TownsPeople2_Animations_103: -102940195369101898
+      TownsPeople2_Animations_104: -7577869433494471984
+      TownsPeople2_Animations_105: 1810673290214284310
+      TownsPeople2_Animations_106: 4240522626280912786
+      TownsPeople2_Animations_107: 297253931449034136
+      TownsPeople2_Animations_108: -4407382798727554852
+      TownsPeople2_Animations_109: 5768724085921084806
+      TownsPeople2_Animations_11: -2179841169267998436
+      TownsPeople2_Animations_110: 2230462950077009287
+      TownsPeople2_Animations_111: -3821746557500139874
+      TownsPeople2_Animations_112: -2919501431474010526
+      TownsPeople2_Animations_113: -3677605553414125181
+      TownsPeople2_Animations_114: 4959139739800604888
+      TownsPeople2_Animations_115: 2234379956454068230
+      TownsPeople2_Animations_116: 8378284290152653346
+      TownsPeople2_Animations_117: 6538064132543573471
+      TownsPeople2_Animations_118: -385425473350585895
+      TownsPeople2_Animations_119: -2318750255489234764
+      TownsPeople2_Animations_12: 548452433288428190
+      TownsPeople2_Animations_120: -1647118934679088262
+      TownsPeople2_Animations_121: -5757713702555427516
+      TownsPeople2_Animations_122: 5930128462955644261
+      TownsPeople2_Animations_123: 7474362224454586029
+      TownsPeople2_Animations_124: -3361310709913716328
+      TownsPeople2_Animations_125: -2749223014395993702
+      TownsPeople2_Animations_126: -5317046203407660924
+      TownsPeople2_Animations_127: -6421159708053321242
+      TownsPeople2_Animations_128: 5977347199496758404
+      TownsPeople2_Animations_129: -8885268096174162765
+      TownsPeople2_Animations_13: 7107943803266740933
+      TownsPeople2_Animations_130: 4611206535898022979
+      TownsPeople2_Animations_131: 3689006540745417986
+      TownsPeople2_Animations_132: -4708495085318955801
+      TownsPeople2_Animations_133: -848680190490130533
+      TownsPeople2_Animations_134: -793171065511095387
+      TownsPeople2_Animations_135: 2782097573320659763
+      TownsPeople2_Animations_136: -8499508372622562293
+      TownsPeople2_Animations_137: -1664371799022824956
+      TownsPeople2_Animations_138: 6146519596209478456
+      TownsPeople2_Animations_139: -1954413500884816264
+      TownsPeople2_Animations_14: 219203386476757288
+      TownsPeople2_Animations_140: 6806294215692264444
+      TownsPeople2_Animations_141: -4594741188524935043
+      TownsPeople2_Animations_142: 7768871639478608964
+      TownsPeople2_Animations_143: -5996458756504615569
+      TownsPeople2_Animations_144: -2654534459878705038
+      TownsPeople2_Animations_145: 2154813144623308208
+      TownsPeople2_Animations_146: 416896686836377184
+      TownsPeople2_Animations_147: 3087229282164470547
+      TownsPeople2_Animations_148: 3028196159968429176
+      TownsPeople2_Animations_149: 4948298980041816786
+      TownsPeople2_Animations_15: 6447926561749888038
+      TownsPeople2_Animations_150: -6959293426767647564
+      TownsPeople2_Animations_151: -5557767363621279314
+      TownsPeople2_Animations_152: 3421973562702559010
+      TownsPeople2_Animations_153: -5246391699151015401
+      TownsPeople2_Animations_154: 5970720539476776010
+      TownsPeople2_Animations_155: -7809285438929837867
+      TownsPeople2_Animations_156: -6091192379486137100
+      TownsPeople2_Animations_157: 2646797317673833065
+      TownsPeople2_Animations_158: -4597607306539200735
+      TownsPeople2_Animations_159: 3846999908390153064
+      TownsPeople2_Animations_16: 5731939907053418352
+      TownsPeople2_Animations_160: -5199518076749610328
+      TownsPeople2_Animations_161: -3702212464784843821
+      TownsPeople2_Animations_162: 1538279955512012970
+      TownsPeople2_Animations_163: 3018512354949960165
+      TownsPeople2_Animations_164: 4852762546430804319
+      TownsPeople2_Animations_165: 8365181155554375432
+      TownsPeople2_Animations_166: 1794457324625798975
+      TownsPeople2_Animations_167: -4770659682599602313
+      TownsPeople2_Animations_168: -1668451604372714809
+      TownsPeople2_Animations_169: -7108103206041669927
+      TownsPeople2_Animations_17: -4040770094531237791
+      TownsPeople2_Animations_170: -7292668206770725428
+      TownsPeople2_Animations_171: -4047070118477424692
+      TownsPeople2_Animations_172: 404770066037164148
+      TownsPeople2_Animations_173: 6572581388301330004
+      TownsPeople2_Animations_174: -1792101522427207460
+      TownsPeople2_Animations_175: 1995962608196006648
+      TownsPeople2_Animations_176: 422104652036895085
+      TownsPeople2_Animations_177: 6341178877899467031
+      TownsPeople2_Animations_178: -6421025561542942933
+      TownsPeople2_Animations_179: 8704152708772180592
+      TownsPeople2_Animations_18: 8831165159759528781
+      TownsPeople2_Animations_180: -2155394030768642869
+      TownsPeople2_Animations_181: -7174133521228569734
+      TownsPeople2_Animations_182: 3483496408191505430
+      TownsPeople2_Animations_183: 4460838887603977199
+      TownsPeople2_Animations_184: -7955112820701580811
+      TownsPeople2_Animations_185: -3100398794527292938
+      TownsPeople2_Animations_186: -6832317404926255736
+      TownsPeople2_Animations_187: 191013333642619192
+      TownsPeople2_Animations_188: -2430333069042415209
+      TownsPeople2_Animations_189: 4223727601287716102
+      TownsPeople2_Animations_19: 6129517689003318531
+      TownsPeople2_Animations_190: -1679261353033341181
+      TownsPeople2_Animations_191: -1078344102528958082
+      TownsPeople2_Animations_2: 7927394625979238497
+      TownsPeople2_Animations_20: 1670950274226952880
+      TownsPeople2_Animations_21: 1022287706542164465
+      TownsPeople2_Animations_22: 6007631009552656286
+      TownsPeople2_Animations_23: -4278651956390461470
+      TownsPeople2_Animations_24: -8828217910366314735
+      TownsPeople2_Animations_25: -3513381853521689406
+      TownsPeople2_Animations_26: 6090779709938725565
+      TownsPeople2_Animations_27: -3167468086408328386
+      TownsPeople2_Animations_28: -5159390326883591714
+      TownsPeople2_Animations_29: 7211420881677919892
+      TownsPeople2_Animations_3: -6551372312140711590
+      TownsPeople2_Animations_30: -8777369778543227091
+      TownsPeople2_Animations_31: -8125654589205021201
+      TownsPeople2_Animations_32: -8921146778573317578
+      TownsPeople2_Animations_33: -7017752463994967541
+      TownsPeople2_Animations_34: 154032979512893920
+      TownsPeople2_Animations_35: 1680602047183528426
+      TownsPeople2_Animations_36: -7429384927185044661
+      TownsPeople2_Animations_37: 2741074559048797292
+      TownsPeople2_Animations_38: 5879450458807510094
+      TownsPeople2_Animations_39: 76915177702077430
+      TownsPeople2_Animations_4: -6738088525002232040
+      TownsPeople2_Animations_40: 2210844668297011313
+      TownsPeople2_Animations_41: 2847804033424109654
+      TownsPeople2_Animations_42: 5499262258071437526
+      TownsPeople2_Animations_43: -7449033134742775080
+      TownsPeople2_Animations_44: 8425849723550467323
+      TownsPeople2_Animations_45: 8773972791941460659
+      TownsPeople2_Animations_46: -5406639029194172712
+      TownsPeople2_Animations_47: -5507661149155255771
+      TownsPeople2_Animations_48: 3274519474529456706
+      TownsPeople2_Animations_49: 3396793170707519240
+      TownsPeople2_Animations_5: 534018278223460715
+      TownsPeople2_Animations_50: 1568090132455128026
+      TownsPeople2_Animations_51: 8603660232788795362
+      TownsPeople2_Animations_52: 8851884663932455702
+      TownsPeople2_Animations_53: 7924144199252590876
+      TownsPeople2_Animations_54: 6920162830255287351
+      TownsPeople2_Animations_55: 7340431261906083571
+      TownsPeople2_Animations_56: 77458805541067624
+      TownsPeople2_Animations_57: -8522701699494327687
+      TownsPeople2_Animations_58: 8329259326601446198
+      TownsPeople2_Animations_59: 1056501399408301520
+      TownsPeople2_Animations_6: 3885801711202283
+      TownsPeople2_Animations_60: 8175057786303598868
+      TownsPeople2_Animations_61: -4906655725760379692
+      TownsPeople2_Animations_62: -8888831753796664974
+      TownsPeople2_Animations_63: -4480970067656322423
+      TownsPeople2_Animations_64: -1525007652957772623
+      TownsPeople2_Animations_65: -3835661012120175332
+      TownsPeople2_Animations_66: -1655920545039277495
+      TownsPeople2_Animations_67: -1156398927828060032
+      TownsPeople2_Animations_68: 967426884778274699
+      TownsPeople2_Animations_69: 9021030832749545800
+      TownsPeople2_Animations_7: 2095748373301076518
+      TownsPeople2_Animations_70: 8539606664732849977
+      TownsPeople2_Animations_71: 8427641826030241660
+      TownsPeople2_Animations_72: 2748029077412217977
+      TownsPeople2_Animations_73: -5423510255856003440
+      TownsPeople2_Animations_74: 8506253730042496847
+      TownsPeople2_Animations_75: -8056600442760402633
+      TownsPeople2_Animations_76: -6722629922632345200
+      TownsPeople2_Animations_77: -2572189087455871698
+      TownsPeople2_Animations_78: 4224953329888297519
+      TownsPeople2_Animations_79: 8820510588455490052
+      TownsPeople2_Animations_8: -7939077382143690355
+      TownsPeople2_Animations_80: -2329516167117230792
+      TownsPeople2_Animations_81: 8202530430452491776
+      TownsPeople2_Animations_82: 3541033023923076538
+      TownsPeople2_Animations_83: -8217390493397950880
+      TownsPeople2_Animations_84: 4905465310865136596
+      TownsPeople2_Animations_85: -3645434756335016694
+      TownsPeople2_Animations_86: -6563564885329250379
+      TownsPeople2_Animations_87: 1784217658526531663
+      TownsPeople2_Animations_88: 3722095175464606885
+      TownsPeople2_Animations_89: -573754938683956183
+      TownsPeople2_Animations_9: -2365568229342933938
+      TownsPeople2_Animations_90: 2585672117446687507
+      TownsPeople2_Animations_91: -1573518713129807098
+      TownsPeople2_Animations_92: 3096694256949568850
+      TownsPeople2_Animations_93: -3019646618958289604
+      TownsPeople2_Animations_94: -4500049154433304833
+      TownsPeople2_Animations_95: 7705142115962943908
+      TownsPeople2_Animations_96: 7892680755167789006
+      TownsPeople2_Animations_97: 4224007177656025873
+      TownsPeople2_Animations_98: -7863164799709100446
+      TownsPeople2_Animations_99: -5036755988722746675
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

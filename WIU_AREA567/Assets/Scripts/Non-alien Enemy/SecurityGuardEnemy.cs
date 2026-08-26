@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -9,9 +10,16 @@ public class SecurityGuardEnemy : MonoBehaviour
     [SerializeField] private SecurityGuardConfig config;
     [SerializeField] private Transform player;
 
+    [Header("Animation")]
+    [SerializeField] private Transform batonVisual;
+    [SerializeField] private float swingAngle = 70f;
+    [SerializeField] private float swingDuration = 0.12f;
+
     private Rigidbody2D body;
     private Damageable damageable;
     private Damageable playerDamageable;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     private State currentState = State.Idle;
     private Vector2 moveDirection = Vector2.zero;
@@ -21,6 +29,8 @@ public class SecurityGuardEnemy : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         damageable = GetComponent<Damageable>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         body.gravityScale = 0f;
 
         if (player == null)
@@ -87,6 +97,10 @@ public class SecurityGuardEnemy : MonoBehaviour
                 }
                 break;
         }
+
+        Vector2 facingDirection = moveDirection.sqrMagnitude > 0.01f ? moveDirection : directionToPlayer;
+        bool isMoving = moveDirection.sqrMagnitude > 0.01f;
+        UpdateAnimator(facingDirection, isMoving);
     }
 
     private void FixedUpdate()
@@ -95,12 +109,67 @@ public class SecurityGuardEnemy : MonoBehaviour
         body.linearVelocity = moveDirection * config.moveSpeed;
     }
 
+    private void UpdateAnimator(Vector2 facingDirection, bool isMoving)
+    {
+        if (animator == null) return;
+
+        animator.speed = isMoving ? 1f : 0f;
+        animator.SetBool("IsMoving", isMoving);
+
+        if (facingDirection.sqrMagnitude < 0.0001f) return;
+
+        animator.SetFloat("MoveX", facingDirection.x);
+        animator.SetFloat("MoveY", facingDirection.y);
+
+        int directionIndex;
+        if (Mathf.Abs(facingDirection.y) >= Mathf.Abs(facingDirection.x))
+        {
+            directionIndex = facingDirection.y > 0 ? 1 : 0;
+        }
+        else
+        {
+            directionIndex = 2;
+            if (spriteRenderer != null) spriteRenderer.flipX = facingDirection.x > 0;
+        }
+
+        animator.SetInteger("Direction", directionIndex);
+    }
+
     private void Attack()
     {
         if (playerDamageable != null)
         {
             playerDamageable.TakeDamage(config.damageAmount);
         }
+
+        if (batonVisual != null)
+        {
+            StartCoroutine(PlaySwing());
+        }
+    }
+
+    private IEnumerator PlaySwing()
+    {
+        Quaternion start = Quaternion.identity;
+        Quaternion peak = Quaternion.Euler(0f, 0f, swingAngle);
+
+        float elapsed = 0f;
+        while (elapsed < swingDuration)
+        {
+            elapsed += Time.deltaTime;
+            batonVisual.localRotation = Quaternion.Slerp(start, peak, elapsed / swingDuration);
+            yield return null;
+        }
+
+        elapsed = 0f;
+        while (elapsed < swingDuration)
+        {
+            elapsed += Time.deltaTime;
+            batonVisual.localRotation = Quaternion.Slerp(peak, start, elapsed / swingDuration);
+            yield return null;
+        }
+
+        batonVisual.localRotation = start;
     }
 
     private void HandleDeath()

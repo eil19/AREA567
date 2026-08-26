@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3155968357448523586
+--- !u!1 &8882432797026436125
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 407964528064277433}
-  - component: {fileID: 7006112826258348180}
-  - component: {fileID: 1658626293078628457}
-  - component: {fileID: 5921911986410623546}
-  - component: {fileID: 5110425913225734574}
-  - component: {fileID: 2059217493666675980}
-  m_Layer: 0
-  m_Name: Turret
+  - component: {fileID: 6999139970465911682}
+  - component: {fileID: 481116865851937625}
+  - component: {fileID: 7081723773627846217}
+  - component: {fileID: 643710497305916950}
+  - component: {fileID: 3618176399192374474}
+  - component: {fileID: 2295489125828385177}
+  - component: {fileID: 3040344001479079714}
+  m_Layer: 8
+  m_Name: EngineerEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &407964528064277433
+--- !u!4 &6999139970465911682
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
+  m_GameObject: {fileID: 8882432797026436125}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.107302, y: -15.150261, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalPosition: {x: 27.61, y: -14.94, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7006112826258348180
+--- !u!212 &481116865851937625
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
+  m_GameObject: {fileID: 8882432797026436125}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,66 +86,50 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8362120110692577531, guid: 1cb0489e830e70c4d9675e8ba2dbf5ca, type: 3}
+  m_Sprite: {fileID: -8311879049529856354, guid: c37682240e9438e4bb17de2aba03abf8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1658626293078628457
-MonoBehaviour:
+--- !u!50 &7081723773627846217
+Rigidbody2D:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbeb5240257e8514b968cbca4974964d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damageable
-  maxHealth: 100
-  currentHealth: 0
-  OnHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  hurtClip: {fileID: 0}
-  deathClip: {fileID: 0}
-  hitVFXPrefab: {fileID: 0}
-  deathVFXPrefab: {fileID: 0}
---- !u!114 &5921911986410623546
-MonoBehaviour:
+  m_GameObject: {fileID: 8882432797026436125}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &643710497305916950
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16585a20c035cbb4fab5167f2ed7742f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Turret
-  config: {fileID: 11400000, guid: e3b6bebc0dedaae459696bc14e27332c, type: 2}
-  player: {fileID: 0}
-  projectilePrefab: {fileID: 4826090118124746438, guid: 5e2fc18c238bf1841bb4b9c84bbe6596, type: 3}
-  projectileSpawnPoint: {fileID: 0}
---- !u!58 &5110425913225734574
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
+  m_GameObject: {fileID: 8882432797026436125}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -172,19 +157,65 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.027472328}
-  m_Radius: 0.07752767
---- !u!95 &2059217493666675980
+  m_Offset: {x: -0.0031734705, y: -0.0025579333}
+  m_Size: {x: 0.15847993, y: 0.23893392}
+  m_Direction: 0
+--- !u!114 &3618176399192374474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882432797026436125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbeb5240257e8514b968cbca4974964d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damageable
+  maxHealth: 30
+  currentHealth: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  hurtClip: {fileID: 0}
+  deathClip: {fileID: 0}
+  hitVFXPrefab: {fileID: 0}
+  deathVFXPrefab: {fileID: 0}
+--- !u!114 &2295489125828385177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882432797026436125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2acb3c29ae9d3a429646bd5c3c1dc12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EngineerEnemy
+  config: {fileID: 11400000, guid: ed141a778d790d34a86feb568e8359eb, type: 2}
+  player: {fileID: 0}
+  turretPrefab: {fileID: 3155968357448523586, guid: b35351c9f148c6740966f8e6d6a61be7, type: 3}
+  toolVisual: {fileID: 0}
+  flourishAngle: 60
+  flourishDuration: 0.15
+--- !u!95 &3040344001479079714
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
+  m_GameObject: {fileID: 8882432797026436125}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e5b9ed57e1ff73e4bb0a2886b04e8a64, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1d5bf365598b36648b99557859994e77, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

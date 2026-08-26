@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3155968357448523586
+--- !u!1 &1918021193250375899
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 407964528064277433}
-  - component: {fileID: 7006112826258348180}
-  - component: {fileID: 1658626293078628457}
-  - component: {fileID: 5921911986410623546}
-  - component: {fileID: 5110425913225734574}
-  - component: {fileID: 2059217493666675980}
-  m_Layer: 0
-  m_Name: Turret
+  - component: {fileID: 5092694493923613410}
+  - component: {fileID: 1793176248238697819}
+  - component: {fileID: 3384305227238266906}
+  - component: {fileID: 7837900194132061637}
+  - component: {fileID: 967063873691873991}
+  - component: {fileID: 7531847532270579068}
+  - component: {fileID: 559418990189362414}
+  m_Layer: 8
+  m_Name: ScientistEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &407964528064277433
+--- !u!4 &5092694493923613410
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
+  m_GameObject: {fileID: 1918021193250375899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.107302, y: -15.150261, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalPosition: {x: 26.93, y: -14.62, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7006112826258348180
+--- !u!212 &1793176248238697819
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
+  m_GameObject: {fileID: 1918021193250375899}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,66 +86,50 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8362120110692577531, guid: 1cb0489e830e70c4d9675e8ba2dbf5ca, type: 3}
+  m_Sprite: {fileID: -4558714131835070483, guid: 990ab7d2b75e06547bedbcbbecc1d748, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1658626293078628457
-MonoBehaviour:
+--- !u!50 &3384305227238266906
+Rigidbody2D:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbeb5240257e8514b968cbca4974964d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damageable
-  maxHealth: 100
-  currentHealth: 0
-  OnHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  hurtClip: {fileID: 0}
-  deathClip: {fileID: 0}
-  hitVFXPrefab: {fileID: 0}
-  deathVFXPrefab: {fileID: 0}
---- !u!114 &5921911986410623546
-MonoBehaviour:
+  m_GameObject: {fileID: 1918021193250375899}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &7837900194132061637
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16585a20c035cbb4fab5167f2ed7742f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Turret
-  config: {fileID: 11400000, guid: e3b6bebc0dedaae459696bc14e27332c, type: 2}
-  player: {fileID: 0}
-  projectilePrefab: {fileID: 4826090118124746438, guid: 5e2fc18c238bf1841bb4b9c84bbe6596, type: 3}
-  projectileSpawnPoint: {fileID: 0}
---- !u!58 &5110425913225734574
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
+  m_GameObject: {fileID: 1918021193250375899}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -172,19 +157,66 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.027472328}
-  m_Radius: 0.07752767
---- !u!95 &2059217493666675980
+  m_Offset: {x: 0.0007585287, y: 0.0038679242}
+  m_Size: {x: 0.15558267, y: 0.21917737}
+  m_Direction: 0
+--- !u!114 &967063873691873991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918021193250375899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbeb5240257e8514b968cbca4974964d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damageable
+  maxHealth: 30
+  currentHealth: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  hurtClip: {fileID: 0}
+  deathClip: {fileID: 0}
+  hitVFXPrefab: {fileID: 0}
+  deathVFXPrefab: {fileID: 0}
+--- !u!114 &7531847532270579068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918021193250375899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf70a912d29e1a49b06cc7a3662c026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScientistEnemy
+  config: {fileID: 11400000, guid: e652156a8f3e7a942a776d5663808156, type: 2}
+  player: {fileID: 0}
+  projectilePrefab: {fileID: 8194189637782619826, guid: b9161f34a5d4bc747aec85163626c91d, type: 3}
+  projectileSpawnPoint: {fileID: 0}
+  throwItemVisual: {fileID: 5855527152566766535, guid: b9161f34a5d4bc747aec85163626c91d, type: 3}
+  throwRotationAngle: 60
+  throwRotationDuration: 0.15
+--- !u!95 &559418990189362414
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155968357448523586}
+  m_GameObject: {fileID: 1918021193250375899}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e5b9ed57e1ff73e4bb0a2886b04e8a64, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0e91f65b7574c6a40a3fb37caf5ca9a4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

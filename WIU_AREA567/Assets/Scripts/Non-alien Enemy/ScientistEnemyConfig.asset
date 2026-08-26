@@ -17,5 +17,5 @@ MonoBehaviour:
   preferredRange: 5
   retreatRange: 2.5
   throwCooldown: 1.5
-  projectileSpeed: 6
+  projectileSpeed: 15
   deathCleanupDelay: 1
