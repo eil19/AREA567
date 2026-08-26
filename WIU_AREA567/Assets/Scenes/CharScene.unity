@@ -3092,6 +3092,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 754595036}
+    - target: {fileID: 8694058418281001635, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: attackRadius
+      value: 0.63
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
