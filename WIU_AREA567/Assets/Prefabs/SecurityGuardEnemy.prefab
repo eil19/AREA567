@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8194189637782619826
+--- !u!1 &7572267779517296343
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5855527152566766535}
-  - component: {fileID: 1224736657482644219}
-  - component: {fileID: 953633778628125965}
-  - component: {fileID: 1584046820961151830}
-  - component: {fileID: 3780251110637888725}
+  - component: {fileID: 3164890755909248075}
+  - component: {fileID: 1398316056783216806}
+  - component: {fileID: 8992716469021997333}
+  - component: {fileID: 44484233755203145}
+  - component: {fileID: 6890030257160884276}
+  - component: {fileID: 7060280039785845474}
+  - component: {fileID: 2879185484566010379}
   m_Layer: 0
-  m_Name: ChemicalFlask
+  m_Name: SecurityGuardEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5855527152566766535
+--- !u!4 &3164890755909248075
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8194189637782619826}
+  m_GameObject: {fileID: 7572267779517296343}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.34747842, w: 0.93768805}
-  m_LocalPosition: {x: 17.37785, y: -13.564005, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.06, y: -14.94, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1224736657482644219
+--- !u!212 &1398316056783216806
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8194189637782619826}
+  m_GameObject: {fileID: 7572267779517296343}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,24 +86,24 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3804594851585270645, guid: a91a73dfe2f40a0458db0752dbfa8e81, type: 3}
+  m_Sprite: {fileID: 5970720539476776010, guid: e3f192f2db35abb48ac5c8febf463b19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!50 &953633778628125965
+--- !u!50 &8992716469021997333
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8194189637782619826}
+  m_GameObject: {fileID: 7572267779517296343}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -109,7 +111,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -120,14 +122,14 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &1584046820961151830
-CircleCollider2D:
+  m_Constraints: 4
+--- !u!70 &44484233755203145
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8194189637782619826}
+  m_GameObject: {fileID: 7572267779517296343}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -151,24 +153,76 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020534515, y: 0}
-  m_Radius: 0.074913405
---- !u!114 &3780251110637888725
+  m_Offset: {x: 0.0015306473, y: -0.016836166}
+  m_Size: {x: 0.17057467, y: 0.22760463}
+  m_Direction: 0
+--- !u!114 &6890030257160884276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8194189637782619826}
+  m_GameObject: {fileID: 7572267779517296343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f22c3093609cad408f8dc0468b82c34, type: 3}
+  m_Script: {fileID: 11500000, guid: bbeb5240257e8514b968cbca4974964d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ProjectileDamage
-  damageAmount: 10
-  targetTag: Player
-  lifetime: 5
+  m_EditorClassIdentifier: Assembly-CSharp::Damageable
+  maxHealth: 100
+  currentHealth: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  hurtClip: {fileID: 0}
+  deathClip: {fileID: 0}
+  hitVFXPrefab: {fileID: 0}
+  deathVFXPrefab: {fileID: 0}
+--- !u!114 &7060280039785845474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572267779517296343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb824d5bcc5e28c45bbd1f8357bf8684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SecurityGuardEnemy
+  config: {fileID: 11400000, guid: 9f9eaef98cae13f47ab545e0c27e07f3, type: 2}
+  player: {fileID: 0}
+  batonVisual: {fileID: 0}
+  swingAngle: 70
+  swingDuration: 0.12
+--- !u!95 &2879185484566010379
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572267779517296343}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c969e35939a3fdf48ad3ca7e9a327233, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
