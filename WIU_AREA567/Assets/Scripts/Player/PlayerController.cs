@@ -40,6 +40,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private WeaponType equippedWeapon = WeaponType.Melee;
     public WeaponType EquippedWeapon => equippedWeapon;
 
+    public void SetSlowMultiplier(float multiplier)
+    {
+        externalSpeedMultiplier = multiplier;
+    }
+
+    public void ClearSlowMultiplier()
+    {
+        externalSpeedMultiplier = 1f;
+    }
+
     private Animator animator;
     private Rigidbody2D body;
     private SpriteRenderer spriteRenderer;
@@ -49,6 +59,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 previousRawInput = Vector2.zero;
     private bool horizontalWasLastPressed = false;
     private int directionIndex = 0; // 0 = Down, 1 = Up, 2 = Side - matches Animator's "Direction" parameter
+    private float externalSpeedMultiplier = 1f;
 
     public Vector2 FacingDirection { get; private set; } = Vector2.down;
 
@@ -177,6 +188,7 @@ public class PlayerController : MonoBehaviour
     {
         float speed = moveSpeed;
         if (isStealthed) speed *= stealthSpeedMultiplier;
+        speed *= externalSpeedMultiplier;
 
         body.linearVelocity = moveInput * speed;
     }
