@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35e5f2fdd0f1a04e97d5acf9ba3a0d0, type: 3}
   m_Name: PlayAlienReactionAnim
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationAction
-  animationName: reaction
+  animationName: flyer_reaction
