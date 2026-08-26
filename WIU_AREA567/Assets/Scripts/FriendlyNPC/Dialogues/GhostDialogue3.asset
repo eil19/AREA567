@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b83e8060d4e4144ae8b58216eb8a7f, type: 3}
-  m_Name: GhostDialogue
+  m_Name: GhostDialogue3
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Ghost Scientist #1
+  npcName: Ghost Scientist #3
   npcPortrait: {fileID: 21300000, guid: 86a136b13c694d947a724e4edd3bb073, type: 3}
   dialogueLines:
   - 'Hello there young person! '
