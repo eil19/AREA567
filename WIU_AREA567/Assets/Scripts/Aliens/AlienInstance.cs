@@ -17,7 +17,6 @@ public class AlienInstance : MonoBehaviour
     [HideInInspector] public float stateTimerStart = 0;    
 
     [HideInInspector] public float lastAttackTime = -999f;
-    [HideInInspector] public float lastHealTime = -999f;
 
     private Animator animator;
 

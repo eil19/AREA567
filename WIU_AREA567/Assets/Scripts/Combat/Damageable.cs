@@ -22,25 +22,14 @@ public class Damageable : MonoBehaviour
     [SerializeField] private GameObject hitVFXPrefab;
     [SerializeField] private GameObject deathVFXPrefab;
 
-    // add an AlienShield component to). Absorbs damage before health does.
-    private AlienShield shield;
-
     void Awake()
     {
         currentHealth = maxHealth;
-        shield = GetComponent<AlienShield>();
     }
 
     public void TakeDamage(int amount)
     {
         if (currentHealth <= 0) return;
-
-        if (shield != null && shield.HasShield)
-        {
-            amount = shield.AbsorbDamage(amount);
-            if (amount <= 0) return; // shield absorbed the whole hit - health untouched
-        }
-
         currentHealth -= amount;
         currentHealth = Mathf.Max(currentHealth, 0);
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
