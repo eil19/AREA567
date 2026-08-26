@@ -12,8 +12,52 @@ public class MainMenuUI : MonoBehaviour
     [Header("Overlay")]
     [SerializeField] private GameObject overlay;
 
+    [Header("Intro")]
+    [SerializeField] private GameObject introPanel;
+    [SerializeField] private IntroCutsceneController introCutsceneController;
+
+    [Header("References")]
+    [SerializeField] private GameSessionManager gameSessionManager;
+    [SerializeField] private AsyncLoader asyncLoader;
+
     private void Start()
     {
+        ShowMainMenu();
+        if (introPanel != null)
+        {
+            introPanel.SetActive(false);
+        }
+    }
+
+    public void StartNewGame()
+    {
+        if (gameSessionManager == null)
+        {
+            gameSessionManager =
+                FindFirstObjectByType<GameSessionManager>();
+        }
+
+        gameSessionManager?.ResetRun();
+
+        HideMainMenu();
+
+        if (introPanel != null)
+        {
+            introPanel.SetActive(true);
+        }
+
+        if (introCutsceneController != null)
+        {
+            introCutsceneController.BeginIntro();
+        }
+    }
+    public void NotReady()
+    {
+        if (introPanel != null)
+        {
+            introPanel.SetActive(false);
+        }
+
         ShowMainMenu();
     }
 

@@ -6,13 +6,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
-    public enum WeaponType
-    {
-        Melee,
-        Ranged,
-        Taser
-    }
-
     [Header("Movement")]
     public float moveSpeed = 4f;
 
@@ -36,8 +29,7 @@ public class PlayerController : MonoBehaviour
     public Transform RangedSpawnPoint => rangedSpawnPoint;
 
     [Header("Weapons")]
-    [Tooltip("KNOWN LIMITATION: currently a fixed mapping (1=Melee, 2=Ranged, 3=Taser). Once Sze Yee's 3-weapon-slot inventory allows reordering, this needs to read whichever weapon is actually in that slot instead of assuming a fixed type per number.")]
-    [SerializeField] private WeaponType equippedWeapon = WeaponType.Melee;
+    [SerializeField] private WeaponType equippedWeapon = WeaponType.Unarmed;
     public WeaponType EquippedWeapon => equippedWeapon;
 
     private bool inputLocked;
@@ -163,13 +155,16 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsStealthed", isStealthed);
         }
 
-        HandleWeaponSelection();
-
         // Left mouse click (the existing Attack input action) uses the selected weapon.
         if (InputSystem.actions["Attack"].WasPressedThisFrame())
         {
             switch (equippedWeapon)
             {
+                case WeaponType.Unarmed:
+                    animator.SetBool("IsBusy", true);
+                    animator.SetTrigger("Attack");
+                    break;
+
                 case WeaponType.Melee:
                     animator.SetBool("IsBusy", true);
                     animator.SetTrigger("Attack");
@@ -185,15 +180,6 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-    }
-
-    private void HandleWeaponSelection()
-    {
-        // Uses the Input Actions system, consistent with the rest of the
-        // project, instead of polling Keyboard.current directly.
-        if (InputSystem.actions["SelectWeapon1"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Melee);
-        if (InputSystem.actions["SelectWeapon2"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Ranged);
-        if (InputSystem.actions["SelectWeapon3"].WasPressedThisFrame()) SetEquippedWeapon(WeaponType.Taser);
     }
 
     public void SetEquippedWeapon(WeaponType weapon)
@@ -215,4 +201,12 @@ public class PlayerController : MonoBehaviour
 
         body.linearVelocity = moveInput * speed;
     }
+}
+
+public enum WeaponType
+{
+    Unarmed,
+    Melee,
+    Ranged,
+    Taser
 }

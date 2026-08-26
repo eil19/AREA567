@@ -78,10 +78,8 @@ public class WirePuzzleController : MonoBehaviour
             return;
 
         isCompleted = true;
-
-        Debug.Log(
-            "WIRE PUZZLE COMPLETED!"
-        );
+        
+        Debug.Log("WIRE PUZZLE COMPLETED!");
 
         OnPuzzleCompleted?.Invoke();
 
@@ -91,7 +89,7 @@ public class WirePuzzleController : MonoBehaviour
         }
 
         activeDoor = null;
-
+        OnPuzzleClosed?.Invoke();
         gameObject.SetActive(false);
     }
 

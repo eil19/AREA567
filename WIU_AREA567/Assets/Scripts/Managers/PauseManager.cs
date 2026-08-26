@@ -9,18 +9,26 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject overlay;
 
+    [Header("References")]
+    [SerializeField]
+    private GameSessionManager gameSessionManager;
+
     public bool IsPaused { get; private set; }
 
     private void Start()
     {
-        if (overlay != null) overlay.SetActive(false);
+        if (overlay != null)
+            overlay.SetActive(false);
+
         pausePanel.SetActive(false);
         settingsPanel.SetActive(false);
     }
 
     private void Update()
     {
-        if (InputSystem.actions["Pause"].WasPressedThisFrame() && !IsPaused)
+        if (InputSystem.actions["Pause"]
+            .WasPressedThisFrame() &&
+            !IsPaused)
         {
             PauseGame();
         }
@@ -29,19 +37,27 @@ public class PauseManager : MonoBehaviour
     public void PauseGame()
     {
         IsPaused = true;
-        if (overlay != null) overlay.SetActive(true);
+
+        if (overlay != null)
+            overlay.SetActive(true);
+
         pausePanel.SetActive(true);
         settingsPanel.SetActive(false);
-        Time.timeScale = 0.0f;
+
+        Time.timeScale = 0f;
     }
 
     public void ResumeGame()
     {
         IsPaused = false;
-        if (overlay != null) overlay.SetActive(false);
+
+        if (overlay != null)
+            overlay.SetActive(false);
+
         pausePanel.SetActive(false);
         settingsPanel.SetActive(false);
-        Time.timeScale = 1.0f;
+
+        Time.timeScale = 1f;
     }
 
     public void OpenSetting()
@@ -58,7 +74,19 @@ public class PauseManager : MonoBehaviour
 
     public void ExitToMainMenu()
     {
-        Time.timeScale = 1.0f;
-        SceneManager.LoadScene("MenuScene");
+        Time.timeScale = 1f;
+
+        if (gameSessionManager == null)
+        {
+            gameSessionManager =
+                FindFirstObjectByType<
+                    GameSessionManager>();
+        }
+
+        gameSessionManager?.ResetRun();
+
+        SceneManager.LoadScene(
+            "MenuScene"
+        );
     }
 }

@@ -10,6 +10,9 @@ public class ItemData : ScriptableObject
     public bool stackable;
     public int maxStack = 99;
     public ItemType itemType;
+
+    [Header("Weapon")]
+    public WeaponType weaponType;
 }
 
 public enum ItemType

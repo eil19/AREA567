@@ -18,3 +18,4 @@ MonoBehaviour:
   stackable: 0
   maxStack: 99
   itemType: 2
+  weaponType: 1

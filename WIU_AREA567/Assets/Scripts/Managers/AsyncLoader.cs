@@ -35,12 +35,12 @@ public class AsyncLoader : MonoBehaviour
         while (!loadOperation.isDone)
         {
             float actualProgress = Mathf.Clamp01(loadOperation.progress / 0.9f);
-            visualProgress = Mathf.MoveTowards(visualProgress, actualProgress, targetSpeed * Time.deltaTime);
+            visualProgress = Mathf.MoveTowards(visualProgress, actualProgress, targetSpeed * Time.unscaledDeltaTime);
             loadingSlider.value = visualProgress;
 
             if (Mathf.Approximately(visualProgress, 1.0f) && !loadOperation.allowSceneActivation)
             {
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSecondsRealtime(0.5f);
                 loadOperation.allowSceneActivation = true;
             }
             yield return null;
