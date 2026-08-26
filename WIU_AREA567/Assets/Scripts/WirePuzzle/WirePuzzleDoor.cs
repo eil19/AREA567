@@ -26,7 +26,6 @@ public class WirePuzzleDoor : MonoBehaviour,
     [SerializeField]
     private string doorID;
 
-
     [Header("Events")]
     public UnityEvent OnDoorUnlocked;
     public UnityEvent OnDoorOpened;
@@ -53,7 +52,6 @@ public class WirePuzzleDoor : MonoBehaviour,
         // Door is already open.
         if (unlocked)
         {
-            OpenDoor();
             return;
         }
 
