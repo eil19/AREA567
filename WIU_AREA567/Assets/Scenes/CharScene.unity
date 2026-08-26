@@ -1793,13 +1793,15 @@ GameObject:
   m_Component:
   - component: {fileID: 752035930}
   - component: {fileID: 752035929}
-  m_Layer: 0
+  - component: {fileID: 752035931}
+  - component: {fileID: 752035932}
+  m_Layer: 7
   m_Name: 16x16 Ranged_WeaponSprite_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &752035929
 SpriteRenderer:
   serializedVersion: 2
@@ -1868,12 +1870,74 @@ Transform:
   m_GameObject: {fileID: 752035928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.508, y: -1.246, z: 0}
+  m_LocalPosition: {x: -1.95, y: 1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &752035931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752035928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefcc7c1c3a115d49b7736096723772a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  item:
+    itemData: {fileID: 11400000, guid: ea6e331cb1ff577448c4fbe592ff6ccf, type: 2}
+    itemEffect: {fileID: 0}
+    quantity: 1
+--- !u!61 &752035932
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752035928}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.875, y: 0.625}
+    newSize: {x: 0.14, y: 0.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.875, y: 0.625}
+  m_EdgeRadius: 0
 --- !u!114 &754595036 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3792234960585479425, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
@@ -2904,10 +2968,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2182279296649678183, guid: ce74c6c8312424e44a3239708f7a928b, type: 3}
-      propertyPath: item.itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 70ed112819826e9488e5e100b47675e4, type: 2}
     - target: {fileID: 4026032879590876069, guid: ce74c6c8312424e44a3239708f7a928b, type: 3}
       propertyPath: m_Name
       value: MeleeWeaponPickup
