@@ -15,7 +15,7 @@ public class OrganisableItem : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    public string ZoneId => zoneId;
+    //public string ZoneId => zoneId;
     public bool IsOrganised { get; private set; }
 
     // False until the player has placed it at least once - keeps items

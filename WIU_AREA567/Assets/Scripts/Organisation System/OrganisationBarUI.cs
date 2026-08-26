@@ -39,20 +39,21 @@ public class OrganisationBarUI : MonoBehaviour
         {
             progressSlider.value = percent;
 
-        if (progressText != null)
-        {
-            progressText.text =
-                Mathf.RoundToInt(percent * 100f) +
-                "% Restored";
-        }
+            if (progressText != null)
+            {
+                progressText.text =
+                    Mathf.RoundToInt(percent * 100f) +
+                    "% Restored";
+            }
 
-        if (statusText != null)
-        {
-            statusText.text =
-                OrganisationManager.Instance != null &&
-                OrganisationManager.Instance.HasMetThreshold
-                    ? "Time Travel Available"
-                    : "Restore the laboratory";
+            if (statusText != null)
+            {
+                statusText.text =
+                    OrganisationManager.Instance != null &&
+                    OrganisationManager.Instance.HasMetThreshold
+                        ? "Time Travel Available"
+                        : "Restore the laboratory";
+            }
         }
     }
 }

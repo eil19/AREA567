@@ -1,7 +1,7 @@
-using UnityEngine;
+//using UnityEngine;
 
-[CreateAssetMenu(fileName = "CutsceneDialogue", menuName = "Scriptable Objects/CutsceneDialogue")]
-public class CutsceneDialogue : ScriptableObject
-{
+//[CreateAssetMenu(fileName = "CutsceneDialogue", menuName = "Scriptable Objects/CutsceneDialogue")]
+//public class CutsceneDialogue : ScriptableObject
+//{
     
-}
+//}
