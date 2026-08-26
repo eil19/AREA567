@@ -14,7 +14,7 @@ public class GameSessionManager : MonoBehaviour
 
     public void ResetRun()
     {
-        // organisation run data
+        OrganisationRunData.ResetRun();
         DoorRunData.ResetRun();
 
         if (inventory != null)

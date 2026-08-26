@@ -1,24 +1,30 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WirePuzzleDoor :
-    MonoBehaviour,
+public class WirePuzzleDoor : MonoBehaviour,
     IInteractable
 {
     [Header("Puzzle")]
     [SerializeField]
     private WirePuzzleController puzzleController;
 
-    [Header("Door")]
+    [Header("Door Collision")]
     [SerializeField]
     private Collider2D blockingCollider;
 
+    [Header("Door Visuals")]
     [SerializeField]
-    private Animator animator;
+    private GameObject lockedVisual;
+
+    [SerializeField]
+    private GameObject unlockedLeftVisual;
+
+    [SerializeField]
+    private GameObject unlockedRightVisual;
 
     [Header("Persistence")]
-    [SerializeField] private string doorID;
-
+    [SerializeField]
+    private string doorID;
 
     [Header("Events")]
     public UnityEvent OnDoorUnlocked;
@@ -35,14 +41,17 @@ public class WirePuzzleDoor :
         {
             RestoreUnlockedState();
         }
+        else
+        {
+            ApplyLockedVisual();
+        }
     }
 
-    public void Interact(
-        GameObject interactor)
+    public void Interact(GameObject interactor)
     {
+        // Door is already open.
         if (unlocked)
         {
-            OpenDoor();
             return;
         }
 
@@ -56,8 +65,7 @@ public class WirePuzzleDoor :
         if (puzzleController == null)
         {
             Debug.LogWarning(
-                "WirePuzzleController " +
-                "could not be found."
+                "WirePuzzleController could not be found."
             );
 
             return;
@@ -69,53 +77,78 @@ public class WirePuzzleDoor :
     public void UnlockDoor()
     {
         if (unlocked)
+        {
             return;
+        }
 
         unlocked = true;
 
+        // Save unlocked state for this run.
         DoorRunData.UnlockDoor(doorID);
+
+        ApplyUnlockedVisual();
+
+        OnDoorUnlocked?.Invoke();
+        OnDoorOpened?.Invoke();
 
         Debug.Log(
             gameObject.name +
             " unlocked."
         );
-
-        OnDoorUnlocked?.Invoke();
-
-        OpenDoor();
     }
 
-    private void OpenDoor()
+    private void ApplyLockedVisual()
     {
+        unlocked = false;
+
+        if (lockedVisual != null)
+        {
+            lockedVisual.SetActive(true);
+        }
+
+        if (unlockedLeftVisual != null)
+        {
+            unlockedLeftVisual.SetActive(false);
+        }
+
+        if (unlockedRightVisual != null)
+        {
+            unlockedRightVisual.SetActive(false);
+        }
+
         if (blockingCollider != null)
         {
-            blockingCollider.enabled =
-                false;
+            blockingCollider.enabled = true;
         }
+    }
 
-        if (animator != null)
+    private void ApplyUnlockedVisual()
+    {
+        if (lockedVisual != null)
         {
-            animator.SetTrigger("Open");
+            lockedVisual.SetActive(false);
         }
 
-        Debug.Log(
-            gameObject.name +
-            " opened."
-        );
+        if (unlockedLeftVisual != null)
+        {
+            unlockedLeftVisual.SetActive(true);
+        }
 
-        OnDoorOpened?.Invoke();
+        if (unlockedRightVisual != null)
+        {
+            unlockedRightVisual.SetActive(true);
+        }
+
+        if (blockingCollider != null)
+        {
+            blockingCollider.enabled = false;
+        }
     }
 
     private void RestoreUnlockedState()
     {
         unlocked = true;
-        if (blockingCollider != null)
-        {
-            blockingCollider.enabled = false;
-        }
-        if (animator != null)
-        {
-            // set bool is open true
-        }
+
+        ApplyUnlockedVisual();
     }
 }

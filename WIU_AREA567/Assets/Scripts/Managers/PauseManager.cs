@@ -26,9 +26,16 @@ public class PauseManager : MonoBehaviour
 
     private void Update()
     {
-        if (InputSystem.actions["Pause"]
-            .WasPressedThisFrame() &&
-            !IsPaused)
+        if (!InputSystem.actions["Pause"].WasPressedThisFrame())
+        {
+            return;
+        }
+
+        if (IsPaused)
+        {
+            ResumeGame();
+        }
+        else
         {
             PauseGame();
         }
