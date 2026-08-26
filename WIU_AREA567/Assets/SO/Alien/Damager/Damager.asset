@@ -16,7 +16,7 @@ MonoBehaviour:
   category: 1
   health: 50
   damage: 10
-  moveSpeed: 2
+  moveSpeed: 3
   reactionDescription: 
   tameDifficulty: 0.739
   tamedPrefab: {fileID: 0}

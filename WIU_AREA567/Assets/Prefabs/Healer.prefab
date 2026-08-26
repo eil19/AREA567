@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 510373475309249197}
   - component: {fileID: 5616119173245815468}
   - component: {fileID: 6847612816970582356}
-  - component: {fileID: 7240283884419794780}
+  - component: {fileID: 3393530438545934951}
   m_Layer: 0
   m_Name: Healer
   m_TagString: Alien
@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3979421758950201900}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.09, y: -0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22447112322edd14886232aef3c01674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlienInstance
-  alienType: {fileID: 11400000, guid: 827e522a4e6223c43a636a2c9bba36f2, type: 2}
+  alienType: {fileID: 11400000, guid: 023aecabcd7d601438643c161f98c836, type: 2}
   identified: 0
   tameSuccessTrigger: 0
   tameFailTrigger: 0
@@ -225,8 +225,8 @@ MonoBehaviour:
   splashReactTrigger: 0
   stateTimerStart: 0
   lastAttackTime: -999
---- !u!61 &7240283884419794780
-BoxCollider2D:
+--- !u!58 &3393530438545934951
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -259,15 +259,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.028997421, y: -0.6205624}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.2307692, y: 2.6153846}
-    newSize: {x: 3.65, y: 3.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.7361183, y: 1.8196827}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.0701797, y: -0.08293927}
+  m_Radius: 0.7717763
