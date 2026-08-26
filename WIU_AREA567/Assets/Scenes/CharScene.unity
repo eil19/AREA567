@@ -3020,7 +3020,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1259108513913241240, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: rangedSpawnOffset.y
-      value: 1.53
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 3000213729321372344, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: m_Controller
