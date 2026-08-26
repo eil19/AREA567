@@ -1799,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &752035929
 SpriteRenderer:
   serializedVersion: 2
@@ -1874,6 +1874,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &754595036 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3792234960585479425, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+  m_PrefabInstance: {fileID: 1464980941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18db48d40733a7746aa33a4fd30b056a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
 --- !u!1 &755172744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2183,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0a694e011f06a4ea6e73f8cc33fbc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickUp
-  inventory: {fileID: 0}
+  inventory: {fileID: 754595036}
+--- !u!1001 &1464980941
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1783434128520917698, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_Name
+      value: PersistentManagers
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02585
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4774
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
 --- !u!1 &1655415673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,7 +2257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1655415674
 SpriteRenderer:
   serializedVersion: 2
@@ -2816,6 +2884,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8689203423987896027, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 754595036}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2832,6 +2904,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2182279296649678183, guid: ce74c6c8312424e44a3239708f7a928b, type: 3}
+      propertyPath: item.itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 70ed112819826e9488e5e100b47675e4, type: 2}
     - target: {fileID: 4026032879590876069, guid: ce74c6c8312424e44a3239708f7a928b, type: 3}
       propertyPath: m_Name
       value: MeleeWeaponPickup
@@ -2903,3 +2979,4 @@ SceneRoots:
   - {fileID: 752035930}
   - {fileID: 1655415675}
   - {fileID: 5386645389166312893}
+  - {fileID: 1464980941}
