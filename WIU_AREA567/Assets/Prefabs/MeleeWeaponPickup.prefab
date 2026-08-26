@@ -131,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.07, y: 0.16}
+    oldSize: {x: 0.4375, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,6 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   item:
-    itemData: {fileID: 11400000, guid: d4e9577294e5a8f4a98ec1701bae1b72, type: 2}
+    itemData: {fileID: 11400000, guid: 70ed112819826e9488e5e100b47675e4, type: 2}
     itemEffect: {fileID: 0}
     quantity: 1

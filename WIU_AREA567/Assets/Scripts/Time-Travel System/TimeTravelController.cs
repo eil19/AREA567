@@ -36,8 +36,6 @@ public class TimeTravelController : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-
         if (timeTravelMaterial != null)
         {
             timeTravelMaterial.SetFloat("_TransitionProgress", 0.0f);
@@ -166,6 +164,20 @@ public class TimeTravelController : MonoBehaviour
         Debug.Log("Time travel finished.");
 
         OnTimeTravelFinished?.Invoke();
+    }
+
+    public void ResetRun()
+    {
+        StopAllCoroutines();
+        currentTimeline = Timeline.Present;
+        isTravelling = false;
+        savedPlayerPosition = Vector3.zero;
+        
+        if (timeTravelMaterial != null)
+        {
+            timeTravelMaterial.SetFloat("_TransitionProgress", 0.0f);
+            timeTravelMaterial.SetFloat("_DistortionStrength", 0.0f);
+        }
     }
 }
 

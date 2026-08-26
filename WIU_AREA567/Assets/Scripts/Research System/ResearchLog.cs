@@ -9,6 +9,7 @@ public class ResearchLog : MonoBehaviour
 {
     [Header("Events")]
     public UnityEvent OnResearchLogChanged;
+    public UnityEvent<ResearchData> OnResearchDiscovered;
 
     private List<ResearchData> discovered = new List<ResearchData>();
     public IReadOnlyList<ResearchData> Discovered => discovered;
@@ -25,7 +26,7 @@ public class ResearchLog : MonoBehaviour
         }
 
         existingInstance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public bool AddResearch(ResearchData data)
@@ -34,6 +35,7 @@ public class ResearchLog : MonoBehaviour
         if (discovered.Contains(data)) return false; // already known
 
         discovered.Add(data);
+        OnResearchDiscovered?.Invoke(data);
         OnResearchLogChanged?.Invoke();
         return true;
     }
@@ -84,5 +86,11 @@ public class ResearchLog : MonoBehaviour
         {
             Debug.Log("Discovered: " + data.researchName);
         }
+    }
+
+    public void ClearResearch()
+    {
+        discovered.Clear();
+        OnResearchLogChanged?.Invoke();
     }
 }

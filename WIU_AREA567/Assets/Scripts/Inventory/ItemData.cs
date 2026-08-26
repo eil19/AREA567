@@ -9,7 +9,15 @@ public class ItemData : ScriptableObject
     public Sprite itemImage;
     public bool stackable;
     public int maxStack = 99;
+    public ItemType itemType;
 
-    [Header("World")]
-    public GameObject worldPickupPrefab;
+    [Header("Weapon")]
+    public WeaponType weaponType;
+}
+
+public enum ItemType
+{
+    Material,
+    Consumable,
+    Weapon
 }

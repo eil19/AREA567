@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class Inventory : MonoBehaviour
 {
     [Header("Inventory Settings")]
-    [SerializeField] private int maxItems = 5;
+    [SerializeField] private int maxItems = 8;
 
     [Header("Events")]
     public UnityEvent OnInventoryChanged;
@@ -18,20 +18,9 @@ public class Inventory : MonoBehaviour
     public IReadOnlyList<ItemInstance> Items => items;
     public int MaxItems => maxItems;
     public int SelectedSlotIndex => selectedSlotIndex;
-    private static Inventory existingInstance;
-
-
 
     private void Awake()
     {
-        if (existingInstance != null && existingInstance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        existingInstance = this;
-        DontDestroyOnLoad(gameObject);
         InitialiseInventory();
     }
 
@@ -60,38 +49,32 @@ public class Inventory : MonoBehaviour
         int remaining = quantityToAdd;
 
         // try to stack item first
-        if (newItem.itemData.stackable)
+        if (itemData.stackable)
         {
             for (int i = 0; i < items.Count; i++)
             {
+                if (!CanPlaceItemInSlot(i, itemData)) continue;
+
                 ItemInstance currentItem = items[i];
                 if (currentItem == null) continue;
-                if (currentItem.itemData != newItem.itemData) continue;
-                if (currentItem.quantity >= currentItem.itemData.maxStack) continue;
+                if (currentItem.itemData != itemData) continue;
+                if (currentItem.quantity >= itemData.maxStack) continue;
 
-                int availableSpace = currentItem.itemData.maxStack - currentItem.quantity;
-                int amountToAdd = Mathf.Min(availableSpace, newItem.quantity);
+                int availableSpace = itemData.maxStack - currentItem.quantity;
+                int amountToAdd = Mathf.Min(availableSpace, remaining);
 
                 currentItem.quantity += amountToAdd;
-                newItem.quantity -= amountToAdd;
+                remaining -= amountToAdd;
 
-                if (newItem.quantity <= 0)
-                {
-                    OnInventoryChanged?.Invoke();
-                    return true;
-                }
+                if (remaining <= 0) break;
             }
         }
 
         // put remaining quantity into empty slots
         while (remaining > 0)
         {
-            int emptyIndex = FindEmptySlot();
-
-            if (emptyIndex < 0)
-            {
-                return false;
-            }
+            int emptyIndex = FindEmptySlot(itemData);
+            if (emptyIndex < 0) return false;
 
             int amountForSlot;
             if (itemData.stackable)
@@ -113,10 +96,13 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-    private int FindEmptySlot()
+    private int FindEmptySlot(ItemData itemData)
     {
+        if (itemData == null) return -1;
+
         for (int i = 0; i < items.Count; i++)
         {
+            if (!CanPlaceItemInSlot(i, itemData)) continue;
             if (items[i] == null) return i;
         }
         return -1;
@@ -130,14 +116,16 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i < items.Count; i++)
         {
-            ItemInstance currentItem = items[i];
+            if (!CanPlaceItemInSlot(i, itemData)) continue;
 
+            ItemInstance currentItem = items[i];
+            // empty valid slot
             if (currentItem == null)
             {
                 availableCapacity += itemData.stackable? itemData.maxStack : 1;
                 continue;
             }
-
+            // existing matching stack
             if (itemData.stackable && currentItem.itemData == itemData)
             {
                 availableCapacity += itemData.maxStack - currentItem.quantity;
@@ -160,18 +148,28 @@ public class Inventory : MonoBehaviour
         OnInventoryChanged?.Invoke();
     }
 
-    public void SwapItems(int firstIndex, int secondIndex)
+    public bool SwapItems(int firstIndex, int secondIndex)
     {
         if (firstIndex < 0 ||
             firstIndex >= items.Count ||
             secondIndex < 0 ||
-            secondIndex >= items.Count) return;
+            secondIndex >= items.Count) return false;
 
-        ItemInstance tempItem = items[firstIndex];
+        if (firstIndex == secondIndex) return false;
+
+        ItemInstance firstItem = items[firstIndex];
+        ItemInstance secondItem = items[secondIndex];
+
+        // can first item move to second slot
+        if (firstItem != null && !CanPlaceItemInSlot(secondIndex, firstItem.itemData)) return false;
+
+        // can second item move to first slot
+        if (secondItem != null && !CanPlaceItemInSlot(firstIndex, secondItem.itemData)) return false;
+
         items[firstIndex] = items[secondIndex];
-        items[secondIndex] = tempItem;
-
+        items[secondIndex] = firstItem;
         OnInventoryChanged?.Invoke();
+        return true;
     }
 
     public void SelectSlot(int index)
@@ -251,9 +249,11 @@ public class Inventory : MonoBehaviour
         return AddItem(item);
     }
 
-    public bool AddItemAtSlot(int index, ItemData itemData, int quantity)
+    public bool AddItemAtSlot(int index, ItemData itemData, 
+        ItemEffect itemEffect, int quantity)
     {
         if (index < 0 || index >= items.Count || itemData == null || quantity <= 0) return false;
+        if (!CanPlaceItemInSlot(index, itemData)) return false;
 
         ItemInstance currentItem = items[index];
 
@@ -263,7 +263,7 @@ public class Inventory : MonoBehaviour
             if (itemData.stackable && quantity > itemData.maxStack) return false;
             if (!itemData.stackable && quantity > 1) return false;
 
-            items[index] = new ItemInstance(itemData, null, quantity);
+            items[index] = new ItemInstance(itemData, itemEffect, quantity);
             OnInventoryChanged?.Invoke();
             return true;
         }
@@ -315,5 +315,20 @@ public class Inventory : MonoBehaviour
         OnItemConsumed?.Invoke(itemData, quantity);
 
         return true;
+    }
+
+    public bool CanPlaceItemInSlot(int slotIndex, ItemData itemData)
+    {
+        if (itemData == null) return false;
+        if (slotIndex < 0 || slotIndex >= items.Count) return false;
+
+        // slots 0-2 reserved for weapons
+        if (slotIndex <= 2)
+        {
+            return itemData.itemType == ItemType.Weapon;
+        }
+
+        // slots 3-7 are for normal inventory items
+        return itemData.itemType != ItemType.Weapon;
     }
 }

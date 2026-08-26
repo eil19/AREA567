@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AlienType
   alienName: Damage
   category: 1
-  health: 40
+  health: 50
   damage: 10
   moveSpeed: 2
   reactionDescription: 

@@ -1,42 +1,36 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OrganisationBarUI : MonoBehaviour
 {
-    //organisation progress. Retries subscribing every frame until OrganisationManager.Instance actually exists, 
     [SerializeField] private Slider progressSlider;
+    [SerializeField] private TMP_Text progressText;
+    [SerializeField] private TMP_Text statusText;
 
-    private bool subscribed;
-
-    void OnEnable()
+    private void OnEnable()
     {
-        TrySubscribe();
-    }
-
-    void Update()
-    {
-        if (!subscribed)
+        if (OrganisationManager.Instance != null)
         {
-            TrySubscribe();
+            OrganisationManager.Instance
+                .OnProgressChanged
+                .AddListener(UpdateBar);
+
+            UpdateBar(
+                OrganisationManager.Instance
+                    .PercentOrganised
+            );
         }
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
-        if (subscribed && OrganisationManager.Instance != null)
+        if (OrganisationManager.Instance != null)
         {
-            OrganisationManager.Instance.OnProgressChanged.RemoveListener(UpdateBar);
+            OrganisationManager.Instance
+                .OnProgressChanged
+                .RemoveListener(UpdateBar);
         }
-        subscribed = false;
-    }
-
-    private void TrySubscribe()
-    {
-        if (OrganisationManager.Instance == null) return;
-
-        OrganisationManager.Instance.OnProgressChanged.AddListener(UpdateBar);
-        UpdateBar(OrganisationManager.Instance.PercentOrganised);
-        subscribed = true;
     }
 
     private void UpdateBar(float percent)
@@ -44,6 +38,22 @@ public class OrganisationBarUI : MonoBehaviour
         if (progressSlider != null)
         {
             progressSlider.value = percent;
+
+            if (progressText != null)
+            {
+                progressText.text =
+                    Mathf.RoundToInt(percent * 100f) +
+                    "% Restored";
+            }
+
+            if (statusText != null)
+            {
+                statusText.text =
+                    OrganisationManager.Instance != null &&
+                    OrganisationManager.Instance.HasMetThreshold
+                        ? "Time Travel Available"
+                        : "Restore the laboratory";
+            }
         }
     }
 }

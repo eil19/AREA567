@@ -28,6 +28,27 @@ public class PlayerInteractor : MonoBehaviour
     private GameObject currentFocusedInteractable;
     private GameObject currentFocusedPickup;
 
+    private bool interactionLocked;
+    public bool IsInteractionLocked => interactionLocked;
+
+    public void SetInteractionLocked(bool locked)
+    {
+        interactionLocked = locked;
+        if (locked)
+        {
+            if (currentFocusedInteractable != null)
+            {
+                OnInteractableLostFocus?.Invoke();
+                currentFocusedInteractable = null;
+            }
+            if (currentFocusedPickup != null)
+            {
+                OnPickupLostFocus?.Invoke();
+                currentFocusedPickup = null;
+            }
+        }
+    }
+
     void Awake()
     {
         if (playerController == null) playerController = GetComponent<PlayerController>();
@@ -35,6 +56,8 @@ public class PlayerInteractor : MonoBehaviour
 
     void Update()
     {
+        if (interactionLocked) return;
+
         // --- Interact (E) ---
         Collider2D interactHit = CheckInRange(interactableLayer);
         GameObject interactObject = interactHit != null ? interactHit.gameObject : null;

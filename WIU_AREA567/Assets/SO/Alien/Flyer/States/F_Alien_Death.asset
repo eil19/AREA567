@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
   m_Name: F_Alien_Death
   m_EditorClassIdentifier: Assembly-CSharp::State
-  initializeActions: []
+  initializeActions:
+  - {fileID: 11400000, guid: 8b509e29e70fb5d46b9305f0cc9b1946, type: 2}
+  - {fileID: 11400000, guid: 653267c0f06ffca469dcb63fef070b67, type: 2}
+  - {fileID: 11400000, guid: ff491a5e1914dcc43a51ac13af2acea3, type: 2}
   executeActions: []
   endActions: []
   transitions: []

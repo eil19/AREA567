@@ -14,13 +14,11 @@ public class AttackEventHandler : MonoBehaviour
     [SerializeField] private int damageAmount = 10;
 
     [Header("Ranged")]
-    [Tooltip("Projectile spawned when the player has weapon 2 (ranged) equipped.")]
     [SerializeField] private GameObject rangedProjectilePrefab;
     [SerializeField, Min(0f)] private float rangedFireCooldown = 0.25f;
     private float nextRangedFireTime;
 
     [Header("Taser")]
-    [Tooltip("GameObject tag used to identify Aliens - Taser only affects objects with this tag.")]
     [SerializeField] private string alienTag = "Alien";
     [SerializeField] private float stunDuration = 3f;
 
@@ -66,17 +64,24 @@ public class AttackEventHandler : MonoBehaviour
         }
     }
 
-    // Called by PlayerController when the Attack input is pressed with weapon 2 (Ranged) equipped.
-    // Unlike melee/taser this fires immediately, so it does not require an animation event.
-    public bool FireRangedAttack()
+    public bool TryStartRangedAttack()
     {
+        if (Time.time < nextRangedFireTime) return false;
         if (rangedProjectilePrefab == null)
         {
             Debug.LogWarning($"{gameObject.name}: No ranged projectile prefab is assigned.");
             return false;
         }
 
-        if (Time.time < nextRangedFireTime) return false;
+        nextRangedFireTime = Time.time + rangedFireCooldown;
+        animator.SetBool("IsBusy", true);
+        animator.SetTrigger("RangedAttack");
+        return true;
+    }
+
+    public void RangedFireCheck()
+    {
+        if (rangedProjectilePrefab == null) return;
 
         Vector2 direction = playerController.FacingDirection;
         Vector3 spawnPosition = rangedSpawnPoint != null
@@ -88,12 +93,10 @@ public class AttackEventHandler : MonoBehaviour
         {
             Debug.LogError($"{rangedProjectilePrefab.name} must have a PlayerProjectile component.");
             Destroy(projectile);
-            return false;
+            return;
         }
 
         playerProjectile.Launch(direction);
-        nextRangedFireTime = Time.time + rangedFireCooldown;
-        return true;
     }
 
     public void AttackEnd()

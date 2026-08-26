@@ -1,10 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-// Generic hurt/death/HP feedback - hook these methods to a Damageable's
-// UnityEvents in the Inspector. Works on Player, TestAlien, or any future
-// enemy - just needs a SpriteRenderer. Placeholder visuals (color flash,
-// disable on death) until real hurt/death sprites and VFX exist.
 [RequireComponent(typeof(SpriteRenderer))]
 public class DamageFeedback : MonoBehaviour
 {
@@ -15,19 +11,30 @@ public class DamageFeedback : MonoBehaviour
     private Color originalColor;
     private Coroutine flashRoutine;
 
+    private Animator animator;
+    private PlayerController playerController;
+    private AttackEventHandler attackEventHandler;
+    private PlayerInteractor playerInteractor;
+    private Rigidbody2D body;
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        animator = GetComponent<Animator>();
+        playerController = GetComponent<PlayerController>();
+        attackEventHandler = GetComponent<AttackEventHandler>();
+        playerInteractor = GetComponent<PlayerInteractor>();
+        body = GetComponent<Rigidbody2D>();
     }
 
-    // Bind to Damageable's OnDamaged (int) - Dynamic Int32 section in the dropdown.
     public void OnHurt(int amount)
     {
         Debug.Log($"{gameObject.name} took {amount} damage");
 
         if (flashRoutine != null) StopCoroutine(flashRoutine);
         flashRoutine = StartCoroutine(FlashRoutine());
+        // No animation trigger - just the color flash, per design choice.
     }
 
     private IEnumerator FlashRoutine()
@@ -38,14 +45,30 @@ public class DamageFeedback : MonoBehaviour
         flashRoutine = null;
     }
 
-    // Bind to Damageable's OnDeath ()
     public void OnDeath()
     {
         Debug.Log($"{gameObject.name} died");
-        gameObject.SetActive(false); // placeholder - swap for real death animation/VFX later
+
+        if (animator != null)
+        {
+            animator.SetTrigger("Death");
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
-    // Bind to Damageable's OnHealthChanged (int, int) - Dynamic Int32, Int32 section.
+    public void OnDeathAnimationComplete()
+    {
+        if (body != null) body.linearVelocity = Vector2.zero;
+        if (playerController != null) playerController.enabled = false;
+        if (attackEventHandler != null) attackEventHandler.enabled = false;
+        if (playerInteractor != null) playerInteractor.enabled = false;
+
+        Debug.Log($"{gameObject.name} is now fully dead - controls disabled.");
+    }
+
     public void OnHealthChanged(int current, int max)
     {
         Debug.Log($"{gameObject.name} HP: {current}/{max}");

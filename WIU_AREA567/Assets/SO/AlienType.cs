@@ -5,7 +5,8 @@ public enum AlienCategory
     Healer,
     Damage,
     Flying,
-    Tanker
+    Tanker,
+    None
 }
 
 [CreateAssetMenu(fileName = "AlienType", menuName = "Scriptable Objects/AlienType")]

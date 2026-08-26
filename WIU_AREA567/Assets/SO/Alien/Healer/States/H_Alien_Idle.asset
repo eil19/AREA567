@@ -13,17 +13,20 @@ MonoBehaviour:
   m_Name: H_Alien_Idle
   m_EditorClassIdentifier: Assembly-CSharp::State
   initializeActions:
-  - {fileID: 11400000, guid: 96f4c05c9f986f24883807b6ebefcd1f, type: 2}
+  - {fileID: 11400000, guid: b86d0e7a20b7dc64dbfd248dc2e89cf7, type: 2}
   executeActions:
-  - {fileID: 11400000, guid: e805a40caaa7dc043aebca3166e5eadb, type: 2}
+  - {fileID: 11400000, guid: b2f81c68d9f6150478bc8dc3e49c9b87, type: 2}
   endActions: []
   transitions:
-  - decision: {fileID: 11400000, guid: aa601043fd5bbe84ba720f680fdc3ed5, type: 2}
-    trueState: {fileID: 11400000, guid: cec9bb15e5e4e7048a3c4dac702a0095, type: 2}
-    falseState: {fileID: 11400000, guid: 75044756d76591246ba846457717831f, type: 2}
-  - decision: {fileID: 11400000, guid: 7c271f2057e604944a5669e8a79978c8, type: 2}
-    trueState: {fileID: 11400000, guid: 2528ca8991da94347a27943d269b8264, type: 2}
-    falseState: {fileID: 11400000, guid: 75044756d76591246ba846457717831f, type: 2}
-  - decision: {fileID: 11400000, guid: 6b9fde972e245404fb295b6c1eed65b7, type: 2}
-    trueState: {fileID: 11400000, guid: ee0a4ec2976abbf4085a36883dcf7c0a, type: 2}
-    falseState: {fileID: 11400000, guid: 75044756d76591246ba846457717831f, type: 2}
+  - decision: {fileID: 11400000, guid: 6cfaac03c30ff7f41892d2b3d83554fe, type: 2}
+    trueState: {fileID: 11400000, guid: fd2ff0fbd88fe624183877c3662b0eb8, type: 2}
+    falseState: {fileID: 11400000, guid: 1b287acb1653878428221d5be8993330, type: 2}
+  - decision: {fileID: 11400000, guid: bd924f09458b5804585f867e0da31443, type: 2}
+    trueState: {fileID: 11400000, guid: e8108165f347dbb47868a076d92f7f28, type: 2}
+    falseState: {fileID: 11400000, guid: 1b287acb1653878428221d5be8993330, type: 2}
+  - decision: {fileID: 11400000, guid: cc116ec316e5b474e9a660fd0dad16d5, type: 2}
+    trueState: {fileID: 11400000, guid: d9f8d51ea2520c94884eb5b8c5c86a7f, type: 2}
+    falseState: {fileID: 11400000, guid: 1b287acb1653878428221d5be8993330, type: 2}
+  - decision: {fileID: 11400000, guid: 9aa34a3cf2ae96042b08a03cd654bb2b, type: 2}
+    trueState: {fileID: 11400000, guid: 22e904678e6468d46ab33ac01db70d45, type: 2}
+    falseState: {fileID: 11400000, guid: 1b287acb1653878428221d5be8993330, type: 2}

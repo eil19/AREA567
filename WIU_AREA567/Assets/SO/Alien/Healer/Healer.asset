@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6da4e5ac9a0971469570a1085b8042a, type: 3}
   m_Name: Healer
   m_EditorClassIdentifier: Assembly-CSharp::AlienType
-  alienName: Healer
+  alienName: 
   category: 0
-  health: 30
-  damage: 2
-  moveSpeed: 2
+  health: 70
+  damage: 10
+  moveSpeed: 5
   reactionDescription: 
-  tameDifficulty: 0.8
+  tameDifficulty: 0.7
   tamedPrefab: {fileID: 0}
   detectRadius: 4
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
-  essencePrefab: {fileID: 3856763265357270299, guid: fb97581180db08548a929350b8eaf3bd, type: 3}
-  essenceItemData: {fileID: 11400000, guid: c1fc54314dc31364da075d50408ce68b, type: 2}
+  essencePrefab: {fileID: 0}
+  essenceItemData: {fileID: 0}

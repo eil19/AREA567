@@ -107,7 +107,7 @@ public class CraftingSlotUI : MonoBehaviour,
         if (item == null) return;
 
         bool placed = craftingSystem.PlaceItem(
-            slotIndex, item.itemData, 1);
+            slotIndex, item.itemData, item.itemEffect, 1);
 
         if (!placed) return;
 
@@ -131,7 +131,7 @@ public class CraftingSlotUI : MonoBehaviour,
         if (sourceItem == null || sourceItem.IsEmpty) return;
 
         bool placed = craftingSystem.PlaceItem(
-            slotIndex, sourceItem.itemData, 1);
+            slotIndex, sourceItem.itemData, sourceItem.itemEffect, 1);
         if (!placed) return;
 
         craftingSystem.RemoveFromGrid(
@@ -143,7 +143,9 @@ public class CraftingSlotUI : MonoBehaviour,
         if (currentSlot == null || currentSlot.IsEmpty) return false;
 
         bool added = inventory.AddItemAtSlot(
-            targetInventorySlot, currentSlot.itemData, 1);
+            targetInventorySlot, currentSlot.itemData, 
+            currentSlot.itemEffect,
+            1);
 
         if (!added) return false;
         craftingSystem.RemoveFromGrid(slotIndex, 1);
