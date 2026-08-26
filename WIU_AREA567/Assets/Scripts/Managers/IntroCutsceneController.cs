@@ -6,13 +6,6 @@ using UnityEngine.UI;
 
 public class IntroCutsceneController : MonoBehaviour
 {
-    [Header("World")]
-    [SerializeField] private Animator alienQueenAnimator;
-
-    [Header("Screen Effects")]
-    [SerializeField] private Image redOverlay;
-    [SerializeField] private Image blackOverlay;
-
     [Header("Dialogue")]
     [SerializeField]
     private CutsceneDialogue dialogue;
@@ -72,18 +65,6 @@ public class IntroCutsceneController : MonoBehaviour
         {
             choiceButtons.SetActive(false);
         }
-
-        CutsceneDialogueLine line =
-            dialogueLines[dialogueIndex];
-
-        speakerNameText.text = line.speaker;
-        dialogueText.text = line.dialogue;
-
-        bool isLastLine =
-            dialogueIndex == dialogueLines.Length - 1;
-
-        continueButton.gameObject.SetActive(!isLastLine);
-        readyButton.gameObject.SetActive(isLastLine);
     }
 
     private IEnumerator PlayIntro()
@@ -127,11 +108,7 @@ public class IntroCutsceneController : MonoBehaviour
             yield return new WaitForSecondsRealtime(
                 typingSpeed
             );
-
-            yield return null;
         }
-
-        SetImageAlpha(image, endAlpha);
     }
 
     private void FinishDialogue()
