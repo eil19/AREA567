@@ -167,11 +167,11 @@ public class PlayerController : MonoBehaviour
 
                 case WeaponType.Melee:
                     animator.SetBool("IsBusy", true);
-                    animator.SetTrigger("Attack");
+                    animator.SetTrigger("MeleeAttack");
                     break;
 
                 case WeaponType.Ranged:
-                    attackEventHandler?.FireRangedAttack();
+                    attackEventHandler?.TryStartRangedAttack();
                     break;
 
                 case WeaponType.Taser:
