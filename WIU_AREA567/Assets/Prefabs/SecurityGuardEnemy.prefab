@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6890030257160884276}
   - component: {fileID: 7060280039785845474}
   - component: {fileID: 2879185484566010379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SecurityGuardEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbeb5240257e8514b968cbca4974964d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Damageable
-  maxHealth: 100
+  maxHealth: 30
   currentHealth: 0
   OnHealthChanged:
     m_PersistentCalls:
