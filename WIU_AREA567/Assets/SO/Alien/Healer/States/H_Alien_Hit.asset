@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
+  m_Name: H_Alien_Hit
+  m_EditorClassIdentifier: Assembly-CSharp::State
+  initializeActions:
+  - {fileID: 11400000, guid: 2538e74cc6cfb1b45a5df4192dfbf7aa, type: 2}
+  - {fileID: 11400000, guid: c885f020f0afcf444a6b11b2ab9570f6, type: 2}
+  executeActions: []
+  endActions:
+  - {fileID: 11400000, guid: b86d0e7a20b7dc64dbfd248dc2e89cf7, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 6cfaac03c30ff7f41892d2b3d83554fe, type: 2}
+    trueState: {fileID: 11400000, guid: fd2ff0fbd88fe624183877c3662b0eb8, type: 2}
+    falseState: {fileID: 11400000, guid: 1b287acb1653878428221d5be8993330, type: 2}
+  - decision: {fileID: 11400000, guid: 42ddccf472d1f24409681b7bc895d771, type: 2}
+    trueState: {fileID: 11400000, guid: c661d3dabf45bdc43ad6646b5c3c362b, type: 2}
+    falseState: {fileID: 11400000, guid: 1b287acb1653878428221d5be8993330, type: 2}

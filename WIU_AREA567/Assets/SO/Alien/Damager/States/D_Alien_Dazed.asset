@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D_Alien_Dazed
   m_EditorClassIdentifier: Assembly-CSharp::State
   initializeActions:
-  - {fileID: 11400000, guid: 6ec90e43988f01d4099c9ae77e04f0ab, type: 2}
+  - {fileID: 11400000, guid: 195c0d059595ac44c99739a22d606ec6, type: 2}
   - {fileID: 11400000, guid: 195c0d059595ac44c99739a22d606ec6, type: 2}
   executeActions: []
   endActions:
@@ -21,4 +21,7 @@ MonoBehaviour:
   transitions:
   - decision: {fileID: 11400000, guid: 705efcbd40f6fa94ba5b5bc834ec4bd0, type: 2}
     trueState: {fileID: 11400000, guid: 7304ffe2fc888ab42ae854012f8ceea4, type: 2}
+    falseState: {fileID: 11400000, guid: 58d9ac5b0713f8d4baa5a939faa449c3, type: 2}
+  - decision: {fileID: 11400000, guid: faa5ccb515c52024288f0afb68b9ca34, type: 2}
+    trueState: {fileID: 11400000, guid: 9e6fb1387ec7c164e95d926adec437bb, type: 2}
     falseState: {fileID: 11400000, guid: 58d9ac5b0713f8d4baa5a939faa449c3, type: 2}
