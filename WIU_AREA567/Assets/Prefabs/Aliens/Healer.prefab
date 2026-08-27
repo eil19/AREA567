@@ -227,6 +227,7 @@ MonoBehaviour:
   lastAttackTime: -999
   lastHealTime: -999
   lastSpecialAttackTime: -999
+  alienID: Healer
   homePosition: {x: 0, y: 0, z: 0}
 --- !u!58 &3393530438545934951
 CircleCollider2D:

@@ -8,12 +8,31 @@ public class ResearchNote : MonoBehaviour, IPickupable
 
     private void Start()
     {
-        if (researchData != null && researchData.icon != null)
+        if (researchData == null)
         {
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            return;
+        }
+
+        // If this note was already collected
+        // during the current run, remove the
+        // newly-loaded world copy immediately.
+        if (ResearchLog.Instance != null &&
+            ResearchLog.Instance.HasDiscovered(
+                researchData))
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        if (researchData.icon != null)
+        {
+            SpriteRenderer spriteRenderer =
+                GetComponent<SpriteRenderer>();
+
             if (spriteRenderer != null)
             {
-                spriteRenderer.sprite = researchData.icon;
+                spriteRenderer.sprite =
+                    researchData.icon;
             }
         }
     }
@@ -21,47 +40,62 @@ public class ResearchNote : MonoBehaviour, IPickupable
     public void Pickup(GameObject picker)
     {
         if (researchData == null)
+        {
             return;
+        }
+
+        ResearchLog researchLog =
+            ResearchLog.Instance;
+
+        if (researchLog == null)
+        {
+            Debug.LogError(
+                "ResearchNote: ResearchLog not found."
+            );
+
+            return;
+        }
+
+        // Already discovered?
+        if (researchLog.HasDiscovered(
+            researchData))
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         bool added =
-            ResearchLog.Instance.AddResearch(
+            researchLog.AddResearch(
                 researchData
             );
 
-        if (added)
+        if (!added)
         {
-            Debug.Log(
-                picker.name +
-                " discovered research: " +
-                researchData.researchName
+            return;
+        }
+
+        Debug.Log(
+            "Discovered research: " +
+            researchData.researchName
+        );
+
+        if (researchData.category ==
+                ResearchCategory.Recipe &&
+            researchData.unlockedRecipe != null)
+        {
+            NotificationPopupUI.Instance?.Show(
+                "Recipe Unlocked: " +
+                researchData.unlockedRecipe.recipeName
             );
-
-            if (researchData.category ==
-                    ResearchCategory.Recipe &&
-                researchData.unlockedRecipe != null)
-            {
-                NotificationPopupUI.Instance?.Show(
-                    "Recipe Unlocked: " +
-                    researchData.unlockedRecipe
-                        .recipeName
-                );
-            }
-            else
-            {
-                NotificationPopupUI.Instance?.Show(
-                    "Research Discovered: " +
-                    researchData.researchName
-                );
-            }
-
-            Destroy(gameObject);
         }
         else
         {
-            Debug.Log(
-                "Already discovered: " +
+            NotificationPopupUI.Instance?.Show(
+                "Research Discovered: " +
                 researchData.researchName
             );
         }
+
+        Destroy(gameObject);
     }
 }

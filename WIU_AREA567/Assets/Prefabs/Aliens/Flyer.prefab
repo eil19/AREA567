@@ -261,3 +261,7 @@ MonoBehaviour:
   splashReactTrigger: 0
   stateTimerStart: 0
   lastAttackTime: -999
+  lastHealTime: -999
+  lastSpecialAttackTime: -999
+  alienID: Flyer
+  homePosition: {x: 0, y: 0, z: 0}

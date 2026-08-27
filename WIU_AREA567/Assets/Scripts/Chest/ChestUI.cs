@@ -16,17 +16,34 @@ public class ChestUI : MonoBehaviour
 
     private void Start()
     {
+        if (chestStorage == null)
+        {
+            chestStorage =
+                FindFirstObjectByType<
+                    ChestStorage>();
+        }
+
         if (inventory == null)
         {
-            inventory = FindFirstObjectByType<Inventory>();
+            inventory =
+                FindFirstObjectByType<
+                    Inventory>();
+        }
+
+        if (chestStorage == null ||
+            inventory == null)
+        {
+            Debug.LogError(
+                "ChestUI: Inventory or ChestStorage missing."
+            );
+
+            return;
         }
 
         InitialiseSlots();
 
-        if (chestStorage != null)
-        {
-            chestStorage.OnStorageChanged.AddListener(Refresh);
-        }
+        chestStorage.OnStorageChanged
+            .AddListener(Refresh);
 
         Refresh();
     }

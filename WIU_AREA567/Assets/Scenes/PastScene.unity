@@ -30578,7 +30578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimelineVisualController
   globalVolume: {fileID: 1317075455}
-  sceneTimeline: 0
+  sceneTimeline: 1
   pastSaturation: -65
   presentDay7Saturation: -35
   presentDay0Saturation: 0
