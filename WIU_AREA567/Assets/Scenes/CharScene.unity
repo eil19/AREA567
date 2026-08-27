@@ -481,7 +481,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press R to pick up
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7701057ef2d21e348a41fd9a965f6fd5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 804b15efedf7c804eaa2e14efa0ae3a6, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -692,7 +692,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to interact
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7701057ef2d21e348a41fd9a965f6fd5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 804b15efedf7c804eaa2e14efa0ae3a6, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1992,6 +1992,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1387088757
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865484674594761340, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: researchData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9c7de6b178b495340936e9022953a97b, type: 2}
+    - target: {fileID: 3960573028751137913, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_Name
+      value: 'Ranged Recipe Note '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5818938b5225b5843a240982282524db, type: 3}
 --- !u!1001 &1464980941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2627,11 +2688,149 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8695790840023690007, guid: 72374c98f6c40a14285f2af207f7cea4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695790840023690007, guid: 72374c98f6c40a14285f2af207f7cea4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 804b15efedf7c804eaa2e14efa0ae3a6, type: 2}
+    - target: {fileID: 8695790840023690007, guid: 72374c98f6c40a14285f2af207f7cea4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901518272512649479, guid: 72374c98f6c40a14285f2af207f7cea4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901518272512649479, guid: 72374c98f6c40a14285f2af207f7cea4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 804b15efedf7c804eaa2e14efa0ae3a6, type: 2}
+    - target: {fileID: 8901518272512649479, guid: 72374c98f6c40a14285f2af207f7cea4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72374c98f6c40a14285f2af207f7cea4, type: 3}
+--- !u!1001 &1431262939085409005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662427096450840647, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841652006456350666, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+      propertyPath: m_Name
+      value: Damage Alien Research Note
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b93e5aa74bfb5d42ab0fef75b3fa8d9, type: 3}
+--- !u!1001 &2281035382557782079
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620560941868852022, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960573028751137913, guid: 5818938b5225b5843a240982282524db, type: 3}
+      propertyPath: m_Name
+      value: 'Healer Alien Research Note '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5818938b5225b5843a240982282524db, type: 3}
 --- !u!1001 &2541867343639648041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2713,6 +2912,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+--- !u!1001 &4126133353565908277
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2154983731586275318, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_Name
+      value: Flying Alien Research Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448117315635710119, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96476e39b47554244b9019d0ff0c63e4, type: 3}
 --- !u!1001 &5386645389166312893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2770,6 +3026,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce74c6c8312424e44a3239708f7a928b, type: 3}
+--- !u!1001 &5875435357709480199
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 544985423694564680, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_Name
+      value: 'Bonding Charm Recipe Note '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452309921240218240, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f792ad70ae3d6842bab16eaff63b431, type: 3}
 --- !u!1001 &7287584068360372510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2899,6 +3212,11 @@ SceneRoots:
   - {fileID: 85351528}
   - {fileID: 755172746}
   - {fileID: 935039313448877916}
+  - {fileID: 5875435357709480199}
+  - {fileID: 1431262939085409005}
+  - {fileID: 4126133353565908277}
+  - {fileID: 2281035382557782079}
+  - {fileID: 1387088757}
   - {fileID: 7287584068360372510}
   - {fileID: 585477952}
   - {fileID: 210000002}
