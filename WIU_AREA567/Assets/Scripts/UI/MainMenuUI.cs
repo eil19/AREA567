@@ -100,6 +100,18 @@ public class MainMenuUI : MonoBehaviour
         ShowMainMenu();
     }
 
+    public void Ready()
+    {
+        if (introPanel != null)
+        {
+            introPanel.SetActive(false);
+        }
+        if (asyncLoader != null)
+        {
+            asyncLoader.LoadScene("PresentScene");
+        }
+    }
+
     private void OpenPopup(GameObject popup)
     {
         CloseAllPopups();
