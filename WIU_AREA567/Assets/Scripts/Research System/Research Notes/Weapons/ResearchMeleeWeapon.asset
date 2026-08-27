@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ResearchMeleeWeapon
   m_EditorClassIdentifier: Assembly-CSharp::ResearchData
   researchName: Melee Weapon Recipe
-  description: 
-  icon: {fileID: 0}
+  description: Scrap + Scrap + Scrap
+  icon: {fileID: 21300000, guid: 59e165b2132f3fa499baf60c11c40333, type: 3}
   category: 0
   unlockedRecipe: {fileID: 11400000, guid: 53de9de7610167f4581beacf49328be6, type: 2}
   relatedAlienCategory: 0
