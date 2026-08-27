@@ -15,15 +15,18 @@ public class AlienFlyAction : StateAction
     public bool hoverAboveAllies = true;
     public float hoverHeight = 2f;
     public float moveSpeed = 3f;
+    public float stopDistance = 0.3f;
     public float allySearchRadius = 6f;
     public LayerMask allyLayer;
 
     public override void Act(StateController controller)
     {
         var alien = controller.GetComponent<AlienInstance>();
+        var rb = controller.GetComponent<Rigidbody2D>();
+
         if (alien == null) return;
 
-        Vector2 origin = controller.transform.position;
+        Vector2 origin = rb.position;
 
         if (hoverAboveAllies)
         {
@@ -31,8 +34,20 @@ public class AlienFlyAction : StateAction
             Vector2 hoverTarget = allyCentre + Vector2.up * hoverHeight;
 
             // Direct transform movement - swap for Rigidbody2D.MovePosition()
-            // if your aliens move via physics elsewhere in the project.
             controller.transform.position = Vector2.MoveTowards(origin, hoverTarget, moveSpeed * Time.deltaTime);
+            rb.linearVelocity = hoverTarget * moveSpeed * Time.deltaTime;
+
+            Vector2 toTarget = hoverTarget - origin;
+            float distance = toTarget.magnitude;
+
+            if (distance <= stopDistance)
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
+            else
+            {
+                rb.linearVelocity = toTarget.normalized * moveSpeed;
+            }
         }
 
         if (Time.time - alien.lastAttackTime < attackCooldown) return;

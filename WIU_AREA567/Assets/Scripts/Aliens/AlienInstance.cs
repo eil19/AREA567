@@ -65,9 +65,12 @@ public class AlienInstance : MonoBehaviour
         SpawnEssence();
     }
 
+    [HideInInspector] public Vector3 homePosition;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        homePosition = transform.position;
     }
 
     public void MarkIdentified()
