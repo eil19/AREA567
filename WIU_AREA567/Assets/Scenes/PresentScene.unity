@@ -90445,7 +90445,6 @@ GameObject:
   - component: {fileID: 1779042214}
   - component: {fileID: 1779042213}
   - component: {fileID: 1779042216}
-  - component: {fileID: 1779042217}
   - component: {fileID: 1779042218}
   m_Layer: 0
   m_Name: TankerAlienPod
@@ -90555,35 +90554,6 @@ MonoBehaviour:
   tameResultText: {fileID: 1996425466}
   tameResultDisplayDuration: 1.5
   closeUpCamera: {fileID: 1430951104}
-  reactionTrigger: SplashReact
-  reactionFallbackDuration: 2
-  cameraBlendDelay: 1.5
---- !u!114 &1779042217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779042212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1383d52628fa0c4429a9653744864b90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PodControlPanel
-  linkedAlien: {fileID: 0}
-  barUI: {fileID: 0}
-  bondingCharmData: {fileID: 0}
-  bondingCharmEffect: {fileID: 0}
-  splashPotionData: {fileID: 0}
-  splashPotionEffect: {fileID: 0}
-  promptRoot: {fileID: 0}
-  potionCountText: {fileID: 0}
-  errorText: {fileID: 0}
-  tamePromptRoot: {fileID: 0}
-  tamePromptText: {fileID: 0}
-  tameResultText: {fileID: 0}
-  tameResultDisplayDuration: 1.5
-  closeUpCamera: {fileID: 0}
   reactionTrigger: SplashReact
   reactionFallbackDuration: 2
   cameraBlendDelay: 1.5
