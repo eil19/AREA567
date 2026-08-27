@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &510005547145836372
+--- !u!1 &3691197936983951253
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4527469129101019143}
-  - component: {fileID: 7722671143166630874}
-  - component: {fileID: 7331381854244220275}
-  - component: {fileID: 8565720323670756810}
-  - component: {fileID: 5112512306409632834}
-  - component: {fileID: 8603233343180116767}
-  - component: {fileID: 1221942104489343590}
-  m_Layer: 8
-  m_Name: ScientistEnemy
+  - component: {fileID: 2876665575176931607}
+  - component: {fileID: 1145996628447015514}
+  - component: {fileID: 6391238437041392591}
+  - component: {fileID: 4526547272955822241}
+  - component: {fileID: 6781047657302672469}
+  m_Layer: 0
+  m_Name: DOTFlask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4527469129101019143
+--- !u!4 &2876665575176931607
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510005547145836372}
+  m_GameObject: {fileID: 3691197936983951253}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.885706, y: -1.0155927, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalPosition: {x: -10.074448, y: -2.8033423, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7722671143166630874
+--- !u!212 &1145996628447015514
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510005547145836372}
+  m_GameObject: {fileID: 3691197936983951253}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,24 +84,24 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4558714131835070483, guid: 990ab7d2b75e06547bedbcbbecc1d748, type: 3}
+  m_Sprite: {fileID: 3804594851585270645, guid: a91a73dfe2f40a0458db0752dbfa8e81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!50 &7331381854244220275
+--- !u!50 &6391238437041392591
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510005547145836372}
+  m_GameObject: {fileID: 3691197936983951253}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -111,7 +109,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -122,14 +120,14 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!70 &8565720323670756810
-CapsuleCollider2D:
+  m_Constraints: 0
+--- !u!58 &4526547272955822241
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510005547145836372}
+  m_GameObject: {fileID: 3691197936983951253}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -153,81 +151,26 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0007585287, y: 0.0038679242}
-  m_Size: {x: 0.15558267, y: 0.21917737}
-  m_Direction: 0
---- !u!114 &5112512306409632834
+  m_Offset: {x: 0.0020534515, y: 0}
+  m_Radius: 0.074913405
+--- !u!114 &6781047657302672469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510005547145836372}
+  m_GameObject: {fileID: 3691197936983951253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbeb5240257e8514b968cbca4974964d, type: 3}
+  m_Script: {fileID: 11500000, guid: d7f2be25a434de8459a93c68fed7a9cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Damageable
-  maxHealth: 30
-  currentHealth: 0
-  OnHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  hurtClip: {fileID: 0}
-  deathClip: {fileID: 0}
-  hitVFXPrefab: {fileID: 0}
-  deathVFXPrefab: {fileID: 0}
---- !u!114 &8603233343180116767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510005547145836372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cf70a912d29e1a49b06cc7a3662c026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScientistEnemy
-  config: {fileID: 11400000, guid: e652156a8f3e7a942a776d5663808156, type: 2}
-  player: {fileID: 0}
-  dotFlaskPrefab: {fileID: 3691197936983951253, guid: e73796c2146bd8544a5b663c271c8553, type: 3}
-  visionFlaskPrefab: {fileID: 5584330141980480699, guid: a68917454dc109c489c6ddcc6d6dc1a1, type: 3}
-  projectileSpawnPoint: {fileID: 0}
-  throwItemVisual: {fileID: 5855527152566766535, guid: b9161f34a5d4bc747aec85163626c91d, type: 3}
-  throwRotationAngle: 60
-  throwRotationDuration: 0.15
-  flashColor: {r: 1, g: 0, b: 0, a: 1}
-  flashDuration: 0.15
---- !u!95 &1221942104489343590
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510005547145836372}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0e91f65b7574c6a40a3fb37caf5ca9a4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorClassIdentifier: Assembly-CSharp::DotFlaskProjectile
+  targetTag: Player
+  lifetime: 5
+  damagePerTick: 5
+  tickInterval: 1
+  duration: 3

@@ -16,6 +16,11 @@ MonoBehaviour:
   detectionRange: 8
   preferredRange: 5
   retreatRange: 2.5
-  throwCooldown: 1.5
-  projectileSpeed: 15
+  throwCooldown: 6
+  projectileSpeed: 13
   deathCleanupDelay: 1
+  stealthDetectionMultiplier: 0.5
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  giveUpRange: 14

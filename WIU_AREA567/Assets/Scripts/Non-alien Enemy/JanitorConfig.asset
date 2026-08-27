@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b759000dcbbf94db25e49371d46891, type: 3}
   m_Name: JanitorConfig
   m_EditorClassIdentifier: Assembly-CSharp::JanitorConfig
-  moveSpeed: 3.5
+  moveSpeed: 3
   detectionRange: 8
   meleeRange: 1.2
   attackCooldown: 1
   damageAmount: 12
   puddleCooldown: 3
   deathCleanupDelay: 1
+  stealthDetectionMultiplier: 0.5
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  giveUpRange: 14

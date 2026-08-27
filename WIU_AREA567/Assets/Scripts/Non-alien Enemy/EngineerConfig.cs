@@ -13,4 +13,8 @@ public class EngineerConfig : ScriptableObject
     [Header("Detection")]
     public float stealthDetectionMultiplier = 0.5f;
     public LayerMask wallLayer;
+    public float giveUpRange = 14f;
+
+    [Header("Robot Variety")]
+    public float spawnRadius = 1.2f;
 }

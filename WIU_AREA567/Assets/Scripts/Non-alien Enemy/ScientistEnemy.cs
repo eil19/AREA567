@@ -9,13 +9,18 @@ public class ScientistEnemy : MonoBehaviour
 
     [SerializeField] private ScientistEnemyConfig config;
     [SerializeField] private Transform player;
-    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject dotFlaskPrefab;
+    [SerializeField] private GameObject visionFlaskPrefab;
     [SerializeField] private Transform projectileSpawnPoint;
 
     [Header("Animation")]
     [SerializeField] private Transform throwItemVisual;
     [SerializeField] private float throwRotationAngle = 60f;
     [SerializeField] private float throwRotationDuration = 0.15f;
+
+    [Header("Damage Feedback")]
+    [SerializeField] private Color flashColor = Color.red;
+    [SerializeField] private float flashDuration = 0.15f;
 
     private Rigidbody2D body;
     private Damageable damageable;
@@ -26,6 +31,9 @@ public class ScientistEnemy : MonoBehaviour
     private State currentState = State.Idle;
     private Vector2 moveDirection = Vector2.zero;
     private float throwTimer = 0f;
+    private int throwCount = 0;
+    private Color normalColor;
+    private Coroutine flashRoutine;
 
     private void Awake()
     {
@@ -33,6 +41,7 @@ public class ScientistEnemy : MonoBehaviour
         damageable = GetComponent<Damageable>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) normalColor = spriteRenderer.color;
         body.gravityScale = 0f;
 
         if (player == null)
@@ -47,6 +56,7 @@ public class ScientistEnemy : MonoBehaviour
         }
 
         damageable.OnDeath.AddListener(HandleDeath);
+        damageable.OnDamaged.AddListener(HandleDamaged);
     }
 
     private void Update()
@@ -55,6 +65,12 @@ public class ScientistEnemy : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         Vector2 directionToPlayer = ((Vector2)player.position - (Vector2)transform.position).normalized;
+
+        if (currentState != State.Idle && distanceToPlayer > config.giveUpRange)
+        {
+            currentState = State.Idle;
+            moveDirection = Vector2.zero;
+        }
 
         switch (currentState)
         {
@@ -163,10 +179,14 @@ public class ScientistEnemy : MonoBehaviour
 
     private void ThrowFlask(Vector2 direction)
     {
-        if (projectilePrefab != null)
+        throwCount++;
+        bool throwVision = visionFlaskPrefab != null && throwCount % 2 == 0;
+        GameObject flaskToThrow = throwVision ? visionFlaskPrefab : dotFlaskPrefab;
+
+        if (flaskToThrow != null)
         {
             Vector3 spawnPos = projectileSpawnPoint != null ? projectileSpawnPoint.position : transform.position;
-            GameObject flask = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+            GameObject flask = Instantiate(flaskToThrow, spawnPos, Quaternion.identity);
 
             if (flask.TryGetComponent(out Rigidbody2D flaskBody))
             {
@@ -202,6 +222,22 @@ public class ScientistEnemy : MonoBehaviour
         }
 
         throwItemVisual.localRotation = start;
+    }
+
+    private void HandleDamaged(int amount)
+    {
+        if (spriteRenderer == null) return;
+
+        if (flashRoutine != null) StopCoroutine(flashRoutine);
+        flashRoutine = StartCoroutine(FlashRed());
+    }
+
+    private IEnumerator FlashRed()
+    {
+        spriteRenderer.color = flashColor;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = normalColor;
+        flashRoutine = null;
     }
 
     private void HandleDeath()

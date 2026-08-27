@@ -10,21 +10,30 @@ public class EngineerEnemy : MonoBehaviour
     [SerializeField] private EngineerConfig config;
     [SerializeField] private Transform player;
     [SerializeField] private GameObject turretPrefab;
+    [SerializeField] private GameObject chaserRobotPrefab;
 
     [Header("Animation")]
     [SerializeField] private Transform toolVisual;
     [SerializeField] private float flourishAngle = 60f;
     [SerializeField] private float flourishDuration = 0.15f;
 
+    [Header("Damage Feedback")]
+    [SerializeField] private Color flashColor = Color.red;
+    [SerializeField] private float flashDuration = 0.15f;
+
     private Rigidbody2D body;
     private Damageable damageable;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private PlayerController playerController;
+    private Collider2D ownCollider;
 
     private State currentState = State.Idle;
     private Vector2 moveDirection = Vector2.zero;
     private float turretTimer = 0f;
+    private int deployCount = 0;
+    private Color normalColor;
+    private Coroutine flashRoutine;
 
     private void Awake()
     {
@@ -32,6 +41,8 @@ public class EngineerEnemy : MonoBehaviour
         damageable = GetComponent<Damageable>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) normalColor = spriteRenderer.color;
+        ownCollider = GetComponent<Collider2D>();
         body.gravityScale = 0f;
 
         if (player == null)
@@ -46,6 +57,7 @@ public class EngineerEnemy : MonoBehaviour
         }
 
         damageable.OnDeath.AddListener(HandleDeath);
+        damageable.OnDamaged.AddListener(HandleDamaged);
     }
 
     private void Update()
@@ -54,6 +66,12 @@ public class EngineerEnemy : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         Vector2 directionToPlayer = ((Vector2)player.position - (Vector2)transform.position).normalized;
+
+        if (currentState != State.Idle && distanceToPlayer > config.giveUpRange)
+        {
+            currentState = State.Idle;
+            moveDirection = Vector2.zero;
+        }
 
         switch (currentState)
         {
@@ -161,9 +179,43 @@ public class EngineerEnemy : MonoBehaviour
 
     private void DeployTurret()
     {
-        if (turretPrefab != null)
+        deployCount++;
+        bool spawnChaser = chaserRobotPrefab != null && deployCount % 3 == 0;
+        GameObject prefabToSpawn = spawnChaser ? chaserRobotPrefab : turretPrefab;
+
+        if (prefabToSpawn != null)
         {
-            Instantiate(turretPrefab, transform.position, Quaternion.identity);
+            float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+            Vector3 offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0f) * config.spawnRadius;
+            Vector3 spawnPos = transform.position + offset;
+
+            GameObject robot = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
+
+            if (robot.TryGetComponent(out Collider2D robotCollider))
+            {
+                if (ownCollider != null)
+                {
+                    Physics2D.IgnoreCollision(ownCollider, robotCollider, true);
+                }
+
+                Turret[] existingTurrets = FindObjectsOfType<Turret>();
+                foreach (Turret turret in existingTurrets)
+                {
+                    if (turret.TryGetComponent(out Collider2D turretCollider))
+                    {
+                        Physics2D.IgnoreCollision(robotCollider, turretCollider, true);
+                    }
+                }
+
+                ChaserRobot[] existingChasers = FindObjectsOfType<ChaserRobot>();
+                foreach (ChaserRobot chaser in existingChasers)
+                {
+                    if (chaser.TryGetComponent(out Collider2D chaserCollider) && chaserCollider != robotCollider)
+                    {
+                        Physics2D.IgnoreCollision(robotCollider, chaserCollider, true);
+                    }
+                }
+            }
         }
 
         if (toolVisual != null)
@@ -194,6 +246,22 @@ public class EngineerEnemy : MonoBehaviour
         }
 
         toolVisual.localRotation = start;
+    }
+
+    private void HandleDamaged(int amount)
+    {
+        if (spriteRenderer == null) return;
+
+        if (flashRoutine != null) StopCoroutine(flashRoutine);
+        flashRoutine = StartCoroutine(FlashRed());
+    }
+
+    private IEnumerator FlashRed()
+    {
+        spriteRenderer.color = flashColor;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = normalColor;
+        flashRoutine = null;
     }
 
     private void HandleDeath()
