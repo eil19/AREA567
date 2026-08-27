@@ -5,7 +5,6 @@ public class SceneFlowManager : MonoBehaviour
 {
     [Header("Scene Names")]
     [SerializeField] private string menuScene = "MenuScene";
-    [SerializeField] private string introCutscene = "IntroCutsceneScene";
     [SerializeField] private string presentScene = "PresentScene";
     [SerializeField] private string pastScene = "PastScene";
     [SerializeField] private string bossScene = "BossScene";
@@ -17,8 +16,6 @@ public class SceneFlowManager : MonoBehaviour
     public void StartNewGame()
     {
         gameSessionManager?.ResetRun();
-
-        LoadScene(introCutscene);
     }
 
     public void FinishIntroCutscene()
@@ -44,8 +41,6 @@ public class SceneFlowManager : MonoBehaviour
     public void ReplayGame()
     {
         gameSessionManager?.ResetRun();
-
-        LoadScene(introCutscene);
     }
 
     public void ReturnToMainMenu()
