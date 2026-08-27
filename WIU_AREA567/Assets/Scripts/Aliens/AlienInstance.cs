@@ -43,7 +43,19 @@ public class AlienInstance : MonoBehaviour
 
         if (isTamed)
         {
+            tameSuccessTrigger = true;
+
             SetTamedLayer();
+
+            Debug.Log(
+                gameObject.name +
+                " restored as TAMED."
+            );
+        }
+
+        if (identified)
+        {
+            _guessed = true;
         }
     }
 
