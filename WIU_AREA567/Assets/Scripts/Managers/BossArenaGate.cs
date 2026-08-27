@@ -1,18 +1,23 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BossAreaGate : MonoBehaviour,
+public class BossArenaGate : MonoBehaviour,
     IInteractable
 {
     [Header("References")]
-    [SerializeField] private DayManager dayManager;
-    [SerializeField] private SceneFlowManager sceneFlowManager;
+    [SerializeField]
+    private DayManager dayManager;
 
     [Header("Events")]
     public UnityEvent OnBossAreaUnlocked;
+
     public UnityEvent OnBossAreaLocked;
 
+    public UnityEvent OnBossFightRequested;
+
     private bool isUnlocked;
+
+    public bool IsUnlocked => isUnlocked;
 
     private void Start()
     {
@@ -22,22 +27,22 @@ public class BossAreaGate : MonoBehaviour,
                 FindFirstObjectByType<DayManager>();
         }
 
-        if (sceneFlowManager == null)
+        if (dayManager == null)
         {
-            sceneFlowManager =
-                FindFirstObjectByType<SceneFlowManager>();
-        }
-
-        if (dayManager != null)
-        {
-            dayManager.OnDayChanged.AddListener(
-                CheckBossAvailability
+            Debug.LogWarning(
+                "BossArenaGate: DayManager not found."
             );
 
-            CheckBossAvailability(
-                dayManager.DaysRemaining
-            );
+            return;
         }
+
+        dayManager.OnDayChanged.AddListener(
+            CheckBossAvailability
+        );
+
+        CheckBossAvailability(
+            dayManager.DaysRemaining
+        );
     }
 
     private void OnDestroy()
@@ -56,11 +61,15 @@ public class BossAreaGate : MonoBehaviour,
         bool shouldUnlock =
             daysRemaining <= 0;
 
-        if (shouldUnlock &&
-            !isUnlocked)
+        if (isUnlocked == shouldUnlock)
         {
-            isUnlocked = true;
+            return;
+        }
 
+        isUnlocked = shouldUnlock;
+
+        if (isUnlocked)
+        {
             Debug.Log(
                 "Boss area is now available."
             );
@@ -82,9 +91,8 @@ public class BossAreaGate : MonoBehaviour,
             return;
         }
 
-        if (sceneFlowManager != null)
-        {
-            sceneFlowManager.LoadBoss();
-        }
+        // Do NOT load BossScene immediately.
+        // Ask the player first.
+        OnBossFightRequested?.Invoke();
     }
 }
