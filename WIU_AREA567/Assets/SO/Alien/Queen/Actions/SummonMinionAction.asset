@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efaff59a8555fc4db77db335877db19, type: 3}
+  m_Name: SummonMinionAction
+  m_EditorClassIdentifier: Assembly-CSharp::SummonMinionAction
+  minionPrefab: {fileID: 3947623797355917695, guid: d4eb573ae305c1540b76cd229a59f72b, type: 3}
+  minionCount: 3
+  spawnRadius: 2.5
+  summonCooldown: 7
+  spawnArcDegrees: 90
+  maxVerticalOffset: 0.4
+  targetTag: Player

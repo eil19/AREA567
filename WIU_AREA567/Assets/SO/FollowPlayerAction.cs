@@ -3,7 +3,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FollowPlayerAction", menuName = "Scriptable Objects/Actions/FollowPlayerAction")]
 public class FollowPlayerAction : StateAction
 {
-    public float stopDistance = 1.5f;
+    [Header("Chase")]
+    [SerializeField] public float followRange = 6f;
+    [SerializeField] public float stopDistance = 4.0f;
+
+    [SerializeField] public float leashDistance = 8f;
+    [SerializeField] public float returnStopDistance = 1.0f;
 
     public override void Act(StateController controller)
     {
@@ -11,18 +16,39 @@ public class FollowPlayerAction : StateAction
         var rb = controller.GetComponent<Rigidbody2D>();
         var player = GameObject.FindGameObjectWithTag("Player");
 
-        if (alien == null || rb == null || alien.alienType == null || player == null) return;
+        if (alien == null || rb == null || alien.alienType == null) return;
 
-        Vector2 toPlayer = (Vector2)player.transform.position - rb.position;
-        float distance = toPlayer.magnitude;
+        float distanceFromHome = Vector2.Distance(rb.position, alien.homePosition);
+        float distanceToPlayer = player != null
+            ? Vector2.Distance(rb.position, player.transform.position)
+            : Mathf.Infinity;
 
-        if (distance <= stopDistance)
+        bool playerOutOfRange = distanceToPlayer >= followRange;
+        bool tooFarFromHome = distanceFromHome > leashDistance;
+
+        if (playerOutOfRange || tooFarFromHome)
         {
-            rb.linearVelocity = Vector2.zero; 
+            // Either the player's not close enough, wandered too far from spawn
+            Vector2 toHome = (Vector2)alien.homePosition - rb.position;
+
+            if (toHome.magnitude <= returnStopDistance)
+            {
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+
+            rb.linearVelocity = toHome.normalized * alien.alienType.moveSpeed;
             return;
         }
 
-        Vector2 direction = toPlayer.normalized;
+        // Player is both in range and we're within our leash, chase.
+        if (distanceToPlayer <= stopDistance)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        Vector2 direction = ((Vector2)player.transform.position - rb.position).normalized;
         rb.linearVelocity = direction * alien.alienType.moveSpeed;
     }
 }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
+  m_Name: B_Alien_Death
+  m_EditorClassIdentifier: Assembly-CSharp::State
+  initializeActions:
+  - {fileID: 11400000, guid: 49f141e23d1273c41b772d17406d5e7f, type: 2}
+  - {fileID: 11400000, guid: 7a195c25754fe64419fb48031ab40dcc, type: 2}
+  - {fileID: 11400000, guid: 5ba193c5d8f82114fab7ef71aba54b61, type: 2}
+  executeActions: []
+  endActions: []
+  transitions: []

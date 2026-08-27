@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e432a7362ef6d43aae6e7e7c18707d, type: 3}
+  m_Name: AlienFlyAction
+  m_EditorClassIdentifier: Assembly-CSharp::AlienFlyAction
+  fireballPrefab: {fileID: 3245186144929268065, guid: 1cf4471db3d4e8240aba92ac7efac5a3, type: 3}
+  fireballSpeed: 6
+  fireballDamage: 10
+  attackRadius: 6
+  attackCooldown: 2
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  hoverAboveAllies: 1
+  hoverHeight: 2
+  moveSpeed: 3
+  stopDistance: 0.3
+  allySearchRadius: 6
+  allyLayer:
+    serializedVersion: 2
+    m_Bits: 2048

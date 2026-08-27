@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
+  m_Name: B_Alien_Summon
+  m_EditorClassIdentifier: Assembly-CSharp::State
+  initializeActions:
+  - {fileID: 11400000, guid: 9b37253a70355874bbd71750896de0ce, type: 2}
+  - {fileID: 11400000, guid: 52676a5d1343e7d47a22b3b6bf7c943a, type: 2}
+  - {fileID: 11400000, guid: ea35df5f28fa38c4e83607df8f0aef5f, type: 2}
+  executeActions: []
+  endActions: []
+  transitions:
+  - decision: {fileID: 11400000, guid: 97012782ded9a164fa7fc69bc8267ada, type: 2}
+    trueState: {fileID: 11400000, guid: c75c890eb2d8bf646bc99b6b63f8f985, type: 2}
+    falseState: {fileID: 11400000}
