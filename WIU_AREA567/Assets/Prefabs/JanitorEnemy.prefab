@@ -185,7 +185,7 @@ MonoBehaviour:
       m_Calls: []
   hurtClip: {fileID: 0}
   deathClip: {fileID: 0}
-  hitVFXPrefab: {fileID: 1136329312195389794, guid: 869cd4af9022ec04f98d6b4cbb918639, type: 3}
+  hitVFXPrefab: {fileID: 0}
   deathVFXPrefab: {fileID: 0}
 --- !u!114 &720980892915063844
 MonoBehaviour:
