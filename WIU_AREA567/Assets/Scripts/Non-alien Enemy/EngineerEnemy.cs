@@ -10,6 +10,7 @@ public class EngineerEnemy : MonoBehaviour
     [SerializeField] private EngineerConfig config;
     [SerializeField] private Transform player;
     [SerializeField] private GameObject turretPrefab;
+    [SerializeField] private GameObject chaserRobotPrefab;
 
     [Header("Animation")]
     [SerializeField] private Transform toolVisual;
@@ -21,10 +22,12 @@ public class EngineerEnemy : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private PlayerController playerController;
+    private Collider2D ownCollider;
 
     private State currentState = State.Idle;
     private Vector2 moveDirection = Vector2.zero;
     private float turretTimer = 0f;
+    private int deployCount = 0;
 
     private void Awake()
     {
@@ -32,6 +35,7 @@ public class EngineerEnemy : MonoBehaviour
         damageable = GetComponent<Damageable>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        ownCollider = GetComponent<Collider2D>();
         body.gravityScale = 0f;
 
         if (player == null)
@@ -54,6 +58,12 @@ public class EngineerEnemy : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         Vector2 directionToPlayer = ((Vector2)player.position - (Vector2)transform.position).normalized;
+
+        if (currentState != State.Idle && distanceToPlayer > config.giveUpRange)
+        {
+            currentState = State.Idle;
+            moveDirection = Vector2.zero;
+        }
 
         switch (currentState)
         {
@@ -161,9 +171,22 @@ public class EngineerEnemy : MonoBehaviour
 
     private void DeployTurret()
     {
-        if (turretPrefab != null)
+        deployCount++;
+        bool spawnChaser = chaserRobotPrefab != null && deployCount % 3 == 0;
+        GameObject prefabToSpawn = spawnChaser ? chaserRobotPrefab : turretPrefab;
+
+        if (prefabToSpawn != null)
         {
-            Instantiate(turretPrefab, transform.position, Quaternion.identity);
+            float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+            Vector3 offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0f) * config.spawnRadius;
+            Vector3 spawnPos = transform.position + offset;
+
+            GameObject robot = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
+
+            if (ownCollider != null && robot.TryGetComponent(out Collider2D robotCollider))
+            {
+                Physics2D.IgnoreCollision(ownCollider, robotCollider, true);
+            }
         }
 
         if (toolVisual != null)

@@ -10,12 +10,19 @@ public class Turret : MonoBehaviour
     [SerializeField] private Transform projectileSpawnPoint;
 
     private Damageable damageable;
-    private float fireTimer = 0f;
+    private SpriteRenderer spriteRenderer;
+    private Color normalColor;
+
+    private float timer = 0f;
+    private int shotsFiredInBurst = 0;
+    private bool isRecharging = false;
     private bool isDead = false;
 
     private void Awake()
     {
         damageable = GetComponent<Damageable>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) normalColor = spriteRenderer.color;
 
         if (player == null)
         {
@@ -36,15 +43,39 @@ public class Turret : MonoBehaviour
         if (isDead || player == null) return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if (distanceToPlayer <= config.detectionRange)
+        if (distanceToPlayer > config.detectionRange) return;
+
+        timer -= Time.deltaTime;
+        if (timer > 0f) return;
+
+        if (isRecharging)
         {
-            fireTimer -= Time.deltaTime;
-            if (fireTimer <= 0f)
+            isRecharging = false;
+            shotsFiredInBurst = 0;
+            SetRecharging(false);
+        }
+        else
+        {
+            Fire();
+            shotsFiredInBurst++;
+
+            if (shotsFiredInBurst >= config.shotsPerBurst)
             {
-                Fire();
-                fireTimer = config.fireCooldown;
+                isRecharging = true;
+                timer = config.burstCooldown;
+                SetRecharging(true);
+            }
+            else
+            {
+                timer = config.burstShotInterval;
             }
         }
+    }
+
+    private void SetRecharging(bool recharging)
+    {
+        if (spriteRenderer == null) return;
+        spriteRenderer.color = recharging ? config.rechargingTint : normalColor;
     }
 
     private void Fire()

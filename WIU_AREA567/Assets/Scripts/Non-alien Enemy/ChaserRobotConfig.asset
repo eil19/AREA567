@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478a94092e44a5a40933892b77e7152c, type: 3}
+  m_Name: ChaserRobotConfig
+  m_EditorClassIdentifier: Assembly-CSharp::ChaserRobotConfig
+  moveSpeed: 5.5
+  detectionRange: 8
+  explodeRange: 0.6
+  explosionDamage: 30
+  giveUpRange: 14
+  stealthDetectionMultiplier: 0.5
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  lifetime: 15

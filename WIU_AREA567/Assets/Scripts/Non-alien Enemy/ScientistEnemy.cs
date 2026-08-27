@@ -56,6 +56,12 @@ public class ScientistEnemy : MonoBehaviour
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         Vector2 directionToPlayer = ((Vector2)player.position - (Vector2)transform.position).normalized;
 
+        if (currentState != State.Idle && distanceToPlayer > config.giveUpRange)
+        {
+            currentState = State.Idle;
+            moveDirection = Vector2.zero;
+        }
+
         switch (currentState)
         {
             case State.Idle:

@@ -14,4 +14,5 @@ public class ScientistEnemyConfig : ScriptableObject
     [Header("Detection")]
     public float stealthDetectionMultiplier = 0.5f;
     public LayerMask wallLayer;
+    public float giveUpRange = 14f;
 }
