@@ -185,7 +185,7 @@ MonoBehaviour:
       m_Calls: []
   hurtClip: {fileID: 0}
   deathClip: {fileID: 0}
-  hitVFXPrefab: {fileID: 1136329312195389794, guid: 869cd4af9022ec04f98d6b4cbb918639, type: 3}
+  hitVFXPrefab: {fileID: 0}
   deathVFXPrefab: {fileID: 0}
 --- !u!114 &7060280039785845474
 MonoBehaviour:
@@ -201,12 +201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SecurityGuardEnemy
   config: {fileID: 11400000, guid: 9f9eaef98cae13f47ab545e0c27e07f3, type: 2}
   player: {fileID: 0}
-  patrolPoints: []
   batonVisual: {fileID: 0}
   swingAngle: 70
   swingDuration: 0.12
-  flashColor: {r: 1, g: 0, b: 0, a: 1}
-  flashDuration: 0.15
 --- !u!95 &2879185484566010379
 Animator:
   serializedVersion: 7
