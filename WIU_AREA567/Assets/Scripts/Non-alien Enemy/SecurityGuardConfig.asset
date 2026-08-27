@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e74ecc58ce2f44c8ca03b311d90e02, type: 3}
   m_Name: SecurityGuardConfig
   m_EditorClassIdentifier: Assembly-CSharp::SecurityGuardConfig
-  moveSpeed: 4.5
+  moveSpeed: 3.5
   detectionRange: 8
   meleeRange: 1.2
   attackCooldown: 1
   damageAmount: 15
   deathCleanupDelay: 1
+  stealthDetectionMultiplier: 0.5
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  giveUpRange: 14

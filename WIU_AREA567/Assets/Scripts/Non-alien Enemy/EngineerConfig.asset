@@ -16,5 +16,11 @@ MonoBehaviour:
   detectionRange: 8
   preferredRange: 6
   retreatRange: 3
-  turretDeployCooldown: 4
+  turretDeployCooldown: 3
   deathCleanupDelay: 1
+  stealthDetectionMultiplier: 0.5
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  giveUpRange: 14
+  spawnRadius: 1.2

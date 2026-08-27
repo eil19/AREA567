@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: TurretConfig
   m_EditorClassIdentifier: Assembly-CSharp::TurretConfig
   detectionRange: 7
-  fireCooldown: 1.2
-  projectileSpeed: 7
+  shotsPerBurst: 3
+  burstShotInterval: 0.5
+  burstCooldown: 7
+  projectileSpeed: 6
   lifetime: 10
+  rechargingTint: {r: 1, g: 0, b: 0, a: 1}

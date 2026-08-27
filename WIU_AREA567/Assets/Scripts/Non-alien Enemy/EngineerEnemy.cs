@@ -17,6 +17,10 @@ public class EngineerEnemy : MonoBehaviour
     [SerializeField] private float flourishAngle = 60f;
     [SerializeField] private float flourishDuration = 0.15f;
 
+    [Header("Damage Feedback")]
+    [SerializeField] private Color flashColor = Color.red;
+    [SerializeField] private float flashDuration = 0.15f;
+
     private Rigidbody2D body;
     private Damageable damageable;
     private Animator animator;
@@ -28,6 +32,8 @@ public class EngineerEnemy : MonoBehaviour
     private Vector2 moveDirection = Vector2.zero;
     private float turretTimer = 0f;
     private int deployCount = 0;
+    private Color normalColor;
+    private Coroutine flashRoutine;
 
     private void Awake()
     {
@@ -35,6 +41,7 @@ public class EngineerEnemy : MonoBehaviour
         damageable = GetComponent<Damageable>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) normalColor = spriteRenderer.color;
         ownCollider = GetComponent<Collider2D>();
         body.gravityScale = 0f;
 
@@ -50,6 +57,7 @@ public class EngineerEnemy : MonoBehaviour
         }
 
         damageable.OnDeath.AddListener(HandleDeath);
+        damageable.OnDamaged.AddListener(HandleDamaged);
     }
 
     private void Update()
@@ -183,9 +191,30 @@ public class EngineerEnemy : MonoBehaviour
 
             GameObject robot = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
 
-            if (ownCollider != null && robot.TryGetComponent(out Collider2D robotCollider))
+            if (robot.TryGetComponent(out Collider2D robotCollider))
             {
-                Physics2D.IgnoreCollision(ownCollider, robotCollider, true);
+                if (ownCollider != null)
+                {
+                    Physics2D.IgnoreCollision(ownCollider, robotCollider, true);
+                }
+
+                Turret[] existingTurrets = FindObjectsOfType<Turret>();
+                foreach (Turret turret in existingTurrets)
+                {
+                    if (turret.TryGetComponent(out Collider2D turretCollider))
+                    {
+                        Physics2D.IgnoreCollision(robotCollider, turretCollider, true);
+                    }
+                }
+
+                ChaserRobot[] existingChasers = FindObjectsOfType<ChaserRobot>();
+                foreach (ChaserRobot chaser in existingChasers)
+                {
+                    if (chaser.TryGetComponent(out Collider2D chaserCollider) && chaserCollider != robotCollider)
+                    {
+                        Physics2D.IgnoreCollision(robotCollider, chaserCollider, true);
+                    }
+                }
             }
         }
 
@@ -217,6 +246,22 @@ public class EngineerEnemy : MonoBehaviour
         }
 
         toolVisual.localRotation = start;
+    }
+
+    private void HandleDamaged(int amount)
+    {
+        if (spriteRenderer == null) return;
+
+        if (flashRoutine != null) StopCoroutine(flashRoutine);
+        flashRoutine = StartCoroutine(FlashRed());
+    }
+
+    private IEnumerator FlashRed()
+    {
+        spriteRenderer.color = flashColor;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = normalColor;
+        flashRoutine = null;
     }
 
     private void HandleDeath()

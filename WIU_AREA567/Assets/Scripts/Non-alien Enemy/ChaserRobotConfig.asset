@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478a94092e44a5a40933892b77e7152c, type: 3}
   m_Name: ChaserRobotConfig
   m_EditorClassIdentifier: Assembly-CSharp::ChaserRobotConfig
-  moveSpeed: 5.5
+  moveSpeed: 4.5
   detectionRange: 8
   explodeRange: 0.6
   explosionDamage: 30
@@ -20,5 +20,5 @@ MonoBehaviour:
   stealthDetectionMultiplier: 0.5
   wallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   lifetime: 15
