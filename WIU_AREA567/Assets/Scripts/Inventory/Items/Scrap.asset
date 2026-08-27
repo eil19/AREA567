@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Scrap
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Scrap
-  description: Scrap
+  description: Used for crafting
   itemImage: {fileID: 8096459312978753757, guid: 29e1721836572324b804ed82932405bf, type: 3}
   stackable: 1
   maxStack: 99
   itemType: 0
+  weaponType: 0

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Splash Potion
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Splash Potion
-  description: Splash Potion
+  description: Use on aliens
   itemImage: {fileID: -7860769533142021695, guid: 3e65c069ca0e92c43a0f2c09e94842f5, type: 3}
   stackable: 1
   maxStack: 99
   itemType: 1
+  weaponType: 0

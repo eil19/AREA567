@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Chemical
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Chemical
-  description: 
+  description: Used for crafting
   itemImage: {fileID: -318911390704657791, guid: e115aaa8693a0f84da614c5ba619f3dd, type: 3}
   stackable: 1
   maxStack: 99
+  itemType: 0
+  weaponType: 0
