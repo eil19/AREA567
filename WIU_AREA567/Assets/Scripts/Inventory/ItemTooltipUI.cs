@@ -40,8 +40,7 @@ public class ItemTooltipUI : MonoBehaviour
         descriptionText.text = item.itemData.description;
 
         // materials cannot be used by player
-        bool canUse = item.itemEffect != null
-            && item.itemData.itemType == ItemType.Consumable;
+        bool canUse = item.itemData.itemType == ItemType.Consumable;
 
         useButton.gameObject.SetActive(canUse);
         gameObject.SetActive(true);
