@@ -3,8 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EndingController :
-    MonoBehaviour
+public class EndingController : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField]
@@ -14,7 +13,7 @@ public class EndingController :
     private TMP_Text endingText;
 
     [SerializeField]
-    private GameObject mainMenuButton;
+    private GameObject exitButton;
 
     [Header("Dialogue")]
     [SerializeField]
@@ -38,13 +37,23 @@ public class EndingController :
 
     private void Start()
     {
-        endingPanel.SetActive(false);
+        if (endingPanel != null)
+        {
+            endingPanel.SetActive(false);
+        }
+
+        if (exitButton != null)
+        {
+            exitButton.SetActive(false);
+        }
     }
 
     public void BeginEnding()
     {
         if (hasStarted)
+        {
             return;
+        }
 
         hasStarted = true;
 
@@ -57,13 +66,26 @@ public class EndingController :
     {
         OnEndingStarted?.Invoke();
 
-        // Allow Queen death animation to play.
-        yield return new WaitForSeconds(
+        // Give the Alien Queen death animation
+        // time to finish before fading to the ending.
+        yield return new WaitForSecondsRealtime(
             bossDeathDelay
         );
 
-        endingPanel.SetActive(true);
-        mainMenuButton.SetActive(false);
+        if (endingPanel != null)
+        {
+            endingPanel.SetActive(true);
+        }
+
+        if (exitButton != null)
+        {
+            exitButton.SetActive(false);
+        }
+
+        if (endingText != null)
+        {
+            endingText.text = "";
+        }
 
         if (endingDialogue != null &&
             endingDialogue.lines != null)
@@ -84,7 +106,10 @@ public class EndingController :
             "Congratulations! You defeated the Alien Queen!"
         );
 
-        mainMenuButton.SetActive(true);
+        if (exitButton != null)
+        {
+            exitButton.SetActive(true);
+        }
 
         OnEndingFinished?.Invoke();
     }
@@ -92,6 +117,11 @@ public class EndingController :
     private IEnumerator TypeLine(
         string line)
     {
+        if (endingText == null)
+        {
+            yield break;
+        }
+
         endingText.text = "";
 
         foreach (char character in line)
