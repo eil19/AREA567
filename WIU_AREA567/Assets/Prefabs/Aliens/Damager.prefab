@@ -227,6 +227,7 @@ MonoBehaviour:
   lastAttackTime: -999
   lastHealTime: -999
   lastSpecialAttackTime: -999
+  essenceSpawnOffset: {x: 0, y: -3, z: 0}
   alienID: Damager
   homePosition: {x: 0, y: 0, z: 0}
 --- !u!61 &4632252193497347046

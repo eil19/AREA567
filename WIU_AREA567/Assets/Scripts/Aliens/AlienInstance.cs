@@ -25,7 +25,7 @@ public class AlienInstance : MonoBehaviour
     private Animator animator;
 
     [SerializeField]
-    private Vector3 essenceSpawnOffset = new Vector3(0f, -0.5f, 0f);
+    private Vector3 essenceSpawnOffset = new Vector3(0f, -3.0f, 0f);
 
     [Header("Persistence")]
     [SerializeField] private string alienID;
