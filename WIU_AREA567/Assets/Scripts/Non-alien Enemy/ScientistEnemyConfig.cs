@@ -10,4 +10,8 @@ public class ScientistEnemyConfig : ScriptableObject
     public float throwCooldown = 1.5f;
     public float projectileSpeed = 6f;
     public float deathCleanupDelay = 1f;
+
+    [Header("Detection")]
+    public float stealthDetectionMultiplier = 0.5f;
+    public LayerMask wallLayer;
 }

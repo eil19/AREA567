@@ -9,4 +9,8 @@ public class SecurityGuardConfig : ScriptableObject
     public float attackCooldown = 1f;
     public int damageAmount = 15;
     public float deathCleanupDelay = 1f;
+
+    [Header("Detection")]
+    public float stealthDetectionMultiplier = 0.5f;
+    public LayerMask wallLayer;
 }

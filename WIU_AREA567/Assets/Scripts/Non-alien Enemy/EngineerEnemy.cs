@@ -20,6 +20,7 @@ public class EngineerEnemy : MonoBehaviour
     private Damageable damageable;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private PlayerController playerController;
 
     private State currentState = State.Idle;
     private Vector2 moveDirection = Vector2.zero;
@@ -39,6 +40,11 @@ public class EngineerEnemy : MonoBehaviour
             if (playerObj != null) player = playerObj.transform;
         }
 
+        if (player != null)
+        {
+            playerController = player.GetComponent<PlayerController>();
+        }
+
         damageable.OnDeath.AddListener(HandleDeath);
     }
 
@@ -53,7 +59,7 @@ public class EngineerEnemy : MonoBehaviour
         {
             case State.Idle:
                 moveDirection = Vector2.zero;
-                if (distanceToPlayer <= config.detectionRange)
+                if (CanDetectPlayer(distanceToPlayer))
                 {
                     currentState = State.Pursue;
                 }
@@ -111,6 +117,20 @@ public class EngineerEnemy : MonoBehaviour
     {
         if (currentState == State.Dead) return;
         body.linearVelocity = moveDirection * config.moveSpeed;
+    }
+
+    private bool CanDetectPlayer(float distanceToPlayer)
+    {
+        float effectiveRange = config.detectionRange;
+        if (playerController != null && playerController.IsStealthed)
+        {
+            effectiveRange *= config.stealthDetectionMultiplier;
+        }
+
+        if (distanceToPlayer > effectiveRange) return false;
+
+        RaycastHit2D hit = Physics2D.Linecast(transform.position, player.position, config.wallLayer);
+        return hit.collider == null;
     }
 
     private void UpdateAnimator(Vector2 facingDirection, bool isMoving)
