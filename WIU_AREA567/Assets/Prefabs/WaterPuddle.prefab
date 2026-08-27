@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4620798079909699580
+--- !u!1 &8902660798152994329
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 204404490756303981}
-  - component: {fileID: 7214297478257547989}
-  - component: {fileID: 7848254288208377093}
-  - component: {fileID: 7870871435713352606}
+  - component: {fileID: 8300871136219544624}
+  - component: {fileID: 1724304664588420534}
+  - component: {fileID: 1040418219714951705}
+  - component: {fileID: 4273412222792858924}
   m_Layer: 0
   m_Name: WaterPuddle
   m_TagString: Untagged
@@ -19,29 +19,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &204404490756303981
+--- !u!4 &8300871136219544624
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4620798079909699580}
+  m_GameObject: {fileID: 8902660798152994329}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.02, y: -15.54, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 23.273136, y: -15.419959, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7214297478257547989
+--- !u!212 &1724304664588420534
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4620798079909699580}
+  m_GameObject: {fileID: 8902660798152994329}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0.23259068, b: 1, a: 1}
+  m_Sprite: {fileID: -6557000388059723178, guid: 38da1e3fb1359b14685836c96ff9c8cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -93,13 +93,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &7848254288208377093
-CircleCollider2D:
+--- !u!114 &1040418219714951705
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4620798079909699580}
+  m_GameObject: {fileID: 8902660798152994329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6e80b23e81301448210aba100493bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterPuddle
+  slowMultiplier: 0.5
+  duration: 4
+  targetTag: Player
+--- !u!70 &4273412222792858924
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902660798152994329}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -127,20 +142,6 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &7870871435713352606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4620798079909699580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6e80b23e81301448210aba100493bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterPuddle
-  slowMultiplier: 0.5
-  duration: 4
-  targetTag: Player
+  m_Offset: {x: -0.041007996, y: 0.04099846}
+  m_Size: {x: 4.363823, y: 4.363823}
+  m_Direction: 0
