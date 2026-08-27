@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ResearchSplashPotion
   m_EditorClassIdentifier: Assembly-CSharp::ResearchData
   researchName: Splash Potion
-  description: 
-  icon: {fileID: 0}
+  description: Scrap + Chemical
+  icon: {fileID: 21300000, guid: 59e165b2132f3fa499baf60c11c40333, type: 3}
   category: 0
   unlockedRecipe: {fileID: 11400000, guid: a4b1cf5e904ad2f488f90df7ef3d79f6, type: 2}
   relatedAlienCategory: 4
