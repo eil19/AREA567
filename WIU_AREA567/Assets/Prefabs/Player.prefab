@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 8689203423987896027}
   - component: {fileID: 2166797974003004678}
   - component: {fileID: 6453097505500589520}
+  - component: {fileID: 6769059825820402200}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -474,6 +475,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.9}
   m_Size: {x: 1.31, y: 1.8}
   m_Direction: 0
+--- !u!114 &6769059825820402200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513979378496533052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67d856239f31f44b9cf482af29ec4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerOrganisation
+  playerController: {fileID: 1259108513913241240}
+  holdPoint: {fileID: 7832747358973802329}
+  actionRange: 1
+  actionRadius: 0.5
+  organisableLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  placementZoneLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1 &3828207482115882165
 GameObject:
   m_ObjectHideFlags: 0
