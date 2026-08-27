@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class EndingController :
     MonoBehaviour
 {
-    [Header("UI")]
     [SerializeField]
     private GameObject endingPanel;
 
@@ -14,13 +13,11 @@ public class EndingController :
     private TMP_Text endingText;
 
     [SerializeField]
-    private GameObject mainMenuButton;
+    private GameObject exitButton;
 
-    [Header("Dialogue")]
     [SerializeField]
     private CutsceneDialogue endingDialogue;
 
-    [Header("Timing")]
     [SerializeField]
     private float typingSpeed = 0.04f;
 
@@ -30,7 +27,6 @@ public class EndingController :
     [SerializeField]
     private float bossDeathDelay = 2f;
 
-    [Header("Events")]
     public UnityEvent OnEndingStarted;
     public UnityEvent OnEndingFinished;
 
@@ -38,7 +34,11 @@ public class EndingController :
 
     private void Start()
     {
-        endingPanel.SetActive(false);
+        if (endingPanel != null)
+            endingPanel.SetActive(false);
+
+        if (exitButton != null)
+            exitButton.SetActive(false);
     }
 
     public void BeginEnding()
@@ -48,22 +48,20 @@ public class EndingController :
 
         hasStarted = true;
 
-        StartCoroutine(
-            EndingSequence()
-        );
+        StartCoroutine(EndingSequence());
     }
 
     private IEnumerator EndingSequence()
     {
         OnEndingStarted?.Invoke();
 
-        // Allow Queen death animation to play.
-        yield return new WaitForSeconds(
-            bossDeathDelay
-        );
+        yield return
+            new WaitForSecondsRealtime(
+                bossDeathDelay
+            );
 
-        endingPanel.SetActive(true);
-        mainMenuButton.SetActive(false);
+        endingPanel?.SetActive(true);
+        exitButton?.SetActive(false);
 
         if (endingDialogue != null &&
             endingDialogue.lines != null)
@@ -84,14 +82,16 @@ public class EndingController :
             "Congratulations! You defeated the Alien Queen!"
         );
 
-        mainMenuButton.SetActive(true);
+        exitButton?.SetActive(true);
 
         OnEndingFinished?.Invoke();
     }
 
-    private IEnumerator TypeLine(
-        string line)
+    private IEnumerator TypeLine(string line)
     {
+        if (endingText == null)
+            yield break;
+
         endingText.text = "";
 
         foreach (char character in line)

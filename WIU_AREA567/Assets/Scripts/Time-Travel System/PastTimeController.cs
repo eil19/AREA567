@@ -24,20 +24,26 @@ public class PastTimeController : MonoBehaviour
 
     private void Update()
     {
-        if (!timerRunning) return;
-        remainingTime -= Time.deltaTime;
-        if (remainingTime <= 0.0f)
-        {
-            remainingTime = 0.0f;
-        }
-            OnTimeChanged?.Invoke(remainingTime);
+        if (!timerRunning)
+            return;
 
-        if (remainingTime <= 0.0f)
+        remainingTime -= Time.deltaTime;
+
+        if (remainingTime <= 0f)
         {
+            remainingTime = 0f;
+
+            OnTimeChanged?.Invoke(
+                remainingTime
+            );
+
             ExpireTimer();
             return;
         }
-        OnTimeChanged?.Invoke(remainingTime);
+
+        OnTimeChanged?.Invoke(
+            remainingTime
+        );
     }
 
     public void StartTimer()

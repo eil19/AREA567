@@ -71,9 +71,23 @@ public class PlayerInteractor : MonoBehaviour
 
         if (InputSystem.actions["Interact"].WasPressedThisFrame())
         {
-            if (interactHit != null && interactHit.TryGetComponent(out IInteractable interactable))
+            if (interactHit != null)
             {
-                interactable.Interact(gameObject);
+                IInteractable interactable =
+                    interactHit
+                        .GetComponent<IInteractable>();
+
+                if (interactable == null)
+                {
+                    interactable =
+                        interactHit
+                            .GetComponentInParent<
+                                IInteractable>();
+                }
+
+                interactable?.Interact(
+                    gameObject
+                );
             }
         }
 
@@ -90,20 +104,29 @@ public class PlayerInteractor : MonoBehaviour
 
         if (InputSystem.actions["Pickup"].WasPressedThisFrame())
         {
-            if (pickupHit != null && pickupHit.TryGetComponent(out IPickupable pickupable))
+            if (pickupHit != null)
             {
-                pickupable.Pickup(gameObject);
+                IPickupable pickupable =
+                    pickupHit
+                        .GetComponent<IPickupable>();
 
-                // The picked-up object may destroy itself this same frame
-                // (ResearchNote does). Don't rely on next frame's overlap
-                // check to notice - a reference to a just-destroyed
-                // GameObject compares equal to null via Unity's overloaded
-                // operators, which silently breaks the change-detection
-                // above. Force the lost-focus event now instead.
-                if (currentFocusedPickup != null)
+                if (pickupable == null)
                 {
-                    OnPickupLostFocus?.Invoke();
-                    currentFocusedPickup = null;
+                    pickupable =
+                        pickupHit
+                            .GetComponentInParent<
+                                IPickupable>();
+                }
+
+                if (pickupable != null)
+                {
+                    pickupable.Pickup(gameObject);
+
+                    if (currentFocusedPickup != null)
+                    {
+                        OnPickupLostFocus?.Invoke();
+                        currentFocusedPickup = null;
+                    }
                 }
             }
         }

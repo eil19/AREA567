@@ -1,16 +1,16 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BossAreaGate : MonoBehaviour,
+public class BossArenaGate :
+    MonoBehaviour,
     IInteractable
 {
-    [Header("References")]
-    [SerializeField] private DayManager dayManager;
-    [SerializeField] private SceneFlowManager sceneFlowManager;
+    [SerializeField]
+    private DayManager dayManager;
 
     [Header("Events")]
-    public UnityEvent OnBossAreaUnlocked;
     public UnityEvent OnBossAreaLocked;
+    public UnityEvent OnBossFightRequested;
 
     private bool isUnlocked;
 
@@ -22,19 +22,13 @@ public class BossAreaGate : MonoBehaviour,
                 FindFirstObjectByType<DayManager>();
         }
 
-        if (sceneFlowManager == null)
-        {
-            sceneFlowManager =
-                FindFirstObjectByType<SceneFlowManager>();
-        }
-
         if (dayManager != null)
         {
             dayManager.OnDayChanged.AddListener(
-                CheckBossAvailability
+                CheckAvailability
             );
 
-            CheckBossAvailability(
+            CheckAvailability(
                 dayManager.DaysRemaining
             );
         }
@@ -44,47 +38,26 @@ public class BossAreaGate : MonoBehaviour,
     {
         if (dayManager != null)
         {
-            dayManager.OnDayChanged.RemoveListener(
-                CheckBossAvailability
-            );
+            dayManager.OnDayChanged
+                .RemoveListener(
+                    CheckAvailability
+                );
         }
     }
 
-    private void CheckBossAvailability(
-        int daysRemaining)
+    private void CheckAvailability(int days)
     {
-        bool shouldUnlock =
-            daysRemaining <= 0;
-
-        if (shouldUnlock &&
-            !isUnlocked)
-        {
-            isUnlocked = true;
-
-            Debug.Log(
-                "Boss area is now available."
-            );
-
-            OnBossAreaUnlocked?.Invoke();
-        }
+        isUnlocked = days <= 0;
     }
 
-    public void Interact(
-        GameObject interactor)
+    public void Interact(GameObject interactor)
     {
         if (!isUnlocked)
         {
-            Debug.Log(
-                "The Alien Queen has not returned yet."
-            );
-
             OnBossAreaLocked?.Invoke();
             return;
         }
 
-        if (sceneFlowManager != null)
-        {
-            sceneFlowManager.LoadBoss();
-        }
+        OnBossFightRequested?.Invoke();
     }
 }

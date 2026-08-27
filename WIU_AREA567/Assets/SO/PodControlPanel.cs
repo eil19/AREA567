@@ -1,8 +1,8 @@
 using System.Collections;
 using TMPro;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using Unity.Cinemachine;
 
 public class PodControlPanel : MonoBehaviour, IInteractable
@@ -39,6 +39,9 @@ public class PodControlPanel : MonoBehaviour, IInteractable
     [SerializeField] private string reactionTrigger = "SplashReact";
     [SerializeField] private float reactionFallbackDuration = 2f;
     [SerializeField] private float cameraBlendDelay = 1.5f;
+
+    [Header("Events")]
+    public UnityEvent OnAlienTamed;
 
     private PlayerInteractor playerInteractor;
     private bool isFocused;
@@ -257,6 +260,10 @@ public class PodControlPanel : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(cameraBlendDelay);
 
         bool success = linkedAlien.AttemptTame();
+        if (success)
+        {
+            OnAlienTamed?.Invoke();
+        }
 
         ShowTameResult(success ? "Tamed!" : "Taming failed, try again.", tameResultDisplayDuration);
 
