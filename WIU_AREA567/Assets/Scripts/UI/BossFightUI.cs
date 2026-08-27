@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BossFightConfirmationUI : MonoBehaviour
+public class BossFightUI : MonoBehaviour
 {
     [SerializeField]
     private GameObject panel;

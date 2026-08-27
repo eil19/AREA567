@@ -26,6 +26,27 @@ public class AlienInstance : MonoBehaviour
 
     private Vector3 offset = new Vector3(0, -2, 0);
 
+    [Header("Persistence")]
+    [SerializeField] private string alienID;
+
+    private void Start()
+    {
+        identified =
+            AlienRunData.IsIdentified(
+                alienID
+            );
+
+        isTamed =
+            AlienRunData.IsTamed(
+                alienID
+            );
+
+        if (isTamed)
+        {
+            SetTamedLayer();
+        }
+    }
+
     [ContextMenu("TEST: Force Identify")]
     private void TestForceIdentify()
     {
@@ -91,6 +112,10 @@ public class AlienInstance : MonoBehaviour
     public void MarkIdentified()
     {
         identified = true;
+
+        AlienRunData.MarkIdentified(
+            alienID
+        );
     }
 
     public void SpawnEssence()
@@ -113,10 +138,14 @@ public class AlienInstance : MonoBehaviour
         bool correct = alienType != null && guess == alienType.category;
         if (correct)
         {
-            identified = true; // Mark as identified ONLY when guessed correctly
+            identified = true;
             _guessed = true;
+
+            AlienRunData.MarkIdentified(
+                alienID
+            );
+
             SpawnEssence();
-            Debug.Log("[AlienInstance] Correct guess! Alien identified.");
         }
         else
         {
@@ -132,7 +161,12 @@ public class AlienInstance : MonoBehaviour
         if (success)
         {
             tameSuccessTrigger = true;
-            isTamed = true; // Mark tamed on success
+            isTamed = true;
+
+            AlienRunData.MarkTamed(
+                alienID
+            );
+
             SetTamedLayer();
         }
         else
@@ -157,7 +191,17 @@ public class AlienInstance : MonoBehaviour
 
     public void SetTased()
     {
-       isTased = true;
+        isTased = true;
+
+        if (stateController != null)
+        {
+            stateController.isTased = true;
+        }
+
+        Debug.Log(
+            gameObject.name +
+            " was tased."
+        );
     }
 
     public void TriggerSplashReaction()

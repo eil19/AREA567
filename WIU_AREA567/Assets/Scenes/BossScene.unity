@@ -102572,7 +102572,7 @@ MonoBehaviour:
   audioSettings: {fileID: 11400000, guid: 9ce4658360af1b445b59c417ce9088a2, type: 2}
   audioMixer: {fileID: 24100000, guid: f6ad4ca3bd5ef1146be041650dd18845, type: 2}
   musicSource: {fileID: 914852365}
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 8300000, guid: 2b15fde0be8dfef4d803f042a3cc967d, type: 3}
   sfxSource: {fileID: 809665174}
 --- !u!4 &657228083
 Transform:
@@ -104497,7 +104497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12bce99c1ee3fad42ab60a3151f2fd34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameOverController
-  gameOverPanel: {fileID: 0}
+  gameOverPanel: {fileID: 1191739334}
 --- !u!4 &1270520489
 Transform:
   m_ObjectHideFlags: 0

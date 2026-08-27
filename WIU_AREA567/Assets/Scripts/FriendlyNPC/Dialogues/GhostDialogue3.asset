@@ -15,6 +15,6 @@ MonoBehaviour:
   npcName: Ghost Scientist #3
   npcPortrait: {fileID: 21300000, guid: 86a136b13c694d947a724e4edd3bb073, type: 3}
   dialogueLines:
-  - 'Hello there young person! '
-  - I am a ghost of the past
-  - You may find research notes around the lab
+  - Beware of the enemies around the lab
+  - They are dangerous
+  - Use your weapons to help

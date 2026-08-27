@@ -8,27 +8,38 @@ public class OrganisationBarUI : MonoBehaviour
     [SerializeField] private TMP_Text progressText;
     [SerializeField] private TMP_Text statusText;
 
-    private void OnEnable()
-    {
-        if (OrganisationManager.Instance != null)
-        {
-            OrganisationManager.Instance
-                .OnProgressChanged
-                .AddListener(UpdateBar);
+    private OrganisationManager organisationManager;
 
-            UpdateBar(
-                OrganisationManager.Instance
-                    .PercentOrganised
-            );
+    private void Start()
+    {
+        organisationManager =
+            OrganisationManager.Instance;
+
+        if (organisationManager == null)
+        {
+            organisationManager =
+                FindFirstObjectByType<
+                    OrganisationManager>();
         }
+
+        if (organisationManager == null)
+        {
+            return;
+        }
+
+        organisationManager.OnProgressChanged
+            .AddListener(UpdateBar);
+
+        UpdateBar(
+            organisationManager.PercentOrganised
+        );
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
-        if (OrganisationManager.Instance != null)
+        if (organisationManager != null)
         {
-            OrganisationManager.Instance
-                .OnProgressChanged
+            organisationManager.OnProgressChanged
                 .RemoveListener(UpdateBar);
         }
     }
@@ -38,22 +49,22 @@ public class OrganisationBarUI : MonoBehaviour
         if (progressSlider != null)
         {
             progressSlider.value = percent;
+        }
 
-            if (progressText != null)
-            {
-                progressText.text =
-                    Mathf.RoundToInt(percent * 100f) +
-                    "% Restored";
-            }
+        if (progressText != null)
+        {
+            progressText.text =
+                Mathf.RoundToInt(percent * 100f) +
+                "% Restored";
+        }
 
-            if (statusText != null)
-            {
-                statusText.text =
-                    OrganisationManager.Instance != null &&
-                    OrganisationManager.Instance.HasMetThreshold
-                        ? "Time Travel Available"
-                        : "Restore the laboratory";
-            }
+        if (statusText != null)
+        {
+            statusText.text =
+                organisationManager != null &&
+                organisationManager.HasMetThreshold
+                    ? "Time Travel Available"
+                    : "Restore the laboratory";
         }
     }
 }

@@ -16,6 +16,7 @@ public class GameSessionManager : MonoBehaviour
     {
         OrganisationRunData.ResetRun();
         DoorRunData.ResetRun();
+        AlienRunData.ResetRun();
 
         if (inventory != null)
             inventory.ClearInventory();

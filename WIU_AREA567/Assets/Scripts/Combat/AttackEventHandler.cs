@@ -54,14 +54,35 @@ public class AttackEventHandler : MonoBehaviour
 
     public void TaserCheck()
     {
-        if (attackPoint == null) return;
+        if (attackPoint == null)
+            return;
 
         attackPoint.gameObject.SetActive(true);
-        Collider2D hit = Physics2D.OverlapCircle(attackPoint.position, attackRadius, layerToCheck);
-        if (hit != null && hit.CompareTag(alienTag) && hit.TryGetComponent(out Stunnable stunnableTarget))
+
+        Collider2D hit =
+            Physics2D.OverlapCircle(
+                attackPoint.position,
+                attackRadius,
+                layerToCheck
+            );
+
+        if (hit == null)
+            return;
+
+        AlienInstance alien =
+            hit.GetComponent<AlienInstance>();
+
+        if (alien == null)
         {
-            stunnableTarget.Stun(stunDuration);
+            alien =
+                hit.GetComponentInParent<
+                    AlienInstance>();
         }
+
+        if (alien == null)
+            return;
+
+        alien.SetTased();
     }
 
     public bool TryStartRangedAttack()

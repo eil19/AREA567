@@ -22,10 +22,24 @@ public class TamingDayProgression : MonoBehaviour
         if (dayManager.DaysRemaining <= 0)
             return;
 
-        int amount =
-            dayManager.DaysRemaining > 1
-                ? 2
-                : 1;
+        int daysRemaining =
+            dayManager.DaysRemaining;
+
+        int amount;
+
+        // Three tame milestones:
+        //
+        // 7 -> 5
+        // 5 -> 3
+        // 3 -> 0
+        if (daysRemaining <= 3)
+        {
+            amount = daysRemaining;
+        }
+        else
+        {
+            amount = 2;
+        }
 
         dayManager.AdvanceDays(amount);
     }

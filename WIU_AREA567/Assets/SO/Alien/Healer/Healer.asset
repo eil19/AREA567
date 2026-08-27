@@ -24,5 +24,5 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
-  essencePrefab: {fileID: 0}
-  essenceItemData: {fileID: 0}
+  essencePrefab: {fileID: 8960216889238441442, guid: 9d92cd91f37850e44a18d95b6e7649a8, type: 3}
+  essenceItemData: {fileID: 11400000, guid: 91b98353b962d1d42920783c62367b52, type: 2}
