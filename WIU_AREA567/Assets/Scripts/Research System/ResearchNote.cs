@@ -1,7 +1,9 @@
 using UnityEngine;
 
-// Mirrors Item.cs's IPickupable pattern (a physical Research Note object tat doesnt take up space in inventory)
-
+// Mirrors Item.cs's IPickupable pattern - a physical Research Note object
+// in the world. On pickup, adds to the persistent ResearchLog instead of
+// Sze Yee's Inventory - Research Notes don't take up one of the 5 physical
+// item slots, they're knowledge, not a resource.
 public class ResearchNote : MonoBehaviour, IPickupable
 {
     [SerializeField] private ResearchData researchData;
