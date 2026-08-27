@@ -18,9 +18,26 @@ public class BossFightUI : MonoBehaviour
     public void Confirm()
     {
         if (panel != null)
+        {
             panel.SetActive(false);
+        }
 
         OnConfirmed?.Invoke();
+
+        SceneFlowManager sceneFlowManager =
+            FindFirstObjectByType<
+                SceneFlowManager>();
+
+        if (sceneFlowManager != null)
+        {
+            sceneFlowManager.LoadBoss();
+        }
+        else
+        {
+            Debug.LogError(
+                "BossFightUI: SceneFlowManager not found."
+            );
+        }
     }
 
     public void Cancel()

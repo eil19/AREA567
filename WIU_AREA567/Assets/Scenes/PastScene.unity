@@ -1195,11 +1195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.400536
+      value: -39.85
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.669033
+      value: -27.36
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30706,11 +30706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.7097
+      value: -36.34
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.973824
+      value: 22.3
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31053,11 +31053,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.123627
+      value: 11.07
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.824635
+      value: -14.03
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31684,6 +31684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417119254}
   - component: {fileID: 417119255}
+  - component: {fileID: 417119256}
   m_Layer: 0
   m_Name: lockedDoor
   m_TagString: Untagged
@@ -31765,6 +31766,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &417119256
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417119253}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.125, y: 4.1875}
+    newSize: {x: 8.125, y: 4.1875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.125, y: 4.1875}
+  m_EdgeRadius: 0
 --- !u!1 &433375143
 GameObject:
   m_ObjectHideFlags: 0
@@ -32221,7 +32268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848c3705a56624a9846d5d551eed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WirePuzzleDoor
-  puzzleController: {fileID: 0}
+  puzzleController: {fileID: 1664961551}
   blockingCollider: {fileID: 460378179}
   lockedVisual: {fileID: 1160579567}
   unlockedLeftVisual: {fileID: 765377096}
@@ -109407,11 +109454,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.312002
+      value: -12.33
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.138214
+      value: -24.55
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110504,11 +110551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.2719364
+      value: -4.81
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.944668
+      value: -14.89
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110600,7 +110647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848c3705a56624a9846d5d551eed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WirePuzzleDoor
-  puzzleController: {fileID: 0}
+  puzzleController: {fileID: 1664961551}
   blockingCollider: {fileID: 599072295}
   lockedVisual: {fileID: 1378468319}
   unlockedLeftVisual: {fileID: 1624162852}
@@ -110986,74 +111033,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1001 &661394116
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1783434128520917698, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_Name
-      value: PersistentManagers
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.97436
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.29113
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061401804986170731, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
---- !u!114 &661394117 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9054898825319672062, guid: 40f5c168001f8c34fa60fb65f7b551bb, type: 3}
-  m_PrefabInstance: {fileID: 661394116}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48098da86f28c9543835465b804d2e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameSessionManager
 --- !u!1 &670267723
 GameObject:
   m_ObjectHideFlags: 0
@@ -111195,7 +111174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848c3705a56624a9846d5d551eed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WirePuzzleDoor
-  puzzleController: {fileID: 0}
+  puzzleController: {fileID: 1664961551}
   blockingCollider: {fileID: 680818379}
   lockedVisual: {fileID: 224637921}
   unlockedLeftVisual: {fileID: 1286063638}
@@ -112478,6 +112457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826072642}
   - component: {fileID: 826072643}
+  - component: {fileID: 826072644}
   m_Layer: 0
   m_Name: locekdDoor (2)
   m_TagString: Untagged
@@ -112559,6 +112539,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &826072644
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826072641}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.125, y: 4.1875}
+    newSize: {x: 8.125, y: 4.1875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.125, y: 4.1875}
+  m_EdgeRadius: 0
 --- !u!1 &832740867
 GameObject:
   m_ObjectHideFlags: 0
@@ -112607,7 +112633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848c3705a56624a9846d5d551eed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WirePuzzleDoor
-  puzzleController: {fileID: 0}
+  puzzleController: {fileID: 1664961551}
   blockingCollider: {fileID: 832740870}
   lockedVisual: {fileID: 743287066}
   unlockedLeftVisual: {fileID: 25344692}
@@ -135176,11 +135202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.130642
+      value: -39.43
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.91092
+      value: -20.4
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -135272,7 +135298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848c3705a56624a9846d5d551eed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WirePuzzleDoor
-  puzzleController: {fileID: 0}
+  puzzleController: {fileID: 1664961551}
   blockingCollider: {fileID: 1026136217}
   lockedVisual: {fileID: 914397880}
   unlockedLeftVisual: {fileID: 653056319}
@@ -135340,6 +135366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046130887}
   - component: {fileID: 1046130888}
+  - component: {fileID: 1046130889}
   m_Layer: 0
   m_Name: tilesStuff_50 (2)
   m_TagString: Untagged
@@ -135421,6 +135448,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1046130889
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046130886}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.875, y: 4.5625}
+    newSize: {x: 2.875, y: 4.5625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.875, y: 4.5625}
+  m_EdgeRadius: 0
 --- !u!1 &1049837347
 GameObject:
   m_ObjectHideFlags: 0
@@ -135780,11 +135853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.574276
+      value: 26.02
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.058226
+      value: -15.68
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -136192,6 +136265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1131662670}
   - component: {fileID: 1131662671}
+  - component: {fileID: 1131662672}
   m_Layer: 0
   m_Name: tilesStuff_62 (1)
   m_TagString: Untagged
@@ -136273,6 +136347,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1131662672
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131662669}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.53125, y: 2.75}
+    newSize: {x: 4.53125, y: 2.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.53125, y: 2.75}
+  m_EdgeRadius: 0
 --- !u!1 &1159205862
 GameObject:
   m_ObjectHideFlags: 0
@@ -136283,6 +136403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159205863}
   - component: {fileID: 1159205864}
+  - component: {fileID: 1159205865}
   m_Layer: 0
   m_Name: locekdDoor
   m_TagString: Untagged
@@ -136364,6 +136485,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1159205865
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159205862}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.125, y: 4.1875}
+    newSize: {x: 8.125, y: 4.1875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.125, y: 4.1875}
+  m_EdgeRadius: 0
 --- !u!1 &1160579567
 GameObject:
   m_ObjectHideFlags: 0
@@ -136656,6 +136823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1233083694}
   - component: {fileID: 1233083695}
+  - component: {fileID: 1233083696}
   m_Layer: 0
   m_Name: locekdDoor
   m_TagString: Untagged
@@ -136737,6 +136905,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1233083696
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233083693}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.125, y: 4.1875}
+    newSize: {x: 8.125, y: 4.1875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.125, y: 4.1875}
+  m_EdgeRadius: 0
 --- !u!1 &1260728356
 GameObject:
   m_ObjectHideFlags: 0
@@ -136983,6 +137197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270719396}
   - component: {fileID: 1270719397}
+  - component: {fileID: 1270719398}
   m_Layer: 0
   m_Name: tilesStuff_51
   m_TagString: Untagged
@@ -137064,6 +137279,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1270719398
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270719395}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.375, y: 5.59375}
+    newSize: {x: 1.375, y: 5.59375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.375, y: 5.59375}
+  m_EdgeRadius: 0
 --- !u!1 &1276806120
 GameObject:
   m_ObjectHideFlags: 0
@@ -137164,6 +137425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283317864}
   - component: {fileID: 1283317865}
+  - component: {fileID: 1283317866}
   m_Layer: 0
   m_Name: locekdDoor (1)
   m_TagString: Untagged
@@ -137245,6 +137507,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1283317866
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283317863}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.125, y: 4.1875}
+    newSize: {x: 8.125, y: 4.1875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.125, y: 4.1875}
+  m_EdgeRadius: 0
 --- !u!1 &1286063638
 GameObject:
   m_ObjectHideFlags: 0
@@ -138536,6 +138844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519098199}
   - component: {fileID: 1519098200}
+  - component: {fileID: 1519098201}
   m_Layer: 0
   m_Name: locekdDoor (3)
   m_TagString: Untagged
@@ -138617,6 +138926,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1519098201
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519098198}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.125, y: 4.1875}
+    newSize: {x: 8.125, y: 4.1875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.125, y: 4.1875}
+  m_EdgeRadius: 0
 --- !u!1001 &1519138967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139007,6 +139362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1547200158}
   - component: {fileID: 1547200159}
+  - component: {fileID: 1547200160}
   m_Layer: 0
   m_Name: tilesStuff_50 (3)
   m_TagString: Untagged
@@ -139088,6 +139444,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1547200160
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547200157}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.875, y: 4.5625}
+    newSize: {x: 2.875, y: 4.5625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.875, y: 4.5625}
+  m_EdgeRadius: 0
 --- !u!1 &1558584716
 GameObject:
   m_ObjectHideFlags: 0
@@ -143759,6 +144161,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2050717848947219414, guid: aeff502f38d9bbf4db60e6845d7fec9f, type: 3}
   m_PrefabInstance: {fileID: 1664961549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1664961551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1826749882700137576, guid: aeff502f38d9bbf4db60e6845d7fec9f, type: 3}
+  m_PrefabInstance: {fileID: 1664961549}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714ad0958c8cc614790a57a113f640a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WirePuzzleController
 --- !u!114 &1664961553 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 662664033808964, guid: aeff502f38d9bbf4db60e6845d7fec9f, type: 3}
@@ -144166,7 +144579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.359568
+      value: -14.48
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -144228,11 +144641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.953524
+      value: -14.96
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.05508
+      value: -23.29
       objectReference: {fileID: 0}
     - target: {fileID: 5755344388305321372, guid: 8c4f6675f67f6a34a8e99f06cf29ea71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -144486,6 +144899,10 @@ PrefabInstance:
     - target: {fileID: 3513979378496533052, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223130364137161549, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4223878342237065612, guid: ef0a275b20e0cdb4c8b856133385e30f, type: 3}
       propertyPath: OnPickupFocused.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -145441,7 +145858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848c3705a56624a9846d5d551eed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WirePuzzleDoor
-  puzzleController: {fileID: 0}
+  puzzleController: {fileID: 1664961551}
   blockingCollider: {fileID: 1914012363}
   lockedVisual: {fileID: 1768961385}
   unlockedLeftVisual: {fileID: 798702108}
@@ -145575,11 +145992,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.133724
+      value: 25.78
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.1156
+      value: -14.78
       objectReference: {fileID: 0}
     - target: {fileID: 2400220263264536360, guid: 9051d6ad8be33184ea77115bc0eb55e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -146083,7 +146500,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1579241493}
   settingsPanel: {fileID: 2080542582}
   overlay: {fileID: 1418936593}
-  gameSessionManager: {fileID: 661394117}
+  gameSessionManager: {fileID: 0}
 --- !u!4 &1995281426
 Transform:
   m_ObjectHideFlags: 0
@@ -146486,7 +146903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f848c3705a56624a9846d5d551eed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WirePuzzleDoor
-  puzzleController: {fileID: 0}
+  puzzleController: {fileID: 1664961551}
   blockingCollider: {fileID: 2065435742}
   lockedVisual: {fileID: 1733574449}
   unlockedLeftVisual: {fileID: 154458279}
@@ -147172,5 +147589,4 @@ SceneRoots:
   - {fileID: 810595506}
   - {fileID: 2905474}
   - {fileID: 1095476220}
-  - {fileID: 661394116}
   - {fileID: 143324296}

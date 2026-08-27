@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,55 +12,107 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private ItemTooltipUI tooltipUI;
     [SerializeField] private GameObject player;
 
-    private void Start()
+    private IEnumerator Start()
     {
-        if (inventory == null)
+        // Allow persistent objects and scene player
+        // to finish appearing after scene load.
+        yield return null;
+
+        while (inventory == null)
         {
-            inventory = FindFirstObjectByType<Inventory>();
+            inventory =
+                FindFirstObjectByType<Inventory>();
+
+            if (inventory == null)
+            {
+                yield return null;
+            }
         }
-        if (player == null)
+
+        while (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
-        if (inventory != null)
-        {
-            inventory.OnInventoryChanged.AddListener(RefreshInventory);
+            player =
+                GameObject.FindGameObjectWithTag(
+                    "Player"
+                );
+
+            if (player == null)
+            {
+                yield return null;
+            }
         }
 
         InitialiseSlots();
-        RefreshInventory();
-    }
 
-    private void OnDestroy()
-    {
-        if (inventory != null)
-        {
-            inventory.OnInventoryChanged.RemoveListener(RefreshInventory);
-        }
+        inventory.OnInventoryChanged
+            .AddListener(RefreshInventory);
+
+        RefreshInventory();
     }
 
     private void InitialiseSlots()
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].Initialise(i, inventory, dragIcon, tooltipUI);
+            if (slots[i] == null)
+            {
+                Debug.LogError(
+                    "InventoryUI slot " +
+                    i +
+                    " is missing."
+                );
+
+                continue;
+            }
+
+            slots[i].Initialise(
+                i,
+                inventory,
+                dragIcon,
+                tooltipUI
+            );
         }
 
         if (tooltipUI != null)
         {
-            tooltipUI.Initialise(inventory, player);
+            tooltipUI.Initialise(
+                inventory,
+                player
+            );
         }
     }
 
     public void RefreshInventory()
     {
-        if (inventory == null) return;
+        if (inventory == null)
+            return;
 
         for (int i = 0; i < slots.Length; i++)
         {
-            ItemInstance item = inventory.GetItem(i);
-            bool isSelected = inventory.SelectedSlotIndex == i;
-            slots[i].UpdateSlot(item, isSelected);
+            if (slots[i] == null)
+                continue;
+
+            ItemInstance item =
+                inventory.GetItem(i);
+
+            bool selected =
+                inventory.SelectedSlotIndex == i;
+
+            slots[i].UpdateSlot(
+                item,
+                selected
+            );
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (inventory != null)
+        {
+            inventory.OnInventoryChanged
+                .RemoveListener(
+                    RefreshInventory
+                );
         }
     }
 }
