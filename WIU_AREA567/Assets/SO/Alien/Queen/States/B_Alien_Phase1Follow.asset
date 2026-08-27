@@ -13,20 +13,22 @@ MonoBehaviour:
   m_Name: B_Alien_Phase1Follow
   m_EditorClassIdentifier: Assembly-CSharp::State
   initializeActions:
-  - {fileID: 11400000, guid: 68cf479c195e43c438857d64eeca9dec, type: 2}
-  - {fileID: 11400000, guid: cbbbd8bc8479e50459ad57922456413e, type: 2}
+  - {fileID: 11400000, guid: 22ac2ebed16cb6b4d9d179f18727ec7e, type: 2}
   executeActions:
-  - {fileID: 11400000, guid: ece2d35e324b5034b9352fb1ee94c719, type: 2}
-  - {fileID: 11400000, guid: cbbbd8bc8479e50459ad57922456413e, type: 2}
+  - {fileID: 11400000, guid: cdc663b1eddd13c4fa7f91ec16656cfc, type: 2}
+  - {fileID: 11400000, guid: aaed31ce4b16b8b4b8b3f4d2ea2a67c6, type: 2}
   endActions:
-  - {fileID: 11400000, guid: b2f81c68d9f6150478bc8dc3e49c9b87, type: 2}
+  - {fileID: 11400000, guid: 49f141e23d1273c41b772d17406d5e7f, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: 6cfaac03c30ff7f41892d2b3d83554fe, type: 2}
+  - decision: {fileID: 11400000, guid: cc22094bcc9dbb146afed8e06ce2e882, type: 2}
     trueState: {fileID: 11400000, guid: b8c166302046fb942b73130c0f76a69f, type: 2}
     falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}
   - decision: {fileID: 11400000, guid: c6a6e12737cb9384090ac295dffa315d, type: 2}
     trueState: {fileID: 11400000, guid: d349871cb9333b94bbbc512a1111027e, type: 2}
     falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}
+  - decision: {fileID: 11400000, guid: 1f3d50925c8615d4a831622f4992076f, type: 2}
+    trueState: {fileID: 11400000, guid: ba34f1a6d2e3d494a97a7144de57e38a, type: 2}
+    falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}
   - decision: {fileID: 11400000, guid: a5da436f3b2e475408e6c6d597c01638, type: 2}
-    trueState: {fileID: 11400000, guid: 002dc805b5d9b9b42baeb465ff0574af, type: 2}
+    trueState: {fileID: 11400000, guid: 530c959f5825aef439b73b01a7aa876e, type: 2}
     falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}

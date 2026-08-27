@@ -21,6 +21,8 @@ public class BossDamageable : Damageable
     [SerializeField] private int protectingMinionCount = 0;
     public bool IsProtected => protectingMinionCount > 0;
 
+    [HideInInspector] public float lastMinionDeathTime = -999f;
+
     protected override void Awake()
     {
         base.Awake(); // this is what was missing - health was never being reset to maxHealth
@@ -35,6 +37,10 @@ public class BossDamageable : Damageable
     public void UnregisterProtector()
     {
         protectingMinionCount = Mathf.Max(0, protectingMinionCount - 1);
+        if (protectingMinionCount == 0)
+        {
+            lastMinionDeathTime = Time.time;
+        }
     }
 
     public void ResetToughness()
