@@ -22,7 +22,7 @@ public class Damageable : MonoBehaviour
     [SerializeField] private GameObject hitVFXPrefab;
     [SerializeField] private GameObject deathVFXPrefab;
 
-    void Awake()
+    protected virtual void Awake()
     {
         currentHealth = maxHealth;
     }
@@ -37,15 +37,22 @@ public class Damageable : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            // AudioManager.Instance?.PlaySFX(deathClip); // TODO: re-enable once AudioManager exists in this project
-            if (deathVFXPrefab != null) Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
-            OnDeath?.Invoke();
+            HandleDeath();
         }
         else
         {
             // AudioManager.Instance?.PlaySFX(hurtClip); // TODO: re-enable once AudioManager exists in this project
             OnDamaged?.Invoke(amount);
         }
+    }
+
+    // intercept the moment health would hit zero - for example, to refill
+    // health and move into a second phase instead of actually dying.
+    protected virtual void HandleDeath()
+    {
+        // AudioManager.Instance?.PlaySFX(deathClip); // TODO: re-enable once AudioManager exists in this project
+        if (deathVFXPrefab != null) Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
+        OnDeath?.Invoke();
     }
 
     public void Heal(int amount)
@@ -63,6 +70,6 @@ public class Damageable : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
         // AudioManager.Instance?.PlaySFX(deathClip); // TODO: re-enable once AudioManager exists in this project
         if (deathVFXPrefab != null) Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
-        OnDeath?.Invoke();
+        HandleDeath();
     }
 }

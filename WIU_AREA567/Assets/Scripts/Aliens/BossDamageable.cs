@@ -3,25 +3,30 @@ using UnityEngine.Events;
 
 public class BossDamageable : Damageable
 {
+    [Header("Phases")]
+    [SerializeField] private int phase = 1;
+    public int Phase => phase;
+    public UnityEvent onPhaseTwoEntered; // wire animation/roar/camera shake here
+
     [Header("Toughness")]
     public int maxToughness = 100;
     [SerializeField] private int currentToughness;
     public int CurrentToughness => currentToughness;
     public bool ToughnessBroken => currentToughness <= 0;
 
-    public UnityEvent onToughnessChanged;
+    public UnityEvent onToughnessChanged; // wire to ToughnessBar
     public UnityEvent onToughnessBroken;
 
     [Header("Minion Protection")]
     [SerializeField] private int protectingMinionCount = 0;
     public bool IsProtected => protectingMinionCount > 0;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake(); // this is what was missing - health was never being reset to maxHealth
         currentToughness = maxToughness;
     }
 
-    // Called by SkeletonMinion when it spawns/dies.
     public void RegisterProtector()
     {
         protectingMinionCount++;
@@ -32,7 +37,6 @@ public class BossDamageable : Damageable
         protectingMinionCount = Mathf.Max(0, protectingMinionCount - 1);
     }
 
-    // Lets you reset the boss for a retry attempt, same idea as Damageable.ResetHealth().
     public void ResetToughness()
     {
         currentToughness = maxToughness;
@@ -41,14 +45,14 @@ public class BossDamageable : Damageable
 
     public override void TakeDamage(int damage)
     {
-        if (IsDead || damage <= 0) return;
+        if (CurrentHealth <= 0 || damage <= 0) return;
 
-        // Fully immune while skeletons are alive.
+        // Fully immune while protectors are alive.
         if (IsProtected) return;
 
         if (!ToughnessBroken)
         {
-            NotifyDamaged(damage); // still triggers Hurt animation even though health isn't affected
+            OnDamaged?.Invoke(damage); // still play the Hit reaction even though health isn't touched yet
 
             currentToughness = Mathf.Max(0, currentToughness - damage);
             onToughnessChanged?.Invoke();
@@ -61,5 +65,20 @@ public class BossDamageable : Damageable
         }
 
         base.TakeDamage(damage);
+    }
+
+    // Called by base.TakeDamage() the instant health would hit zero before OnDeath fires.
+    protected override void HandleDeath()
+    {
+        if (phase == 1)
+        {
+            phase = 2;
+            Heal(MaxHealth); // refill for the second life bar
+            ResetToughness();
+            onPhaseTwoEntered?.Invoke();
+            return; 
+        }
+
+        base.HandleDeath(); // phase 2 -> real death, VFX + OnDeath fire normally
     }
 }

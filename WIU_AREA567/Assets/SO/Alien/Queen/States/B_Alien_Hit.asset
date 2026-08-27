@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: B_Alien_Hit
   m_EditorClassIdentifier: Assembly-CSharp::State
   initializeActions:
-  - {fileID: 11400000, guid: 2538e74cc6cfb1b45a5df4192dfbf7aa, type: 2}
-  - {fileID: 11400000, guid: c885f020f0afcf444a6b11b2ab9570f6, type: 2}
+  - {fileID: 11400000, guid: 88630bbc1dcb0f2428caadb7c6b2d114, type: 2}
+  - {fileID: 11400000, guid: f94c27ce5497915488622b0a406f14f6, type: 2}
   executeActions: []
   endActions:
-  - {fileID: 11400000, guid: b86d0e7a20b7dc64dbfd248dc2e89cf7, type: 2}
+  - {fileID: 11400000, guid: 95f873fd50cb4764fba087e9f79c31d6, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: 6cfaac03c30ff7f41892d2b3d83554fe, type: 2}
-    trueState: {fileID: 11400000, guid: fd2ff0fbd88fe624183877c3662b0eb8, type: 2}
-    falseState: {fileID: 11400000, guid: 1b287acb1653878428221d5be8993330, type: 2}
-  - decision: {fileID: 11400000, guid: 42ddccf472d1f24409681b7bc895d771, type: 2}
-    trueState: {fileID: 11400000, guid: c661d3dabf45bdc43ad6646b5c3c362b, type: 2}
-    falseState: {fileID: 11400000, guid: 1b287acb1653878428221d5be8993330, type: 2}
+  - decision: {fileID: 11400000, guid: cc22094bcc9dbb146afed8e06ce2e882, type: 2}
+    trueState: {fileID: 11400000, guid: b8c166302046fb942b73130c0f76a69f, type: 2}
+    falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}
+  - decision: {fileID: 11400000, guid: 97012782ded9a164fa7fc69bc8267ada, type: 2}
+    trueState: {fileID: 11400000, guid: c75c890eb2d8bf646bc99b6b63f8f985, type: 2}
+    falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}

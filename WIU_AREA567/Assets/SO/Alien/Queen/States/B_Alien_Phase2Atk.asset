@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
+  m_Name: B_Alien_Phase2Atk
+  m_EditorClassIdentifier: Assembly-CSharp::State
+  initializeActions:
+  - {fileID: 11400000, guid: 566f812fff21cdd4ca6291bab5be2fcb, type: 2}
+  - {fileID: 11400000, guid: 9b37253a70355874bbd71750896de0ce, type: 2}
+  executeActions: []
+  endActions: []
+  transitions:
+  - decision: {fileID: 11400000, guid: cc22094bcc9dbb146afed8e06ce2e882, type: 2}
+    trueState: {fileID: 11400000, guid: b8c166302046fb942b73130c0f76a69f, type: 2}
+    falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}
+  - decision: {fileID: 11400000, guid: c6a6e12737cb9384090ac295dffa315d, type: 2}
+    trueState: {fileID: 11400000, guid: d349871cb9333b94bbbc512a1111027e, type: 2}
+    falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}
+  - decision: {fileID: 11400000, guid: a5da436f3b2e475408e6c6d597c01638, type: 2}
+    trueState: {fileID: 11400000, guid: 002dc805b5d9b9b42baeb465ff0574af, type: 2}
+    falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}

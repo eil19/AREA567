@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
   m_Name: B_Alien_Phase2Follow
   m_EditorClassIdentifier: Assembly-CSharp::State
-  initializeActions: []
+  initializeActions:
+  - {fileID: 11400000, guid: aaed31ce4b16b8b4b8b3f4d2ea2a67c6, type: 2}
+  - {fileID: 11400000, guid: cdc663b1eddd13c4fa7f91ec16656cfc, type: 2}
+  - {fileID: 11400000, guid: 22ac2ebed16cb6b4d9d179f18727ec7e, type: 2}
   executeActions: []
-  endActions: []
-  transitions: []
+  endActions:
+  - {fileID: 11400000, guid: 95f873fd50cb4764fba087e9f79c31d6, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: cc22094bcc9dbb146afed8e06ce2e882, type: 2}
+    trueState: {fileID: 11400000, guid: b8c166302046fb942b73130c0f76a69f, type: 2}
+    falseState: {fileID: 11400000, guid: 2ad53cba113a650458894294c2d21014, type: 2}

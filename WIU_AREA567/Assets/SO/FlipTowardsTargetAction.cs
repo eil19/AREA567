@@ -16,13 +16,13 @@ public class FlipTowardsTargetAction : StateAction
         {
             // ensure the x scale is negative (face one direction); flip sign if needed
             var scale = controller.transform.localScale;
-            if (scale.x > 0f) scale.x *= -1f;
+            if (scale.x < 0f) scale.x *= -1f;
             controller.transform.localScale = scale;
         }
         else if (hDiff <= -0.01f)
         {
             var scale = controller.transform.localScale;
-            if (scale.x < 0f) scale.x *= -1f;
+            if (scale.x > 0f) scale.x *= -1f;
             controller.transform.localScale = scale;
         }
     }

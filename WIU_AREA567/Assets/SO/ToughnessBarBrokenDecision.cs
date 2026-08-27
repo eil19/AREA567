@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ToughnessBarBrokenDecision", menuName = "Scriptable Objects/Decisions/ToughnessBarBrokenDecision")]
+[CreateAssetMenu(fileName = "ToughnessBarBrokenDecision", menuName = "Scriptable Objects/Decisions/ToughnessBrokenDecision")]
 public class ToughnessBarBrokenDecision : StateDecision
 {
     public override bool Decide(StateController controller)
