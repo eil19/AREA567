@@ -19,6 +19,10 @@ public class SummonMinionAction : StateAction
         if (boss.IsProtected) return;
         if (minionPrefab == null) return;
 
+        // Cooldown starts from when the last minion died, not from the last summon.
+        if (Time.time < boss.lastMinionDeathTime + summonCooldown) return;
+
+
         GameObject playerObj = GameObject.FindGameObjectWithTag(targetTag);
         Vector2 forwardDirection = Vector2.right; // fallback if the player can't be found
         if (playerObj != null)

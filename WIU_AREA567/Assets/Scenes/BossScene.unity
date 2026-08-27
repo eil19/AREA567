@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 145231578}
   - component: {fileID: 145231577}
   - component: {fileID: 145231576}
+  - component: {fileID: 145231579}
   m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
@@ -212,7 +213,7 @@ RectTransform:
   m_LocalScale: {x: 0.022807907, y: 0.022807907, z: 0.022807907}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 347777821}
+  - {fileID: 1492889522}
   - {fileID: 2143756082}
   m_Father: {fileID: 362357882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -284,6 +285,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &145231579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145231574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45630729ee7104ea52496ad3bcf007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlienHpBarUI
+  damageable: {fileID: 362357877}
+  healthSlider: {fileID: 347777822}
+  hideWhenFull: 0
+  visualRoot: {fileID: 1492889521}
 --- !u!1 &293833571
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +498,7 @@ GameObject:
   - component: {fileID: 347777821}
   - component: {fileID: 347777822}
   m_Layer: 8
-  m_Name: HealthBar
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,7 +511,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347777820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -502,12 +519,12 @@ RectTransform:
   - {fileID: 379848992}
   - {fileID: 460411266}
   - {fileID: 301796515}
-  m_Father: {fileID: 145231575}
+  m_Father: {fileID: 1492889522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 46}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: -18, y: 3.9}
+  m_SizeDelta: {x: 134.94, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &347777822
 MonoBehaviour:
@@ -615,19 +632,7 @@ MonoBehaviour:
   currentHealth: 0
   OnHealthChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 347777820}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnDamaged:
     m_PersistentCalls:
       m_Calls: []
@@ -663,6 +668,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   protectingMinionCount: 0
+  lastMinionDeathTime: -999
 --- !u!95 &362357878
 Animator:
   serializedVersion: 7
@@ -697,7 +703,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 20
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -710,7 +716,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &362357880
 CapsuleCollider2D:
@@ -746,8 +752,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.13221359, y: -0.23504615}
-  m_Size: {x: 1.2644272, y: 2.4700923}
+  m_Offset: {x: -0.19391346, y: -0.22080779}
+  m_Size: {x: 1.3878269, y: 2.8782592}
   m_Direction: 0
 --- !u!212 &362357881
 SpriteRenderer:
@@ -845,6 +851,8 @@ MonoBehaviour:
   splashReactTrigger: 0
   stateTimerStart: 0
   lastAttackTime: -999
+  lastHealTime: -999
+  homePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &379848991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,8 +1252,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 5.1, y: 0}
+  m_SizeDelta: {x: 20.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828984750
 MonoBehaviour:
@@ -1319,8 +1327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 4.68, y: 0}
+  m_SizeDelta: {x: 19.37, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905181242
 MonoBehaviour:
@@ -1395,6 +1403,42 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1492889521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492889522}
+  m_Layer: 8
+  m_Name: Health
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1492889522
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492889521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 347777821}
+  m_Father: {fileID: 145231575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 46.000004}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1827625299
 GameObject:
@@ -1781,8 +1825,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 28.7}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: -18.000017, y: 32.600014}
+  m_SizeDelta: {x: 134.94, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143756083
 MonoBehaviour:

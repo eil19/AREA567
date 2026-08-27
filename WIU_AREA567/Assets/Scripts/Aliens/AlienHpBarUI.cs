@@ -7,7 +7,6 @@ public class AlienHpBarUI : MonoBehaviour
     [SerializeField] private Slider healthSlider;
 
     [Header("Visibility")]
-    [Tooltip("Hide the bar entirely while health is full - common for regular aliens so undamaged enemies don't show a bar at all.")]
     [SerializeField] private bool hideWhenFull = false;
     [SerializeField] private GameObject visualRoot; // what actually gets shown/hidden - defaults to this GameObject if left empty
 
@@ -17,11 +16,6 @@ public class AlienHpBarUI : MonoBehaviour
         {
             damageable = GetComponentInParent<Damageable>();
         }
-
-        if (visualRoot == null)
-        {
-            visualRoot = gameObject;
-        }
     }
 
     void OnEnable()
@@ -30,9 +24,14 @@ public class AlienHpBarUI : MonoBehaviour
 
         damageable.OnHealthChanged.AddListener(UpdateBar);
         damageable.OnDeath.AddListener(HandleDeath);
+    }
 
-        // Reflect current health immediately instead of waiting for the next hit.
-        UpdateBar(damageable.CurrentHealth, damageable.MaxHealth);
+    void Start()
+    {
+        if (damageable != null)
+        {
+            UpdateBar(damageable.CurrentHealth, damageable.MaxHealth);
+        }
     }
 
     void OnDisable()
