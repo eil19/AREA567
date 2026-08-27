@@ -54,8 +54,9 @@ public class OrganisationBarUI : MonoBehaviour
         if (progressText != null)
         {
             progressText.text =
-                Mathf.RoundToInt(percent * 100f) +
-                "% Restored";
+                Mathf.RoundToInt(
+                    percent * 100f
+                ) + "%";
         }
 
         if (statusText != null)

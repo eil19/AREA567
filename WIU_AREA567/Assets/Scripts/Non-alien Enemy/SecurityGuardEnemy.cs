@@ -138,23 +138,51 @@ public class SecurityGuardEnemy : MonoBehaviour
 
     private void UpdatePatrol()
     {
-        if (patrolPoints == null || patrolPoints.Length == 0)
+        if (patrolPoints == null ||
+            patrolPoints.Length == 0)
         {
             moveDirection = Vector2.zero;
             return;
         }
 
-        Transform target = patrolPoints[currentWaypointIndex];
-        Vector2 toTarget = (Vector2)target.position - (Vector2)transform.position;
-
-        if (toTarget.magnitude <= config.waypointReachDistance)
+        if (currentWaypointIndex < 0 ||
+            currentWaypointIndex >= patrolPoints.Length)
         {
-            currentWaypointIndex = (currentWaypointIndex + 1) % patrolPoints.Length;
+            currentWaypointIndex = 0;
+        }
+
+        Transform target =
+            patrolPoints[currentWaypointIndex];
+
+        // Protect against an unassigned waypoint.
+        if (target == null)
+        {
+            moveDirection = Vector2.zero;
+
+            currentWaypointIndex =
+                (currentWaypointIndex + 1) %
+                patrolPoints.Length;
+
+            return;
+        }
+
+        Vector2 toTarget =
+            (Vector2)target.position -
+            (Vector2)transform.position;
+
+        if (toTarget.magnitude <=
+            config.waypointReachDistance)
+        {
+            currentWaypointIndex =
+                (currentWaypointIndex + 1) %
+                patrolPoints.Length;
+
             moveDirection = Vector2.zero;
         }
         else
         {
-            moveDirection = toTarget.normalized;
+            moveDirection =
+                toTarget.normalized;
         }
     }
 

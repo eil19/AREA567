@@ -7,14 +7,14 @@ public class PlayerInteractor : MonoBehaviour
 {
     [SerializeField] private PlayerController playerController;
 
-    [Header("Shared detection range (used by BOTH Interact and Pickup checks below)")]
+    [Header("Shared Detection Range")]
     [SerializeField] private float interactRange = 1f;
     [SerializeField] private float interactRadius = 0.5f;
 
-    [Header("Interact (E) - crafting bench, cryo tube panel, NPCs, etc.")]
+    [Header("Interact (E)")]
     [SerializeField] private LayerMask interactableLayer;
 
-    [Header("Pickup (Right Click) - Research Notes, Scrap, Chemical, etc.")]
+    [Header("Pickup (R)")]
     [SerializeField] private LayerMask pickupLayer;
 
     [Header("Interact Focus Events")]
@@ -29,120 +29,268 @@ public class PlayerInteractor : MonoBehaviour
     private GameObject currentFocusedPickup;
 
     private bool interactionLocked;
+
     public bool IsInteractionLocked => interactionLocked;
+
+    private void Awake()
+    {
+        if (playerController == null)
+        {
+            playerController =
+                GetComponent<PlayerController>();
+        }
+    }
+
+    private void Update()
+    {
+        if (interactionLocked)
+            return;
+
+        UpdateInteractable();
+        UpdatePickup();
+    }
 
     public void SetInteractionLocked(bool locked)
     {
         interactionLocked = locked;
-        if (locked)
+
+        if (!locked)
+            return;
+
+        if (currentFocusedInteractable != null)
+        {
+            OnInteractableLostFocus?.Invoke();
+            currentFocusedInteractable = null;
+        }
+
+        if (currentFocusedPickup != null)
+        {
+            OnPickupLostFocus?.Invoke();
+            currentFocusedPickup = null;
+        }
+    }
+
+    // =========================
+    // INTERACT
+    // =========================
+
+    private void UpdateInteractable()
+    {
+        Collider2D interactHit =
+            CheckInRange(interactableLayer);
+
+        GameObject interactObject =
+            GetInteractableObject(interactHit);
+
+        // Focus changed.
+        if (interactObject !=
+            currentFocusedInteractable)
         {
             if (currentFocusedInteractable != null)
             {
                 OnInteractableLostFocus?.Invoke();
-                currentFocusedInteractable = null;
             }
-            if (currentFocusedPickup != null)
+
+            currentFocusedInteractable =
+                interactObject;
+
+            if (currentFocusedInteractable != null)
             {
-                OnPickupLostFocus?.Invoke();
-                currentFocusedPickup = null;
-            }
-        }
-    }
-
-    void Awake()
-    {
-        if (playerController == null) playerController = GetComponent<PlayerController>();
-    }
-
-    void Update()
-    {
-        if (interactionLocked) return;
-
-        // --- Interact (E) ---
-        Collider2D interactHit = CheckInRange(interactableLayer);
-        GameObject interactObject = interactHit != null ? interactHit.gameObject : null;
-
-        if (interactObject != currentFocusedInteractable)
-        {
-            if (currentFocusedInteractable != null) OnInteractableLostFocus?.Invoke();
-            if (interactObject != null) OnInteractableFocused?.Invoke(interactObject);
-            currentFocusedInteractable = interactObject;
-        }
-
-        if (InputSystem.actions["Interact"].WasPressedThisFrame())
-        {
-            if (interactHit != null)
-            {
-                IInteractable interactable =
-                    interactHit
-                        .GetComponent<IInteractable>();
-
-                if (interactable == null)
-                {
-                    interactable =
-                        interactHit
-                            .GetComponentInParent<
-                                IInteractable>();
-                }
-
-                interactable?.Interact(
-                    gameObject
+                OnInteractableFocused?.Invoke(
+                    currentFocusedInteractable
                 );
             }
         }
 
-        // --- Pickup (Right Click) ---
-        Collider2D pickupHit = CheckInRange(pickupLayer);
-        GameObject pickupObject = pickupHit != null ? pickupHit.gameObject : null;
-
-        if (pickupObject != currentFocusedPickup)
+        // Press E.
+        if (!InputSystem.actions["Interact"]
+            .WasPressedThisFrame())
         {
-            if (currentFocusedPickup != null) OnPickupLostFocus?.Invoke();
-            if (pickupObject != null) OnPickupFocused?.Invoke(pickupObject);
-            currentFocusedPickup = pickupObject;
+            return;
         }
 
-        if (InputSystem.actions["Pickup"].WasPressedThisFrame())
+        if (interactHit == null)
+            return;
+
+        IInteractable interactable =
+            GetInteractable(interactHit);
+
+        if (interactable != null)
         {
-            if (pickupHit != null)
+            interactable.Interact(gameObject);
+        }
+    }
+
+    private IInteractable GetInteractable(
+        Collider2D hit)
+    {
+        if (hit == null)
+            return null;
+
+        IInteractable interactable =
+            hit.GetComponent<IInteractable>();
+
+        if (interactable == null)
+        {
+            interactable =
+                hit.GetComponentInParent<
+                    IInteractable>();
+        }
+
+        return interactable;
+    }
+
+    private GameObject GetInteractableObject(
+        Collider2D hit)
+    {
+        if (hit == null)
+            return null;
+
+        IInteractable interactable =
+            GetInteractable(hit);
+
+        MonoBehaviour behaviour =
+            interactable as MonoBehaviour;
+
+        // Follow the object containing the
+        // IInteractable script instead of
+        // a random child collider.
+        if (behaviour != null)
+        {
+            return behaviour.gameObject;
+        }
+
+        return hit.gameObject;
+    }
+
+    // =========================
+    // PICKUP
+    // =========================
+
+    private void UpdatePickup()
+    {
+        Collider2D pickupHit =
+            CheckInRange(pickupLayer);
+
+        GameObject pickupObject =
+            GetPickupObject(pickupHit);
+
+        if (pickupObject !=
+            currentFocusedPickup)
+        {
+            if (currentFocusedPickup != null)
             {
-                IPickupable pickupable =
-                    pickupHit
-                        .GetComponent<IPickupable>();
+                OnPickupLostFocus?.Invoke();
+            }
 
-                if (pickupable == null)
-                {
-                    pickupable =
-                        pickupHit
-                            .GetComponentInParent<
-                                IPickupable>();
-                }
+            currentFocusedPickup =
+                pickupObject;
 
-                if (pickupable != null)
-                {
-                    pickupable.Pickup(gameObject);
-
-                    if (currentFocusedPickup != null)
-                    {
-                        OnPickupLostFocus?.Invoke();
-                        currentFocusedPickup = null;
-                    }
-                }
+            if (currentFocusedPickup != null)
+            {
+                OnPickupFocused?.Invoke(
+                    currentFocusedPickup
+                );
             }
         }
+
+        if (!InputSystem.actions["Pickup"]
+            .WasPressedThisFrame())
+        {
+            return;
+        }
+
+        if (pickupHit == null)
+            return;
+
+        IPickupable pickupable =
+            GetPickupable(pickupHit);
+
+        if (pickupable == null)
+            return;
+
+        pickupable.Pickup(gameObject);
+
+        if (currentFocusedPickup != null)
+        {
+            OnPickupLostFocus?.Invoke();
+            currentFocusedPickup = null;
+        }
     }
 
-    private Collider2D CheckInRange(LayerMask layer)
+    private IPickupable GetPickupable(
+        Collider2D hit)
     {
-        Vector2 checkPoint = (Vector2)transform.position + playerController.FacingDirection * interactRange;
-        return Physics2D.OverlapCircle(checkPoint, interactRadius, layer);
+        if (hit == null)
+            return null;
+
+        IPickupable pickupable =
+            hit.GetComponent<IPickupable>();
+
+        if (pickupable == null)
+        {
+            pickupable =
+                hit.GetComponentInParent<
+                    IPickupable>();
+        }
+
+        return pickupable;
     }
 
-    void OnDrawGizmosSelected()
+    private GameObject GetPickupObject(
+        Collider2D hit)
     {
-        if (playerController == null) return;
+        if (hit == null)
+            return null;
+
+        IPickupable pickupable =
+            GetPickupable(hit);
+
+        MonoBehaviour behaviour =
+            pickupable as MonoBehaviour;
+
+        if (behaviour != null)
+        {
+            return behaviour.gameObject;
+        }
+
+        return hit.gameObject;
+    }
+
+    // =========================
+    // DETECTION
+    // =========================
+
+    private Collider2D CheckInRange(
+        LayerMask layer)
+    {
+        Vector2 checkPoint =
+            (Vector2)transform.position +
+            playerController.FacingDirection *
+            interactRange;
+
+        return Physics2D.OverlapCircle(
+            checkPoint,
+            interactRadius,
+            layer
+        );
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (playerController == null)
+            return;
+
         Gizmos.color = Color.cyan;
-        Vector2 checkPoint = (Vector2)transform.position + playerController.FacingDirection * interactRange;
-        Gizmos.DrawWireSphere(checkPoint, interactRadius);
+
+        Vector2 checkPoint =
+            (Vector2)transform.position +
+            playerController.FacingDirection *
+            interactRange;
+
+        Gizmos.DrawWireSphere(
+            checkPoint,
+            interactRadius
+        );
     }
 }
