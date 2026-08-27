@@ -83449,7 +83449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1243903809}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &922650361
 SpriteRenderer:
@@ -85537,7 +85537,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2113053315}
   - {fileID: 1234178120}
   m_Father: {fileID: 1604182046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -86900,7 +86899,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 144923891}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
@@ -87289,7 +87288,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Right-click to pick up
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 24a32b9f60c64db4da6445af22a59d48, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f4ef3ca8ce877c845824b73a6ce27b33, type: 2}
   m_sharedMaterial: {fileID: 8116697470868351285, guid: 24a32b9f60c64db4da6445af22a59d48, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -87356,7 +87355,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1346694626
@@ -89037,7 +89036,6 @@ Transform:
   - {fileID: 740175565}
   - {fileID: 1393316094}
   - {fileID: 1779042214}
-  - {fileID: 23281370}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501758920
@@ -89070,7 +89068,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1243903809}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1501758922
 SpriteRenderer:
@@ -90153,7 +90151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1243903809}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1663729071
 SpriteRenderer:
@@ -90432,7 +90430,6 @@ Transform:
   - {fileID: 167312739}
   - {fileID: 2045063780}
   - {fileID: 1638531116}
-  - {fileID: 1243903809}
   - {fileID: 2105654657}
   - {fileID: 1654610181}
   m_Father: {fileID: 0}
@@ -112896,7 +112893,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to interact
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 24a32b9f60c64db4da6445af22a59d48, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f4ef3ca8ce877c845824b73a6ce27b33, type: 2}
   m_sharedMaterial: {fileID: 8116697470868351285, guid: 24a32b9f60c64db4da6445af22a59d48, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -112963,7 +112960,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1849734610
@@ -139473,3 +139470,7 @@ SceneRoots:
   - {fileID: 790037350}
   - {fileID: 610571916}
   - {fileID: 579142256}
+  - {fileID: 922650360}
+  - {fileID: 1285894369}
+  - {fileID: 1501758921}
+  - {fileID: 1663729070}
