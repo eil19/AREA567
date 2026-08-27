@@ -155,8 +155,8 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsStealthed", isStealthed);
         }
 
-        // Left mouse click (the existing Attack input action) uses the selected weapon.
-        if (InputSystem.actions["Attack"].WasPressedThisFrame())
+        // spacebar shooting
+        if (InputSystem.actions["Attack"].WasPressedThisFrame() && !animator.GetBool("IsBusy"))
         {
             switch (equippedWeapon)
             {

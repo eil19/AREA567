@@ -51,7 +51,9 @@ public class DamageFeedback : MonoBehaviour
 
         if (animator != null)
         {
+            animator.SetBool("IsBusy", true); // blocks Idle/Walk's Any State transitions from reclaiming control right after Death fires
             animator.SetTrigger("Death");
+            //AudioManager.Instance?.PlaySFX(deathSound);
         }
         else
         {
