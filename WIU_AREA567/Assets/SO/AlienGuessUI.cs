@@ -40,7 +40,7 @@ public class AlienGuessUI : MonoBehaviour
         healerButton.onClick.AddListener(() => SubmitGuess(AlienCategory.Healer));
         damageButton.onClick.AddListener(() => SubmitGuess(AlienCategory.Damage));
         flyingButton.onClick.AddListener(() => SubmitGuess(AlienCategory.Flying));
-        //tankerButton.onClick.AddListener(() => SubmitGuess(AlienCategory.Tanker));
+        tankerButton.onClick.AddListener(() => SubmitGuess(AlienCategory.Tanker));
     }
 
 

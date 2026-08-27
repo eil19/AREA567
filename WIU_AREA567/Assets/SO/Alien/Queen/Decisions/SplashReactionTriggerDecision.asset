@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a62c6d414707d947ba19cd39791f997, type: 3}
-  m_Name: IsHealthZero
-  m_EditorClassIdentifier: Assembly-CSharp::CheckHealthDecision
-  healthToCheck: 0
+  m_Script: {fileID: 11500000, guid: 37dcbff70f144c24fad2c9b342f6e2fd, type: 3}
+  m_Name: SplashReactionTriggerDecision
+  m_EditorClassIdentifier: Assembly-CSharp::SplashReactTriggerDecision

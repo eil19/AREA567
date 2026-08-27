@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efaff59a8555fc4db77db335877db19, type: 3}
   m_Name: SummonMinionAction
   m_EditorClassIdentifier: Assembly-CSharp::SummonMinionAction
-  minionPrefab: {fileID: 3947623797355917695, guid: d4eb573ae305c1540b76cd229a59f72b, type: 3}
+  minionPrefab: {fileID: 0}
   minionCount: 3
   spawnRadius: 2.5
-  summonCooldown: 7
+  summonCooldown: 12
   spawnArcDegrees: 90
   maxVerticalOffset: 0.4
   targetTag: Player

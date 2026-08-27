@@ -67,14 +67,9 @@ public class AlienInstance : MonoBehaviour
 
     [HideInInspector] public Vector3 homePosition;
 
-    private Damageable damageable;
-    private StateController stateController;
-
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        damageable = GetComponent<Damageable>();
-        stateController = GetComponent<StateController>();
         homePosition = transform.position;
     }
 

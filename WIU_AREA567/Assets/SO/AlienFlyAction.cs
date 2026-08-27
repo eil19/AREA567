@@ -33,6 +33,10 @@ public class AlienFlyAction : StateAction
             Vector2 allyCentre = AlienActionUtils.GetAllyCentre(origin, allySearchRadius, allyLayer, controller.gameObject);
             Vector2 hoverTarget = allyCentre + Vector2.up * hoverHeight;
 
+            // Direct transform movement - swap for Rigidbody2D.MovePosition()
+            controller.transform.position = Vector2.MoveTowards(origin, hoverTarget, moveSpeed * Time.deltaTime);
+            rb.linearVelocity = hoverTarget * moveSpeed * Time.deltaTime;
+
             Vector2 toTarget = hoverTarget - origin;
             float distance = toTarget.magnitude;
 

@@ -12,19 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e432a7362ef6d43aae6e7e7c18707d, type: 3}
   m_Name: AlienFlyAction
   m_EditorClassIdentifier: Assembly-CSharp::AlienFlyAction
-  fireballPrefab: {fileID: 3245186144929268065, guid: 1cf4471db3d4e8240aba92ac7efac5a3, type: 3}
+  fireballPrefab: {fileID: 0}
   fireballSpeed: 6
   fireballDamage: 10
   attackRadius: 6
   attackCooldown: 2
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   hoverAboveAllies: 1
   hoverHeight: 2
   moveSpeed: 3
-  stopDistance: 0.3
   allySearchRadius: 6
   allyLayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0

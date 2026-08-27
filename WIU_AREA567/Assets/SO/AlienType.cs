@@ -5,7 +5,7 @@ public enum AlienCategory
     Healer,
     Damage,
     Flying,
-    Minion,
+    Tanker,
     None
 }
 

@@ -3,52 +3,52 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FollowPlayerAction", menuName = "Scriptable Objects/Actions/FollowPlayerAction")]
 public class FollowPlayerAction : StateAction
 {
-    [Header("Chase")]
-    [SerializeField] public float followRange = 6f;
-    [SerializeField] public float stopDistance = 4.0f;
+    using UnityEngine;
 
-    [SerializeField] public float leashDistance = 8f;
-    [SerializeField] public float returnStopDistance = 1.0f;
+[CreateAssetMenu(fileName = "FollowPlayerAction", menuName = "Scriptable Objects/Actions/FollowPlayerAction")]
+public class FollowPlayerAction : StateAction
+{
+    [Header("Chase")]
+    public float followRange = 6f;
+    public float stopDistance = 1.5f;
+
+    [Header("Return Home")]
+    [Tooltip("How close to homePosition counts as 'arrived' before stopping.")]
+    public float returnStopDistance = 0.2f;
 
     public override void Act(StateController controller)
     {
         var alien = controller.GetComponent<AlienInstance>();
-        var rb = controller.GetComponent<Rigidbody2D>();
+        var mover = controller.GetComponent<AlienPathMover>();
         var player = GameObject.FindGameObjectWithTag("Player");
 
-        if (alien == null || rb == null || alien.alienType == null) return;
+        if (alien == null || mover == null || alien.alienType == null) return;
 
-        float distanceFromHome = Vector2.Distance(rb.position, alien.homePosition);
         float distanceToPlayer = player != null
-            ? Vector2.Distance(rb.position, player.transform.position)
+            ? Vector2.Distance(controller.transform.position, player.transform.position)
             : Mathf.Infinity;
 
-        bool playerOutOfRange = distanceToPlayer >= followRange;
-        bool tooFarFromHome = distanceFromHome > leashDistance;
-
-        if (playerOutOfRange || tooFarFromHome)
+        if (player != null && distanceToPlayer <= followRange)
         {
-            // Either the player's not close enough, wandered too far from spawn
-            Vector2 toHome = (Vector2)alien.homePosition - rb.position;
-
-            if (toHome.magnitude <= returnStopDistance)
+            if (distanceToPlayer <= stopDistance)
             {
-                rb.linearVelocity = Vector2.zero;
+                mover.Stop();
                 return;
             }
 
-            rb.linearVelocity = toHome.normalized * alien.alienType.moveSpeed;
-            return;
+            mover.MoveTowards(player.transform.position, alien.alienType.moveSpeed);
         }
-
-        // Player is both in range and we're within our leash, chase.
-        if (distanceToPlayer <= stopDistance)
+        else
         {
-            rb.linearVelocity = Vector2.zero;
-            return;
-        }
+            float distanceToHome = Vector2.Distance(controller.transform.position, alien.homePosition);
+            if (distanceToHome <= returnStopDistance)
+            {
+                mover.Stop();
+                return;
+            }
 
-        Vector2 direction = ((Vector2)player.transform.position - rb.position).normalized;
-        rb.linearVelocity = direction * alien.alienType.moveSpeed;
+            mover.MoveTowards(alien.homePosition, alien.alienType.moveSpeed);
+        }
     }
+}
 }
