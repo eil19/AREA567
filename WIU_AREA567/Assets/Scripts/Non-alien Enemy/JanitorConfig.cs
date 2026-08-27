@@ -10,4 +10,8 @@ public class JanitorConfig : ScriptableObject
     public int damageAmount = 12;
     public float puddleCooldown = 3f;
     public float deathCleanupDelay = 1f;
+
+    [Header("Detection")]
+    public float stealthDetectionMultiplier = 0.5f;
+    public LayerMask wallLayer;
 }

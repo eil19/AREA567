@@ -21,6 +21,7 @@ public class JanitorEnemy : MonoBehaviour
     private Damageable playerDamageable;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private PlayerController playerController;
 
     private State currentState = State.Idle;
     private Vector2 moveDirection = Vector2.zero;
@@ -49,6 +50,11 @@ public class JanitorEnemy : MonoBehaviour
             playerDamageable = player.GetComponent<Damageable>();
         }
 
+        if (player != null)
+        {
+            playerController = player.GetComponent<PlayerController>();
+        }
+
         damageable.OnDeath.AddListener(HandleDeath);
         puddleTimer = config.puddleCooldown;
     }
@@ -64,7 +70,7 @@ public class JanitorEnemy : MonoBehaviour
         {
             case State.Idle:
                 moveDirection = Vector2.zero;
-                if (distanceToPlayer <= config.detectionRange)
+                if (CanDetectPlayer(distanceToPlayer))
                 {
                     currentState = State.Chase;
                 }
@@ -120,6 +126,20 @@ public class JanitorEnemy : MonoBehaviour
     {
         if (currentState == State.Dead) return;
         body.linearVelocity = moveDirection * config.moveSpeed;
+    }
+
+    private bool CanDetectPlayer(float distanceToPlayer)
+    {
+        float effectiveRange = config.detectionRange;
+        if (playerController != null && playerController.IsStealthed)
+        {
+            effectiveRange *= config.stealthDetectionMultiplier;
+        }
+
+        if (distanceToPlayer > effectiveRange) return false;
+
+        RaycastHit2D hit = Physics2D.Linecast(transform.position, player.position, config.wallLayer);
+        return hit.collider == null;
     }
 
     private void UpdateAnimator(Vector2 facingDirection, bool isMoving)
