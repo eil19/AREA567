@@ -3,7 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EndingController : MonoBehaviour
+public class EndingController :
+    MonoBehaviour
 {
     [Header("UI")]
     [SerializeField]
@@ -13,7 +14,7 @@ public class EndingController : MonoBehaviour
     private TMP_Text endingText;
 
     [SerializeField]
-    private GameObject exitButton;
+    private GameObject mainMenuButton;
 
     [Header("Dialogue")]
     [SerializeField]
@@ -37,23 +38,13 @@ public class EndingController : MonoBehaviour
 
     private void Start()
     {
-        if (endingPanel != null)
-        {
-            endingPanel.SetActive(false);
-        }
-
-        if (exitButton != null)
-        {
-            exitButton.SetActive(false);
-        }
+        endingPanel.SetActive(false);
     }
 
     public void BeginEnding()
     {
         if (hasStarted)
-        {
             return;
-        }
 
         hasStarted = true;
 
@@ -66,26 +57,13 @@ public class EndingController : MonoBehaviour
     {
         OnEndingStarted?.Invoke();
 
-        // Give the Alien Queen death animation
-        // time to finish before fading to the ending.
-        yield return new WaitForSecondsRealtime(
+        // Allow Queen death animation to play.
+        yield return new WaitForSeconds(
             bossDeathDelay
         );
 
-        if (endingPanel != null)
-        {
-            endingPanel.SetActive(true);
-        }
-
-        if (exitButton != null)
-        {
-            exitButton.SetActive(false);
-        }
-
-        if (endingText != null)
-        {
-            endingText.text = "";
-        }
+        endingPanel.SetActive(true);
+        mainMenuButton.SetActive(false);
 
         if (endingDialogue != null &&
             endingDialogue.lines != null)
@@ -106,10 +84,7 @@ public class EndingController : MonoBehaviour
             "Congratulations! You defeated the Alien Queen!"
         );
 
-        if (exitButton != null)
-        {
-            exitButton.SetActive(true);
-        }
+        mainMenuButton.SetActive(true);
 
         OnEndingFinished?.Invoke();
     }
@@ -117,11 +92,6 @@ public class EndingController : MonoBehaviour
     private IEnumerator TypeLine(
         string line)
     {
-        if (endingText == null)
-        {
-            yield break;
-        }
-
         endingText.text = "";
 
         foreach (char character in line)

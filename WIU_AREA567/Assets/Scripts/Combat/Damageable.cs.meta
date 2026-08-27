@@ -1,15 +1,2 @@
 fileFormatVersion: 2
 guid: bbeb5240257e8514b968cbca4974964d
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences:
-  - hurtClip: {instanceID: 0}
-  - deathClip: {instanceID: 0}
-  - hitVFXPrefab: {fileID: 1136329312195389794, guid: 869cd4af9022ec04f98d6b4cbb918639, type: 3}
-  - deathVFXPrefab: {instanceID: 0}
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
