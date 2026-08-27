@@ -189,8 +189,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (inputLocked)
-        {
+        if(inputLocked || animator.GetBool("IsBusy"))
+    {
             body.linearVelocity = Vector2.zero;
             return;
         }
