@@ -22,12 +22,12 @@ MonoBehaviour:
     quantity: 0
   - item: {fileID: 0}
     quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
   - item: {fileID: 11400000, guid: 3e41c8d2c30e445449dcf6f7a988d81d, type: 2}
     quantity: 1
   - item: {fileID: 11400000, guid: ae484dd9ee72c2248bcefd498833c75d, type: 2}
     quantity: 1
-  - item: {fileID: 0}
-    quantity: 0
   - item: {fileID: 0}
     quantity: 0
   - item: {fileID: 0}

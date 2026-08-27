@@ -59,7 +59,9 @@ public class WirePuzzleDoor : MonoBehaviour,
         {
             puzzleController =
                 FindFirstObjectByType<
-                    WirePuzzleController>();
+                    WirePuzzleController>(
+                        FindObjectsInactive.Include
+                    );
         }
 
         if (puzzleController == null)

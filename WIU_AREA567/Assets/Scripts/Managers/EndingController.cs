@@ -104,4 +104,23 @@ public class EndingController :
                 );
         }
     }
+
+    public void ExitToMainMenu()
+    {
+        SceneFlowManager sceneFlowManager =
+            FindFirstObjectByType<
+                SceneFlowManager>();
+
+        if (sceneFlowManager != null)
+        {
+            sceneFlowManager.ReturnToMainMenu();
+        }
+        else
+        {
+            Debug.LogError(
+                "EndingController: " +
+                "SceneFlowManager not found."
+            );
+        }
+    }
 }

@@ -7109,28 +7109,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Movement - WASD
-
-    Switch weapons - 1, 2, 3
-
-    Pause - Esc
-
-    Interact
-    - E
-
-    Crouch - C
-
-    Jump - Space
-
-    Inventory - I
-
-    Attack - Left Mouse
-    Button
-
-    Pick up - Right Mouse Button
-
-
-'
+  m_text: "Esc - pause\r\n123 - toggle weapons\r\nWASD - movement\r\nE - interact\r\nC
+    - crouch\r\nI - inventory \r\nSpacebar - attack\r\nR - pick up\r\nL - research
+    logbook\r\nLMC - drag wires for door"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f4ef3ca8ce877c845824b73a6ce27b33, type: 2}
   m_sharedMaterial: {fileID: 2967673305952960626, guid: f4ef3ca8ce877c845824b73a6ce27b33, type: 2}
