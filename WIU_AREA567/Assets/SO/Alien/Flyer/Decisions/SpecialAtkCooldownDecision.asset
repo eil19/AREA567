@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6ad6becb1dfb5c499f426e08c2be140, type: 3}
-  m_Name: CanAtkAgainDecision
-  m_EditorClassIdentifier: Assembly-CSharp::CanAtkAgainDecision
-  attackCooldown: 5
+  m_Script: {fileID: 11500000, guid: 2f36f67a3a108234f9758e9e213b3fd7, type: 3}
+  m_Name: SpecialAtkCooldownDecision
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialAtkCooldownDecision
+  specialAtkCooldown: 10

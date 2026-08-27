@@ -22,13 +22,16 @@ public class AlienFireball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (((1 << other.gameObject.layer) & hitLayer) == 0) return;
-
-        if (other.TryGetComponent(out Damageable damageable))
+        // Only deal damage to things on hitLayer.
+        if (((1 << other.gameObject.layer) & hitLayer) != 0)
         {
-            damageable.TakeDamage(damage);
+            if (other.TryGetComponent(out Damageable damageable))
+            {
+                damageable.TakeDamage(damage);
+            }
         }
 
+        // Despawn on any collision, not just hitLayer matches.
         Destroy(gameObject);
     }
 }

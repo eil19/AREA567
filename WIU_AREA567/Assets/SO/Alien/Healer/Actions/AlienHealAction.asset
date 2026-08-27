@@ -16,5 +16,5 @@ MonoBehaviour:
   healRadius: 4
   allyLayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 4104
   healCooldown: 5

@@ -6,7 +6,11 @@ public class BossDamageable : Damageable
     [Header("Phases")]
     [SerializeField] private int phase = 1;
     public int Phase => phase;
-    public UnityEvent onPhaseTwoEntered; // wire animation/roar/camera shake here
+    public UnityEvent onPhaseTwoEntered; 
+
+    [Header("Boss Defeated")]
+    public UnityEvent onBossDefeated; // wire the win menu / game-won logic here
+
 
     [Header("Toughness")]
     public int maxToughness = 100;
@@ -14,7 +18,7 @@ public class BossDamageable : Damageable
     public int CurrentToughness => currentToughness;
     public bool ToughnessBroken => currentToughness <= 0;
 
-    public UnityEvent onToughnessChanged; // wire to ToughnessBar
+    public UnityEvent onToughnessChanged; 
     public UnityEvent onToughnessBroken;
 
     [Header("Minion Protection")]
@@ -25,7 +29,7 @@ public class BossDamageable : Damageable
 
     protected override void Awake()
     {
-        base.Awake(); // this is what was missing - health was never being reset to maxHealth
+        base.Awake(); 
         currentToughness = maxToughness;
     }
 
@@ -85,6 +89,7 @@ public class BossDamageable : Damageable
             return; 
         }
 
+        onBossDefeated?.Invoke();
         base.HandleDeath(); // phase 2 -> real death, VFX + OnDeath fire normally
     }
 }

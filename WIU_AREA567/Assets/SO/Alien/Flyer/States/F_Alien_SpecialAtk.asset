@@ -10,26 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1f1d14c66893194e981b81970a01027, type: 3}
-  m_Name: F_Alien_Idle
+  m_Name: F_Alien_SpecialAtk
   m_EditorClassIdentifier: Assembly-CSharp::State
   initializeActions:
-  - {fileID: 11400000, guid: f490bc8ee034acd46b8aefa200754797, type: 2}
+  - {fileID: 11400000, guid: 8e133964a6861db4bb1094292b04748e, type: 2}
+  - {fileID: 11400000, guid: 7c4d975ffa1cf4446a57baa375f859cc, type: 2}
   executeActions:
-  - {fileID: 11400000, guid: 8b509e29e70fb5d46b9305f0cc9b1946, type: 2}
-  endActions: []
+  - {fileID: 11400000, guid: 1f5cfdd31aa89ef449bd103378c3600d, type: 2}
+  endActions:
+  - {fileID: 11400000, guid: 354c704697e7b5740871d61cb1128b80, type: 2}
+  - {fileID: 11400000, guid: f490bc8ee034acd46b8aefa200754797, type: 2}
   transitions:
+  - decision: {fileID: 11400000, guid: 283fb359a9e03bb42a5a4400022dde60, type: 2}
+    trueState: {fileID: 11400000, guid: be3395008acf59f4bbd1076328cd97d6, type: 2}
+    falseState: {fileID: 11400000, guid: 1232fad5d99e0f5409e25c4866a02518, type: 2}
   - decision: {fileID: 11400000, guid: fd935e5647db143488b2a1f336a36b96, type: 2}
     trueState: {fileID: 11400000, guid: c40204fd97ded314db36403aa943aa81, type: 2}
     falseState: {fileID: 11400000, guid: 1232fad5d99e0f5409e25c4866a02518, type: 2}
-  - decision: {fileID: 11400000, guid: 27cac04dd71c1b142a30ec0e1eac4be9, type: 2}
-    trueState: {fileID: 11400000, guid: 47cd4b871fa48e1489d20b7f5c3c921a, type: 2}
-    falseState: {fileID: 11400000, guid: 1232fad5d99e0f5409e25c4866a02518, type: 2}
-  - decision: {fileID: 11400000, guid: ac38e9768e503464fa7bb326d9afe162, type: 2}
-    trueState: {fileID: 11400000, guid: 18a234776466d514a9fedaf22cd3183b, type: 2}
-    falseState: {fileID: 11400000, guid: 1232fad5d99e0f5409e25c4866a02518, type: 2}
   - decision: {fileID: 11400000, guid: 6ca37bbd549f39c448f13da3e0b36baf, type: 2}
     trueState: {fileID: 11400000, guid: ad12f79e5b4f4ba4386e5d53e8c608db, type: 2}
-    falseState: {fileID: 11400000, guid: 1232fad5d99e0f5409e25c4866a02518, type: 2}
-  - decision: {fileID: 11400000, guid: c2c21de99583ef640a31b6d760d9cb04, type: 2}
-    trueState: {fileID: 11400000, guid: 0b4b89e724c717a4e94d11e663d9e32a, type: 2}
     falseState: {fileID: 11400000, guid: 1232fad5d99e0f5409e25c4866a02518, type: 2}

@@ -18,10 +18,26 @@ public class FollowPlayerAction : StateAction
 
         if (alien == null || rb == null || alien.alienType == null) return;
 
-        float distanceFromHome = Vector2.Distance(rb.position, alien.homePosition);
+
         float distanceToPlayer = player != null
             ? Vector2.Distance(rb.position, player.transform.position)
             : Mathf.Infinity;
+
+        // Tamed aliens ignore the leash/home-return logic entirely and always chase the player.
+        if (alien.isTamed)
+        {
+            if (player == null || distanceToPlayer <= stopDistance)
+            {
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+
+            Vector2 tamedDirection = ((Vector2)player.transform.position - rb.position).normalized;
+            rb.linearVelocity = tamedDirection * alien.alienType.moveSpeed;
+            return;
+        }
+
+        float distanceFromHome = Vector2.Distance(rb.position, alien.homePosition);
 
         bool playerOutOfRange = distanceToPlayer >= followRange;
         bool tooFarFromHome = distanceFromHome > leashDistance;

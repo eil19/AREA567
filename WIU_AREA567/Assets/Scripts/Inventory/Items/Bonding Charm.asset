@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Bonding Charm
   description: Tame aliens using this item
   itemImage: {fileID: -1050898653572085083, guid: 655f28ef2871a2e40b23e846d9aa34b0, type: 3}
-  stackable: 0
+  stackable: 1
   maxStack: 99
   itemType: 1
+  weaponType: 0

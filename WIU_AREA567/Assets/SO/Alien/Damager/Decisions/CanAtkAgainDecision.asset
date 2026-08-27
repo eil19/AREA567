@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ad6becb1dfb5c499f426e08c2be140, type: 3}
   m_Name: CanAtkAgainDecision
   m_EditorClassIdentifier: Assembly-CSharp::CanAtkAgainDecision
-  attackCooldown: 3
+  attackCooldown: 7

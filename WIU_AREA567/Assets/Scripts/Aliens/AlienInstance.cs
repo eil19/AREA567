@@ -17,7 +17,10 @@ public class AlienInstance : MonoBehaviour
     [HideInInspector] public float stateTimerStart = 0;    
 
     [HideInInspector] public float lastAttackTime = -999f;
+    //healing for healer alien
     [HideInInspector] public float lastHealTime = -999f;
+    //flying n projectiles for flyer alien
+    [HideInInspector] public float lastSpecialAttackTime = -999f;
 
     private Animator animator;
 
@@ -29,10 +32,17 @@ public class AlienInstance : MonoBehaviour
         identified = true;
     }
 
+    [ContextMenu("TEST: Force Tame")]
+    private void TestForceTame()
+    {
+        AttemptTame();
+    }
+
     [ContextMenu("TEST: Force Tame Success")]
     private void TestForceTameSuccess()
     {
         tameSuccessTrigger = true;
+        isTamed = true;
     }
 
     [ContextMenu("TEST: Force Tame Fail")]
@@ -123,12 +133,26 @@ public class AlienInstance : MonoBehaviour
         {
             tameSuccessTrigger = true;
             isTamed = true; // Mark tamed on success
+            SetTamedLayer();
         }
         else
         {
             tameFailTrigger = true;
         }
         return success;
+    }
+
+    private void SetTamedLayer()
+    {
+        int tamedLayer = LayerMask.NameToLayer("Tamed");
+        if (tamedLayer == -1)
+        {
+            Debug.LogWarning($"{gameObject.name}: No layer named \"Tamed\" exists. Add one in Edit > Project Settings > Tags and Layers.");
+            return;
+        }
+
+        gameObject.layer = tamedLayer;
+
     }
 
     public void SetTased()

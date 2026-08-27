@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 1e9ea4635e3dcd94cb7078bad3762797
+guid: e78a7f74ab8c6f54282f352db8a6672b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 783731313485499341
-    second: healer_side_heal 1_0
+      213: -1023974322323363290
+    second: healer_side_heal_0
   - first:
-      213: -7681557689508097863
-    second: healer_side_heal 1_1
+      213: 4124862850335098837
+    second: healer_side_heal_1
   - first:
-      213: 7103970415198761960
-    second: healer_side_heal 1_2
+      213: 3406313965710097155
+    second: healer_side_heal_2
   - first:
-      213: 8542550688597870418
-    second: healer_side_heal 1_3
+      213: 517008206473931656
+    second: healer_side_heal_3
   - first:
-      213: 4486496586575878925
-    second: healer_side_heal 1_4
+      213: -6665006081582769062
+    second: healer_side_heal_4
   - first:
-      213: 2553706754919107049
-    second: healer_side_heal 1_5
+      213: -2627440322244986059
+    second: healer_side_heal_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,19 +132,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 23
-        width: 40
-        height: 32
+        y: 22
+        width: 38
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8cbde38e5da743a4b9092d030827aa28
-      internalID: -1003906726
+      spriteID: 62a6bc277cc1ac1f0800000000000000
+      internalID: -1023974322323363290
       vertices: []
       indices: 
       edges: []
@@ -153,20 +153,20 @@ TextureImporter:
       name: healer_side_heal_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 23
-        width: 40
-        height: 32
+        x: 46
+        y: 22
+        width: 38
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b185c5e294c423a4a975f3c0759bc2f7
-      internalID: 1248546147
+      spriteID: 5d7cd6d68e47e3930800000000000000
+      internalID: 4124862850335098837
       vertices: []
       indices: 
       edges: []
@@ -175,20 +175,20 @@ TextureImporter:
       name: healer_side_heal_2
       rect:
         serializedVersion: 2
-        x: 83
-        y: 23
-        width: 40
-        height: 32
+        x: 87
+        y: 22
+        width: 38
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fe3fd59322e8ced47884a8948dbd5b7b
-      internalID: -1561829670
+      spriteID: 30b3a9f1188a54f20800000000000000
+      internalID: 3406313965710097155
       vertices: []
       indices: 
       edges: []
@@ -197,20 +197,20 @@ TextureImporter:
       name: healer_side_heal_3
       rect:
         serializedVersion: 2
-        x: 123
-        y: 23
-        width: 40
-        height: 32
+        x: 128
+        y: 22
+        width: 38
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 40414bbc3fa4a6944bc9660008e2cf32
-      internalID: 302464611
+      spriteID: 88b27dc7938cc2700800000000000000
+      internalID: 517008206473931656
       vertices: []
       indices: 
       edges: []
@@ -219,20 +219,20 @@ TextureImporter:
       name: healer_side_heal_4
       rect:
         serializedVersion: 2
-        x: 163
-        y: 23
-        width: 40
-        height: 32
+        x: 168
+        y: 22
+        width: 38
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a74a87500d986d847939330a84bad6fc
-      internalID: 1906908097
+      spriteID: a5cd07118442183a0800000000000000
+      internalID: -6665006081582769062
       vertices: []
       indices: 
       edges: []
@@ -241,20 +241,20 @@ TextureImporter:
       name: healer_side_heal_5
       rect:
         serializedVersion: 2
-        x: 203
-        y: 23
-        width: 47
-        height: 32
+        x: 211
+        y: 22
+        width: 38
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 44a3ebe2608ca6e46a6dc4e743978f68
-      internalID: 1825152328
+      spriteID: 53bbc0c92f4798bd0800000000000000
+      internalID: -2627440322244986059
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 50aaf484da34f754aa478fdbf056a1bb
+    spriteID: 539c7a2514d202e4f8e98306a23b8386
     internalID: 0
     vertices: []
     indices: 
@@ -273,14 +273,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":40.0,"y":32.0},"gridSpriteOffset":{"x":3.0,"y":15.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":38.0,"y":34.0},"gridSpriteOffset":{"x":0.0,"y":14.0},"gridSpritePadding":{"x":1.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      healer_side_heal_0: -1003906726
-      healer_side_heal_1: 1248546147
-      healer_side_heal_2: -1561829670
-      healer_side_heal_3: 302464611
-      healer_side_heal_4: 1906908097
-      healer_side_heal_5: 1825152328
+      healer_side_heal_0: -1023974322323363290
+      healer_side_heal_1: 4124862850335098837
+      healer_side_heal_2: 3406313965710097155
+      healer_side_heal_3: 517008206473931656
+      healer_side_heal_4: -6665006081582769062
+      healer_side_heal_5: -2627440322244986059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
