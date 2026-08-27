@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
-using Microsoft.Win32.SafeHandles;
 
 public class HoverButton : MonoBehaviour,
     IPointerEnterHandler,
