@@ -23,6 +23,13 @@ public class PlayerProjectile : MonoBehaviour
     {
         direction = direction.sqrMagnitude > 0f ? direction.normalized : Vector2.down;
         body.linearVelocity = direction * speed;
+
+        // Rotate the sprite to visually face the direction of travel.
+        // The "- 90f" assumes the bullet art is drawn pointing UP by default -
+        // see note below if it looks wrong.
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
         Destroy(gameObject, lifetime);
     }
 
