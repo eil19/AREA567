@@ -23,3 +23,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   giveUpRange: 14
+  patrolSpeed: 2
+  waypointReachDistance: 0.2
