@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerHealthBarUI : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Slider healthSlider;
+    [SerializeField] private Image fillImage;
     [SerializeField] private Damageable playerHealth;
 
     private void Start()
@@ -38,8 +38,13 @@ public class PlayerHealthBarUI : MonoBehaviour
 
     public void UpdateHealthBar(int currentHealth, int maxHealth)
     {
-        healthSlider.value = maxHealth <= 0
+        if (fillImage == null)
+        {
+            return;
+        }
+
+        fillImage.fillAmount = maxHealth <= 0
             ? 0f
-            : (float)currentHealth / maxHealth;
+            : Mathf.Clamp01((float)currentHealth / maxHealth);
     }
 }
