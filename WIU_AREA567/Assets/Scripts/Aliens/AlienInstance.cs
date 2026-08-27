@@ -24,7 +24,8 @@ public class AlienInstance : MonoBehaviour
 
     private Animator animator;
 
-    private Vector3 offset = new Vector3(0, -2, 0);
+    [SerializeField]
+    private Vector3 essenceSpawnOffset = new Vector3(0f, -0.5f, 0f);
 
     [Header("Persistence")]
     [SerializeField] private string alienID;
@@ -134,7 +135,7 @@ public class AlienInstance : MonoBehaviour
     {
         if (alienType == null || alienType.essencePrefab == null) return;
 
-        GameObject drop = Instantiate(alienType.essencePrefab, transform.position + offset, Quaternion.identity);
+        GameObject drop = Instantiate(alienType.essencePrefab, transform.position + essenceSpawnOffset, Quaternion.identity);
 
         if (drop.TryGetComponent<Item>(out var item))
         {

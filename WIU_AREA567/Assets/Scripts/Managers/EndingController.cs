@@ -27,6 +27,8 @@ public class EndingController :
     [SerializeField]
     private float bossDeathDelay = 2f;
 
+    [Header("Player UI")] [SerializeField] private GameObject playerUI;
+
     public UnityEvent OnEndingStarted;
     public UnityEvent OnEndingFinished;
 
@@ -43,6 +45,11 @@ public class EndingController :
 
     public void BeginEnding()
     {
+        if (playerUI != null)
+        {
+            playerUI.SetActive(false);
+        }
+
         if (hasStarted)
             return;
 
