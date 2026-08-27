@@ -14,4 +14,8 @@ public class SecurityGuardConfig : ScriptableObject
     public float stealthDetectionMultiplier = 0.5f;
     public LayerMask wallLayer;
     public float giveUpRange = 14f;
+
+    [Header("Patrol")]
+    public float patrolSpeed = 2f;
+    public float waypointReachDistance = 0.2f;
 }

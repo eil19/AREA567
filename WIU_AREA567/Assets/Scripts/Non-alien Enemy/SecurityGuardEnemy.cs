@@ -9,11 +9,16 @@ public class SecurityGuardEnemy : MonoBehaviour
 
     [SerializeField] private SecurityGuardConfig config;
     [SerializeField] private Transform player;
+    [SerializeField] private Transform[] patrolPoints;
 
     [Header("Animation")]
     [SerializeField] private Transform batonVisual;
     [SerializeField] private float swingAngle = 70f;
     [SerializeField] private float swingDuration = 0.12f;
+
+    [Header("Damage Feedback")]
+    [SerializeField] private Color flashColor = Color.red;
+    [SerializeField] private float flashDuration = 0.15f;
 
     private Rigidbody2D body;
     private Damageable damageable;
@@ -25,6 +30,9 @@ public class SecurityGuardEnemy : MonoBehaviour
     private State currentState = State.Idle;
     private Vector2 moveDirection = Vector2.zero;
     private float attackTimer = 0f;
+    private int currentWaypointIndex = 0;
+    private Color normalColor;
+    private Coroutine flashRoutine;
 
     private void Awake()
     {
@@ -32,6 +40,7 @@ public class SecurityGuardEnemy : MonoBehaviour
         damageable = GetComponent<Damageable>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) normalColor = spriteRenderer.color;
         body.gravityScale = 0f;
 
         if (player == null)
@@ -54,6 +63,7 @@ public class SecurityGuardEnemy : MonoBehaviour
         }
 
         damageable.OnDeath.AddListener(HandleDeath);
+        damageable.OnDamaged.AddListener(HandleDamaged);
     }
 
     private void Update()
@@ -72,10 +82,14 @@ public class SecurityGuardEnemy : MonoBehaviour
         switch (currentState)
         {
             case State.Idle:
-                moveDirection = Vector2.zero;
                 if (CanDetectPlayer(distanceToPlayer))
                 {
                     currentState = State.Chase;
+                    moveDirection = Vector2.zero;
+                }
+                else
+                {
+                    UpdatePatrol();
                 }
                 break;
 
@@ -118,7 +132,30 @@ public class SecurityGuardEnemy : MonoBehaviour
     private void FixedUpdate()
     {
         if (currentState == State.Dead) return;
-        body.linearVelocity = moveDirection * config.moveSpeed;
+        float speed = currentState == State.Idle ? config.patrolSpeed : config.moveSpeed;
+        body.linearVelocity = moveDirection * speed;
+    }
+
+    private void UpdatePatrol()
+    {
+        if (patrolPoints == null || patrolPoints.Length == 0)
+        {
+            moveDirection = Vector2.zero;
+            return;
+        }
+
+        Transform target = patrolPoints[currentWaypointIndex];
+        Vector2 toTarget = (Vector2)target.position - (Vector2)transform.position;
+
+        if (toTarget.magnitude <= config.waypointReachDistance)
+        {
+            currentWaypointIndex = (currentWaypointIndex + 1) % patrolPoints.Length;
+            moveDirection = Vector2.zero;
+        }
+        else
+        {
+            moveDirection = toTarget.normalized;
+        }
     }
 
     private bool CanDetectPlayer(float distanceToPlayer)
@@ -196,6 +233,22 @@ public class SecurityGuardEnemy : MonoBehaviour
         }
 
         batonVisual.localRotation = start;
+    }
+
+    private void HandleDamaged(int amount)
+    {
+        if (spriteRenderer == null) return;
+
+        if (flashRoutine != null) StopCoroutine(flashRoutine);
+        flashRoutine = StartCoroutine(FlashRed());
+    }
+
+    private IEnumerator FlashRed()
+    {
+        spriteRenderer.color = flashColor;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = normalColor;
+        flashRoutine = null;
     }
 
     private void HandleDeath()
